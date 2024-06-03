@@ -1,0 +1,107 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "myygiloata-ravimi-pohjendus",
+  "language": "et",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/myygiloata-ravimi-pohjendus"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+      "valueCode": "executable"
+    }
+  ],
+  "url": "https://fhir.ee/CodeSystem/myygiloata-ravimi-pohjendus",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.252"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "version"
+          }
+        ]
+      },
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.1.252.1"
+    }
+  ],
+  "version": "1.0.0",
+  "versionAlgorithmString": "integer",
+  "name": "MyygiloataRavimiPohjendus",
+  "title": "ER_Müügiloata taotluse põhjendus",
+  "status": "active",
+  "experimental": false,
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "andmekorraldus@tehik.ee"
+        },
+        {
+          "system": "url",
+          "value": "https://tehik.ee/"
+        }
+      ]
+    }
+  ],
+  "description": "Elektrooniline retsept (ER) - Müügiloata ravimi kasutamise taotlemise põhjendus, mis sisestatakse retsepti koostamisel.",
+  "effectivePeriod": {
+    "start": "2015-09-04T00:00:00Z"
+  },
+  "author": [
+    {
+      "name": "Tervisekassa"
+    }
+  ],
+  "caseSensitive": false,
+  "content": "complete",
+  "property": [
+    {
+      "code": "display",
+      "uri": "http://terminology.hl7.org/CodeSystem/designation-usage|display",
+      "description": "Display",
+      "type": "string"
+    }
+  ],
+  "concept": [
+    {
+      "code": "ML01",
+      "display": "Eestis puudub haiguse/seisundi raviks müügiloaga ravim"
+    },
+    {
+      "code": "ML02",
+      "display": "Müügiloaga ravimitel puudub sobiv ravimvorm"
+    },
+    {
+      "code": "ML03",
+      "display": "Müügiloaga ravimitel puudub sobiv tugevus (toimeaine sisaldus)"
+    },
+    {
+      "code": "ML04",
+      "display": "Müügiloaga ravimitel puudub sobiv pakend (kogus pakendis, materjal vm)"
+    },
+    {
+      "code": "ML05",
+      "display": "Kõik sobivad müügiloaga ravimid põhjustavad kõrvaltoimeid"
+    },
+    {
+      "code": "ML06",
+      "display": "Ükski müügiloaga ravim ei ole olnud piisavalt efektiivne"
+    },
+    {
+      "code": "ML07",
+      "display": "Eriarsti poolt määratud püsiravi"
+    },
+    {
+      "code": "ML08",
+      "display": "Muu meditsiiniline põhjus (lisada põhjendatud selgitus)"
+    }
+  ]
+}

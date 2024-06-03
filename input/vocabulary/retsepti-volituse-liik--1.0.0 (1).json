@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "retsepti-volituse-liik",
+  "language": "et",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-volituse-liik"
+    }
+  ],
+  "url": "https://fhir.ee/ValueSet/retsepti-volituse-liik", 
+  "version": "1.0.0",
+  "name": "RetseptiVolituseLiik",
+  "title": "ER_Volituse liik",
+  "status": "active",
+  "experimental": false,
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "andmekorraldus@tehik.ee"
+        },
+        {
+          "system": "url",
+          "value": "https://tehik.ee/"
+        }
+      ]
+    }
+  ],
+  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "effectivePeriod": {
+    "start": "2010-01-01T00:00:00Z"
+  },
+  "author": [
+    {
+      "name": "Tervisekassa"
+    }
+  ],
+  "compose": {
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://fhir.ee/CodeSystem/retsepti-volituse-liik",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

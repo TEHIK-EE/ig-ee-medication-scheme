@@ -1,0 +1,2095 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "retsept-mahu-ja-massiyhik",
+  "language": "et",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsept-mahu-ja-massiyhik"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+      "valueCode": "executable"
+    }
+  ],
+  "url": "https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.56"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "version"
+          }
+        ]
+      },
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.56.1"
+    }
+  ],
+  "version": "1.0.0",
+  "versionAlgorithmString": "integer",
+  "name": "RetseptMahuJaMassiyhik",
+  "title": "ER_Ühikud mahu- ja massiühikud",
+  "status": "active",
+  "experimental": false,
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "andmekorraldus@tehik.ee"
+        },
+        {
+          "system": "url",
+          "value": "https://tehik.ee/"
+        }
+      ]
+    }
+  ],
+  "description": "Elektrooniline retsept (ER) - Loendi loomise aluseks on Sotsiaalministeeriumi määrus nr 30 \"Ravimite väljakirjutamise ja apteekidest väljastamise tingimused, Vabariigi Valitsuse määrus \"Retseptikeskuse asutamine ja retseptikeskuse põhimäärus\" ja analüüsidokument \"Digiretsepti realiseerimine SAP platvormil\" ver 7.1. Loend on kirjeldatud ka dokumendis \"Digiretsepti realiseerimine SAP platvormil. Retseptikeskuse teenused ja liidestumise juhend\", mis on kättesaadav RIA SVN-keskkonnas.",
+  "effectivePeriod": {
+    "start": "2023-03-30T00:00:00Z"
+  },
+  "author": [
+    {
+      "name": "Tervisekassa"
+    }
+  ],
+  "caseSensitive": false,
+  "content": "complete",
+  "property": [
+    {
+      "code": "display",
+      "uri": "http://terminology.hl7.org/CodeSystem/designation-usage|display",
+      "description": "Display",
+      "type": "string"
+    },
+    {
+      "code": "status",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "description": "Status",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "%",
+      "display": "%",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "percent"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "% W/V",
+      "display": "% W/V",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "weight per volume"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "%W/W",
+      "display": "%W/W",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "percent by weight"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "1 MG/ML",
+      "display": "1 MG/ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "1 MG/ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "100G",
+      "display": "100G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "100 grams"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD",
+      "display": "AD",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD %",
+      "display": "AD %",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD %"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD % W/V",
+      "display": "AD % W/V",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD % W/V"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD 1 G",
+      "display": "AD 1 G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD 1 G"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD 1 ML",
+      "display": "AD 1 ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD 1 ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD 100 %",
+      "display": "AD 100 %",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD 100 %"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD 1000 ML",
+      "display": "AD 1000 ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD 1000 ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD 100ML",
+      "display": "AD 100ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD 100ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD G",
+      "display": "AD G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD G"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD MCG",
+      "display": "AD MCG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD MCG"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD MCL",
+      "display": "AD MCL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD MCL"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD MG",
+      "display": "AD MG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD MG"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD MG/ML",
+      "display": "AD MG/ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD MG/ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD ML",
+      "display": "AD ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD ML"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD MMOL/L",
+      "display": "AD MMOL/L",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD MMOL/L"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD PH",
+      "display": "AD PH",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD PH"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AD PH 4,5",
+      "display": "AD PH 4,5",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "AD PH 4,5"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "AMPULL",
+      "display": "AMPULL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "ampoule(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ANNUS",
+      "display": "ANNUS",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "dosage(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ANNUST",
+      "display": "ANNUST",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "Asendatud väärtusega \"Annus\""
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "retired"
+        }
+      ]
+    },
+    {
+      "code": "ANTI-XA",
+      "display": "ANTI-XA",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "anti-Xa"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ANTIGEENI ÜHIK",
+      "display": "ANTIGEENI ÜHIK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "antigen unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "BOU",
+      "display": "BOU",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "billion units"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CCID50",
+      "display": "CCID50",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "50% cell culture infectious dose"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CENTILITER",
+      "display": "CENTILITER",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "centiliter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CM",
+      "display": "CM",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "centimeter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CM2",
+      "display": "CM2",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "square centimeter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CM3",
+      "display": "CM3",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "cubic centimeter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CUBIC FOOT",
+      "display": "CUBIC FOOT",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "cubic foot"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "D-ANTIGEENI ÜHIK",
+      "display": "D-ANTIGEENI ÜHIK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "d-antigen unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "DOOS",
+      "display": "DOOS",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "dose(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "EL.U",
+      "display": "EL.U",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "ELISA unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ELISA ÜHIK",
+      "display": "ELISA ÜHIK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "ELISA unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G",
+      "display": "G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/1000ML",
+      "display": "G/1000ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 1000 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/100G",
+      "display": "G/100G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 100 gram"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/100ML",
+      "display": "G/100ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 100 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/20ML",
+      "display": "G/20ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 20 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/50ML",
+      "display": "G/50ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 50 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/5ML",
+      "display": "G/5ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per 5 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "G/ML",
+      "display": "G/ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s) per milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "GBQ",
+      "display": "GBQ",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gigabecquerel(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "GRAMM",
+      "display": "GRAMM",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "gram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "H",
+      "display": "H",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "hour(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "IR",
+      "display": "IR",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "index of reactivity"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KANISTER",
+      "display": "KANISTER",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "canister(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KAPSEL",
+      "display": "KAPSEL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "capsule(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KATSUTIT",
+      "display": "KATSUTIT",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "test-tube(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KG",
+      "display": "KG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "kilogram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KILOTONNE",
+      "display": "KILOTONNE",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "kiloton(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KOMPLEKT",
+      "display": "KOMPLEKT",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "kit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KONTEINER",
+      "display": "KONTEINER",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "container(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "KOTT",
+      "display": "KOTT",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "bag(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "L",
+      "display": "L",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "liter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "LD50",
+      "display": "LD50",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "lethal dose 50 -median concentration of a toxicant that will kill 50% of the test animals within a designated period"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "LRÜ",
+      "display": "LRÜ",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "LRÜ"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MBQ",
+      "display": "MBQ",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "megabecquerel(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG",
+      "display": "MCG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG/0,5ML",
+      "display": "MCG/0,5ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s) per 0,5 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG/ANNUSES",
+      "display": "MCG/ANNUSES",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s) per dose"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG/CM2",
+      "display": "MCG/CM2",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s) per square centimeter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG/ML",
+      "display": "MCG/ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s) per milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCG/VIAALIS",
+      "display": "MCG/VIAALIS",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microgram(s) per vial"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCI",
+      "display": "MCI",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microliter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCL",
+      "display": "MCL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microliter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MCL/G",
+      "display": "MCL/G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "microliter(s) per gram"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG",
+      "display": "MG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG+MCG",
+      "display": "MG+MCG",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) + microgram(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/100G",
+      "display": "MG/100G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per 100 gram"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/10ML",
+      "display": "MG/10ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per 10 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/20ML",
+      "display": "MG/20ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per 20 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/5ML",
+      "display": "MG/5ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per 5 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/ANNUSES",
+      "display": "MG/ANNUSES",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per dose"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/G",
+      "display": "MG/G",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per gram"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/ML",
+      "display": "MG/ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MG/TABLETIS",
+      "display": "MG/TABLETIS",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milligram(s) per tablet"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MILJTÜ",
+      "display": "MILJTÜ",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "million units"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ML",
+      "display": "ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milliliter(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ML/20ML",
+      "display": "ML/20ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milliliter(s) per 20 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ML/5ML",
+      "display": "ML/5ML",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "milliliter(s) per 5 milliliter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MMOL",
+      "display": "MMOL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "millimole(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MMOL/L",
+      "display": "MMOL/L",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "millimole(s) per liter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MOL/L",
+      "display": "MOL/L",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "mole(s) per liter"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "MÕÕTANNUS",
+      "display": "MÕÕTANNUS",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "actuation(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "PFU",
+      "display": "PFU",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "plaque forming unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "PPM",
+      "display": "PPM",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "parts per million"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "PUDEL",
+      "display": "PUDEL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "bottle(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "PURK",
+      "display": "PURK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "jar(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "RÜ",
+      "display": "RÜ",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "international unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "SÜSTAL",
+      "display": "SÜSTAL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "injection syringe(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "TABL",
+      "display": "TABLETTI",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "tablet(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "TILKA",
+      "display": "TILKA",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "drop(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "TK",
+      "display": "TÜKK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "piece(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "TÜ",
+      "display": "TOIMEAINE ÜHIK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "US GALLON",
+      "display": "US GALLON",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "USA gallon(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "US POUND",
+      "display": "US POUND",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "USA pound(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "VIAAL",
+      "display": "VIAAL",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "vial(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "X10ASTMES8",
+      "display": "X10ASTMES8",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "x10^8"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "X10ASTMES9",
+      "display": "X10ASTMES9",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "x10^9"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "YH",
+      "display": "YH",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "ÜHIK",
+      "display": "ÜHIK",
+      "designation": [
+        {
+          "language": "en",
+          "use": {
+            "code": "display"
+          },
+          "value": "unit(s)"
+        }
+      ],
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    }
+  ]
+}

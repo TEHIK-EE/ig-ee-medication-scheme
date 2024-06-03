@@ -1,0 +1,15 @@
+== Suppressed Messages ==
+
+# Externally defined ValueSets cannot be resolved
+
+The valueSet reference%
+Hyperlink 'https://fhir.ee/%
+The link 'https://fhir.ee/ValueSet/%
+The link 'https://fhir.ee/CodeSystem/%
+The link 'https://fhir.ee/StructureDefinition/%
+
+# Other
+Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+The Implementation Guide contains no examples for this extension
+%in the language en#
+A code with no system has no defined meaning. A system should be provided

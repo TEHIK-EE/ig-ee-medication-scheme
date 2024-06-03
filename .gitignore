@@ -1,0 +1,28 @@
+# Temporary folders #
+#####################
+temp
+template
+output
+input-cache
+fsh-generated
+
+# Don't commit this because it's so large #
+###########################################
+/input-cache/publisher.jar
+
+# Windows generated files #
+###########################
+Thumbs.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+hs_err_pid2908.log
+hs_err_pid2908.mdmp
+hs_err_pid16412.log
+hs_err_pid16412.mdmp

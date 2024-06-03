@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "retsepti-soodustuse-maar",
+  "language": "et",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+      "valueUrl": "https://termx.kodality.dev/fhir/ValueSet/retsepti-soodustuse-maar"
+    }
+  ],
+  "url": "https://fhir.ee/ValueSet/retsepti-soodustuse-maar",
+  "version": "1.0.0",
+  "name": "RetseptiSoodustuseMaar",
+  "title": "ER_Soodustuse määr",
+  "status": "active",
+  "experimental": false,
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "andmekorraldus@tehik.ee"
+        },
+        {
+          "system": "url",
+          "value": "https://tehik.ee/"
+        }
+      ]
+    }
+  ],
+  "description": "Elektrooniline retsept (ER) - Meditsiiniline dokumentatsioon digitaalse retsepti koostamisel/realiseerimisel/digitaliseerimisel.",
+  "effectivePeriod": {
+    "start": "2008-07-10T00:00:00Z"
+  },
+  "author": [
+    {
+      "name": "Tervisekassa"
+    }
+  ],
+  "compose": {
+    "inactive": false,
+    "include": [
+      {
+        "system": "https://fhir.ee/CodeSystem/retsepti-soodustuse-maar",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}
