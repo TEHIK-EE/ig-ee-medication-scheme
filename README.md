@@ -1,8 +1,8 @@
-Ravimiskeem / Medication Schema (copy of Simplifier project)
+Ravimiskeem / Medication Scheme 
 ---
 
 
-The IG is not for implementation, just a temporary playground and example.
+This IG is for Medication Scheme implementation. 
 
 Continuous Build: __http://build.fhir.org/ig/TEHIK-EE/ig-ee-medication-scheme__  
 
