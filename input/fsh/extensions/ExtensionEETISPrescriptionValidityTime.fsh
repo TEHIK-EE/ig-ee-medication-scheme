@@ -4,8 +4,8 @@ Description: "Retsepti kehtivuse lõpu aeg ravimiskeemi rea kontekstis. Validity
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "MedicationStatement"
-* . ^short = "Retsepti kehtivuse lõpu aeg."
-* . ^definition = "For expressing the validity end date of the prescription(s) in one MedicationStatement."
+* . ^short = "Validity end date of the prescription(s) in one MedicationStatement."
+* . ^definition = "Retsepti kehtivuse lõpu aeg."
 * value[x] only dateTime
-* value[x] ^short = "Retsepti kehtivuse lõpp kuupäeva täpsusega"
-* value[x] ^definition = "Ravimiskeemi reaga seotud retsepti kehtivuse lõpp."
+* value[x] ^short = "Validity end date of the prescription(s) in one MedicationStatement"
+* value[x] ^definition = "Ravimiskeemi reaga seotud retsepti kehtivuse lõpp kuupäeva täpsusega."

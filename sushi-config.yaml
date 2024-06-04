@@ -12,7 +12,7 @@ canonical: https://fhir.ee
 url: https://fhir.ee/ImplementationGuide/ig-ee-medication-scheme
 name: MedicationScheme
 title: "Medication Scheme Implementation Guide"
-description: "Implementation guide to be used in for medication scheme"
+description: "Implementation guide for medication scheme"
 status: draft
 license: CC0-1.0
 date: 2024-06-03

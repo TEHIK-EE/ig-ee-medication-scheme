@@ -10,14 +10,11 @@ Description: "Pakkeühiku suurus. Size of medicinal product item (3ml)."
 * ^contact[=].telecom[=].value = "https://www.tehik.ee"
 * ^contact[=].telecom[+].system = #email
 * ^contact[=].telecom[=].value = "fhir@tehik.ee"
-* ^contact[+].name = "Rutt Lindström"
-* ^contact[=].telecom.system = #email
-* ^contact[=].telecom.value = "rutt.lindstrom@tehik.ee"
-* ^contact[=].telecom.use = #work
 * ^jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * ^context.type = #element
 * ^context.expression = "Medication"
-* . ^short = "Pakkeühiku suurus"
-* . ^definition = "Size of medicinal product item (3ml). E.g. total volume of packaged medication is 30ml but it includes 10 items 3ml each."
+* . ^short = "Size of medicinal product item (3ml). E.g. total volume of packaged medication is 30ml but it includes 10 items 3ml each."
+* . ^definition = "Pakkeühiku suurus"
 * value[x] only SimpleQuantity
-* value[x] ^definition = "Size of medicinal product item (3ml). E.g. total volume of packaged medication is 30ml but it includes 10 items 3ml each."
+* value[x] ^short = "Size of medicinal product item"
+* value[x] ^definition = "Pakkeühiku suurus (3ml). Näiteks pakendi kogumaht on 30ml aga see sisaldab 10 pakkeühikut suuruses 3ml."

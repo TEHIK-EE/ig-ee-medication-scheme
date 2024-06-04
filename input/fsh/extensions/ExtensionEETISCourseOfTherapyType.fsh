@@ -9,7 +9,7 @@ Description: "Ravikuuri tüüp. Defines the type of medication course."
 * . ^short = "Defines whether the medication course is fixed or continuous etc."
 * value[x] only CodeableConcept
 * value[x] from $ravikuuri-tyyp-VS (preferred)
-* value[x] ^short = "Course of therapy type. pidev | fikseeritud | vajadusel | muutuv | ühekordne"
+* value[x] ^short = "Course of therapy type. \r\npidev | fikseeritud | vajadusel | muutuv | ühekordne"
 * value[x] ^definition = "Ravikuuri tüüp valitakse loendist iga retseptiravimi kohta eraldi."
 //* value[x].coding from $ravikuuri-tyyp-VS (preferred)
 //* value[x].coding ^binding.description = "Ravikuuri tüüp"

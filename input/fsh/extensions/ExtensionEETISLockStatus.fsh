@@ -12,7 +12,7 @@ Description: "Broneering retseptil. When pharmacy locks the prescription for ord
 * extension contains
     lockStatus 0..* and
     lockOwner 0..*
-* extension[lockStatus] ^short = "Prescription is locked in pharmacy "
+* extension[lockStatus] ^short = "Prescription is locked in pharmacy"
 * extension[lockStatus] ^definition = "Broneeritud apteegis. Kasutatakse juhul kui on tegemist müügiloata ravimi retseptiga, mis on saanud positiivse otsuse ning ootab apteegis tellitavat ravimit. "
 * extension[lockStatus].value[x] only boolean
 * extension[lockStatus].valueBoolean ^definition = "True - prescription is locked for certain pharmacy.\r\nFalse - prescription is not locked."

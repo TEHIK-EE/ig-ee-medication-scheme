@@ -10,10 +10,6 @@ Description: "Klassifikatsioon. Classification of the product, e.g. ATC."
 * ^contact[=].telecom[=].value = "https://www.tehik.ee"
 * ^contact[=].telecom[+].system = #email
 * ^contact[=].telecom[=].value = "fhir@tehik.ee"
-* ^contact[+].name = "Rutt Lindström"
-* ^contact[=].telecom.system = #email
-* ^contact[=].telecom.value = "rutt.lindstrom@tehik.ee"
-* ^contact[=].telecom.use = #work
 * ^jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * ^context.type = #element
 * ^context.expression = "Medication"

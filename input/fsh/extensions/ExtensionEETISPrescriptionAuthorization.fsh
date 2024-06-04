@@ -7,12 +7,10 @@ Description: "Volituse liik. Defines the authorization of the prescription."
 * ^context[=].expression = "MedicationStatement"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationRequest"
-* . ^short = "Volituse liik."
-* . ^definition = "Defines the authorization of the prescription."
+* . ^short = "Defines the authorization of the prescription."
+* . ^definition = "Volituse liik. Digiretsepti koostamisel on patsiendil võimalik piirata ravimi väljaostu õiguseid. Vaikimisi on küll kõik retseptid avalikud, kuid seda staatust saab muuta arst retsepti koostamisel või patsient terviseportaalis."
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $retsepti-volituse-liik-VS (required)
-* value[x] ^label = "VOLITUSE LIIK"
-* value[x] ^short = "avalik | privaatne | volitatud"
-* value[x] ^definition = "Prescription can be public, private or authorized."
-* value[x] ^binding.description = "Volituse liik"
+* value[x] ^short = "Prescription can be public, private or authorized.\r\navalik | privaatne | volitatud"
+* value[x] ^definition = "Volituse liik"
