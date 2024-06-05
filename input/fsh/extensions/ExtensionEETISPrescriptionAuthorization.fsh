@@ -12,5 +12,5 @@ Description: "Volituse liik. Defines the authorization of the prescription."
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $retsepti-volituse-liik-VS (required)
-* value[x] ^short = "Prescription can be public, private or authorized.\r\navalik | privaatne | volitatud"
+* value[x] ^short = "Prescription can be public, private or authorized.\r\n\r\navalik | privaatne | volitatud"
 * value[x] ^definition = "Volituse liik"

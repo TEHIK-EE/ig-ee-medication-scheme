@@ -6,7 +6,7 @@ Description: "Koostoimest mõjutatud ravimiskeemi rida.This extension is used in
 * ^date = "2024-02-23T08:41:33.7774358+00:00"
 * ^context.type = #element
 * ^context.expression = "ClinicalUseDefinition"
-* . ^short = "EETIS Extension "
+* . ^short = "MedicationStatements affected by interactions."
 * . ^definition = "Kasutusel viitamaks ravimiskeemi ridadele, millel on koostoimeid."
 * value[x] only Reference(EETISMedicationStatement)
 * value[x] ^short = "MedicationStatement including medication which interacts with other medication"

@@ -6,7 +6,7 @@ Description: "Nõusolek koostoimetega. This extension is used in EETISMedication
 * ^date = "2024-02-23T08:41:33.7774358+00:00"
 * ^context.type = #element
 * ^context.expression = "List"
-* . ^short = "If true indicates that practitioner is aware and agrees with medication interactions"
+* . ^short = "Consent with medication interactions."
 * value[x] only boolean
-* value[x] ^short = "Whether or not practitioner agrees with interactions"
+* value[x] ^short = "Whether or not practitioner agrees with interactions. \r\n\r\nIf true indicates that practitioner is aware and agrees with medication interactions"
 * value[x] ^definition = "Ravimi väljakirjutaja nõusolek koostoimetega"
