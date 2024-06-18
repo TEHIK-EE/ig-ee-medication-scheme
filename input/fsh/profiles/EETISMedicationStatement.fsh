@@ -12,7 +12,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     ExtensionEETISMedicationRemainder named extensionEETISMedicationRemainder 0..1 and
     ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and //reaalselt RKs 0..1 võimalik
 //    ExtensionEETISLockStatus named extensionEETISLockStatus 0..* and
-    ExtensionEETISDispensationAuthorization named extensionEETISDispensationAuthorization 0..1 and
+    ExtensionEETISDispensationAuthorization named extensionEETISDispensationAuthorization 1..1 and
     ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..1 and // täidetakse ainult ravimiskeemi rea kustutamisel
     ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..1 and //selected Reimbursement rate
     ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..1 and //Ravimiametilt küsida nimi

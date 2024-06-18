@@ -18,7 +18,8 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * note.author[x] only string or Reference(Practitioner or PractitionerRole)
 * note.time 1..
 * attester 1..1
-* attester ^short = "KES KINNITAS RAVIMISKEEMI. ARST. Attests to accuracy of composition"
+* attester ^short = "Practitioner who has verified medication scheme."
+* attester ^definition = "KES KINNITAS RAVIMISKEEMI. ARST."
 * attester.mode ^fixedCodeableConcept.text = "professional"
 * attester.party only Reference(EETISPractitionerRole or EETISPractitioner or EETISOrganization)
 * custodian ..0

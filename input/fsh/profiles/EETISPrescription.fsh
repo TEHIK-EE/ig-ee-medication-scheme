@@ -9,8 +9,8 @@ Description: "Retsept. This is a prescription of a medicine."
 * meta.lastUpdated ^example.valueInstant = "2023-09-25T12:12:12+00:01"
 * contained ..0
 * extension contains
-    ExtensionEETISDispensationAuthorization named dispensationAuthorization 0..* and
-    ExtensionEETISLockStatus named lockStatus 0..* and
+    ExtensionEETISDispensationAuthorization named dispensationAuthorization 1..1 and
+    ExtensionEETISLockStatus named lockStatus 0..1 and
     ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..* and
     ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and
     ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..*
