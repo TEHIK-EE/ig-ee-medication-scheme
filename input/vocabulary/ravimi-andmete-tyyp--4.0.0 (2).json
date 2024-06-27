@@ -1,0 +1,61 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ravimi-andmete-tyyp",
+    "language": "et",
+    "url": "https://fhir.ee/ValueSet/ravimi-andmete-tyyp",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.25"
+      },
+      {
+        "type": {
+          "coding": [
+            {
+              "code": "version"
+            }
+          ]
+        },
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.3.6.1.4.1.28284.6.2.2.25.4"
+      }
+    ],
+    "version": "4.0.0",
+    "name": "RavimiAndmeteTyyp",
+    "title": "Ravimi andmete tüüp",
+    "status": "active",
+    "experimental": false,
+    "publisher": "TEHIK",
+    "contact": [
+      {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "andmekorraldus@tehik.ee"
+          },
+          {
+            "system": "url",
+            "value": "https://tehik.ee/"
+          }
+        ]
+      }
+    ],
+    "description": "Digiloo XML sõnumis <substanceAdmistration><code> elemendis vastavalt Digiloo standardites määratud reeglitele. Digiloo sõnumis ravimi andmete tüüp näitab, kas tegu on välja kirjutatud retseptiga või meditsiinitöötaja poolt patsiendile antud ravimiga.",
+    "effectivePeriod": {
+      "start": "2019-05-16T00:00:00Z"
+    },
+    "author": [
+      {
+        "name": "TEHIK"
+      }
+    ],
+    "compose": {
+      "inactive": false,
+      "include": [
+        {
+          "system": "https://fhir.ee/CodeSystem/ravimi-andmete-tyyp",
+          "version": "4.0.0"
+        }
+      ]
+    }
+  }

@@ -77,3 +77,5 @@ Alias: $ee-location = https://fhir.ee/StructureDefinition/ee-location
 Alias: $ee-practitioner = https://fhir.ee/StructureDefinition/ee-practitioner
 Alias: $ee-practitioner-role = https://fhir.ee/StructureDefinition/ee-practitioner-role
 Alias: $ee-related-person = https://fhir.ee/StructureDefinition/ee-related-person
+Alias: $ravimi-andmete-tyyp = https://fhir.ee/CodeSystem/ravimi-andmete-tyyp
+Alias: $ravimi-andmete-tyyp-VS = https://fhir.ee/ValueSet/ravimi-andmete-tyyp

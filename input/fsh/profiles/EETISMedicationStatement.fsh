@@ -34,7 +34,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
 * category[courseOfTherapyType] ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND"
-* category[statementOriginCategory] from $statement-origin-category-VS (required)
+* category[statementOriginCategory] from $ravimi-andmete-tyyp-VS (required)
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
 * category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement. Use code |ASK| from ValueSet ravimi-andmete-tyyp."
