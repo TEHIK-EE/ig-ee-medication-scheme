@@ -35,9 +35,9 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[courseOfTherapyType] ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND"
 * category[statementOriginCategory] from $statement-origin-category-VS (required)
-* category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. VAJAB UUT LOENDIT!!"
-* category[statementOriginCategory] ^definition = "SEE KATEGOORIA DEFINEERIB ÄRA, KAS RAVIMISKEEMI RIDA ON LOODUD RETSEPTIKESKUSE RETSEPTI PEALT VÕI PATSIENDI SÕNUL. (Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.)."
-* category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement."
+* category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
+* category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
+* category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement. Use code |ASK| from ValueSet ravimi-andmete-tyyp."
 * category[prescriptionCategory] from $retsepti-liik-VS (required)
 * category[prescriptionCategory] ^short = "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
