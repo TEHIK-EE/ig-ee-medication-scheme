@@ -39,7 +39,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
 * category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement. Use only code |ASK| from ValueSet ravimi-andmete-tyyp."
 //* category[statementOriginCategory] = $ravimi-andmete-tyyp-VS#ASK "ütluspõhine ravim" (exactly)
-* category[statementOriginCategory] ^fixedCodeableConcept.text = "ütluspõhine ravim"
+* category[statementOriginCategory] ^fixedCodeableConcept.text = "|ASK| ütluspõhine ravim"
 * category[prescriptionCategory] from $retsepti-liik-VS (required)
 * category[prescriptionCategory] ^short = "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
