@@ -14,14 +14,17 @@ Description: "Väljamüük. When the medication prescribed is dispensed in pharm
 * identifier ..0
 * basedOn ..0
 * partOf ..0
+* status = #completed (exactly)
+* status ^short = "When dispensation occurres it is always completed."
+* status ^definition = "Ravimi väljamüük saab olla ainult \"completed\" staatuses, kui ravimit ei saa müüa siis muutub kas retsepti või ravimiskeemi rea staatus ja dispense pole üldse."
 * notPerformedReason ..0
 * statusChanged ..0
 * category ..0
-* medication only CodeableReference(EETISMedicationEPC)
+* medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 * medication ^short = "Väljastatud ravim"
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
-//* medication.reference only Reference(EETISMedicationEPC)
+//* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
 * subject only Reference(EETISPatient)
 * subject ^short = "Patsient, kellele ravim väljastatakse"

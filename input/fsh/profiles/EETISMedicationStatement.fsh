@@ -6,7 +6,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * ^status = #draft
 * ^date = "2024-02-23T10:56:02.4427313+00:00"
 * text ^short = "MedicationStatement is part of MedicationOverview representing one treatmentline"
-* contained ..0
+* contained 0..*
 * extension contains
     ExtensionEETISPrescriptionValidityTime named extensionEETISPrescriptionValidityTime 0..1 and
     ExtensionEETISMedicationRemainder named extensionEETISMedicationRemainder 0..1 and
@@ -46,10 +46,10 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
 * category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * category[repeatCategory] ^binding.description = "Retsepti kordsus. LOEND."
-* medication only CodeableReference(EETISMedicationEPC)
+* medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
-//* medication.reference only Reference(EETISMedicationEPC)
+//* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
 * subject only Reference(EETISPatient)
 * subject ^type.aggregation = #referenced

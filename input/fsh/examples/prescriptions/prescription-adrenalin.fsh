@@ -1,7 +1,7 @@
 Instance: prescription-adrenalin
 InstanceOf: MedicationRequest
 Usage: #example
-Description: "Prescription of adrenaline in on-hold status as the marketing request has negative decision"
+Description: "Prescription of adrenaline marketing request has negative decision"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-prescription"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
@@ -27,7 +27,7 @@ Description: "Prescription of adrenaline in on-hold status as the marketing requ
 * extension[=].extension[=].valueDateTime = "2023-11-11"
 * extension[=].extension[+].url = "requestNegDecision"
 * extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 "Taotletud ravimil on kehtiv müügiluba ning seda turustatakse Eestis. Ei vaja arsti taotlust."
-* status = #on-hold
+* status = #active
 * statusChanged = "2023-11-07"
 * intent = #proposal
 * category[0] = $retsepti-liik#1 "tavaretsept"

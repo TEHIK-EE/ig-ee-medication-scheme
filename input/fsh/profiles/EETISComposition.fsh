@@ -49,7 +49,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * section.entry[medicationDispenseEntry] only Reference(EETISPrescriptionDispense)
 * section.entry[medicationRequestEntry] only Reference(EETISPrescription)
 * section.entry[patientEntry] only Reference(EETISPatient)
-* section.entry[medicationEntry] only Reference(EETISMedicationEPC)
+* section.entry[medicationEntry] only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 * section.entry[practitionerEntry] only Reference(EETISPractitioner)
 * section.entry[practitionerRoleEntry] only Reference(EETISPractitionerRole)
 * section.entry[organizationEntry] only Reference(EETISOrganization)

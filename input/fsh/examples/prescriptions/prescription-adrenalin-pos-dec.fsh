@@ -27,7 +27,7 @@ Description: "Unauthorized medication adrenaline with positive decision for mark
 * extension[=].extension[=].valueDateTime = "2023-11-11"
 //* extension[=].extension[+].url = "requestNegDecision"
 //* extension[=].extension[=].valueCodeableConcept = $myygiloata-ravimi-neg-otsuse-pohjendus#ON04 "Tegelikult, kui on positiivne otsus siis negatiivset keeldumist siia ei tule ju."
-* status = #on-hold
+* status = #active
 * statusChanged = "2023-11-07"
 * intent = #proposal
 * category[0] = $retsepti-liik#1 "tavaretsept"

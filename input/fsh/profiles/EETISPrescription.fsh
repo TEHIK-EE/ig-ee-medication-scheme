@@ -23,7 +23,7 @@ Description: "Retsept. This is a prescription of a medicine."
 * identifier.assigner only Reference(EETISOrganization)
 * basedOn ..1
 * priorPrescription ..0
-* status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status \"on-hold\" ning extension lockStatus alt täpsustus, milline apteek retesepti broneeris. \r\n\r\nA code specifying the current state of the order.  Generally, this will be active or completed state."
+* status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status siiski \"active\" , sest retsept on aktiivne ning kui müügiloa otsus on positiivne ja \"intent\" muutunud \"proposal\"-st \"order\"-ks extension lockStatus alt täpsustus, milline apteek retesepti broneeris ja retsept staatusesse \"on-hold. \r\n\r\nA code specifying the current state of the order.  Generally, this will be active or completed state."
 * statusReason from $retsepti-annulleerimise-pohjus-VS (required)
 * statusReason ^short = "ANNULLEERIMISE PÕHJUS. LOEND. Reason for current status"
 * statusReason ^definition = "Kui retsept annulleeritakse, kasutatakse statust \"cancelled\" ning valitakse põhjus loendist \"Annulleerimise põhjuse\".\r\n\r\nCaptures the reason for the current state of the MedicationRequest."
@@ -49,10 +49,10 @@ Description: "Retsept. This is a prescription of a medicine."
 * category[repeatCategory] ^binding.description = "Retsepti kordsuse loend"
 * priority ..0
 * doNotPerform ..0
-* medication only CodeableReference(EETISMedicationEPC)
+* medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 * medication ^type.aggregation = #referenced
 //* medication.concept ..0
-* medication only CodeableReference(EETISMedicationEPC)
+* medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 * subject only Reference(EETISPatient)
 * subject ^short = "Patsient, kellele retsept on välja kirjutatud"
 * subject ^type.aggregation = #referenced
