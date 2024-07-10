@@ -49,7 +49,7 @@ Description: "Ekstemporaalne ravim. Profile for representing medication that is 
 * totalVolume.code ^short = "Unit for total volume"
 * totalVolume.code ^definition = "Ühikute koguhulga ühik"
 * ingredient 1..
-* ingredient.item.concept.text = "List of ingredients for medication preparation"
+* ingredient.item.concept.text 1..1
 * ingredient.item ^short = "List of ingredients in precise amounts for medication preparation"
 * ingredient.item ^definition = "Retsept koos vajalike kogustega ravimi valmistamiseks apteegis"
 //* ingredient.item.concept ^binding.description = "Toimeainete loend"
