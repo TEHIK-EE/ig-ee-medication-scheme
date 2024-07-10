@@ -29,4 +29,4 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * entry[organizationEntry].resource only EETISOrganization
 * entry[patientEntry].resource only EETISPatient
 * entry[deviceEntry].resource only Device
-* entry[medicationEntry].resource only EETISMedicationEPC or EETISMedicationExtemporal 
+* entry[medicationEntry].resource only EETISMedicationEPC or EETISMedicationExtemporal or EETISMedicationDispensedToPatient

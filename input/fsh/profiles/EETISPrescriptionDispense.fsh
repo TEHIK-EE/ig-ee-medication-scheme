@@ -20,7 +20,7 @@ Description: "Väljamüük. When the medication prescribed is dispensed in pharm
 * notPerformedReason ..0
 * statusChanged ..0
 * category ..0
-* medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
+* medication only CodeableReference(EETISMedicationDispensedToPatient or EETISMedicationExtemporal)
 * medication ^short = "Väljastatud ravim"
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0

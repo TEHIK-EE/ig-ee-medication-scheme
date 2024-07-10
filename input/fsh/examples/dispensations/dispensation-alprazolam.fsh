@@ -10,7 +10,7 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * extension.extension[+].url = "reimbursementReason"
 * extension.extension[=].valueString = "ei ole soodusravim"
 * status = #completed
-* medication.reference = Reference(alprazolam)
+* medication.reference = Reference(alprazolam-dispensed)
 * subject = Reference(pat1MatiMeri)
 * performer.actor = Reference(pharmacistKristiina)
 * authorizingPrescription = Reference(prescription-alprazolam)

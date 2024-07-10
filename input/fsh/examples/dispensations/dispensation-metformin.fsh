@@ -12,7 +12,7 @@ Description: "Dispensation of metformin prescription for other buyer"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc"
 * extension[=].valueString = "42002230000"
 * status = #completed
-* medication.reference = Reference(metformin)
+* medication.reference = Reference(metformin-dispensed)
 * subject = Reference(pat1MatiMeri)
 * performer.actor = Reference(pharmacistKristiina)
 * authorizingPrescription = Reference(prescription-metformin)

@@ -56,7 +56,10 @@ Description: "Retsept. This is a prescription of a medicine."
 * subject only Reference(EETISPatient)
 * subject ^short = "Patsient, kellele retsept on välja kirjutatud"
 * subject ^type.aggregation = #referenced
-* informationSource ..0
+* informationSource 0..*
+* informationSource ^short = "If prescription is cancelled by someone else than original prescriber it must be filled here. Original prescriber remains in requester field."
+* informationSource ^definition = "Juhul kui retsept on annulleeritud kellegi teise poolt kui algne väljakirjutaja, tuleb annulleerija info siia tuua."
+* informationSource only Reference(EETISPractitionerRole or EETISPractitioner)
 * encounter ..0
 * authoredOn 1..
 * authoredOn ^short = "Koostamise aeg"

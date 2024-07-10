@@ -18,6 +18,7 @@ Description: "Cancelled prescription of phenoxymethylpenicillin"
 * intent = #order
 * medication.reference = Reference(fenoksymetyylpenitsilliin)
 * subject = Reference(pat1MatiMeri)
+* informationSource = Reference(PractRoleD98765)
 * authoredOn = "2023-11-07"
 * reason.concept = $rhk-10#J20.2 "Streptokokitekkene äge bronhiit"
 * dosageInstruction.timing.repeat.count = 3
