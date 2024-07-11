@@ -1,11 +1,11 @@
 Profile: EETISMedicationStatement
 Parent: MedicationStatement
 Id: ee-tis-medication-statement
-Description: "Ravimiskeemi rida. One or more Medication Statements form patient's Medication Overview."
+Description: "Ravimiskeemi rida. One or more Medication Statements form patient's Medication Scheme."
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-23T10:56:02.4427313+00:00"
-* text ^short = "MedicationStatement is part of MedicationOverview representing one treatmentline"
+* text ^short = "MedicationStatement is part of Medication Scheme representing one treatmentline"
 * contained 0..*
 * extension contains
     ExtensionEETISPrescriptionValidityTime named extensionEETISPrescriptionValidityTime 0..1 and
@@ -21,8 +21,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..*
 * extension[extensionEETISVerification] ^definition = "Optional Extension Element - found in all resources."
 * partOf only Reference(MedicationStatement)
-* status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud. A code representing the status of recording the medication statement."
-* status ^short = "recorded = KINNITATUD; draft = KINNITAMATA"
+* status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud."
+* status ^short = "A code representing the status of recording the medication statement. recorded = KINNITATUD; draft = KINNITAMATA"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -45,34 +45,38 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
 * category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne | 6-kordne"
-* category[repeatCategory] ^binding.description = "Retsepti kordsus. LOEND."
+* category[repeatCategory] ^binding.description = "RETSEPTI KORDSUS. LOEND."
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
 //* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
 * subject only Reference(EETISPatient)
-* subject ^type.aggregation = #referenced
+//* subject ^type.aggregation = #referenced
 * encounter ..0
 * effective[x] only Period
 * effective[x] ^short = "Ravimiskeemi rea kehtivuse algus"
 * informationSource only Reference(EETISPractitioner or EETISPractitionerRole)
-* informationSource ^short = "Ravimiskeemi rea (algne) koostaja"
-* informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."
+* informationSource ^short = "Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."
+* informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Ravimiskeemi rea (algne) koostaja."
 * derivedFrom only Reference(EETISPrescription)
-* derivedFrom ^short = "SEOTUD RETSEPTID. Link to information used to derive the MedicationStatement"
+* derivedFrom ^short = "Prescriptions created elsewhere than in TJT. Link to information used to derive the MedicationStatement"
+* derivedFrom ^definition = "SEOTUD RETSEPTID."
 * derivedFrom ^type.aggregation = #referenced
-* reason ^definition = "A concept, Condition or observation that supports why the medication is being/was taken.\r\nDIAGNOOSIKOOD retseptikeskusest"
+* reason ^definition = "Diagnoosikoodid (RHK-10)\r\nDIAGNOOSIKOOD retseptikeskusest"
 * reason from $rhk-10-VS (preferred)
-* reason ^short = "Diagnoosikoodid (RHK-10)"
+* reason ^short = "Diagnose for medication. ICD-10 codes from Estonian Prescription Centre. Reimbursement of medication depends on which ICD-10 code is used."
 //* reason ^binding.description = "Diagnoosikood RHK-10"
 //* reason.reference ..0
-* note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes.\r\nSiia saab kirjutada märkusi ravimiskeemi rea kohta."
+* note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes."
+* note ^short = "Siia saab kirjutada märkusi ravimiskeemi rea kohta."
 * note.author[x] 1..
 * note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
-* dosage ^definition = "Indicates how the medication is/was or should be taken by the patient.\r\nANNUSTAMISEJUHIS"
-* dosage.additionalInstruction ^definition = "VALMISTAMISEJUHIS\r\nSupplemental instructions to the patient on how to take the medication  (e.g. \"with meals\" or\"take half to one hour before food\") or warnings for the patient about the medication (e.g. \"may cause drowsiness\" or \"avoid exposure of skin to direct sunlight or sunlamps\")."
+* dosage ^short = "Indicates how the medication is/was or should be taken by the patient."
+* dosage ^definition = "ANNUSTAMISEJUHIS"
+* dosage.additionalInstruction ^definition = "VALMISTAMISEJUHIS"
+* dosage.additionalInstruction ^short = "Supplemental instructions to the patient on how to take the medication  (e.g. \"with meals\" or\"take half to one hour before food\") or warnings for the patient about the medication (e.g. \"may cause drowsiness\" or \"avoid exposure of skin to direct sunlight or sunlamps\")."
 * dosage.maxDosePerAdministration.unit ..0
 * adherence ..0

@@ -5,12 +5,15 @@ Description: "Apteegi asukoht. This resource is used when there is a need to spe
 * ^status = #draft
 * ^date = "2023-09-28T10:15:30.0319461+00:00"
 * contained ..0
-* identifier ^short = "APTEEGI TEGEVUSKOHA KOOD. Unique code or number identifying the location to its users"
+* identifier ^short = "Unique code or number identifying the location to its users"
+* identifier ^definition ="APTEEGI TEGEVUSKOHA KOOD."
 * operationalStatus ..0
-* name ^short = "APTEEGI TEGEVUSKOHA NIMI. Name of the location as used by humans"
+* name ^short = "Name of the location as used by humans"
+* name ^definition = "APTEEGI TEGEVUSKOHA NIMI." 
 * type ..0
 * position ..0
-* managingOrganization ^short = "APTEEGI ÄRIREGISTRI KOOD. Organization responsible for provisioning and upkeep"
+* managingOrganization ^short = "Organization responsible for provisioning and upkeep"
+* managingOrganization ^definition = "APTEEGI ÄRIREGISTRI KOOD."
 * partOf ..0
 * characteristic ..0
 * hoursOfOperation ..0
