@@ -6,7 +6,7 @@ Description: "Apteegi asukoht. This resource is used when there is a need to spe
 * ^date = "2023-09-28T10:15:30.0319461+00:00"
 * contained ..0
 * identifier ^short = "Unique code or number identifying the location to its users"
-* identifier ^definition ="APTEEGI TEGEVUSKOHA KOOD."
+* identifier ^definition = "APTEEGI TEGEVUSKOHA KOOD."
 * operationalStatus ..0
 * name ^short = "Name of the location as used by humans"
 * name ^definition = "APTEEGI TEGEVUSKOHA NIMI." 
