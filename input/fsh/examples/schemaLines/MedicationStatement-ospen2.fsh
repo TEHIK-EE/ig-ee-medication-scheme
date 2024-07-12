@@ -13,7 +13,10 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
 * extension[=].valueDateTime = "2023-11-07"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
-* extension[=].valueInteger = 12
+* extension[=].extension[0].url = "daysAvailable"
+* extension[=].extension[=].valueInteger = 12
+* extension[=].extension[+].url = "daysDispensed"
+* extension[=].extension[=].valueInteger = 12
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#75 "75%"

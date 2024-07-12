@@ -10,7 +10,10 @@ Usage: #example
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
 * extension[=].valueDateTime = "2023-11-07"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
-* extension[=].valueInteger = 12
+* extension[=].extension[0].url = "daysAvailable"
+* extension[=].extension[=].valueInteger = 100
+* extension[=].extension[+].url = "daysDispensed"
+* extension[=].extension[=].valueInteger = 30
 //* modifierExtension.url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 //* modifierExtension.extension[0].valueDateTime = "2023-11-07"
 //* modifierExtension.extension[+].valueReference = Reference(PractRoleD98765)
