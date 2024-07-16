@@ -8,29 +8,29 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "value"
 * parameter ^slicing.rules = #open
-* parameter ^short = "Received reimbursement rate from EPC"
+* parameter ^short = "Received reimbursement rate from EPC (Estonian Prescription Centre)"
 * parameter.name ^short = "Received reimbursement rate from EPC"
-* parameter.name ^definition = "SOODUSMÄÄR päringu vastusena olenevalt, millised õigused on patsiendil. The name of the parameter (reference to the operation definition)."
+* parameter.name ^definition = "SOODUSMÄÄR (retseptikeskusest) päringu vastusena olenevalt, millised õigused on patsiendil."
 * parameter contains
     insuranceParameter 0..* and
     insuranceEUParameter 0..* and
     oldAgePensionParameter 0..* and
     incapacityForWorkPensionParameter 0..* and
     reimbursementRateParameter 0..*
-* parameter[insuranceParameter] ^short = "Kindlustatus"
-* parameter[insuranceParameter] ^definition = "A parameter received from the operation indicationg whether or not the patient is insured."
+* parameter[insuranceParameter] ^short = "A parameter received from the operation indicationg whether or not the patient is insured."
+* parameter[insuranceParameter] ^definition = "Kindlustatus"
 * parameter[insuranceParameter].name ^short = "Insurance response"
 * parameter[insuranceParameter].value[x] only boolean
-* parameter[insuranceEUParameter] ^short = "EU kindlustatus"
-* parameter[insuranceEUParameter] ^definition = "A parameter received from the operation indication whether or not the patient has EU insurance."
+* parameter[insuranceEUParameter] ^short = "A parameter received from the operation indication whether or not the patient has EU insurance."
+* parameter[insuranceEUParameter] ^definition = "EU kindlustatus"
 * parameter[insuranceEUParameter].name ^short = "EU insurance response"
 * parameter[insuranceEUParameter].value[x] only boolean
-* parameter[oldAgePensionParameter] ^short = "Vanaduspension"
-* parameter[oldAgePensionParameter] ^definition = "A parameter received from the operation indicationg whether or not the patient has old age pension."
+* parameter[oldAgePensionParameter] ^short = "A parameter received from the operation indicationg whether or not the patient has old age pension."
+* parameter[oldAgePensionParameter] ^definition = "Vanaduspension"
 * parameter[oldAgePensionParameter].name ^short = "Old age pension response"
 * parameter[oldAgePensionParameter].value[x] only boolean
-* parameter[incapacityForWorkPensionParameter] ^short = "Töövõimetuspension"
-* parameter[incapacityForWorkPensionParameter] ^definition = "A parameter received from the operation indication whether the patient has pension for incapacity for work."
+* parameter[incapacityForWorkPensionParameter] ^short = "A parameter received from the operation indication whether the patient has pension for incapacity for work."
+* parameter[incapacityForWorkPensionParameter] ^definition = "Töövõimetuspension"
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
 * parameter[reimbursementRateParameter].value[x] only CodeableConcept
