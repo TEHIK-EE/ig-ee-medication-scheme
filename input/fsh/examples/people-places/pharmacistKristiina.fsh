@@ -10,6 +10,6 @@ Description: "Practitioner with Medre code P00197 in practitioner role pharmacis
 * organization.identifier.value = "74000091"
 * organization.display = "Haigekassa"
 * code[0] = $practitioner-role#pharmacist "pharmacist"
-* code[+] = $autoriseerimismooduli-kasutajarollid-VS#specialist "Spetsialist"
+* code[+] = $autoriseerimismooduli-kasutajarollid#specialist "Spetsialist"
 * contact.telecom.system = #email
 * contact.telecom.value = "apteek123@tehik.ee"
