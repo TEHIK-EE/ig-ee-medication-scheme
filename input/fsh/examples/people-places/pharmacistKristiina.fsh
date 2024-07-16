@@ -9,6 +9,7 @@ Description: "Practitioner with Medre code P00197 in practitioner role pharmacis
 * practitioner.display = "Proviisor Kristiina Kuldkepp"
 * organization.identifier.value = "74000091"
 * organization.display = "Haigekassa"
-* code = $practitioner-role#pharmacist "pharmacist"
+* code[0] = $practitioner-role#pharmacist "pharmacist"
+* code[+] = $autoriseerimismooduli-kasutajarollid-VS#specialist "Spetsialist"
 * contact.telecom.system = #email
 * contact.telecom.value = "apteek123@tehik.ee"

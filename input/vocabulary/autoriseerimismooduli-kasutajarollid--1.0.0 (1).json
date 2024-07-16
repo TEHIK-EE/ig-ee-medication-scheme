@@ -6,14 +6,6 @@
       {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/web-source",
         "valueUrl": "https://akk.tehik.ee/classifier/fhir/ValueSet/autoriseerimismooduli-kasutajarollid"
-      },
-      {
-        "url": "https://fhir.ee/StructureDefinition/version-description",
-        "valueString": "TIS mikroteenuste juures autoriseerimisel kasutatavate rollide loend."
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
-        "valueCode": "executable"
       }
     ],
     "url": "https://fhir.ee/CodeSystem/autoriseerimismooduli-kasutajarollid",

@@ -5,4 +5,4 @@ Description: "Tervishoiutöötaja roll. Certified/licenced practitioner in a cer
 * ^status = #draft
 * ^date = "2024-01-16T07:51:36.859751+00:00"
 * code 1..
-* code from $autoriseerimismooduli-kasutajarollid
+* code from $autoriseerimismooduli-kasutajarollid-VS
