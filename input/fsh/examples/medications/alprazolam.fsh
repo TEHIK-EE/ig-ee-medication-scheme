@@ -11,7 +11,7 @@ Description: "Description of medication alprazoleme"
 //* extension[=].valueQuantity = 1 https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik#MG
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Xanax XR"
-* identifier.system = "http://ravimiregister.ee/pakendid"
+* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
 * identifier.value = "1021857"
 * doseForm = $ravimvormid#1224 "toimeainet prolongeeritult vabastav tablett"
 * totalVolume.value = 30

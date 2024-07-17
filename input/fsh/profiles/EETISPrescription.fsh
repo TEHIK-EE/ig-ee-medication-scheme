@@ -18,9 +18,9 @@ Description: "Retsept. This is a profile for medication prescription."
 * extension[lockStatus] ^definition = "Kasutatakse AINULT müügiloata ravimi taotluse retsepti broneerimise puhul."
 * extension[extensionEETISUnauthorizedProductRequest] ^short = "Müügiloata ravimi taotluse tarvis."
 * identifier ..1
-* identifier.system from $tis-fhir-identifikaatorid (preferred)
-* identifier.system ^short = "System for identificators"
-* identifier.system ^definition = "TIS FHIR identifikaatorite süsteem"
+* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
+* identifier.system ^short = "Identifier system uri for Estonian Prescription Centre prescriptions"
+//* identifier.system ^definition = "TIS FHIR identifikaatorite süsteem"
 * identifier.value ^short = "Prescription number"
 * identifier ^short = "Retsepti number."
 * identifier ^definition = "Retsepti unikaalne identifikaator. Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server."
