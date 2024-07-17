@@ -61,6 +61,9 @@ First phase of development is tightly connected with Estonian Medical Prescripti
 
 TJT – Tervisejuhtimise töölaud - is a new software currently under developement for healthcare proffessionals. TJT is going to be developed module by module Medication Overview being the first module. TJT is a central tool aiming to bring health care proffessionald in common space in order to add, display and exchange health data with each other.
 
+## Terminology
+
+Code systems and value sets in this IG are examples. You will find the most up-to-date versions of them in TEHIK terminology server. Always query the terminology from there.
 
 ## References
 

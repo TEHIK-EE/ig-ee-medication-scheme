@@ -1,13 +1,13 @@
 Profile: EETISPrescription
 Parent: MedicationRequest
 Id: ee-tis-prescription
-Description: "Retsept. This is a prescription of a medicine."
+Description: "Retsept. This is a profile for medication prescription."
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-21T13:56:50.8906817+00:00"
 * meta.lastUpdated ^example.label = "ajanäidis"
 * meta.lastUpdated ^example.valueInstant = "2023-09-25T12:12:12+00:01"
-* contained ..0
+* contained 0..*
 * extension contains
     ExtensionEETISDispensationAuthorization named dispensationAuthorization 1..1 and
     ExtensionEETISLockStatus named lockStatus 0..1 and
