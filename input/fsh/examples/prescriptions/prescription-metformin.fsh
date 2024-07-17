@@ -11,8 +11,8 @@ Description: "Prescription of metformin with substitution NOT allowed and reason
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
-* identifier.system = $tis-fhir-identifikaatorid#retseptikeskus-retsept "Retseptikeskuse retsepti number"
-* identifier.value = "123456"
+* identifier.system = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept
+* identifier.value = "1018862058"
 * status = #active
 * statusChanged = "2014-06-10"
 * intent = #order
