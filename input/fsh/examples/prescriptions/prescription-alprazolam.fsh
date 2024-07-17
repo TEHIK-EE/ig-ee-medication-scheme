@@ -11,6 +11,8 @@ Description: "Prescription of alprazolam with reimbursement rate 50%"
 * extension[=].extension[=].valueString = "nii on"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
+* identifier.system = $tis-fhir-identifikaatorid#retseptikeskus-retsept "Retseptikeskuse retsepti number"
+* identifier.value = "123456"
 * status = #active
 * statusChanged = "2014-06-10"
 * intent = #order
