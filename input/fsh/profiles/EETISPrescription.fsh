@@ -27,7 +27,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * identifier.assigner only Reference(EETISOrganization)
 * basedOn ..1
 * priorPrescription ..0
-* status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status siiski \"active\" , sest retsept on aktiivne ning kui müügiloa otsus on positiivne ja \"intent\" muutunud \"proposal\"-st \"order\"-ks extension lockStatus alt täpsustus, milline apteek retesepti broneeris ja retsept staatusesse \"on-hold. \r\n\r\nA code specifying the current state of the order.  Generally, this will be active or completed state."
+* status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status siiski \"active\" , sest retsept on aktiivne ning kui müügiloa otsus on positiivne ja \"intent\" muutunud \"proposal\"-st \"order\"-ks extension lockStatus alt täpsustus, milline apteek retesepti broneeris ja retsept staatusesse \"on-hold. \r\n\r\nA code specifying the current state of the order. Generally, this will be active or completed state."
 * statusReason from $retsepti-annulleerimise-pohjus-VS (required)
 * statusReason ^short = "ANNULLEERIMISE PÕHJUS. LOEND. Reason for current status"
 * statusReason ^definition = "Kui retsept annulleeritakse, kasutatakse statust \"cancelled\" ning valitakse põhjus loendist \"Annulleerimise põhjuse\".\r\n\r\nCaptures the reason for the current state of the MedicationRequest."
@@ -49,7 +49,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
 * category[repeatCategory].coding.system = $retsepti-kordsus
 * category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne| 6-kordne"
-* category[repeatCategory] ^definition = "KORDSUS. LOEND.  An arbitrary categorization or grouping of the medication request.  It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication."
+* category[repeatCategory] ^definition = "KORDSUS. LOEND.  An arbitrary categorization or grouping of the medication request. It could be used for indicating where meds are intended to be administered, eg. in an inpatient setting or in a patient's home, or a legal category of the medication."
 * category[repeatCategory] ^binding.description = "Retsepti kordsuse loend"
 * priority ..0
 * doNotPerform ..0
@@ -105,11 +105,11 @@ Description: "Retsept. This is a profile for medication prescription."
 * dosageInstruction.timing.repeat.countMax ..0
 * dosageInstruction.timing.repeat.duration ..0
 * dosageInstruction.timing.repeat.durationMax ..0
-* dosageInstruction.timing.repeat.frequency ^short = "Mitu korda (ajaühikus). Indicates the number of repetitions that should occur within a period. I.e. Event occurs frequency times per period"
+* dosageInstruction.timing.repeat.frequency ^short = "Mitu korda (ajaühikus). Indicates the number of repetitions that should occur within a period. I.e. Event occurs frequency times per period."
 * dosageInstruction.timing.repeat.frequencyMax ..0
 * dosageInstruction.timing.repeat.period ^short = "(mitu korda) aja(ühikus). The duration to which the frequency applies. I.e. Event occurs frequency times per period"
 * dosageInstruction.timing.repeat.periodMax ..0
-* dosageInstruction.timing.repeat.periodUnit ^definition = "T(mitu korda aja)ühikus. he units of time for the period in UCUM units\nNormal practice is to use the 'mo' code as a calendar month when calculating the next occurrence."
+* dosageInstruction.timing.repeat.periodUnit ^definition = "T(mitu korda aja)ühikus. The units of time for the period in UCUM units\nNormal practice is to use the 'mo' code as a calendar month when calculating the next occurrence."
 * dosageInstruction.timing.repeat.dayOfWeek ..0
 * dosageInstruction.timing.repeat.when ..0
 * dosageInstruction.timing.repeat.offset ..0
@@ -138,7 +138,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * dosageInstruction.maxDosePerPeriod ..0
 * dosageInstruction.maxDosePerAdministration ..0
 * dosageInstruction.maxDosePerLifetime ..0
-* dispenseRequest ^definition = "Täpne info ravimi väljamüügi kohta. \r\n\r\nIndicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department."
+* dispenseRequest ^definition = "Täpne info ravimi väljamüügi kohta. \r\n\r\nIndicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order). Note that this information is not always sent with the order. There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department."
 * dispenseRequest.id ..0
 * dispenseRequest.initialFill ..0
 * dispenseRequest.dispenseInterval ..0

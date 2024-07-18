@@ -98,7 +98,7 @@
       {
         "code": "consent-representative",
         "display": "Täieõiguslik esindaja",
-        "definition": "Terviseportaalis patsiendi enda poolt määratud täieõiguslik esindaja. Vaatamisõigus (v.a. aegkriitilisi andmeid ja neid meditsiinidokumente, mille patsient on esindajale sulgenud). Õigus uuendada isikuandmeid, sulgeda arstile meditsiinidokumente või kogu digilugu, teha tahteavaldusi, edastada vaktsiinikahjude hüvitamiseks  andmeid ning osta apteegist elektroonse retsepti alusel ravimeid.",
+        "definition": "Terviseportaalis patsiendi enda poolt määratud täieõiguslik esindaja. Vaatamisõigus (v.a. aegkriitilisi andmeid ja neid meditsiinidokumente, mille patsient on esindajale sulgenud). Õigus uuendada isikuandmeid, sulgeda arstile meditsiinidokumente või kogu digilugu, teha tahteavaldusi, edastada vaktsiinikahjude hüvitamiseks  andmeid ning osta apteegist elektroonse retsepti alusel ravimeid.",
         "property": [
           {
             "code": "status",
@@ -155,7 +155,7 @@
       {
         "code": "legal-representative",
         "display": "Seaduslik esindaja",
-        "definition": "Kohtu poolt määratud seaduslik esindaja ehk eestkostja. Alaealise puhul tema vanem. ",
+        "definition": "Kohtu poolt määratud seaduslik esindaja ehk eestkostja. Alaealise puhul tema vanem. ",
         "designation": [
           {
             "language": "et",
@@ -293,7 +293,7 @@
       {
         "code": "receptionist",
         "display": "Registraator/klienditeenindaja",
-        "definition": "TTO-s töötav registraator, keda ei ole Terviseameti registris reguleeritud ega registreeritud. ",
+        "definition": "TTO-s töötav registraator, keda ei ole Terviseameti registris reguleeritud ega registreeritud.",
         "property": [
           {
             "code": "status",
