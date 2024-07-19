@@ -19,8 +19,8 @@ Description: "Müügiloata ravimi taotlus. Used for requesting marketing permit 
     requestReasonText 0..*
 * extension[requestNumber] ^short = "Request number for unauthorized medication marketing request"
 * extension[requestNumber].value[x] only id
-* extension[requestNumber].value[x] ^short = "Every marketing request has its own unique number."
-* extension[requestNumber].value[x] ^definition = "Müügiloata ravimi taotluse number"
+* extension[requestNumber].value[x] ^short = "Marketing request decision number given by Ravimiamet. Every marketing request has its own unique number."
+* extension[requestNumber].value[x] ^definition = "Müügiloata ravimi otsuse number, mille annab Ravimiamet."
 * extension[requestReason] ^short = "Reason for unauthorized medication marketing request"
 * extension[requestReason] ^definition = "Müügiloata ravimi taotluse põhjus"
 * extension[requestReason].value[x] only CodeableConcept
