@@ -10,6 +10,8 @@ Description: "Example of a medication interaction between medication A and B"
 * extension[=].valueReference = Reference(MedicationStatement-metformin)
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-affected-medication-statements"
 * extension[=].valueReference = Reference(MedicationStatementAdrenalin)
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-additional-information-link"
+* extension[=].valueString = "www.synbase.ee/metformin+adrenalin"
 * type = #interaction
 //* category[0] = $clinical-importance-category-VS#4 
 //* category[ClinicalImportance] ^short = "Clinical importance category"

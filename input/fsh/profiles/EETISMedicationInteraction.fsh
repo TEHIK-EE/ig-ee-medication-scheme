@@ -9,7 +9,8 @@ Description: "This profile is for the representation of the interactions between
 * contained only Medication
 * type = #interaction (exactly)
 * extension contains
-    ExtensionEETISAffectedMedicationStatements named affected 0..*
+    ExtensionEETISAffectedMedicationStatements named affected 0..* and
+    ExtensionEETISAdditionalInformationLink named link 0..*
 // * category ^slicing.discriminator.type = #value
 // * category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
 // * category ^slicing.rules = #open
@@ -25,6 +26,7 @@ Description: "This profile is for the representation of the interactions between
 //* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
 // * category[ScientificDocumentation] ^short = "0 | 1 | 2 | 3 | 4"
 //* category[ScientificDocumentation] only text
+//* extension[extensionEETISAdditionalInformationLink] ^definition = "Link to SynBase for additional information about interaction."
 * subject 1..
 * subject only Reference(Medication)
 * subject ^short = "medication A"
