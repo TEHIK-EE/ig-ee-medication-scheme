@@ -1,7 +1,7 @@
 Instance: dispensation-metformin
 InstanceOf: MedicationDispense
 Usage: #example
-Description: "Dispensation of metformin prescription for other buyer"
+Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of metformin prescription for other buyer"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-prescription-dispense"
 * implicitRules = "https://build.fhir.org/ig/HL7EE/ig-ee-base"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"

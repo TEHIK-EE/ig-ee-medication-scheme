@@ -2,7 +2,7 @@ Instance: PractRoleN98765
 InstanceOf: PractitionerRole
 Usage: #example
 Description: "Practitioner N98765 in practitioner role nurse and occupation õde"
-* meta.profile = "https://fhir.ee/StructureDefinition/ee-practitioner-role"
+* meta.profile = "https://fhir.ee/base/StructureDefinition/ee-practitioner-role"
 * active = true
 * period.start = "2012-01-01"
 * practitioner = Reference(N98765)

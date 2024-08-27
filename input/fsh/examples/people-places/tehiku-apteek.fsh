@@ -8,6 +8,6 @@ Description: "Location of pharmacy Tehiku apteek"
 * address.use = #work
 * address.text = "Pärnu mnt 132"
 * address.country = "EE"
-* managingOrganization.identifier.system = "https://fhir.ee/StructureDefinition/ee-organization"
+* managingOrganization.identifier.system = "https://fhir.ee/base/StructureDefinition/ee-organization"
 * managingOrganization.identifier.value = "123456"
 * managingOrganization.display = "Tehiku apteek"

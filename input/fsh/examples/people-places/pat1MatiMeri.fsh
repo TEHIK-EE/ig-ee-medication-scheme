@@ -2,7 +2,7 @@ Instance: pat1MatiMeri
 InstanceOf: Patient
 Usage: #example
 Description: "Patient Mati Meri"
-* meta.profile = "https://fhir.ee/StructureDefinition/ee-patient"
+* meta.profile = "https://fhir.ee/base/StructureDefinition/ee-patient"
 * identifier[0].system = "https://fhir.ee/sid/pid/est/ni"
 * identifier[=].value = "38301105216"
 * identifier[+].system = "https://fhir.ee/sid/pid/est/ppn"
@@ -17,9 +17,9 @@ Description: "Patient Mati Meri"
 //* birthDate = "1983-01-11"
 //* birthDate.extension.url = "https://fhir.ee/StructureDefinition/ee-date-accuracy-indicator"
 //* birthDate.extension.valueCoding = $ee-date-accuracy-indicator#AAA "Day, month and year are accurate"
-//* address.extension[0].url = "https://fhir.ee/StructureDefinition/ee-ads"
+//* address.extension[0].url = "https://fhir.ee/base/StructureDefinition/ee-ads"
 //* address.extension[=].valueCoding = $ee-ads#2280361
-* address.extension[+].url = "https://fhir.ee/StructureDefinition/ee-ehak"
+* address.extension[+].url = "https://fhir.ee/base/StructureDefinition/ee-ehak"
 * address.extension[=].valueCoding = $ehak#0387
 * address.extension[+].url = "http://hl7.org/fhir/StructureDefinition/address-official"
 * address.extension[=].valueBoolean = true
