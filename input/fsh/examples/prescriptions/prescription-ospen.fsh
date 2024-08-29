@@ -31,5 +31,5 @@ Description: "Prescription of phenoxymethylpenicillin"
 * dispenseRequest.validityPeriod.start = "2023-11-07"
 * dispenseRequest.validityPeriod.end = "2024-05-07"
 * substitution.allowedBoolean = true
-* substitution.reason = $ravimi-asendamatuse-pohjus#KP02 "Tegemist on kitsa terapeutilise vahemikuga ravimiga"
+* substitution.reason = $ravimi-asendamatuse-pohjus#KP02 "Prohibited since it is a medicinal product with narrow therapeutic index"
 //* substitution.reason.text = "Tegemist on kitsa terapeutilise vahemikuga ravimiga"
