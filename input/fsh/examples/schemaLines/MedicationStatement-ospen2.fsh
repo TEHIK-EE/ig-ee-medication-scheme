@@ -7,7 +7,7 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "substitutionAllowedReason"
-* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP03 "Patsiendil esineb ülitundlikkus abiaine vastu, mis esineb kõigis teistes sarnastes ja sama toimeainega ravimites"
+* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP03 "Prohibited because the patient has hypersensitivity for the excipient which is present in all similar medicinal products with same active ingredient"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
 * extension[=].valueQuantity.value = 12
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"

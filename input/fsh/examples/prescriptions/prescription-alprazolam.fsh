@@ -31,5 +31,5 @@ Description: "Prescription of alprazolam with reimbursement rate 50%"
 * dispenseRequest.validityPeriod.end = "2023-12-07"
 //* dispenseRequest.dispenser.reference = "https://fhir.ee/StructureDefinition/ee-tis-organization"
 * substitution.allowedBoolean = true
-* substitution.reason = $ravimi-asendamatuse-pohjus#KP08 "Patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"
+* substitution.reason = $ravimi-asendamatuse-pohjus#KP08 "Prohibited because the patient has been diagnosed with concurrent mental or behavioural disorder"
 //* substitution.reason.text = "Patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"

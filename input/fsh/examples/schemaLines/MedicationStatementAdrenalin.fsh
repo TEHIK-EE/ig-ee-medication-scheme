@@ -7,7 +7,7 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "substitutionAllowedReason"
-* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP09 "Tegemist on müügiloata/erisoodustusega ravimiga"
+* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP09 "Prohibited since it is a medicinal product with fringe benefit or without market authorization in Estonia"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
 * extension[=].valueQuantity.value = 5
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
