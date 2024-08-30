@@ -22,8 +22,8 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 //* extension ^slicing.ordered = false
 // * extension ^slicing.rules = #open
 * extension contains
-    ExtensionEETISMedicinalProductClassification named atc 0..1 and
-   // ExtensionEETISMedicinalProductClassification named narcotic 0..1 and
+    ExtensionEETISMedicinalProductClassification named atc 1..1 and
+    ExtensionEETISMedicinalProductClassification named narcotic 0..1 and
     ExtensionEETISSizeOfItem named sizeOfItem 0..1 and
     ExtensionEETISMedicinalProductName named name 0..1
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
