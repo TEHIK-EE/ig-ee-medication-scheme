@@ -58,6 +58,7 @@ jurisdiction: urn:iso:std:iso:3166#EE "Estonia"
 dependencies:
   hl7.fhir.uv.extensions: current
   ee.fhir.base: current
+  ee.fhir.mpi: 1.1.1
 #  hl7.fhir.ee.mpi: current 
 
 # The global property corresponds to the IG.global property, but it

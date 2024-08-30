@@ -6,7 +6,7 @@ Description: "Seotud isik. Related person can be involved in patient's care proc
 * ^date = "2024-01-03T15:14:18.1951648+00:00"
 * contained ..0
 * identifier 1..1
-* patient only Reference(EETISPatient)
+* patient only Reference($ee-mpi-patient)
 * telecom ..0
 * gender ..0
 * birthDate ..0

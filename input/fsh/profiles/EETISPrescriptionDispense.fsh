@@ -29,7 +29,7 @@ Description: "Ravimi väljastamine. When the medication prescribed is dispensed 
 //* medication.concept ..0
 //* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
-* subject only Reference(EETISPatient)
+* subject only Reference($ee-mpi-patient)
 * subject ^short = "Patient recieving the medication"
 * subject ^definition = "Patsient, kellele ravim väljastatakse"
 //* subject ^type.aggregation = #referenced

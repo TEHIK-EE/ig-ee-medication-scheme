@@ -18,7 +18,7 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * code ^short = "Ravimiskeem - kas on vaja teha oma koodisüsteem? Lahtine küsimus tuleviku aruteludeks"
 * code ^fixedCodeableConcept.text = "Medication List"
 * subject 1..1
-* subject only Reference(EETISPatient)
+* subject only Reference($ee-mpi-patient)
 //* subject ^type.aggregation = #referenced
 * encounter ..0
 * source 1..

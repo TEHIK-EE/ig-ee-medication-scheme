@@ -60,7 +60,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * medication ^type.aggregation = #referenced
 //* medication.concept ..0
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
-* subject only Reference(EETISPatient)
+* subject only Reference($ee-mpi-patient)
 * subject ^short = "Patient for who is the request made for."
 * subject ^definition = "Patsient, kellele retsept on välja kirjutatud."
 * subject ^type.aggregation = #referenced

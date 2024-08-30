@@ -71,6 +71,7 @@ Alias: $task-input-parameter-type = https://fhir.ee/CodeSystem/task-input-parame
 Alias: $task-output-parameter-type = https://fhir.ee/CodeSystem/task-output-parameter-type
 //Alias: $ee-identity-system = https://fhir.ee/ValueSet/ee-identity-system
 
+Alias: $ee-mpi-patient = https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified
 Alias: $ee-patient = https://fhir.ee/base/StructureDefinition/ee-patient
 Alias: $ee-organization = https://fhir.ee/base/StructureDefinition/ee-organization
 Alias: $ee-location = https://fhir.ee/base/StructureDefinition/ee-location

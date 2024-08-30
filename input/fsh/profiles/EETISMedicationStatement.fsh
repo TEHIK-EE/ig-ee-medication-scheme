@@ -51,7 +51,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 //* medication.concept ..0
 //* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
-* subject only Reference(EETISPatient)
+* subject only Reference($ee-mpi-patient)
 //* subject ^type.aggregation = #referenced
 * encounter ..0
 * effective[x] only Period

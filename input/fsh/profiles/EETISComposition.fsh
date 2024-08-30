@@ -7,7 +7,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * ^status = #draft
 * ^date = "2024-01-31T13:55:03.1985103+00:00"
 * category ..0
-* subject only Reference(EETISPatient)
+* subject only Reference($ee-mpi-patient)
 * subject ^type.aggregation = #referenced
 * encounter ..0
 * useContext ..0
@@ -48,7 +48,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * section.entry[medicationStatementEntry] only Reference(EETISMedicationStatement)
 * section.entry[medicationDispenseEntry] only Reference(EETISPrescriptionDispense)
 * section.entry[medicationRequestEntry] only Reference(EETISPrescription)
-* section.entry[patientEntry] only Reference(EETISPatient)
+* section.entry[patientEntry] only Reference($ee-mpi-patient)
 * section.entry[medicationEntry] only Reference(EETISMedicationEPC or EETISMedicationExtemporal or EETISMedicationDispensedToPatient)
 * section.entry[practitionerEntry] only Reference(EETISPractitioner)
 * section.entry[practitionerRoleEntry] only Reference(EETISPractitionerRole)
