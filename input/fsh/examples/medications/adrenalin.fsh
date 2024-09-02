@@ -5,8 +5,8 @@ Description: "Description of medication adrenaline"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#C01CA24 "Epinefriin"
-// * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
-// * extension[=].valueCodeableConcept.text = "psyhhotroopne" //meelega vale katsetuse mõttes//
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
+* extension[=].valueCodeableConcept = $ravikuuri-tyyp#P "Pidev"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"
 * extension[=].valueQuantity = 1 $retsept-mahu-ja-massiyhik#ML
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
