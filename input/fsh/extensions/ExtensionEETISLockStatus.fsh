@@ -8,7 +8,7 @@ Description: "Broneering retseptil. When pharmacy locks the prescription for ord
 * ^context[=].expression = "MedicationRequest"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationStatement"
-* . ^short = "Lock on prescription and pharmacy who loecked"
+* . ^short = "Lock on prescription and pharmacy who locked"
 * extension contains
     lockStatus 0..* and
     lockOwner 0..*

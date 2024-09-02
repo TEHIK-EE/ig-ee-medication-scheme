@@ -32,8 +32,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     prescriptionCategory 0..* and
     repeatCategory 0..*
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
-* category[courseOfTherapyType] ^short = "pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
-* category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND"
+* category[courseOfTherapyType] ^short = "What type of medication course is"
+* category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[statementOriginCategory] from $ravimi-andmete-tyyp-VS (required)
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
@@ -41,11 +41,11 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 //* category[statementOriginCategory] = $ravimi-andmete-tyyp-VS#ASK "ütluspõhine ravim" (exactly)
 //* category[statementOriginCategory] ^fixedCodeableConcept.text = "|ASK| ütluspõhine ravim"
 * category[prescriptionCategory] from $retsepti-liik-VS (required)
-* category[prescriptionCategory] ^short = "tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
-* category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND."
+* category[prescriptionCategory] ^short = "Whether the prescription is for regular medication, narcotics or medical device"
+* category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
-* category[repeatCategory] ^short = "1-kordne | 2-kordne | 3-kordne | 6-kordne"
-* category[repeatCategory] ^binding.description = "RETSEPTI KORDSUS. LOEND."
+* category[repeatCategory] ^short = "Whether the prescription is one-time prescription or multiple"
+* category[repeatCategory] ^binding.description = "RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
@@ -55,7 +55,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 //* subject ^type.aggregation = #referenced
 * encounter ..0
 * effective[x] only Period
-* effective[x] ^short = "Ravimiskeemi rea kehtivuse algus"
+* effective[x] ^short = "Time period when the treatment line begins and ends"
+* effective[x] ^definition = "Ravimiskeemi rea kehtivuse algus"
 * informationSource only Reference(EETISPractitioner or EETISPractitionerRole)
 * informationSource ^short = "Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."
 * informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Ravimiskeemi rea (algne) koostaja."

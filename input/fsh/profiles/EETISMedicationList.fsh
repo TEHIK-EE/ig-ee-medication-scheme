@@ -15,7 +15,8 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * title ^short = "Medication Scheme"
 * title ^definition = "Ravimiskeem"
 * code = $list-example-codes#medications "Medication List" (exactly)
-* code ^short = "Ravimiskeem - kas on vaja teha oma koodisüsteem? Lahtine küsimus tuleviku aruteludeks"
+* code ^short = "Ravimiskeem"
+* code ^definition = "kas on vaja teha oma koodisüsteem? Lahtine küsimus tuleviku aruteludeks"
 * code ^fixedCodeableConcept.text = "Medication List"
 * subject 1..1
 * subject only Reference($ee-mpi-patient)

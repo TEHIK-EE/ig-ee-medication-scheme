@@ -1,7 +1,7 @@
 Profile: EETISMedicationInteraction
 Parent: ClinicalUseDefinition
 Id: ee-tis-medication-interaction
-Description: "This profile is for the representation of the interactions between medication A and medication B in order to display warnings related to medications."  
+Description: "Ravimite omavahelised koostoimed. This profile is for the representation of the interactions between medication A and medication B in order to display warnings related to medications."  
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-22T14:32:30.0668499+00:00"
@@ -41,18 +41,17 @@ Description: "This profile is for the representation of the interactions between
 * interaction.interactant.item[x] ^short = "medication B"
 * interaction.type = $interaction-type#drug-drug "drug to drug interaction" (exactly)
 * interaction.type ^fixedCodeableConcept.text = "drug to drug interaction"
-* interaction.effect ^short = "Consequences (SYNBASE VÄLJUNDIS)"
+* interaction.effect ^short = "Consequences (SYNBASE)"
 * interaction.effect.concept ^short = "Consequences"
-* interaction.effect.concept.text ^short = "KUI POLE KODEERITAV"
+* interaction.effect.concept.text ^short = "If not codeable, use text to represent consequenses"
 * interaction.effect.reference ..0
-* interaction.incidence ^short = "Classification (e.g. D0)"
+* interaction.incidence ^short = "Classification (SYNBASE. e.g. D0)"
 * interaction.incidence ^definition = "Kombinatsioon category all olevatest numbritest ja tähtedest. The incidence of the interaction, e.g. theoretical, observed."
 * interaction.incidence.text ^short = "Classification"
 * interaction.management ..1
-* interaction.management ^short = "RECOMMENDATION (SYNBASE VÄLJUNDIS)"
-* interaction.management.text ^short = "KUI POLE KODEERITAV"
+* interaction.management ^short = "Recommendation (SYNBASE)"
+* interaction.management.text ^short = "If not codeable, use text to represent recommendation"
 * population ..0
-* library ^short = "SYNBASE? Logic used by the clinical use definition"
-* library ^definition = "Logic used by the clinical use definition. SYNBASE?"
+* library ..0
 * undesirableEffect ..0
 * warning ..0
