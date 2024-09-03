@@ -52,6 +52,7 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * dosage[=].text = "esimene nädal"
 * dosage[=].timing.repeat.boundsDuration.value = 7
 * dosage[=].timing.repeat.boundsDuration.code = #d
+* dosage[=].timing.repeat.boundsDuration.system = "http://unitsofmeasure.org"
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
@@ -62,6 +63,7 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * dosage[=].text = "teine nädal"
 * dosage[=].timing.repeat.boundsDuration.value = 7
 * dosage[=].timing.repeat.boundsDuration.code = #d
+* dosage[=].timing.repeat.boundsDuration.system = "http://unitsofmeasure.org"
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
@@ -72,6 +74,7 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * dosage[=].text = "kolmas nädal ja edasi"
 * dosage[=].timing.repeat.boundsDuration.value = 7
 * dosage[=].timing.repeat.boundsDuration.code = #d
+* dosage[=].timing.repeat.boundsDuration.system = "http://unitsofmeasure.org"
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
