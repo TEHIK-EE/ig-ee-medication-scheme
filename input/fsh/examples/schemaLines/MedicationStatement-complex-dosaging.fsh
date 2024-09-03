@@ -50,8 +50,8 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * dosage[0].patientInstruction = "pool tabletti õhtuti"
 * dosage[=].sequence = 1
 * dosage[=].text = "esimene nädal"
-* dosage[=].timing.repeat.duration = 7
-* dosage[=].timing.repeat.durationUnit = #d
+* dosage[=].timing.repeat.boundsDuration.value = 7
+* dosage[=].timing.repeat.boundsDuration.code = #d
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
@@ -60,24 +60,25 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * dosage[1].patientInstruction = "1 tablett õhtuti"
 * dosage[=].sequence = 2
 * dosage[=].text = "teine nädal"
-* dosage[=].timing.repeat.duration = 7
-* dosage[=].timing.repeat.durationUnit = #d
+* dosage[=].timing.repeat.boundsDuration.value = 7
+* dosage[=].timing.repeat.boundsDuration.code = #d
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
 * dosage[=].timing.repeat.timeOfDay = "21:00:00"
 * dosage[=].doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA "tablett"
-* dosage[2].patientInstruction = "1 tablett hommikul ja õhtul"
+* dosage[2].patientInstruction = "1 tablett hommikul ja 1 tablett õhtul"
 * dosage[=].sequence = 3
 * dosage[=].text = "kolmas nädal ja edasi"
-* dosage[=].timing.repeat.duration = 7
-* dosage[=].timing.repeat.durationUnit = #d
+* dosage[=].timing.repeat.boundsDuration.value = 7
+* dosage[=].timing.repeat.boundsDuration.code = #d
 * dosage[=].timing.repeat.frequency = 1
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
 * dosage[=].timing.repeat.timeOfDay = "09:00:00"
 * dosage[=].doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA "tablett"
-* dosage[+].timing.repeat.frequency = 1
+* dosage[3].timing.repeat.frequency = 1
+* dosage[=].sequence = 3
 * dosage[=].timing.repeat.period = 1
 * dosage[=].timing.repeat.periodUnit = #d
 * dosage[=].timing.repeat.timeOfDay = "21:00:00"
