@@ -16,5 +16,6 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * performer.actor = Reference(pharmacistKristiina)
 * authorizingPrescription = Reference(prescription-alprazolam)
 * quantity.value = 30
+* daysSupply.value = 30
 * whenHandedOver = "2023-11-07"
 * note.text = "ei ole võimalik väljastada arsti kirjutatud soodustusega"

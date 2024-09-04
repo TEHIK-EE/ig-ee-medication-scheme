@@ -18,5 +18,6 @@ Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of met
 * performer.actor = Reference(pharmacistKristiina)
 * authorizingPrescription = Reference(prescription-metformin)
 * quantity.value = 100
+* daysSupply.value = 33.3
 * whenHandedOver = "2023-11-07"
 * note.text = "ravim väljastatud ainult osaliselt, sest puudus õige suurusega pakend"
