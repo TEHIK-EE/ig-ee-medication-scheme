@@ -58,6 +58,8 @@ Description: "Ravimi väljastamine. When the medication prescribed is dispensed 
 * quantity.system ..0
 * quantity.code ..0
 * daysSupply 0..1
+* daysSupply ^short = "Dispensed medication calculated in days. How many days is covered with this amount of medication."
+* daysSupply ^definition = "müüdud kogus ümber arvutatud ravipäevadeks"
 * recorded ..0
 * whenPrepared ..0
 * whenHandedOver 1..
