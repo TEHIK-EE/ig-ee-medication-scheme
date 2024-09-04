@@ -57,7 +57,7 @@ Description: "Ravimi väljastamine. When the medication prescribed is dispensed 
 * quantity.unit ..0
 * quantity.system ..0
 * quantity.code ..0
-* daysSupply ..0
+* daysSupply 0..1
 * recorded ..0
 * whenPrepared ..0
 * whenHandedOver 1..
