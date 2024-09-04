@@ -11,10 +11,6 @@ Description: "Ekstemporaalne ravim. Profile for representing medication that is 
 * ^contact[=].telecom[=].value = "https://www.tehik.ee"
 * ^contact[=].telecom[+].system = #email
 * ^contact[=].telecom[=].value = "fhir@tehik.ee"
-//* ^contact[+].name = "Rutt Lindström"
-//* ^contact[=].telecom.system = #email
-//* ^contact[=].telecom.value = "rutt.lindstrom@tehik.ee"
-//* ^contact[=].telecom.use = #work
 * ^jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * meta.versionId ^example.label = "versionId"
 * meta.versionId ^example.valueId = "1"

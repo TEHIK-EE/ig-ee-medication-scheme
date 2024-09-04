@@ -1,4 +1,4 @@
-Profile: EEBasePatient
+/*Profile: EEBasePatient
 Parent: Patient
 Id: ee-patient
 Description: "Patsient. Patient is the subject of the medication overview."
@@ -20,3 +20,4 @@ Description: "Patsient. Patient is the subject of the medication overview."
 * telecom ^example[+].label = "email"
 * telecom ^example[=].valueContactPoint.system = #email
 * telecom ^example[=].valueContactPoint.value = "fiona@fiona.org"
+*/

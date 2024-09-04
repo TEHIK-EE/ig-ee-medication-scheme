@@ -7,8 +7,8 @@ Description: "Unauthorized medication adrenaline with positive decision for mark
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#0 "0%"
-//* extension[=].extension[+].url = "reimbursementReason"
-//* extension[=].extension[=].valueString = "nii on"
+* extension[=].extension[=].valueCodeableConcept.coding.code = #000
+* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-lock-status"

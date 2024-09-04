@@ -7,8 +7,9 @@ Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of met
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#90 "90%"
-* extension[=].extension[+].url = "reimbursementReason"
-* extension[=].extension[=].valueString = "elu on"
+* extension[=].extension[+].url = "reimbursementCondition"
+* extension[=].extension[=].valueCodeableConcept.coding.code = #90_1
+* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc"
 * extension[=].valueString = "42002230000"
 * status = #completed

@@ -15,7 +15,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * author ^type.aggregation = #contained
 * title ^short = "Ravimiskeem"
 * note.author[x] 1..
-* note.author[x] only string or Reference(Practitioner or PractitionerRole)
+* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * note.time 1..
 * attester 1..1
 * attester ^short = "Practitioner who has verified medication scheme."

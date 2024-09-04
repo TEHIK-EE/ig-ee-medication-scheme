@@ -7,8 +7,9 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * extension.url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension.extension[0].url = "reimbursementRate"
 * extension.extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#0 "0%"
-* extension.extension[+].url = "reimbursementReason"
-* extension.extension[=].valueString = "ei ole soodusravim"
+* extension.extension[+].url = "reimbursementCondition"
+* extension.extension[=].valueCodeableConcept.coding.code = #000
+* extension.extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * status = #completed
 * medication.reference = Reference(alprazolam-dispensed)
 * subject = Reference(pat1MatiMeri)

@@ -7,8 +7,9 @@ Description: "Prescription of adrenaline marketing request has negative decision
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
-* extension[=].extension[+].url = "reimbursementReason"
-* extension[=].extension[=].valueString = "nii on"
+* extension[=].extension[+].url = "reimbursementCondition"
+* extension[=].extension[=].valueCodeableConcept.coding.code = #50_1
+* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-lock-status"
