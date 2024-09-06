@@ -18,7 +18,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..1 and //Ravimiametilt küsida nimi
     ExtensionEETISSubstitution named extensionEETISSubstitution 0..1 and
     ExtensionEETISVerification named extensionEETISVerification 0..* and
-    ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..*
+    ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..* and
+    ExtensionEETISPrescriptionChange named extensionEETISPrescriptionChange 0..*
 * extension[extensionEETISVerification] ^definition = "Optional Extension Element - found in all resources."
 * partOf only Reference(EETISMedicationStatement)
 * status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud."

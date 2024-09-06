@@ -13,7 +13,8 @@ Description: "Retsept. This is a profile for medication prescription."
     ExtensionEETISLockStatus named lockStatus 0..1 and
     ExtensionEETISUnauthorizedProductRequest named extensionEETISUnauthorizedProductRequest 0..* and
     ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and
-    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..*
+    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..* and 
+    ExtensionEETISPrescriptionChange named extensionEETISPrescriptionChange 0..*
 * extension[lockStatus] ^short = "Used only when requesting unauthorized medication."
 * extension[lockStatus] ^definition = "Broneeritud müügiloata ravimi taotluse jaoks. Kasutatakse AINULT müügiloata ravimi taotluse retsepti broneerimise puhul."
 * extension[extensionEETISUnauthorizedProductRequest] ^short = "Used for requesting marketing permit for unauthorized medication."

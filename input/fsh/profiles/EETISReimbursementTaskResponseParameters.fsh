@@ -6,11 +6,11 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * ^status = #draft
 * ^date = "2024-02-05T14:08:48.1446292+00:00"
 * parameter ^slicing.discriminator.type = #value
-* parameter ^slicing.discriminator.path = "$this" //enne oli "value"
+* parameter ^slicing.discriminator.path = "$name" //enne oli "value"
 * parameter ^slicing.rules = #open
 * parameter ^short = "Received reimbursement rate from EPC (Estonian Prescription Centre)"
 * parameter.name ^short = "Received reimbursement rate from EPC"
-* parameter.name ^definition = "SOODUSMÄÄR (retseptikeskusest) päringu vastusena olenevalt, millised õigused on patsiendil."
+* parameter.name ^definition = "reimbursementParameter" //"SOODUSMÄÄR (retseptikeskusest) päringu vastusena olenevalt, millised õigused on patsiendil."
 * parameter contains
     insuranceParameter 0..* and
     insuranceEUParameter 0..* and
@@ -35,14 +35,30 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[incapacityForWorkPensionParameter] ^definition = "Töövõimetuspension"
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
-* parameter[reimbursementParameter].name ^short = "reimbursementParameter"
-* parameter[reimbursementParameter].part.name ^short = "reimbursementRateParameter"
-* parameter[reimbursementParameter].part.name ^definition = "soodusmäär" 
-* parameter[reimbursementParameter].part.value[x] only CodeableConcept
-* parameter[reimbursementParameter].part.value[x] from $retsepti-soodustuse-maar-VS (preferred)
-* parameter[reimbursementParameter].part.name ^short = "reimbursementConditionParameter"
-* parameter[reimbursementParameter].part.name ^definition = "vajalikud tingimused"
-* parameter[reimbursementParameter].part.value[x] only CodeableConcept
+* parameter[reimbursementParameter].part ^slicing.discriminator.type = #value
+* parameter[reimbursementParameter].part ^slicing.discriminator.path = "$name" //enne oli "value"
+* parameter[reimbursementParameter].part ^slicing.rules = #open
+* parameter[reimbursementParameter].part ^short = "Received reimbursement rate from EPC (Estonian Prescription Centre)"
+* parameter[reimbursementParameter].part
+* parameter[reimbursementParameter].part contains
+     condition 1..1 and
+     rate 1..* and
+* parameter[reimbursementParameter].part[condition].name = "condition"
+* parameter[reimbursementParameter].part[condition].name ^short = "Received reimbursement Condition from EPC"
+* parameter[reimbursementParameter].part[condition].value[x] only CodeableConcept
+* parameter[reimbursementParameter].part[condition].value[x] from $retsepti-soodustuse-maar-VS (preferred)
+* parameter[reimbursementParameter].part[rate].name = "rate"
+* parameter[reimbursementParameter].part[rate].name ^short = "Received reimbursement rate from EPC"
+* parameter[reimbursementParameter].part[rate].value[x] only CodeableConcept
+* parameter[reimbursementParameter].part[rate].value[x] from $whatever-valueset
+//* parameter[reimbursementParameter].name ^short = "reimbursementParameter"
+//* parameter[reimbursementParameter].part.name ^short = "reimbursementRateParameter"
+//* parameter[reimbursementParameter].part.name ^definition = "soodusmäär" 
+//* parameter[reimbursementParameter].part.value[x] only CodeableConcept
+//* parameter[reimbursementParameter].part.value[x] from $retsepti-soodustuse-maar-VS (preferred)
+//* parameter[reimbursementParameter].part.name ^short = "reimbursementConditionParameter"
+//* parameter[reimbursementParameter].part.name ^definition = "vajalikud tingimused"
+//* parameter[reimbursementParameter].part.value[x] only CodeableConcept
 //* parameter[reimbursementRateParameter].value[x] only CodeableConcept
 //* parameter[reimbursementRateParameter].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 //* parameter[reimbursementRateParameter].value[x] ^binding.description = "Soodustuse määr"
