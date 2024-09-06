@@ -6,7 +6,7 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * ^status = #draft
 * ^date = "2024-02-05T14:08:48.1446292+00:00"
 * parameter ^slicing.discriminator.type = #value
-* parameter ^slicing.discriminator.path = "value"
+* parameter ^slicing.discriminator.path = "$this" //enne oli "value"
 * parameter ^slicing.rules = #open
 * parameter ^short = "Received reimbursement rate from EPC (Estonian Prescription Centre)"
 * parameter.name ^short = "Received reimbursement rate from EPC"
@@ -16,8 +16,9 @@ Description: "This resource passes information back to EETISReimbursementTask ou
     insuranceEUParameter 0..* and
     oldAgePensionParameter 0..* and
     incapacityForWorkPensionParameter 0..* and
-    reimbursementParameter 0..*
- //   reimbursementConditionParameter 0..*
+    reimbursementParameter 0..* and
+    reimbursementRateParameter 0..* and
+    reimbursementConditionParameter 0..*
 * parameter[insuranceParameter] ^short = "A parameter received from the operation indicationg whether or not the patient is insured."
 * parameter[insuranceParameter] ^definition = "Kindlustatus"
 * parameter[insuranceParameter].name ^short = "Insurance response"
@@ -34,10 +35,13 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[incapacityForWorkPensionParameter] ^definition = "Töövõimetuspension"
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
-* parameter[reimbursementParameter].part.name ^short = "reimbursementRate"
+* parameter[reimbursementParameter].name ^short = "reimbursementParameter"
+* parameter[reimbursementParameter].part.name ^short = "reimbursementRateParameter"
+* parameter[reimbursementParameter].part.name ^definition = "soodusmäär" 
 * parameter[reimbursementParameter].part.value[x] only CodeableConcept
 * parameter[reimbursementParameter].part.value[x] from $retsepti-soodustuse-maar-VS (preferred)
-* parameter[reimbursementParameter].part.name ^short = "reimbursementCondition"
+* parameter[reimbursementParameter].part.name ^short = "reimbursementConditionParameter"
+* parameter[reimbursementParameter].part.name ^definition = "vajalikud tingimused"
 * parameter[reimbursementParameter].part.value[x] only CodeableConcept
 //* parameter[reimbursementRateParameter].value[x] only CodeableConcept
 //* parameter[reimbursementRateParameter].value[x] from $retsepti-soodustuse-maar-VS (preferred)
