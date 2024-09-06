@@ -16,9 +16,9 @@ Description: "This resource passes information back to EETISReimbursementTask ou
     insuranceEUParameter 0..* and
     oldAgePensionParameter 0..* and
     incapacityForWorkPensionParameter 0..* and
-    reimbursementParameter 0..* and
-    reimbursementRateParameter 0..* and
-    reimbursementConditionParameter 0..*
+    reimbursementParameter 0..* 
+    //reimbursementRateParameter 0..* and
+    //reimbursementConditionParameter 0..*
 * parameter[insuranceParameter] ^short = "A parameter received from the operation indicationg whether or not the patient is insured."
 * parameter[insuranceParameter] ^definition = "Kindlustatus"
 * parameter[insuranceParameter].name ^short = "Insurance response"
@@ -46,11 +46,11 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[reimbursementParameter].part[condition].name = "condition"
 * parameter[reimbursementParameter].part[condition].name ^short = "Received reimbursement Condition from EPC"
 * parameter[reimbursementParameter].part[condition].value[x] only CodeableConcept
-* parameter[reimbursementParameter].part[condition].value[x] from $retsepti-soodustuse-maar-VS (preferred)
+* parameter[reimbursementParameter].part[condition].value[x] ^binding.description = "Vajalikud tingimused- LOEND"
 * parameter[reimbursementParameter].part[rate].name = "rate"
 * parameter[reimbursementParameter].part[rate].name ^short = "Received reimbursement rate from EPC"
 * parameter[reimbursementParameter].part[rate].value[x] only CodeableConcept
-* parameter[reimbursementParameter].part[rate].value[x] ^binding.description = "Vajalikud tingimused"
+* parameter[reimbursementParameter].part[rate].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 //* parameter[reimbursementParameter].name ^short = "reimbursementParameter"
 //* parameter[reimbursementParameter].part.name ^short = "reimbursementRateParameter"
 //* parameter[reimbursementParameter].part.name ^definition = "soodusmäär" 
