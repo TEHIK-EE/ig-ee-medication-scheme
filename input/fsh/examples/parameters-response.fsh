@@ -12,6 +12,6 @@ Description: "Soodustuse päringu vastus. Response for reimbursement parameters.
 * parameter[=].valueBoolean = false
 * parameter[+].name = "reimbursementParameter"
 * parameter[=].part[0].name = "condition"
-* parameter[=].part[=].valueCode = #9004
+* parameter[=].part[=].valueCodeableConcept = #9004
 * parameter[=].part[+].name = "rate"
-* parameter[=].part[=].valueCode = #090
+* parameter[=].part[=].valueCodeableConcept = #090

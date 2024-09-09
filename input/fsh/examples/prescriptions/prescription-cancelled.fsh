@@ -7,7 +7,7 @@ Description: "Cancelled prescription of phenoxymethylpenicillin"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
-* extension[=].extension[0].url = "reimbursementCondition"
+* extension[=].extension[+].url = "reimbursementCondition"
 * extension[=].extension[=].valueCodeableConcept.coding.code = #50_1
 * extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
