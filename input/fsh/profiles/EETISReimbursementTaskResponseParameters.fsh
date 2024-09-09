@@ -39,14 +39,14 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[incapacityForWorkPensionParameter].name = "incapacityForWorkPensionParameter"
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
-//* parameter[reimbursementParameter].part.name = "reimbursementParameter"
-//* parameter[reimbursementParameter].part.name ^short = "Received reimbursement rate from EPC"
-//* parameter[reimbursementParameter].part.name ^definition = "reimbursementParameter"
+* parameter[reimbursementParameter].name = "reimbursementParameter"
+* parameter[reimbursementParameter].name ^short = "Received reimbursement rate from EPC"
+* parameter[reimbursementParameter].name ^definition = "Soodusmäär retseptikeskusest"
 * parameter[reimbursementParameter].part ^slicing.discriminator.type = #value
 * parameter[reimbursementParameter].part ^slicing.discriminator.path = "name" //enne oli "value"
 * parameter[reimbursementParameter].part ^slicing.rules = #open
-* parameter[reimbursementParameter].part ^short = "Received reimbursement rate from EPC (Estonian Prescription Centre)"
-* parameter[reimbursementParameter].part
+* parameter[reimbursementParameter].part ^short = "Received reimbursement rate and condition from EPC (Estonian Prescription Centre)"
+* parameter[reimbursementParameter].part ^definition = "Soodusmäär ning vajalikud tingimused soodustuse saamiseks retseptikeskusest"
 * parameter[reimbursementParameter].part contains
      condition 1..1 and
      rate 1..*
