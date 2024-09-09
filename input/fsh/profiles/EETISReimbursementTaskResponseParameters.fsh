@@ -26,8 +26,8 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[insuranceParameter].value[x] only boolean
 * parameter[insuranceEUParameter] ^short = "A parameter received from the operation indication whether or not the patient has EU insurance."
 * parameter[insuranceEUParameter] ^definition = "EU kindlustatus"
-* parameter[insuranceEUParameter].name = "EU insurance response"
-* parameter[insuranceEUParameter].name ^short = "insuranceEUParameter"
+* parameter[insuranceEUParameter].name = "insuranceEUParameter"
+* parameter[insuranceEUParameter].name ^short = "EU insurance response"
 * parameter[insuranceEUParameter].value[x] only boolean
 * parameter[oldAgePensionParameter] ^short = "A parameter received from the operation indicationg whether or not the patient has old age pension."
 * parameter[oldAgePensionParameter] ^definition = "Vanaduspension"
@@ -40,8 +40,8 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 * parameter[incapacityForWorkPensionParameter].name ^short = "Pension for incapacity for work"
 * parameter[incapacityForWorkPensionParameter].value[x] only boolean
 //* parameter[reimbursementParameter].part.name = "reimbursementParameter"
-* parameter[reimbursementParameter].part.name ^short = "Received reimbursement rate from EPC"
-* parameter[reimbursementParameter].part.name ^definition = "reimbursementParameter"
+//* parameter[reimbursementParameter].part.name ^short = "Received reimbursement rate from EPC"
+//* parameter[reimbursementParameter].part.name ^definition = "reimbursementParameter"
 * parameter[reimbursementParameter].part ^slicing.discriminator.type = #value
 * parameter[reimbursementParameter].part ^slicing.discriminator.path = "name" //enne oli "value"
 * parameter[reimbursementParameter].part ^slicing.rules = #open
