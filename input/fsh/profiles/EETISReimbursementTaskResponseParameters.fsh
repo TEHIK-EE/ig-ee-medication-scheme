@@ -17,8 +17,6 @@ Description: "This resource passes information back to EETISReimbursementTask ou
     oldAgePensionParameter 0..* and
     incapacityForWorkPensionParameter 0..* and
     reimbursementParameter 0..* 
-    //reimbursementRateParameter 0..* and
-    //reimbursementConditionParameter 0..*
 * parameter[insuranceParameter] ^short = "A parameter received from the operation indicationg whether or not the patient is insured."
 * parameter[insuranceParameter] ^definition = "Kindlustatus"
 * parameter[insuranceParameter].name = "insuranceParameter"

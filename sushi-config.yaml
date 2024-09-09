@@ -129,7 +129,9 @@ pages:
   guidance.md:
     title: Guidance
   operations.md:
-    title: Operations  
+    title: Operations 
+  knownissues.md:
+    title: Known Issues   
   downloads.xml:
     title: Downloads
 
@@ -159,6 +161,7 @@ menu:
   Guidance: guidance.html
   Artifacts: artifacts.html
   Operations: operations.html
+  Known Issues: knownissues.html
   Downloads: downloads.html
 #  Changes: changes.html
 #  History: ../history.html
