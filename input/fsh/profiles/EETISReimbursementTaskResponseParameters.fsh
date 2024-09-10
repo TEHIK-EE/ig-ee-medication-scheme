@@ -49,9 +49,10 @@ Description: "This resource passes information back to EETISReimbursementTask ou
      condition 1..1 and
      rate 1..*
 * parameter[reimbursementParameter].part[condition].name = "condition"
-* parameter[reimbursementParameter].part[condition].name ^short = "Received reimbursement Condition from EPC"
+* parameter[reimbursementParameter].part[condition].name ^short = "Received reimbursement Condition from EPC."
+* parameter[reimbursementParameter].part[condition].name ^definition = "Vajalikud tingimused- LOEND"
 * parameter[reimbursementParameter].part[condition].value[x] only CodeableConcept
-* parameter[reimbursementParameter].part[condition].value[x] ^binding.description = "Vajalikud tingimused- LOEND"
+//* parameter[reimbursementParameter].part[condition].value[x] ^binding.description = "Vajalikud tingimused- LOEND" kuniks pole päris loendit, ei saa binding-descriptionit panna.
 * parameter[reimbursementParameter].part[rate].name = "rate"
 * parameter[reimbursementParameter].part[rate].name ^short = "Received reimbursement rate from EPC"
 * parameter[reimbursementParameter].part[rate].value[x] only CodeableConcept
