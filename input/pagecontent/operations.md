@@ -4,13 +4,12 @@
 
 Parameetrid
 
-**In Parameters:** |  |  |  |  |  |  
----|---|---|---|---|---|--- 				
-**Name** |**Scope** |**Cardinality** |**Type** |**Binding** |**Profile** |**Documentation** 
-subject |type |1..1 |Reference (Patient) |  |EEBasePatient |Patsiendi MPI viide - kelle ravimiskeemi vastu koostoimete kontrolli tehakse 
-input |  |0..* |Medication |  |Medication |"Kui on lisatud, siis ravimid/toimeained, mille kohta küsitakse koostoimeid patsiendi hetkel kehtiva ravimiskeemiga
-NB! Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmestikku"  
-
+| **In Parameters:** |   |   |   |   |   |   |  
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | 				
+| **Name** | **Scope** | **Cardinality** | **Type** | **Binding** | **Profile** | **Documentation** | 
+| subject | type | 1..1 | Reference (Patient) |   | EEBasePatient | Patsiendi MPI viide - kelle ravimiskeemi vastu koostoimete kontrolli tehakse. | 
+| input |   | 0..* | Medication |   | Medication | "Kui on lisatud, siis ravimid/toimeained, mille kohta küsitakse koostoimeid patsiendi hetkel kehtiva ravimiskeemiga
+NB! Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmestikku". |  
 {:.table-bordered .table-sm}
 
 |**Out Parameters:** |  |  |  |  |  |  |					
