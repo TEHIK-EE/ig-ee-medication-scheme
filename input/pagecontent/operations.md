@@ -11,13 +11,11 @@ Parameetrid
 | input |   | 0..* | Medication |   | Medication | "Kui on lisatud, siis ravimid/toimeained, mille kohta küsitakse koostoimeid patsiendi hetkel kehtiva ravimiskeemiga <br />NB! Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmestikku". |  
 {:.table-bordered .table-sm}
 
+
 | **Out Parameters:** |   |   |   |   |   |   |  
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 				
 | **Name** | **Scope** | **Cardinality** | **Type** | **Binding** | **Profile** | **Documentation** | 
-| return |   | 1..1 | Bundle |   | Bundle sees on: EETISMedicationInteraction | "Operation väljundiks on alati Bundle - kui koostoimeid ei ole, on Bundle tühi.
-<br />Toimeainete vahelised koostoimed, iga toimeainete paari vahel leitud koostoime on üks eraldiseisev ClinicalUseDefinition (EETISMedicationInteraction).
-<br />Tagastatavatel Medication ressurssidel on andmestikus märgitud vastvalt patsiendi ravimiskeemi andmetele - toimeaine + ravimvormi info, täiendavalt võib ka kaasas olla pakendi viide ja nimetus.
-<br />Ravimiskeemi ridade viited on ClinicalUseDefinition.affected väljas reference'dena" |
+| return |   | 1..1 | Bundle |   | Bundle sees on EETISMedicationInteraction | "Operation väljundiks on alati Bundle - kui koostoimeid ei ole, on Bundle tühi.<br /> Toimeainete vahelised koostoimed, iga toimeainete paari vahel leitud koostoime on üks eraldiseisev ClinicalUseDefinition (EETISMedicationInteraction). <br />Tagastatavatel Medication ressurssidel on andmestikus märgitud vastvalt patsiendi ravimiskeemi andmetele - toimeaine + ravimvormi info, <br />täiendavalt võib ka kaasas olla pakendi viide ja nimetus. <br />Ravimiskeemi ridade viited on ClinicalUseDefinition.affected väljas reference'dena". |
 {:.table-bordered .table-sm}
 
 Ärireeglid:
