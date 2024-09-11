@@ -15,6 +15,7 @@ NB! Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmest
 Toimeainete vahelised koostoimed, iga toimeainete paari vahel leitud koostoime on üks eraldiseisev ClinicalUseDefinition (EETISMedicationInteraction).
 Tagastatavatel Medication ressurssidel on andmestikus märgitud vastvalt patsiendi ravimiskeemi andmetele - toimeaine + ravimvormi info, täiendavalt võib ka kaasas olla pakendi viide ja nimetus.
 Ravimiskeemi ridade viited on ClinicalUseDefinition.affected väljas reference'dena" |
+{:.table-bordered .table-sm}
 
 Ärireeglid:
  - In each drug, either drug code or combination of substances and drug form id should be provided
