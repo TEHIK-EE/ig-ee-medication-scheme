@@ -13,7 +13,7 @@ Käesolev juhis kirjeldab ravimiskeemi, mida haldab Tervise ja Heaolu Infosüste
   <tr><td><b>In English</b></td><td><b>Eesti keeles</b></td></tr>
   <tr>
   <td>
-<p>Medication scheme is part of practitioner's new software (TJT) where he/she can easily get an accurate and up-to-date overview of patient's medication. Practitioner can add or remove medications and issue prescriptions. Currently patient may have several duplicating prescriptions and it is difficult for a healthcare proffessional to have a proper overview of patient's medication. .</p>
+<p>The digital Medication Scheme offers both doctors and patients a comprehensive and up-to-date overview of the medications a patient is taking. The entire management of a patient's medication scheme is consolidated under the one service. In the future, important over-the-counter medications and dietary supplements can be included in the Medication Scheme. </p>
 <hr>
 <p>Implementation Guide contains:</p>
 <ul>
@@ -26,7 +26,7 @@ Käesolev juhis kirjeldab ravimiskeemi, mida haldab Tervise ja Heaolu Infosüste
 <p></p>
 </td>
 <td>
-<p>Ravimiskeem on osa tervishoiutöötajate uuest tarkvarast Tervise juhtimise töölaud (TJT), kus tervishoiutöötaja saab ajakohase ülevaate patsiendi ravimitest. Seal saab lisada või eemaldada ravimiskeemi ridu ning retsepte väljakirjutada. Praegusel hetkel võib patisendil olla mitmeid duplitseerivaid ning mitte-ajakohaseid retsepte, mis teevad ravimitest korraliku ülevaate saamise keeruliseks. </p>
+<p>Ravimiskeem pakub nii arstidele kui ka patsientidele terviklikku ja ajakohast ülevaadet patsiendi poolt tarvitatavatest ravimitest. Kogu patsiendi ravimiskeemi korraldus koondub Ravimiskeemi teenuse alla. Tulevikus saab ravimiskeemi lisada olulisi käsimüügiravimeid ja ka toidulisandeid.  </p>
 <hr>
 <p>Juhend sisaldab:</p>
 <ul>
@@ -57,13 +57,52 @@ Käesolev juhis kirjeldab ravimiskeemi, mida haldab Tervise ja Heaolu Infosüste
 
 First phase of development is tightly connected with Estonian Medical Prescription Center so Medication Overview is a copy of legacy prescribing system gradually moving towards new generation health data exchange.
 
-## TJT
+## Healthcare Specialist Portal | Tervisejuhtimise töölaud TJT
 
-TJT – Tervisejuhtimise töölaud - is a new software currently under developement for healthcare proffessionals. TJT is going to be developed module by module Medication Overview being the first module. TJT is a central tool aiming to bring health care proffessionald in common space in order to add, display and exchange health data with each other.
+
+  <table border="0">
+  <tr><td><b>In English</b></td><td><b>Eesti keeles</b></td></tr>
+  <tr>
+  <td>
+<p>Tervisejuhtimise töölaud (Healthcare Specialist Portal) is a web-based tool designed for healthcare professionals and other specialists involved in patient care. It consolidates various e-services that support patient treatment. The tool provides a quick overview of an individual’s health data, allows for data updates, and facilitates collaboration among healthcare providers to create a comprehensive health plan for the person. All new generation health data system's e-services will be made available through the portal.
+
+Specialists can access relevant information legally available to them. This includes a unified medication history, essential health details, and the patient’s medical background. Additionally, the dashboard provides condition-specific views and references to private-sector digital solutions.
+
+Each specialist can tailor a personal dashboard to display the most relevant information for their work. This personalization ensures that critical data is readily accessible.
+
+Patients wishing to access the same information can use [Health Portal](https://www.terviseportaal.ee/en/).
+
+The Healthcare Specialist Portal was developed through collaboration between Tervisekassa, TEHIK, and analysis and development partners from Industry62, Net Group, and Nortal. It represents the next generation of health information system services. .</p>
+<hr>
+<p>Healthcare Specialist Portal:</p>
+<ul>
+  <li>Is intented for use by healthcare professionals and other specialists involved in providing healthcare services</li>
+  <li>Serves as the initial access point for next-generation health information system services</li>
+  <li>Ensures that refined services are available to be seamlessly integrated into healthcare institutions' information systems.</li>
+</ul>
+<p></p>
+</td>
+<td>
+<p>Tervisejuhtimise töölaud on veebipõhine tööriist kõigile tervishoiutöötajatele ja teistele raviprotsessi toetavatele spetsialistidele, mis koondab kokku erinevad patsiendikäsitlust toetavad e-teenused. Lahendus annab kiirelt ülevaate inimese terviseandmetest, võimaldab neid omakorda täiendada ning koostöös teiste tervishoiutöötajatega juhtide inimese terviseplaani. Töölaua kaudu saavad kättesaadavaks kõik uue põlvkonna terviseinfosüsteemi teenused.
+
+Töölaual näeb iga spetsialist kogu infot, milleks tal juriidiliselt õigus on, alates ühtsest ravimiskeemist, elulisest teabest ja terviseajaloost, lõpetades seisundipõhiste vaadete ja viidetega erasektori digilahendustele.
+
+Spetsialistidel on võimalik töölaua avakuva kohandada selliselt, et sealt tuleks välja just temale kõige olulisem info. Inimene ise aga pääseb samale infole ligi [Terviseportaali](https://www.terviseportaal.ee/) kaudu. </p>
+<hr>
+<p>Tervisejuhtimise töölaud:</p>
+<ul>
+  <li>On kasutamiseks tervishoiutöötajatele ja teistele spetsialistidele, kes tervishoiuteenuste pakkumisel osalevad</li>
+  <li>On eelkõige koostööplatvorm, mis võimaldab oma tööd senisest kiiremini, mugavamalt, efektiivsemalt ja patsiendikesksemalt teha.</li>
+  <li>Töölaud on esimene ligipääsupunkt uue põlvkonna terviseinfosüsteemi teenustele ning töölaua abil tagame ka raviasutuste infosüsteemidele juurutamiseks lihvitud teenused.</li>
+</ul>
+</td>
+</tr></table>
+
+
 
 ## Terminology
 
-Code systems and value sets in this IG are examples. You will find the most up-to-date versions of them in TEHIK terminology server. Always query the terminology from there.
+Code systems and value sets in this IG are examples. You will find the most up-to-date versions of them in TEHIK terminology server. Always query the terminology from there. [FHIR terminology services](https://build.fhir.org/ig/TEHIK-EE/TerminologyServices/) maintained by Health and Welfare Information Systems Centre IG contains more detailed information.
 
 ## References
 
