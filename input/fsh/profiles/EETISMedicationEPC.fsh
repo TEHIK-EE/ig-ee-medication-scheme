@@ -37,6 +37,8 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * doseForm ^short = "Dose form of the medication. E.g powder, tablet, ointment etc."
 * doseForm ^definition = "Väljakirjutatud ravimi ravimvorm (loendist). Nt. pulber, tablett, salv jne"
 * totalVolume 1..
+* totalVolume ^short = "If the certain medication (brand name) is chosen then total volume is the amount of medication in package. If based on just active ingredient then total volume is same as in MedicationStatement TotalPrescribedAmount."
+* totalVolume ^definition = "Kui preparaat ON määratud, siis on ravimite hulk pakendis. Kui preparaat EI ole määratud, siis on see kogu välja kirjutatud hulk (ehk võrdne MedicationStatement extension andmetega)."
 * totalVolume only SimpleQuantity
 * totalVolume.value 1..
 * totalVolume.value ^short = "Total volume of medication."
