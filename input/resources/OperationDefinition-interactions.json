@@ -1,0 +1,85 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "Medication-interactions",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>URL: [base]/$interactions</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "url": "https://fhir.ee/OperationDefinition/interactions",
+  "version": "1.0.0",
+  "name": "Interactions",
+  "title": "Find interactions for medications",
+  "status": "active",
+  "kind": "operation",
+  "experimental": false,
+  "date": "2024-05-13T00:00:00Z",
+  "publisher": "TEHIK",
+  "contact": [
+    {
+      "name": "TEHIK",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://tehik.ee"
+        }
+      ]
+    }
+  ],
+  "description": "The interactions operation is used to get interactions for given Medications or MedicationPlan.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "EE",
+          "display": "Estonia"
+        }
+      ]
+    }
+  ],
+  "affectsState": false,
+  "code": "interactions",
+  "resource": [
+    "Medication",
+    "Patient"
+  ],
+  "system": false,
+  "type": true,
+  "instance": false,
+  "parameter": [
+    {
+      "name": "subject",
+      "use": "in",
+      "min": 1,
+      "max": 1,
+      "documentation": "Patient",
+      "type": "Patient"
+    },
+    {
+      "name": "input",
+      "use": "in",
+      "min": 0,
+      "max": "*",
+      "documentation": "List of new medications. If not empty then only interactions between input medications will be returned. Old medication interactions won't be returned if they don't interact with new medications.",
+      "type": "Medication"
+    },
+    {
+      "name": "return",
+      "use": "out",
+      "min": 1,
+      "max": 1,
+      "documentation": "Found interactions",
+      "type": "ClinicalUseDefinition"
+    }
+  ]
+}
