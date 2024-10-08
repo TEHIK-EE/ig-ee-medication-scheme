@@ -28,10 +28,10 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains
-    courseOfTherapyType 0..* and
-    statementOriginCategory 0..* and
-    prescriptionCategory 0..* and
-    repeatCategory 0..*
+    courseOfTherapyType 1..* and
+    statementOriginCategory 1..* and
+    prescriptionCategory 1..* and
+    repeatCategory 1..*
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
 * category[courseOfTherapyType] ^short = "What type of medication course is"
 * category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
@@ -55,6 +55,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * subject only Reference($ee-mpi-patient)
 //* subject ^type.aggregation = #referenced
 * encounter ..0
+* effective[x] 1..1
 * effective[x] only Period
 * effective[x] ^short = "Time period when the treatment line begins and ends"
 * effective[x] ^definition = "Ravimiskeemi rea kehtivuse algus"
