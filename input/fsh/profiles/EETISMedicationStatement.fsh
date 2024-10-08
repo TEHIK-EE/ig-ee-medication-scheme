@@ -29,7 +29,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category ^slicing.rules = #open
 * category contains
     courseOfTherapyType 1..* and
-    statementOriginCategory 1..* and
+    statementOriginCategory 0..* and
     prescriptionCategory 1..* and
     repeatCategory 1..*
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
