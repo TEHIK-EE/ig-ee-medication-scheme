@@ -14,7 +14,6 @@ Description: "Väljamüüdud ravim. Medication resource as it is presented today
 * ^jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * meta.versionId ^example.label = "versionId"
 * meta.versionId ^example.valueId = "1"
-* meta.lastUpdated = "2024-02-13T09:25:49.780106+00:00"
 //* extension ^slicing.ordered = false
 // * extension ^slicing.rules = #open
 * extension contains
