@@ -26,7 +26,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * status ^short = "A code representing the status of recording the medication statement. recorded = KINNITATUD; draft = KINNITAMATA"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
+* category ^slicing.rules = #closed
 * category contains
     courseOfTherapyType 1..* and
     statementOriginCategory 0..* and
