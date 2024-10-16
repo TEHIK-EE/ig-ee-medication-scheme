@@ -129,9 +129,7 @@ pages:
   guidance.md:
     title: Guidance
   operations.md:
-    title: Operations 
-  OperationDefinition-medication-interactions.html:
-    title: Interactions  
+    title: Operations   
   knownissues.md:
     title: Known Issues   
   downloads.xml:
@@ -166,7 +164,7 @@ menu:
   Known Issues: knownissues.html
   Downloads: downloads.html
   Table of contents: toc.html
-#  Changes: changes.html
+#  Changes: changes.html 
 #  History: ../history.html
 
 # The parameters property represents IG.definition.parameter. Rather
