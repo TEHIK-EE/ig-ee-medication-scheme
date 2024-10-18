@@ -1,3 +1,11 @@
 ## Operations in Medication Scheme
 
-Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions](OperationDefinition-medication-interactions.html)
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
