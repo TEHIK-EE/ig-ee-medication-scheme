@@ -23,8 +23,8 @@ Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
 <img src="ravimiskeemiparimine.png" alt="Ravimiskeemi pärimine" width="800"/>
 <br clear="all"/>
 
-<div>{% include test.png %}</div>
-<br clear="all"/>
-
-<div>{% include test.svg %}</div>
-<br clear="all"/>
+<div>
+<img src="test.png"  alt="Project Timeline" width="60%">
+<p>Figure 1 - Projects Timeline for the E-EHRxF</p>
+<p></p>
+</div>
