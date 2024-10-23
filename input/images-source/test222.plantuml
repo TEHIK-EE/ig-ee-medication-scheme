@@ -1,13 +1,24 @@
 @startuml test222
-participant Alice
-actor Bob
+title "Ravimiskeemi ravimi lisamine"
+actor Teenuse kasutaja, TTO klientsysteem, TJT as you
+participant MedIN as me
 
-ref over Alice, Bob : init
+note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
+you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+activate you
+me --> you FHIR bundle
+activate me
 
-Alice -> Bob : hello
+note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
+you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+activate you
+me --> you FHIR bundle
+activate me
 
-ref over Bob
-  This can be on
-  several lines
-end ref
+note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
+you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+activate you
+me --> you FHIR bundle
+activate me
+
 @enduml
