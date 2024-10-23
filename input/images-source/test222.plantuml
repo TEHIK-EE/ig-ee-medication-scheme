@@ -1,0 +1,27 @@
+@startuml test222
+
+hide footbox
+
+'you can use skins to define your own look and feel
+!include ./style.iuml 
+
+actor "Teenuse kasutaja (TTO  klientsüsteem, TJT)" as you
+participant "MedIN" as pu #DEE
+
+group GET[base]/MedicationStatement/$confirmed-medication-scheme
+you -> pu: Päritakse patsient MPI viite alusel kehtiv ravimiskeem
+pu --> you: FHIR Bundle
+activate you
+end
+
+
+group POST [base]/MedicationStatement/
+$interactions (subject)
+you -> pu: Päritakse kehtivas ravimiskeemis olevaid koostoimeid
+pu --> you: FHIR Bundle
+activate pu
+end
+
+end
+
+@enduml
