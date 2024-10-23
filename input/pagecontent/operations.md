@@ -20,5 +20,5 @@ Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
 
 ## pildiproov
 
-<img src="ravimiskeemiparimine.png" alt="ValueSets are made of CodeSystem concepts" width="800"/>
+<img src="ravimiskeemiparimine.png" alt="Ravimiskeemi pärimine" width="800"/>
 <br clear="all"/>
