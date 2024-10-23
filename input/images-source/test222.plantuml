@@ -3,8 +3,8 @@ title "Ravimiskeemi ravimi lisamine"
 
 hide footbox
 
-actor Teenuse kasutaja, TTO klientsysteem, TJT as you
-participant MedIN as me
+actor "Teenuse kasutaja" as you
+participant "MedIN" as me
 
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
 you o-> me: ei 
