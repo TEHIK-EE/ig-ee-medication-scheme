@@ -1,22 +1,25 @@
 @startuml test222
 title "Ravimiskeemi ravimi lisamine"
+
+hide footbox
+
 actor Teenuse kasutaja, TTO klientsysteem, TJT as you
 participant MedIN as me
 
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+you o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
 activate you
 me --> you FHIR bundle
 activate me
 
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+you o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
 activate you
 me --> you FHIR bundle
 activate me
 
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you [o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
+you o-> me "POST [base]/MedicationStatement/$interactions (subject, input)" 
 activate you
 me --> you FHIR bundle
 activate me
