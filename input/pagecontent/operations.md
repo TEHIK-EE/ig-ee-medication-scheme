@@ -17,3 +17,8 @@ Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
 
 <div>{% include test222.svg %}</div>
 <br clear="all"/>
+
+## pildiproov
+
+<img src="ravimiskeemiparimine.png" alt="ValueSets are made of CodeSystem concepts" width="800"/>
+<br clear="all"/>
