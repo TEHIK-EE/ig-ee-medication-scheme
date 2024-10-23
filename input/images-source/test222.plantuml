@@ -6,8 +6,7 @@ hide footbox
 actor "Teenuse kasutaja" as you
 participant "MedIN" as me
 
-note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you o-> me: ei 
+you -> me: ei 
 me --> you: FHIR bundle
 
 end 
