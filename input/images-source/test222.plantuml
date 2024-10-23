@@ -1,14 +1,10 @@
 @startuml test222
 title "Ravimiskeemi ravimi lisamine"
 
-hide footbox
-
 actor "Teenuse kasutaja" as you
 participant "MedIN" as me
 
 you -> me: ei 
 me --> you: FHIR bundle
-
-end 
 
 @enduml
