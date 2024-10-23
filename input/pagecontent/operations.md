@@ -10,4 +10,4 @@ graph TD;
 
 Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
 
-{% include test.svg %}
+{% include test123.svg %}
