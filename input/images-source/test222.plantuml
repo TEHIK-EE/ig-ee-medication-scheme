@@ -21,7 +21,9 @@ activate me
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
 you o-> me: meeldi 
 activate you
-me --> you: FHIR [[bundle/POST$janiiedasi]]
+me --> you: FHIR
 activate me
+
+end 
 
 @enduml
