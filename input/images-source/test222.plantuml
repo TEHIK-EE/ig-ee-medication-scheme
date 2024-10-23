@@ -6,15 +6,14 @@ actor "Teenuse kasutaja (TTO  klientsüsteem, TJT)" as you
 participant "MedIN" as pu #DEE
 
 group Päritakse patsient MPI viite alusel kehtiv ravimiskeem
-you -> pu: GET[base]/MedicationStatement/$confirmed-medication-scheme
+you -> pu: puuy
 pu --> you: FHIR Bundle
 activate you
 end
 
 
 group Päritakse kehtivas ravimiskeemis olevaid koostoimeid
-you -> pu: POST [base]/MedicationStatement/
-$interactions (subject)
+you -> pu: plaa
 pu --> you: FHIR Bundle
 activate pu
 end
