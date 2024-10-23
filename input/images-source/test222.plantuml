@@ -8,21 +8,7 @@ participant "MedIN" as me
 
 note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
 you o-> me: ei 
-activate you
 me --> you: FHIR bundle
-activate me
-
-note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you o-> me: see 
-activate you
-me --> you: FHIR bundle
-activate me
-
-note left : loppkasutaja on sisestanud lisatava ravimi toimeainete või preparaadi info
-you o-> me: meeldi 
-activate you
-me --> you: FHIR
-activate me
 
 end 
 
