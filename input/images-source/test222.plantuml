@@ -1,23 +1,13 @@
 @startuml test222
+participant Alice
+actor Bob
 
-hide footbox
+ref over Alice, Bob : init
 
-actor "Teenuse kasutaja (TTO  klientsüsteem, TJT)" as you
-participant "MedIN" as pu #DEE
+Alice -> Bob : hello
 
-group Päritakse patsient MPI viite alusel kehtiv ravimiskeem
-you -> pu: puuy
-pu --> you: FHIR Bundle
-activate you
-end
-
-
-group Päritakse kehtivas ravimiskeemis olevaid koostoimeid
-you -> pu: plaa
-pu --> you: FHIR Bundle
-activate pu
-end
-
-end
-
+ref over Bob
+  This can be on
+  several lines
+end ref
 @enduml
