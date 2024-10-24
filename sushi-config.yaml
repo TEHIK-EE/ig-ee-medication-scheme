@@ -129,11 +129,21 @@ pages:
   guidance.md:
     title: Guidance
   operations.md:
-    title: Operations   
+    title: Operations  
   knownissues.md:
-    title: Known Issues   
+    title: Known Issues    
   downloads.xml:
     title: Downloads
+  controls.md:
+    title: Controls
+  checklist.md:
+    title: Checklist for developers
+  usecases.md:
+    title: Use cases
+  other.md:
+    title: Other
+  contacts.md: 
+    title: Contacts
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -158,11 +168,16 @@ pages:
 # include a `menu.xml` file in input/includes.
 menu:
   Home: index.html
-  Guidance: guidance.html
+  Guidance: 
+    Operations: operations.html
+    Controls: controls.html
+    Use cases: controls.html
+    Checklist for developers: checklist.html
   Artifacts: artifacts.html
-  Operations: operations.html
-  Known Issues: knownissues.html
-  Downloads: downloads.html
+  Other : 
+    Known Issues: knownissues.html
+    Downloads: downloads.html
+    Contacts: contacts.html
   Table of contents: toc.html
 #  Changes: changes.html 
 #  History: ../history.html

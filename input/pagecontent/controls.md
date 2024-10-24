@@ -1,1 +1,1 @@
-Siia kirjeldame kontrollid
+# Controls | Kontrollid
