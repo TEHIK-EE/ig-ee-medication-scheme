@@ -24,12 +24,6 @@ Interaktsioonide jaoks tuleb kasutada operatsiooni [Medication/$interactions]
 <br clear="all"/>
 
 <div>
-<img src="test.png"  alt="Project Timeline" width="60%">
-<p>Figure 1 - Projects Timeline for the E-EHRxF</p>
-<p></p>
-</div>
-
-<div>
 <img src="test.svg"  alt="Project Timeline" width="60%">
 <p>Figure 1 - Projects Timeline for the E-EHRxF</p>
 <p></p>

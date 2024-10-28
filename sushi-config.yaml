@@ -141,7 +141,7 @@ pages:
   usecases.md:
     title: Use cases
   other.md:
-    title: Other
+    title: About
   contacts.md: 
     title: Contacts
   changes.xml:
@@ -176,12 +176,13 @@ menu:
     Use cases: usecases.html
     Checklist for developers: checklist.html
   Artifacts: artifacts.html
-  Other : 
+  About : 
     Known Issues: knownissues.html
     Downloads: downloads.html
     Contacts: contacts.html
-  Table of contents: toc.html
   Changes: changes.html
+  Table of contents: toc.html
+ 
 #  Changes: changes.html 
 #  History: ../history.html
 

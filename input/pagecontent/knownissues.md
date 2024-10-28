@@ -1,3 +1,5 @@
+# Known issues | Teadaolevad probleemid
+
 ### Identificators not resolving
 
 Some identificators are created as a CodeSystem since they only have OID-s in Estonia. But for a better readability we created TIS FHIR identificator CodeSystem. These system uris don't resolve. In future this problem will be tackled.
