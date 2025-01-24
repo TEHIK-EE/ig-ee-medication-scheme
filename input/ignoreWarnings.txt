@@ -9,6 +9,7 @@ The link 'https://fhir.ee/CodeSystem/%
 The link 'https://fhir.ee/StructureDefinition/%
 The link 'https://fhir.ee/ravimiregister-pakend
 The link 'https://fhir.ee/retseptikeskus-retsept
+The link 'https://fhir.ee/ValueSet/rhk-10
 
 # Other
 Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
