@@ -1,4 +1,4 @@
-Instance: Medication-interactions
+Instance: Interactions
 InstanceOf: OperationDefinition
 Usage: #definition
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
