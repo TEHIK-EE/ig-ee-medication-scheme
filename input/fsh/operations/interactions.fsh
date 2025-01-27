@@ -5,7 +5,7 @@ Usage: #definition
 * extension[=].valueInteger = 1
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension[=].valueCode = #trial-use
-* url = "https://fhir.ee/OperationDefinition/interactions"
+* url = "https://fhir.ee/OperationDefinition/Interactions"
 * version = "1.0.0"
 * name = "Interactions"
 * title = "Find interactions for medications"
