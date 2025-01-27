@@ -1,6 +1,6 @@
 Extension: ExtensionEETISMedicinalProductClassification
 Id: ee-tis-medicinal-product-classification
-Description: "Klassifikatsioon. Classification of the product, e.g. ATC."
+Description: "Klassifikatsioon. Classification of the product, e.g. ATC, narcotic/psychtropic or prescription/over-the-counter medication"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-15T06:15:37.9998371+00:00"
@@ -13,7 +13,7 @@ Description: "Klassifikatsioon. Classification of the product, e.g. ATC."
 * ^jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * ^context.type = #element
 * ^context.expression = "Medication"
-* . ^short = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, etc."
+* . ^short = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, OTC medication etc."
 * value[x] only CodeableConcept
 //* value[x] ^slicing.discriminator.type = #type
 //* value[x] ^slicing.discriminator.path = "$this"
@@ -21,7 +21,7 @@ Description: "Klassifikatsioon. Classification of the product, e.g. ATC."
 //* valueCodeableConcept only CodeableConcept
 //* valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^short = "Medication classified according to some defined system."
-* valueCodeableConcept ^definition = "Ravimi klassifikatsioon"
+* valueCodeableConcept ^definition = "Ravimi klassifikatsioon (näiteks käsimüügiravim/retseptiravim, narkootiline/psühhotroopne jne)"
 //* valueCodeableConcept ^binding.description = "ATC"
 //* valueCodeableConcept.coding from $atc (preferred)
 //* valueCodeableConcept.coding ^definition = "ATC. \r\n\r\nA reference to a code defined by a terminology system."

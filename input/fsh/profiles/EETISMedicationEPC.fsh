@@ -18,7 +18,7 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 // * extension ^slicing.rules = #open
 * extension contains
     ExtensionEETISMedicinalProductClassification named atc 1..1 and
-//    ExtensionEETISMedicinalProductClassification named narcotic 0..1 and - hetkel seda ei kasuta, sest pole CS ega VS aga vajadusel saame sisse lylitada
+//    ExtensionEETISMedicinalProductClassification named narcotic 0..1 and - hetkel seda ei kasuta, sest pole CS ega VS aga vajadusel saame sisse lylitada. Siia alla saab lisda ka käsimyygi ja retseptiravimite eristamise.
     ExtensionEETISSizeOfItem named sizeOfItem 0..1 and
     ExtensionEETISMedicinalProductName named name 0..1
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
