@@ -17,6 +17,7 @@ Description: "Ravimiameti nimekiri ravimite toimeainetest"
 * #11887 "püridoksiin"
 * #10853 "tsüanokobalamiin"
 * #8546 "lidokaiin"
+* #9773 "atsetüülsalitsüülhape"
 
 ValueSet: Toimeained_VS
 Id: toimeained
