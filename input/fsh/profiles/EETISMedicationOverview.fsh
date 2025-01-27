@@ -9,8 +9,8 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * . ^short = "Ravimiskeem"
 * . ^definition = "Ravimiskeem koosneb ravimiskeemiridadest. A container for a collection of resources."
 * type = #document (exactly)
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resolve()"
+* entry ^slicing.discriminator.type = #type
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry contains
     medicationsStatementEntry 0..* and
