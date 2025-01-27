@@ -14,6 +14,7 @@ Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
 * #J01CE02 "fenoksümetüülpenitsilliin"
 * #A10BA02 "metformiin"
 * #A11DB85 "tiamiin+püridoksiin+tsüanokobalamiin+lidokaiin"
+* #B01AC06 "Atsetüülsalitsüülhape"
 
 ValueSet: ATC_EE_VS
 Id: atc-ee
