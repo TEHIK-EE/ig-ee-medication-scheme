@@ -11,13 +11,11 @@ Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Treatment line for pa
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 * category[=].text = "pidev"
-* medication.reference = Reference(raud-patient-reported)
+* medication.reference.display = "Raud 25mg"
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2027-10-01"
-* note.authorReference = Reference(N98765)
-* note.time = "2023-09-01"
-* note.text = "patsient võtab igapäevaselt rauda, türoksiiniga kokku ei sobi ning tuleb tähelepanu pöörata!"
+* dosage.patientInstruction = "võtab igal hommikul rauda (toidulisand)"
 * dosage.timing.repeat.frequency = 1
 * dosage.timing.repeat.period = 24
 * dosage.timing.repeat.periodUnit = #h

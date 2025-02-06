@@ -1,4 +1,4 @@
-Instance: raud-patient-reported
+/*Instance: raud-patient-reported
 InstanceOf: Medication
 Usage: #example
 Description: "Description of patient reported food supplement"
@@ -7,3 +7,4 @@ Description: "Description of patient reported food supplement"
 * extension[=].valueString = "RAUD 25MG"
 * identifier.system =  "https://jvis.agri.ee"
 * identifier.value = "412462"
+*/

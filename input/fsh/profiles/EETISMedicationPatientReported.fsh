@@ -1,5 +1,4 @@
-Profile: EETISMedicationPatientReported
-Parent: Medication
+/*Parent: Medication
 Id: ee-tis-medication-patient-reported
 Description: "Patsiendi sõnul ravim. Medication resource for the representation of food supplements etc as patient reports them to healthcare professional."
 * ^version = "1.0.0"
@@ -31,3 +30,4 @@ Description: "Patsiendi sõnul ravim. Medication resource for the representation
 * ingredient ..0
 * batch ..0
 * definition ..0
+*/

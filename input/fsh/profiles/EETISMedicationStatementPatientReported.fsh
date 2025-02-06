@@ -23,11 +23,13 @@ Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Medication Statement 
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
 * category[courseOfTherapyType] ^short = "What type of medication course is"
 * category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
-* medication only CodeableReference(EETISMedicationPatientReported or Medication or EETISMedicationEPC)
+* medication only CodeableReference(Medication or EETISMedicationEPC)
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
 //* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
+* medication.reference.display ^short = "Patient reported medication in free form text. This is in use until there is no integration with food supplement database jvis.agri.ee"
+* medication.reference.display ^definition = "Patsiendi sõnul ravimid vabatekstina kuniks pole liidestust toidulisandite andmebaasiga jvis.argri.ee"
 * subject only Reference($ee-mpi-patient)
 //* subject ^type.aggregation = #referenced
 * encounter ..0
@@ -44,4 +46,6 @@ Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Medication Statement 
 * note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
+* dosage.patientInstruction ^short = "Comments or remarks about the medication that patient reports."
+* dosage.patientInstruction ^definition = "Märkused ja kommentaarid patsiendi sõnul ravimite kohta."
 * adherence ..0
