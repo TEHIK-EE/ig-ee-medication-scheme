@@ -1,7 +1,7 @@
-Profile: EETISMedicationStatementPatientReported
+Profile: EETISMedicationStatementFoodSupplement
 Parent: MedicationStatement
-Id: ee-tis-medication-statement-patient-reported
-Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Medication Statement for patient reported medications (food supplements etc)."
+Id: ee-tis-medication-statement-food-supplement
+Description: "Ravimiskeemi rida toidulisandile. Medication Statement for (patient reported) food supplements."
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-23T10:56:02.4427313+00:00"
@@ -28,8 +28,8 @@ Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Medication Statement 
 //* medication.concept ..0
 //* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication.reference ^type.aggregation = #referenced
-* medication.reference.display ^short = "Patient reported medication in free form text. This is in use until there is no integration with food supplement database jvis.agri.ee"
-* medication.reference.display ^definition = "Patsiendi sõnul ravimid vabatekstina kuniks pole liidestust toidulisandite andmebaasiga jvis.argri.ee"
+* medication.reference.display ^short = "Patient reported food supplement in free form text. This is in use until there is no integration with food supplement database jvis.agri.ee"
+* medication.reference.display ^definition = "Patsiendi sõnul toidulisandid on vabatekstina kuniks pole liidestust toidulisandite andmebaasiga jvis.argri.ee"
 * subject only Reference($ee-mpi-patient)
 //* subject ^type.aggregation = #referenced
 * encounter ..0
@@ -46,6 +46,6 @@ Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Medication Statement 
 * note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
-* dosage.patientInstruction ^short = "Comments or remarks about the medication that patient reports."
-* dosage.patientInstruction ^definition = "Märkused ja kommentaarid patsiendi sõnul ravimite kohta."
+* dosage.patientInstruction ^short = "Comments or remarks about the food supplements that patient reports."
+* dosage.patientInstruction ^definition = "Märkused ja kommentaarid patsiendi sõnul toidulisandite kohta."
 * adherence ..0
