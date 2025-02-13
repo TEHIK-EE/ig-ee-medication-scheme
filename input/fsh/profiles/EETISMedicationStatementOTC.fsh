@@ -9,7 +9,9 @@ Description: "Ravimiskeemi rida käsimüügiravimi puhul. Medication Statement f
 * contained 0..*
 * extension contains
     ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..1 and // täidetakse ainult ravimiskeemi rea kustutamisel
+    ExtensionEETISTotalPrescribedAmount named extensionEETISTotalPrescribedAmount 0..* and
     ExtensionEETISVerification named extensionEETISVerification 0..* and
+    ExtensionEETISSubstitution named extensionEETISSubstitution 0..1 and
     ExtensionEETISPrescriptionIntent named extensionEETISPrescriptionIntent 0..* and
     ExtensionEETISPrescriptionChange named ExtensionEETISPrescriptionChange 0..*
 * extension[extensionEETISVerification] ^definition = "Optional Extension Element - found in all resources."
