@@ -9,5 +9,5 @@ Description: "Practitioner N98765 in practitioner role nurse and occupation õde
 * organization = Reference(rh)
 * code[0] = $practitioner-role#nurse "Nurse"
 * code[+] = $ee-occupation#22210502 "Õde"
-* specialty[0] = $sct#394810000 "Rheumatology"
+* specialty[0] = $sct#394810000 "Rheumatology (qualifier value)"
 * specialty[+] = $ee-medre-specialty#N200 "Kliiniline õendus"

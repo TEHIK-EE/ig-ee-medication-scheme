@@ -10,6 +10,6 @@ Description: "Practitioner D98765 in practitioner role doctor and with occupatio
 * code[0] = $practitioner-role#doctor "Doctor"
 * code[+] = $ee-occupation#22120901 "Kardioloog"
 * code[+] = $autoriseerimismooduli-kasutajarollid#doctor "Arst"
-* specialty[0] = $sct#394579002 "Cardiology"
-* specialty[+] = $sct#1251549008 "Interventional cardiology"
+* specialty[0] = $sct#394579002 "Cardiology (qualifier value)"
+* specialty[+] = $sct#1251549008 "Interventional cardiology (qualifier value)"
 * specialty[+] = $ee-medre-specialty#E170 "Kardioloogia"
