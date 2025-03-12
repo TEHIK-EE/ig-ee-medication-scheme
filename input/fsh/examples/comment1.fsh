@@ -2,7 +2,7 @@ Instance: Comment1
 InstanceOf: Communication
 Usage: #example
 Description: "Comment about alprazolam"
-* meta.profile = "https://fhir.ee/base/StructureDefinition/ee-tis-communication"
+* meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
 * identifier.value = "080808"
 * status = #completed
 * category.text = "siia tuleb kommentaari tüüp"

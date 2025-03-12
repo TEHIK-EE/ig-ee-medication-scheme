@@ -2,7 +2,7 @@ Instance: Comment-changed
 InstanceOf: Communication
 Usage: #example
 Description: "Comment about alprazolam where the comment has been changed"
-* meta.profile = "https://fhir.ee/base/StructureDefinition/ee-tis-communication"
+* meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
 * identifier.value = "080809"
 * status = #completed
 * category.text = "siia tuleb kommentaari tüüp. eeldatavasti loendist"
