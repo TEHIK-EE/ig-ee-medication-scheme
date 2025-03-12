@@ -1,0 +1,39 @@
+Profile: EETISCommunication
+Parent: Communication
+Id: ee-tis-communication
+Description: "Ravimiskeemi kommentaar. Comment about one treatment line in mediction list." 
+* ^version = "1.0.0"
+* ^status = #draft
+* ^date = "2025-03-12T13:55:03.1985103+00:00"
+* . ^short = "Comment"
+* . ^definition = "Kommentaar"
+* identifier ^short = "ID of the comment"
+* identifier ^definition = "Kommentaari ID"
+* status ^short = "Status of the comment can be completed(LISATUD) or stopped(KUSTUTATUD). If comment is changed the note element is used."
+* status ^definition = "Kasutusel 2 staatust LISATUD=completed, KUSTUTATUD=stopped. Kui tegu on muutmisega, tuleb see välja note.time elemendi muutmise aja ja teksti kaudu. " 
+* category 1..1
+* category ^binding.description = "Vajab LOENDit, mis tüüpi kommentaariga on tegu"
+* category ^short = "The type of comment this is"
+* category ^definition = "Kommentaari tüüp, nt neerufunktsiooni mõjutav ravim, seotud otsustustoega"
+* about only Reference(MedicationStatement)
+* about 1..1
+* about ^short = "Related MedicationStatement the comment is about"
+* about ^definition = "Ravimiskeemi rida, mille kohta kommentaar on tehtud" 
+* sent 1..1
+* sent ^short = "When the comment was added to the MedicationStatement"
+* sent ^definition = "Kommentaari lisamise aeg"
+* sender only Reference(EETISPractitioner or EETISPractitionerRole)
+* sender 1..1
+* sender ^short = "Practitioner who added the comment"
+* sender ^definition = "Tervishoiutöötaja, kes lisas ravimiskeemi reale kommentaari" 
+* reason only CodeableReference(Medication)
+* reason ^short = "Reference to a certain medication, its strenght and active ingredient this comment is about" 
+* reason ^definition = "Viide ravimile, ka toimeaine ja tugevus, mille kohta kommentaar on tehtud"
+* payload.contentCodeableConcept.text 1..1
+* payload.contentCodeableConcept.text ^short = "Comment about the MedicationStatement in free form text"
+* payload.contentCodeableConcept.text ^definition = "Kommentaari sisu vabatekstina"
+* note.time 1..1 
+* note.time ^short = "Time when the comment was changed."
+* note.time ^definition = "Kommentaari muutmise aeg"
+* note.text ^short = "Why the comment was changed"
+* note.text ^definition = "Kommentaari muutmise põhjendus"
