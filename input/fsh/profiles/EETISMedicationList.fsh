@@ -25,6 +25,9 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * source 1..
 * source only Reference(EETISPractitioner or EETISPractitionerRole)
 //* source ^type.aggregation = #contained
+* note 0..1
+* note ^short = "Comment about medication scheme"
+* note ^definition = "Kommentaar terve ravimiskeemi kohta. Erineb ravimiskeemi üksiku rea kommentaarist, vt. Communication-profiili."
 * entry.item only Reference(EETISMedicationStatement)
 * entry.deleted ..0
 * entry.date ^short = "When entry flag is unchanged entry date does not change. When entry flag is something else than ´unchanged´ the entry date is also changed"

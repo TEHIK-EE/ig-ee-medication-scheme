@@ -5,7 +5,8 @@ Description: "Comment about alprazolam"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
 * identifier.value = "080808"
 * status = #completed
-* category.text = "siia tuleb kommentaari tüüp"
+* category = #alert
+* category.text = "D1. siia tuleb hoiatus neerufunktsiooni langusest"
 * about = Reference(MedicationStatementAlprazolam)
 * sent = 2025-03-12
 * sender = Reference(PractRoleD12345)
