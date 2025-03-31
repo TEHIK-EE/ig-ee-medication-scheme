@@ -5,7 +5,7 @@ Description: "Comment about alprazolam when the patient has renal failure"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
 * identifier.value = "080808"
 * status = #completed
-//* category = #alert 
+* category = #alert 
 * category.text = "D1. siia tuleb hoiatus neerufunktsiooni langusest"
 * about = Reference(MedicationStatementAlprazolam)
 * sent = 2025-03-12
