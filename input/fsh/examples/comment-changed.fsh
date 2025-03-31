@@ -5,7 +5,7 @@ Description: "Comment about alprazolam where the comment has been changed"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
 * identifier.value = "080809"
 * status = #completed
-* category = #notification 
+//* category = #notification 
 * about = Reference(MedicationStatementAlprazolam)
 * sent = 2025-03-12
 * sender = Reference(PractRoleD12345)

@@ -12,7 +12,7 @@ Description: "Ravimiskeemi kommentaar. Comment about one treatment line in medic
 * status ^short = "Status of the comment can be completed(LISATUD) or stopped(KUSTUTATUD). If comment is changed the note element is used."
 * status ^definition = "Kasutusel 2 staatust LISATUD=completed, KUSTUTATUD=stopped. Kui tegu on muutmisega, tuleb see välja note.time elemendi muutmise aja ja teksti kaudu. " 
 * category 1..1
-* category from http://hl7.org/fhir/ValueSet/communication-category (example)
+//* category from http://hl7.org/fhir/ValueSet/communication-category (example)
 * category ^binding.description = "|alert| is used when there is a renal failure of some degree and the health care professional needs to pay more attention to dosage"
 * category ^short = "The type of comment this is. Codes |alert| or |notification| are used"
 * category ^definition = "Kommentaari tüüp, nt neerufunktsiooni mõjutav ravimi puhul on koodiks |alert|"
