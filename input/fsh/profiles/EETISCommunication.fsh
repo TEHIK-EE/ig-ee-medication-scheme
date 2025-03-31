@@ -12,11 +12,12 @@ Description: "Ravimiskeemi kommentaar. Comment about one treatment line in medic
 * status ^short = "Status of the comment can be completed(LISATUD) or stopped(KUSTUTATUD). If comment is changed the note element is used."
 * status ^definition = "Kasutusel 2 staatust LISATUD=completed, KUSTUTATUD=stopped. Kui tegu on muutmisega, tuleb see välja note.time elemendi muutmise aja ja teksti kaudu. " 
 * category 1..1
-* category ^binding.description = "Vajab LOENDit, mis tüüpi kommentaariga on tegu"
-* category ^short = "The type of comment this is"
-* category ^definition = "Kommentaari tüüp, nt neerufunktsiooni mõjutav ravim, seotud otsustustoega"
+* category from http://hl7.org/fhir/ValueSet/communication-category (example)
+* category ^binding.description = "|alert| is used when there is a renal failure of some degree and the health care professional needs to pay more attention to dosage"
+* category ^short = "The type of comment this is. Codes |alert| or |notification| are used"
+* category ^definition = "Kommentaari tüüp, nt neerufunktsiooni mõjutav ravimi puhul on koodiks |alert|"
 * category.text ^short = "Description of the alert"
-* category.text ^definition = "C/D. Siia tuleb hoiatus, kui ravim on neerutoksiline"
+* category.text ^definition = "C/D. Siia tuleb hoiatus, kui ravim on neerutoksiline. Kui on tegu muu kommentaariga siis see väli on tühi"
 * about only Reference(MedicationStatement)
 * about 1..1
 * about ^short = "Related MedicationStatement the comment is about"
