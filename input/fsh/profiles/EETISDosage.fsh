@@ -56,8 +56,9 @@ Description: "Annustamisjuhis. Dosage is for exact representation of what quanti
 * site ^definition = "KEHAPIIRKOND."
 * route ^short = "How drug should enter body"
 * route ^definition = "MANUSTAMISVIIS."
+* route ^binding.description = "Manustamisviiside loend Ravimiregistrist"
 * method ^short = "Technique for administering medication"
-* method ^definition = "MANUSTAMISMEETOD. Näiteks subkutaanne"
+* method ^definition = "MANUSTAMISMEETOD."
 * doseAndRate ^short = "Amount of medication administered, to be administered or typical amount to be administered"
 * doseAndRate ^definition = "ANNUS JA KIIRUS."
 //* doseAndRate.dose[x] from $retsept-annustamise-yhik-VS (example)

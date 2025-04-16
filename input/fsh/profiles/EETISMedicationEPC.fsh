@@ -47,9 +47,9 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * totalVolume.code ^definition = "Ühikute koguhulga ühik"
 * ingredient 1..
 * ingredient.item from $toimeained-VS (preferred)
-* ingredient.item ^short = "Active ingredient from Ravimiameti value set"
+* ingredient.item ^short = "Active ingredient from Ravimiregister value set"
 * ingredient.item ^definition = "Toimeaine loendist"
-//* ingredient.item.concept ^binding.description = "Toimeainete loend"
+* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
 //* ingredient.item.reference ..0
 * ingredient.isActive 1..
 * ingredient.isActive.value = true
