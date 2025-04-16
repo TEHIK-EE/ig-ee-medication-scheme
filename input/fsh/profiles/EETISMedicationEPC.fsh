@@ -48,8 +48,8 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * ingredient 1..
 * ingredient.item from $toimeained-VS (preferred)
 * ingredient.item ^short = "Active ingredient from Ravimiregister value set"
-* ingredient.item ^definition = "Toimeaine loendist"
-* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
+* ingredient.item ^definition = "Toimeaine loendist. Ravimiregistri loend"
+//* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
 //* ingredient.item.reference ..0
 * ingredient.isActive 1..
 * ingredient.isActive.value = true

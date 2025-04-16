@@ -47,7 +47,7 @@ Description: "Ekstemporaalne ravim. Profile for representing medication that is 
 * ingredient.item.concept.text 1..1
 * ingredient.item ^short = "List of ingredients in precise amounts for medication preparation"
 * ingredient.item ^definition = "Retsept koos vajalike kogustega ravimi valmistamiseks apteegis"
-* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
+//* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
 //* ingredient.item.reference ..0
 //* ingredient.isActive 1..
 //* ingredient.isActive.value = true
