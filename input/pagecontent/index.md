@@ -1,13 +1,10 @@
->## NB! 
+># NB! 
 >
->This is a development build and should be considered as “work in progress”. The content changes on a daily basis. This is not an official product release yet.>
+>**This is a development build and should be considered as “work in progress”. The content changes on a daily basis. This is not an official product release yet.**
 
-<div xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="NB!">		
-		<p>This is a development build and should be considered as “work in progress”. The content changes on a daily basis. This is not an official product release yet</p>		
-	</blockquote>
-</div>
+**Juhendit täiendatakse igapäevaselt. Kõik liidestumiseks vajalik materjal pole veel juhendisse lisatud, tegemist on MUSTANDIGA**
+>
+
 
 This implementation guide describes the medication scheme maintained by Health and Welfare Information Systems Centre. Main content is provided in English, more detailed specifications and names of local value sets and code systems may occasionally be available only in Estonian.
 

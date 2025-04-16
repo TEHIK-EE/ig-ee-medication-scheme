@@ -2,4 +2,11 @@
 
 {% include fsh-link-references.md %}
 
-[MedicationStatement-confirm]
+From the links below you can access the operations used in Medication Scheme:
+
+- [MedicationStatement-confirm]
+- [MedicationStatement-confirmed-medication-scheme]
+- [MedicationStatement-history]
+- [Interactions]
+- [Task-reimbursements]
+- [MedicationStatement-validate-custom]
