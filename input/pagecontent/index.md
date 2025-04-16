@@ -1,8 +1,8 @@
 ># NB! 
 >
 >**This is a development build and should be considered as “work in progress”. The content changes on a daily basis. This is not an official product release yet.**
-
-**Juhendit täiendatakse igapäevaselt. Kõik liidestumiseks vajalik materjal pole veel juhendisse lisatud, tegemist on MUSTANDIGA**
+>
+>**Juhendit täiendatakse igapäevaselt. Kõik liidestumiseks vajalik materjal pole veel juhendisse lisatud, tegu on MUSTANDIGA!**
 >
 
 
