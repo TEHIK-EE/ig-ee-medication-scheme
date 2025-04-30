@@ -56,7 +56,7 @@ Description: "Annustamisjuhis. Dosage is for exact representation of what quanti
 * site ^definition = "KEHAPIIRKOND."
 * route ^short = "How drug should enter body"
 * route ^definition = "MANUSTAMISVIIS. Loend Ravimiregistrist"
-* route ^binding.description = "Manustamisviiside loend Ravimiregistrist"
+//* route ^binding.description = "Manustamisviiside loend Ravimiregistrist"
 * method ^short = "Technique for administering medication"
 * method ^definition = "MANUSTAMISMEETOD."
 * doseAndRate ^short = "Amount of medication administered, to be administered or typical amount to be administered"
