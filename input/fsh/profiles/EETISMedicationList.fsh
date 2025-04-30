@@ -28,8 +28,8 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * note 0..1
 * note ^short = "Comment about medication scheme"
 * note ^definition = "Kommentaar terve ravimiskeemi kohta. Erineb ravimiskeemi üksiku rea kommentaarist, vt. Communication-profiili."
-* note.authorString ^short = "Healthcare professional who added comment"
-* note.authorString ^definition = "Kommentaari lisaja, THT nimi ja roll"
+* note.author ^short = "Healthcare professional who added comment"
+* note.author ^definition = "Kommentaari lisaja, THT nimi ja roll"
 * note.time 0..1 
 * note.time ^short = "Time when the comment was added."
 * note.time ^definition = "Kommentaari lisamise aeg"
