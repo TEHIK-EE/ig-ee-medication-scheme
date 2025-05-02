@@ -36,7 +36,7 @@ Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line
 * extension[=].valueIdentifier.value = "1011111111"
 * extension[=].valueIdentifier.value = "1022222222"
 * extension[=].valueIdentifier.value = "1033333333"
-* extension[=].valueReference = Reference(MedicationStatement-metformin)
+//* extension[=].valueReference = Reference(MedicationStatement-metformin)
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 //* category[=].text = "pidev"
