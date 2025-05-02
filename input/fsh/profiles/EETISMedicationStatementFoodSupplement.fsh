@@ -10,7 +10,8 @@ Description: "Ravimiskeemi rida toidulisandile. Medication Statement for (patien
 * extension contains
     ExtensionEETISCancelledStatusReason named extensionEETISCancelledStatusReason 0..1 and // täidetakse ainult ravimiskeemi rea kustutamisel
     ExtensionEETISVerification named extensionEETISVerification 0..* and
-    ExtensionEETISPrescriptionChange named ExtensionEETISPrescriptionChange 0..*
+    ExtensionEETISPrescriptionChange named ExtensionEETISPrescriptionChange 0..* and
+    ExtensionEETISGroupingIdentifier named ExtensionEETISGroupingIdentifier 0..*
 * extension[extensionEETISVerification] ^definition = "Optional Extension Element - found in all resources."
 * partOf only Reference(EETISMedicationStatement)
 * status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud."
