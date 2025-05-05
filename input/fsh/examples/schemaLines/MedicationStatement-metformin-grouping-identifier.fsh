@@ -33,9 +33,10 @@ Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-grouping-identifier"
-* extension[=].valueIdentifier.value = "1011111111"
-* extension[=].valueIdentifier.value = "1022222222"
-* extension[=].valueIdentifier.value = "1033333333"
+* extension[=].extension[0].url = "groupingIdentifier"
+* extension[=].extension[=].valueIdentifier.value = "1011111111"
+* extension[=].extension[=].valueIdentifier.value = "1022222222"
+* extension[=].extension[=].valueIdentifier.value = "1033333333"
 //* extension[=].valueReference = Reference(MedicationStatement-metformin)
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#P "Pidev"
