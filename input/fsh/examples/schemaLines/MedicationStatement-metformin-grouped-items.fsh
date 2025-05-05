@@ -1,4 +1,4 @@
-Instance: MedicationStatement-metformin-grouping-identifier
+Instance: MedicationStatement-metformin-grouped-items
 InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line for metformin where several identifiers are grouped." 
@@ -32,10 +32,15 @@ Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line
 * extension[=].extension[=].valueDateTime = "2023-11-09"
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-grouping-identifier"
-* extension[=].extension[0].url = "groupingIdentifier"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-grouped-items"
+* extension[=].extension[0].url = "groupingReference"
+* extension[=].extension[=].valueReference = Reference(MedicationStatement-metformin)
+* extension[=].extension[+].url = "groupingIdentifier"
+* extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1011111111"
+* extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1022222222"
+* extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1033333333"
 //* extension[=].valueReference = Reference(MedicationStatement-metformin)
 * status = #recorded
