@@ -38,8 +38,10 @@ Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line
 * extension[=].extension[+].url = "groupingIdentifier"
 * extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1011111111"
+* extension[=].extension[+].url = "groupingIdentifier"
 * extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1022222222"
+* extension[=].extension[+].url = "groupingIdentifier"
 * extension[=].extension[=].valueIdentifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
 * extension[=].extension[=].valueIdentifier.value = "1033333333"
 //* extension[=].valueReference = Reference(MedicationStatement-metformin)

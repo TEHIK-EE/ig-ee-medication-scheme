@@ -16,6 +16,7 @@ Description: "Grupeerija. Used when there is a need to group several items that 
 * extension[groupingIdentifier] ^short = "Identifier(s) of MedicationStatement which are shown as one line"
 * extension[groupingIdentifier] ^definition = "Ravimiskeemi rea identifikaator(id), mis on kokku grupeeritud."
 * extension[groupingIdentifier].value[x] only Identifier
+* extension[groupingIdentifier].valueIdentifier.system ^short = "Use this https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept" 
 /** extension[groupingIdentifier].system = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid
  value[x] ^short = "Identifier(s) or reference of MedicationStatement which are shown as one line"
 * value[x] ^definition = "Ravimiskeemi rea identifikaator või referents, mis on kokku grupeeritud."
