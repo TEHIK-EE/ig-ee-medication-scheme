@@ -4,6 +4,8 @@
 
 ## Use cases
 
+## Data model
+
 ## Terminology
 
 ## Controls
