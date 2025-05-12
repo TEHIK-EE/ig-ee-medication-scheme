@@ -18,7 +18,7 @@ Andmete lisamine, muutmine ja eemaldamine on kõik läbi Ravimiskeemi andmete ki
 * Andmete muutmisel tekivad FHIR ressurssidest uued versioonid
 * Ravimiskeemis andmete kustutamist kui sellist ei eksisteeri, on vaid ravimiskeemi ridade aktiivsest vaatest eemaldamine ehk nendele effective.end kuupäeva määramine kinnitamisel, mis välistab need Kinnitatud ravimiskeemi pärimine [MedicationStatement-confirmed-medication-scheme] operatsiooni väljundist.
 
-katsetan [$linki](MedicationStatement-confirmed-medication-scheme.html)
+katsetan [$linki](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html)
 
 ## Ravimiskeemi kinnitamise andmestik
 
