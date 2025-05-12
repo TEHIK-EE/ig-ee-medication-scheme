@@ -146,6 +146,8 @@ pages:
     title: Contacts
   changes.xml:
     title: Changes
+  documentation.md:
+    title: Documentation
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -172,6 +174,7 @@ menu:
   Home: index.html
   Guidance: 
     Operations: operations.html
+    Documentation: documentation.html
     Controls: controls.html
     Use cases: usecases.html
     Checklist for developers: checklist.html
