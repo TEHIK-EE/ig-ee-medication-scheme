@@ -8,7 +8,7 @@ Alltoodud skeem illustreerib tehniliste ressursside ärilist kasutust:
 <p></p>
 </div>
 
-Andmete lisamine, muutmine ja eemaldamine on kõik läbi Ravimiskeemi andmete kinnitamine [MedicationStatement-confirm] operatsiooni. All on lühidalt kirjeldatud andemete tekkimise järjekorda:
+Andmete lisamine, muutmine ja eemaldamine on kõik läbi [Ravimiskeemi andmete kinnitamine](OperationDefinition-MedicationStatement-confirm.html) operatsiooni. All on lühidalt kirjeldatud andemete tekkimise järjekorda:
 
 * Patsiendi ravimiskeemi lisatakse ravimiskeemi rida, tekivad ressursid MedicationStatement ja sellega seotud Medication A 
     * ühtlasi lisatakse taustal Retseptikeskusesse retseptid ning salvestatakse nende numbrid MedicationStatement juurde
@@ -16,9 +16,7 @@ Andmete lisamine, muutmine ja eemaldamine on kõik läbi Ravimiskeemi andmete ki
     * täiendavalt päritakse retseptikeskusest numbrite alusel retseptid ning konverteeritakse need MedicationRequest ressurssideks, mis on samuti seotud eelnevalt MedicationStatement'ga seotud Medication A-ga. 
     * juhul kui retsepte on väljastatud, tekib iga retsepti väljastamisel MedicationDispense - siin on aga eripäraks iga väljastusega eraldi kaasa tulev Medication ressurss (joonisel nt MedicationDispense 1 ja Medication B). Põhjus seisneb selles, et Patsiendile väljastatava ravimi osas langetab lõpliku otsuse kohapeal olev apteeker.
 * Andmete muutmisel tekivad FHIR ressurssidest uued versioonid
-* Ravimiskeemis andmete kustutamist kui sellist ei eksisteeri, on vaid ravimiskeemi ridade aktiivsest vaatest eemaldamine ehk nendele effective.end kuupäeva määramine kinnitamisel, mis välistab need Kinnitatud ravimiskeemi pärimine [MedicationStatement-confirmed-medication-scheme] operatsiooni väljundist.
-
-katsetan [$linki](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html)
+* Ravimiskeemis andmete kustutamist kui sellist ei eksisteeri, on vaid ravimiskeemi ridade aktiivsest vaatest eemaldamine ehk nendele effective.end kuupäeva määramine kinnitamisel, mis välistab need [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) operatsiooni väljundist.
 
 ## Ravimiskeemi kinnitamise andmestik
 
