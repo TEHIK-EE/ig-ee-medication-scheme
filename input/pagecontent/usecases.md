@@ -75,7 +75,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
     * Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul eemaldatav rida muudetud kujul ning kõik ülejäänud Kinnitatud ravimiskeemi pärimisel saadud read
 5. MedIN valideerib andmed, kontrollib koostoimeid,  võimalusel tühistab eemaldatava reaga seotud retseptid ning salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
     * Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
-    * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid FHIR-i <u>ei salvestata<u>, küll aga tehakse Retseptikeskuses retseptide tühistamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski annulleeritakse. Sellisel juhul peegeldub see muudatus ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes.
+    * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid FHIR-i ei salvestata, küll aga tehakse Retseptikeskuses retseptide tühistamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski annulleeritakse. Sellisel juhul peegeldub see muudatus ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes.
 
 ### Ravimiskeemi ravimi muutmine
 *NB! Lihtsuse huvides on skeemilt ja tegevuste nimekirjast jäetud ära koostoimete pärimine*
