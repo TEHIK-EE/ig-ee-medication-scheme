@@ -1,4 +1,4 @@
-# Dokumentatsioon
+# MedIN Andmemudel
 {% include fsh-link-references.md %}
 ## Ressursside äriline kasutus
 Alltoodud skeem illustreerib tehniliste ressursside ärilist kasutust:

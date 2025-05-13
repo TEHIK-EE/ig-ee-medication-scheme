@@ -1,6 +1,6 @@
-# Use cases | Kasutusjuhud
+# Kasutuslood
 {% include fsh-link-references.md %}
-### Sissejuhatus
+
 Tehniliselt ei ole Ravimiskeemi teenus oma ülesehituselt märkimisväärselt keerukas, kuid teenuste kasutus on erinevates ärilistes stsenaariumites mõnevõrra erinev. 
 Teenuste tehniline kirjeldus on toodud MedIN API kirjeldus alamlehtedel, järgnevalt on aga ära toodud teenuste kasutamine erinevates ärilistes stsenaariumites.
 
@@ -17,7 +17,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 
 ### Patsiendi ravimiskeemi pärimine
 <div>
-<img src="patsiendiravimiskeemiparimine.svg"  alt="patsiendiravimiskeemiparimine" width="60%">
+<img src="patsiendiravimiskeemiparimine.svg"  alt="patsiendiravimiskeemiparimine" width="50%">
 <p>Joonis 1. Patsiendi ravimiskeemi pärimine</p>
 <p></p>
 </div>
@@ -33,7 +33,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 
 ### Ravimiskeemi ravimi lisamine
 <div>
-<img src="ravimiskeemiravimilisamine.svg"  alt="Ravimiskeemi ravimi lisamine" width="60%">
+<img src="ravimiskeemiravimilisamine.svg"  alt="Ravimiskeemi ravimi lisamine" width="50%">
 <p>Joonis 2. Ravimiskeemi ravimi lisamine</p>
 <p></p>
 </div>
@@ -61,7 +61,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 ### Ravimiskeemi ravimi eemaldamine
 *NB! Lihtsuse huvides on skeemilt ja tegevuste nimekirjast jäetud ära koostoimete pärimine*
 <div>
-<img src="ravimieemaldamine.svg"  alt="Ravimi eemaldamine" width="60%">
+<img src="ravimieemaldamine.svg"  alt="Ravimi eemaldamine" width="50%">
 <p>Joonis 3. Ravimiskeemi rea eemaldamine </p>
 <p></p>
 </div>
@@ -80,7 +80,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 ### Ravimiskeemi ravimi muutmine
 *NB! Lihtsuse huvides on skeemilt ja tegevuste nimekirjast jäetud ära koostoimete pärimine*
 <div>
-<img src="ravimimuutmine.svg"  alt="Ravimiskeemi rea muutmine" width="60%">
+<img src="ravimimuutmine.svg"  alt="Ravimiskeemi rea muutmine" width="50%">
 <p>Joonis 4. Ravimiskeemi rea muutmine</p>
 <p></p>
 </div>
@@ -118,7 +118,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 ### Ravimiskeemi ravimi pikendamine
 *NB! Lihtsuse huvides on skeemilt ja tegevuste nimekirjast jäetud ära koostoimete pärimine*
 <div>
-<img src="ravimipikendamine.svg"  alt="Ravimiskeemi rea pikendamine" width="60%">
+<img src="ravimipikendamine.svg"  alt="Ravimiskeemi rea pikendamine" width="50%">
 <p>Joonis 5. Ravimiskeemi rea pikendamine</p>
 <p></p>
 </div>
