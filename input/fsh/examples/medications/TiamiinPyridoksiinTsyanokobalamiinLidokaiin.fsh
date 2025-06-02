@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of medication Milgamma with four ingredient"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#A11DB85 "tiamiin+püridoksiin+tsüanokobalamiin+lidokaiin"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"

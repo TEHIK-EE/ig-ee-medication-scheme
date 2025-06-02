@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of patient reported food supplement"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-patient-reported"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "RAUD 25MG"
 * identifier.system =  "https://jvis.agri.ee"

@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of medication adrenaline"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#C01CA24 "Epinefriin"
 //* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"

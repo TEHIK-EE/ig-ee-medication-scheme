@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of medication aspart-insulin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#J01CE02 "fenoksümetüülpenitsilliin"
 //* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"

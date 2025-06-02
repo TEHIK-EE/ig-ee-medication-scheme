@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of medication metformin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#A10BA02 "metformiin"
 //* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"

@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Extemporal medication example of sulfur ointment"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-extemporal"
+* language = #et
 //* extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 //* extension[=].valueCodeableConcept = $atc-ee#C01CA24 "Epinefriin"
 // * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"

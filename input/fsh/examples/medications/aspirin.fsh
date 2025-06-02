@@ -3,6 +3,7 @@ InstanceOf: Medication
 Usage: #example
 Description: "Description of medication Aspirin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-epc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
 * extension[=].valueCodeableConcept = $atc-ee#B01AC06 "Atsetüülsalitsüülhape"
 //* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
