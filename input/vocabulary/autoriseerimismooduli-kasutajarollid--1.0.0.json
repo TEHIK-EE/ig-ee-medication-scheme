@@ -1,4 +1,4 @@
-{
+/*{
     "resourceType": "ValueSet",
     "id": "autoriseerimismooduli-kasutajarollid",
     "language": "et",
@@ -57,3 +57,4 @@
       ]
     }
   }
+    */

@@ -1,4 +1,4 @@
-{
+/*{
     "resourceType": "CodeSystem",
     "id": "autoriseerimismooduli-kasutajarollid",
     "language": "et",
@@ -383,3 +383,4 @@
       }
     ]
   }
+    */
