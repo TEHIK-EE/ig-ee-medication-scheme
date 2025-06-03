@@ -3,6 +3,7 @@ InstanceOf: Communication
 Usage: #example
 Description: "Comment about alprazolam where the comment has been changed"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
+* language = #et
 * identifier.value = "080809"
 * status = #completed
 * category = #notification 

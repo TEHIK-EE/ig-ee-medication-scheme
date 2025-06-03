@@ -2,6 +2,7 @@
 InstanceOf: List
 Usage: #example
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
+* language = #et
 //* implicitRules = "http://hl7.org/fhir/reference"
 * status = #current
 * mode = #snapshot

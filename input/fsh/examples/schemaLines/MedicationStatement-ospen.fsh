@@ -2,6 +2,7 @@
 InstanceOf: MedicationStatement
 Usage: #example
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
+* language = #et
 * implicitRules = "https://build.fhir.org/ig/HL7EE/ig-ee-base"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution"
 * extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP03 "Patsiendil esineb ülitundlikkus abiaine vastu, mis esineb kõigis teistes sarnastes ja sama toimeainega ravimites"

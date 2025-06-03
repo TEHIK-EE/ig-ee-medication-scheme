@@ -3,6 +3,7 @@ InstanceOf: PractitionerRole
 Usage: #example
 Description: "Practitioner D98765 in practitioner role doctor and with occupation kardioloog"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+* language = #et
 * active = true
 * period.start = "2012-01-01"
 * practitioner = Reference(D98765)

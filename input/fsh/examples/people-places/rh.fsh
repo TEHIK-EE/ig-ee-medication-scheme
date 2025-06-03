@@ -3,6 +3,7 @@ InstanceOf: Organization
 Usage: #example
 Description: "Organization Rakvere Haigla"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-organization"
+* language = #et
 * identifier.system = "https://fhir.ee/sid/org/est/br"
 * identifier.value = "10856624"
 * active = true

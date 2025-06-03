@@ -3,6 +3,7 @@ InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true

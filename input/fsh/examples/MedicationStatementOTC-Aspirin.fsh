@@ -3,6 +3,7 @@ InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida käsimüügiravimile. Schema line for over-the-counter Aspirin" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement-otc"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 * extension[=].extension[0].url = "verificationTime"
 * extension[=].extension[=].valueDateTime = "2023-11-09"

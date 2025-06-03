@@ -3,6 +3,7 @@ InstanceOf: ClinicalUseDefinition
 Usage: #example
 Description: "Example of a medication interaction between medication A and B" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-interaction"
+* language = #et
 * status = #active
 * contained[0] = metformin
 * contained[+] = adrenalin

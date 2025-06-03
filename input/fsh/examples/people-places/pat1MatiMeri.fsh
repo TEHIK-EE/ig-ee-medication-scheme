@@ -3,6 +3,7 @@ InstanceOf: Patient
 Usage: #example
 Description: "Patient Mati Meri"
 * meta.profile = "https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified"
+* language = #et
 * identifier[0].system = "https://fhir.ee/sid/pid/est/ni"
 * identifier[=].value = "38301105216"
 * identifier[+].system = "https://fhir.ee/sid/pid/est/ppn"

@@ -3,6 +3,7 @@ InstanceOf: List
 Usage: #example
 Description: "List of patient's medications verified by D12345"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
+* language = #et
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
 * extension[=].valueBoolean = true

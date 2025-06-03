@@ -3,6 +3,7 @@ InstanceOf: Communication
 Usage: #example
 Description: "Comment about alprazolam when the patient has renal failure"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-communication"
+* language = #et
 * identifier.value = "080808"
 * status = #completed
 * category = #alert 

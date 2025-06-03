@@ -3,6 +3,7 @@ InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida patsiendi sõnul ravimile. Treatment line for patient reported iron"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement-food-supplement"
+* language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-verification"
 * extension[=].extension[0].url = "verificationTime"
 * extension[=].extension[=].valueDateTime = "2023-11-09"

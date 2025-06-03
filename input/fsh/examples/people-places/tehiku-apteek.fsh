@@ -3,6 +3,7 @@ InstanceOf: Location
 Usage: #example
 Description: "Location of pharmacy Tehiku apteek" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-pharmacy-location"
+* language = #et
 //* implicitRules = "http://hl7.org/fhir/reference"
 * name = "Tehiku apteek"
 * address.use = #work
