@@ -8,7 +8,7 @@ Description: "Ravimiskeemi rida. Schema line for metformin"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "substitutionAllowedReason"
-* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP08 "Prohibited because the patient has been diagnosed with concurrent mental or behavioural disorder"
+* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP08 "patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
 * extension[=].valueQuantity.value = 100
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"

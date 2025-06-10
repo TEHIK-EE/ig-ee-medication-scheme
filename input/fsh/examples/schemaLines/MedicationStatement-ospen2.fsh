@@ -8,7 +8,7 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * extension[=].extension[0].url = "substitutionAllowed"
 * extension[=].extension[=].valueBoolean = true
 * extension[=].extension[+].url = "substitutionAllowedReason"
-* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP03 "Prohibited because the patient has hypersensitivity for the excipient which is present in all similar medicinal products with same active ingredient"
+* extension[=].extension[=].valueCodeableConcept = $ravimi-asendamatuse-pohjus#KP03 "patsiendil esineb ülitundlikkus abiaine vastu, mis esineb kõigis teistes sarnastes ja sama toimeainega ravimites"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-total-prescribed-amount"
 * extension[=].valueQuantity.value = 12
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-validity-time"
@@ -47,7 +47,7 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2024-02-07"
-* reason.concept = $rhk-10#J13 "Streptococcus pneumoniae tekkene kopsupõletik e pneumoonia"
+* reason.concept = $rhk-10#J13 "Streptococcus pneumoniae tekkene bronhopneumoonia"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"
 * note.text = "teised antibiootikumid ei anna tulemust"
