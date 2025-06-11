@@ -21,10 +21,10 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].extension[=].valueString = "Siin on soovitused"
 * type = #undesirable-effect
 * category[0] = $drug-form-group-VS#1 "Systemic"
-* category[+].text = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[+].text = "failureDegree 1 - GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
 * category[+].text = "siia võib ka igast asju lisada"
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
-* undesirableEffect.classification.text = "A, annust võiks muuta"
+* undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"
 //* warning.description = "Additional information etc etc"
 //* warning.code.text = "Siia tuleb failureDegree. 1, jne. Kuniks pole loendit"
