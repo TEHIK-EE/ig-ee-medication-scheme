@@ -13,8 +13,8 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
     ExtensionEETISAdditionalInformationLink named link 0..* and
     ExtensionEETISNephrotoxic named nephrotoxic 0..* and
     ExtensionEETISDosageModification named dosageModification 0..*
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "this" //katsetus - enne oli $this ja value
 * category ^slicing.rules = #open
 * category ^short = "RenBase drugFormGroup ja failureDegree"
 * category contains
