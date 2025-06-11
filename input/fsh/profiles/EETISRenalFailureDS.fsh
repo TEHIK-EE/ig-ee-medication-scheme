@@ -5,7 +5,7 @@ Description: "Neerufuntsiooni puudulikkuse otsustustugi. This profile is for the
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-22T14:32:30.0668499+00:00"
-* contained 2..2
+* contained 1..1
 * contained only Medication
 * type = #undesirableEffect (exactly)
 * extension contains
@@ -32,7 +32,7 @@ Description: "Neerufuntsiooni puudulikkuse otsustustugi. This profile is for the
 * subject 1..
 * subject only Reference(Medication)
 * subject ^short = "medication that may cause renal function failure"
-* subject.identifier ..1
+//* subject.identifier ..1
 //* subject.identifier ^short = "siia tuleb referents toimeainete loendile?"
 * subject.display = "siia toimeaine nimetus"
 * contraindication ..0
