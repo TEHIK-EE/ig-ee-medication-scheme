@@ -1,4 +1,4 @@
-/*Instance: renal-function-failure
+Instance: renal-function-failure
 InstanceOf: ClinicalUseDefinition
 Usage: #example
 Description: "Example of a alert when medication affects renal function and dosage must be corrected" 
@@ -20,11 +20,11 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].extension[+].url = "recommendation"
 * extension[=].extension[=].valueString = "Siin on soovitused"
 * type = #undesirableEffect
-* category = $drug-form-group-VS#1 "Systemic"
-* category.text = "siia võib ka igast asjau lisada"
+* category[0] = $drug-form-group-VS#1 "Systemic"
+* category[+].text = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[+].text = "siia võib ka igast asju lisada"
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
-//* undesirableEffect.classification.text = "A, annust võiks muuta"
+* undesirableEffect.classification.text = "A, annust võiks muuta"
 //* warning.description = "Additional information etc etc"
 //* warning.code.text = "Siia tuleb failureDegree. 1, jne. Kuniks pole loendit"
-*/
