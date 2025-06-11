@@ -45,7 +45,7 @@ Description: "Ravimiskeemi rida. Schema line for alprazolam"
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2027-10-01"
-* reason.concept = $rhk-10#F41.0 "Paanikahäire"
+* reason.concept = $rhk-10-VS#F41.0 "Paanikahäire"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"
 * note.text = "patsient helistas ja soovis suuremat annust"

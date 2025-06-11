@@ -17,7 +17,7 @@ Description: "Ravimiskeemi rida käsimüügiravimile. Schema line for over-the-c
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2024-02-07"
-* reason.concept.coding = $rhk-10#I10 "Hüpertooniatõbi e essentsiaalne e primaarne arteriaalne hüpertensioon e kõrgvererõhktõbi"
+* reason.concept.coding = $rhk-10-VS#I10 "Hüpertooniatõbi e essentsiaalne e primaarne arteriaalne hüpertensioon e kõrgvererõhktõbi"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"
 * note.text = "igapäevaselt võtta südameaspiriini toetamaks veresoonkonna tervist"
