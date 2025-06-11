@@ -19,7 +19,7 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].extension[=].valueQuantity.value = 12
 * extension[=].extension[+].url = "recommendation"
 * extension[=].extension[=].valueString = "Siin on soovitused"
-* type = #undesirable-Effect
+* type = #undesirable-effect
 * category[0] = $drug-form-group-VS#1 "Systemic"
 * category[+].text = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
 * category[+].text = "siia võib ka igast asju lisada"
