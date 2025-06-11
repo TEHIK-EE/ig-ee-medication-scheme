@@ -37,7 +37,7 @@ Description: "Neerufuntsiooni puudulikkuse otsustustugi. This profile is for the
 * subject.display = "siia toimeaine nimetus"
 * contraindication ..0
 * indication 0..0
-* undesirableEffect.classification.text = "klassifikatsioon (A/B/C/D) + selle tekst nt C, text: Annust või annustamise vahemikku tuleb kohandada"
+* undesirableEffect.classification ^short = "klassifikatsioon (A/B/C/D) + selle tekst nt C, text: Annust või annustamise vahemikku tuleb kohandada"
 * undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as observation"
 * undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
 * undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
