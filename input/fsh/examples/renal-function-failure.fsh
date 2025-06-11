@@ -1,4 +1,4 @@
-Instance: renal-function-failure
+/*Instance: renal-function-failure
 InstanceOf: ClinicalUseDefinition
 Usage: #example
 Description: "Example of a alert when medication affects renal function and dosage must be corrected" 
@@ -24,6 +24,7 @@ Description: "Example of a alert when medication affects renal function and dosa
 * category.text = "siia võib ka igast asjau lisada"
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
-* undesirableEffect.classification.text = "A, annust võiks muuta"
-* warning.description = "Additional information etc etc"
-* warning.code.text = "Siia tuleb failureDegree. 1, jne. Kuniks pole loendit"
+//* undesirableEffect.classification.text = "A, annust võiks muuta"
+//* warning.description = "Additional information etc etc"
+//* warning.code.text = "Siia tuleb failureDegree. 1, jne. Kuniks pole loendit"
+*/

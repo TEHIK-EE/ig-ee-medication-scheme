@@ -7,28 +7,28 @@ Description: "Neerufuntsiooni puudulikkuse otsustustugi. This profile is for the
 * ^date = "2024-02-22T14:32:30.0668499+00:00"
 * contained 1..1
 * contained only Medication
-* type = #undesirableEffect (exactly)
+* type = #undesirable-effect (exactly)
 * extension contains
     ExtensionEETISAffectedMedicationStatements named affected 0..* and
     ExtensionEETISAdditionalInformationLink named link 0..* and
     ExtensionEETISNephrotoxic named nephrotoxic 0..* and
     ExtensionEETISDosageModification named dosageModification 0..*
-//* category ^slicing.discriminator.type = #value
-// * category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
-// * category ^slicing.rules = #open
-// * category ^short = "Koostoime väljendamine tähe ja numbriga"
-// * category contains
-//    ClinicalImportance 0..* and
-//    ScientificDocumentation 0..*
-* category from $drug-form-group-VS
-// * category[ClinicalImportance] ^short = "A | B | C | D "
-//* category[sliceClinicalImportance] ^binding.description = "Clinical importance code (ABCD)"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this" //katsetus - enne oli $this ja value
+* category ^slicing.rules = #open
+* category ^short = "RenBase drugFormGroup ja failureDegree"
+* category contains
+    drugFormGroup 0..1 and
+    failureDegree 0..1 and
+    additionalInformation 0..1
+* category[drugFormGroup] ^short = "0 | 1 | 2 | 3 | 4 | 5| "
+* category[drugFormGroup] from $drug-form-group-VS
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
-//* category[sliceScientificDocumentation] ^binding.description = "Scientific documentation code (01234)"
-// * category[ScientificDocumentation] ^short = "0 | 1 | 2 | 3 | 4"
-//* category[ScientificDocumentation] only text
-//* extension[extensionEETISAdditionalInformationLink] ^definition = "Link to SynBase for additional information about interaction."
+* category[failureDegree] ^binding.description = "siia ilmselt mingi koodisüsteem?"
+* category[failureDegree] ^short = "0 | 1 | 2 | 3 | 4"
+* category[additionalInformation].text ^short = "siia tekst"
+//* category[additionalInformation] ^short = "Any additional information"
 * subject 1..
 * subject only Reference(Medication)
 * subject ^short = "medication that may cause renal function failure"
@@ -41,11 +41,11 @@ Description: "Neerufuntsiooni puudulikkuse otsustustugi. This profile is for the
 * undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as observation"
 * undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
 * undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
-* warning.description ^short = "Additional information about renal function failure caused by this medication. LISAINFO teksti kujul (võib olla pikem tekst)"
-* warning.description ^definition = "lisainfo teksti kujul (võib olla pikem tekst)"
-* warning.code ^short = "failureDegree"
-* warning.code ^definition = "Neerupuudulikkuse aste: number + selgitus:"
-* warning.code.text = "Kuniks pole loendit, siis number ja selgitus mõlemad teksti alla. Kui tuleb loend siis number code alla ja selgitus teksti"
+//* warning.description ^short = "Additional information about renal function failure caused by this medication. LISAINFO teksti kujul (võib olla pikem tekst)"
+//* warning.description ^definition = "lisainfo teksti kujul (võib olla pikem tekst)"
+//* warning.code ^short = "failureDegree"
+//* warning.code ^definition = "Neerupuudulikkuse aste: number + selgitus:"
+//* warning.code.text = "Kuniks pole loendit, siis number ja selgitus mõlemad teksti alla. Kui tuleb loend siis number code alla ja selgitus teksti"
 //* interaction.interactant.item[x] only Reference(Medication)
 //* interaction.interactant.item ^type.aggregation = #contained
 //* interaction.interactant.itemCodeableConcept from $toimeained-VS (required)
