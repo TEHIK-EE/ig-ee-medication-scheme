@@ -10,7 +10,7 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].valueReference = Reference(MedicationStatement-metformin)
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-additional-information-link"
 * extension[=].valueString = "www.synbase.ee/metformin-neerufunktsioon"
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-ee-tis-nephrotoxic"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-nephrotoxic"
 * extension[=].valueBoolean = false 
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dosage-modification"
 * extension[=].extension[0].url = "dosageIntervalMin"
