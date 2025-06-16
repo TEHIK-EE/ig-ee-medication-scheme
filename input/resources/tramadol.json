@@ -1,7 +1,6 @@
 {
-    "resourceType": "Bundle",
-    "type": "collection",
-    "id": "renal-failure-ds-1-tramadool",
+    "id": "some-id",
+	"resourceType": "Bundle",
     "entry": [
         {
             "resourceType": "ClinicalUseDefinition",
