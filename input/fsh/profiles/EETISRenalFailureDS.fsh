@@ -1,4 +1,4 @@
-Profile: EETISRenalFailureDS
+/*Profile: EETISRenalFailureDS
 Parent: ClinicalUseDefinition
 Id: ee-tis-renal-failure-ds
 Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is for the representation of patient's renal function failure and alerts about it so the medication can be adjusted according to failure degree."  
@@ -67,3 +67,4 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
 //* interaction.management.text ^short = "If not codeable, use text to represent recommendation"
 * population ..0
 * library ..0
+*/
