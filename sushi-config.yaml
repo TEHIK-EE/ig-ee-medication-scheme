@@ -14,7 +14,7 @@ name: MedicationScheme
 title: "Medication Scheme Implementation Guide"
 description: "Implementation guide for medication scheme"
 status: draft
-license: MIT 
+license: CC0-1.0
 date: 2024-06-03
 version: 1.0.0
 fhirVersion: 5.0.0
@@ -58,7 +58,7 @@ jurisdiction: urn:iso:std:iso:3166#EE "Estonia"
 dependencies:
   hl7.fhir.uv.extensions: current
   ee.fhir.base: 1.1.1
-  ee.fhir.mpi: 1.3.1
+  ee.fhir.mpi: 1.1.1
 #  hl7.fhir.ee.mpi: current 
 
 # The global property corresponds to the IG.global property, but it
