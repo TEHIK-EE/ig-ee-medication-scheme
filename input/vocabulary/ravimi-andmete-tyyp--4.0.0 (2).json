@@ -40,7 +40,7 @@
         ]
       }
     ],
-    "description": "Digiloo XML sõnumis <substanceAdmistration><code> elemendis vastavalt Digiloo standardites määratud reeglitele. Digiloo sõnumis ravimi andmete tüüp näitab, kas tegu on välja kirjutatud retseptiga või meditsiinitöötaja poolt patsiendile antud ravimiga.",
+    "description": "Digiloo XML sõnumis substanceAdmistration code elemendis vastavalt Digiloo standardites määratud reeglitele. Digiloo sõnumis ravimi andmete tüüp näitab, kas tegu on välja kirjutatud retseptiga või meditsiinitöötaja poolt patsiendile antud ravimiga.",
     "effectivePeriod": {
       "start": "2019-05-16T00:00:00Z"
     },
