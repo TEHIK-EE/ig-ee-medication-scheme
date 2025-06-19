@@ -14,7 +14,7 @@ name: MedicationScheme
 title: "Medication Scheme Implementation Guide"
 description: "Implementation guide for medication scheme"
 status: draft
-license: CC0-1.0
+license: MIT 
 date: 2024-06-03
 version: 1.0.0
 fhirVersion: 5.0.0
