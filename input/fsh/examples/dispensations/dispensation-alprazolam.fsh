@@ -7,7 +7,7 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * language = #et
 * extension.url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension.extension[0].url = "reimbursementRate"
-* extension.extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#0 "0%"
+* extension.extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#000 "0%"
 * extension.extension[+].url = "reimbursementCondition"
 * extension.extension[=].valueCodeableConcept.coding.code = #000
 * extension.extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"

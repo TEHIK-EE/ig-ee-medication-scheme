@@ -52,7 +52,7 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#U "Ühekordne"
+* category[0] = $ravikuuri-tyyp#V "Vajadusel"
 * category[=].text = "ühekordne"
 * category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
 * category[+] = $retsepti-liik#1 "tavaretsept"

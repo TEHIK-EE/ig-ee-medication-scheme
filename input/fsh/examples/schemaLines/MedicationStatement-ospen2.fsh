@@ -47,7 +47,7 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
 //* effectivePeriod.end = "2024-02-07"
-* reason.concept = $rhk-10#J13 "Streptococcus pneumoniae tekkene bronhopneumoonia"
+* reason.concept = $rhk-10#J13 "Streptococcus pneumoniae tekkene kopsupõletik e pneumoonia"
 * note.authorReference = Reference(N98765)
 * note.time = "2023-09-01"
 * note.text = "teised antibiootikumid ei anna tulemust"
