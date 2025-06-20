@@ -24,8 +24,18 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier ..1
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "this"
+* identifier ^slicing.rules = #open
 * identifier ^short = "Package code when medication is prescribed based on specific package"
 * identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
+* identifier contains
+    packageNumber 0..1 and
+    prescriptionNumber 0..1
+* identifier[packageNumber].system from $ravimiregister-pakend (preferred)
+* identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
+* identifier[prescriptionNumber].system from $retseptikeskus-retsept (preferred)
+* identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
 * status ..0
 * marketingAuthorizationHolder ..0

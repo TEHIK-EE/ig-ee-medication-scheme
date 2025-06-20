@@ -85,3 +85,5 @@ Alias: $autoriseerimismooduli-kasutajarollid = https://fhir.ee/CodeSystem/autori
 Alias: $tis-fhir-identifikaatorid = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid
 Alias: $drug-form-group = https://fhir.ee/CodeSystem/renbase-drug-form-group
 Alias: $drug-form-group-VS = https://fhir.ee/ValueSet/renbase-drug-form-group
+Alias: $retseptikeskus-retsept = https://fhir.ee/retseptikeskus-retsept
+Alias: $ravimiregister-pakend = https://fhir.ee/ravimiregister-pakend
