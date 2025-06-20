@@ -44,26 +44,5 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
 * undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as an observation"
 * undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
 * undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
-//* warning.description ^short = "Additional information about renal function failure caused by this medication. LISAINFO teksti kujul (võib olla pikem tekst)"
-//* warning.description ^definition = "lisainfo teksti kujul (võib olla pikem tekst)"
-//* warning.code ^short = "failureDegree"
-//* warning.code ^definition = "Neerupuudulikkuse aste: number + selgitus:"
-//* warning.code.text = "Kuniks pole loendit, siis number ja selgitus mõlemad teksti alla. Kui tuleb loend siis number code alla ja selgitus teksti"
-//* interaction.interactant.item[x] only Reference(Medication)
-//* interaction.interactant.item ^type.aggregation = #contained
-//* interaction.interactant.itemCodeableConcept from $toimeained-VS (required)
-//* interaction.interactant.item[x] ^short = "medication B"
-//* interaction.type = $interaction-type#drug-drug "drug to drug interaction" (exactly)
-//* interaction.type ^fixedCodeableConcept.text = "drug to drug interaction"
-//* interaction.effect ^short = "Consequences (SYNBASE)"
-//* interaction.effect.concept ^short = "Consequences"
-//* interaction.effect.concept.text ^short = "If not codeable, use text to represent consequenses"
-//* interaction.effect.reference ..0
-//* interaction.incidence ^short = "Classification (SYNBASE. e.g. D0)"
-//* interaction.incidence ^definition = "Kombinatsioon category all olevatest numbritest ja tähtedest. The incidence of the interaction, e.g. theoretical, observed."
-//* interaction.incidence.text ^short = "Classification"
-//* interaction.management ..1
-//* interaction.management ^short = "Recommendation (SYNBASE)"
-//* interaction.management.text ^short = "If not codeable, use text to represent recommendation"
 * population ..0
 * library ..0
