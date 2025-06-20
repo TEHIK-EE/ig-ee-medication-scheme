@@ -13,13 +13,12 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry contains
-    medicationsStatementEntry 0..* and
     compositionEntry 0..* and
+    medicationsStatementEntry 0..* and
     practitionerEntry 0..* and
     practitionerRoleEntry 0..* and
     organizationEntry 0..* and
     patientEntry 0..1 and
-    deviceEntry 0..* and
     medicationEntry 0..* and
     pharmacyLocationEntry 0..*
 * entry[medicationsStatementEntry].resource only EETISMedicationStatement
@@ -28,5 +27,5 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * entry[practitionerRoleEntry].resource only EETISPractitionerRole
 * entry[organizationEntry].resource only EETISOrganization
 * entry[patientEntry].resource only $ee-mpi-patient
-* entry[deviceEntry].resource only Device
+//* entry[deviceEntry].resource only Device
 * entry[medicationEntry].resource only EETISMedicationEPC or EETISMedicationExtemporal or EETISMedicationDispensedToPatient
