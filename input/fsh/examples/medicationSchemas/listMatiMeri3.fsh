@@ -1,10 +1,9 @@
-/*Instance: listMatiMeri3
+Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
 Description: "List of patient's medications verified by D12345"
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-list"
 * language = #et
-//* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
 * extension[=].valueBoolean = true
 * status = #current
@@ -14,7 +13,7 @@ Description: "List of patient's medications verified by D12345"
 * code.text = "Medication List"
 * subject = Reference(pat1MatiMeri)
 * date = "2024-01-19T13:17:15.4473399+00:00"
-* source = Reference(PractRoleD12345) // List source peaks olema TJT?
+* source = Reference(PractRoleD12345)
 * note.authorString = "Kardioloog Doktor Doktor"
 * note.time = "2024-01-19T13:17:15.4473399+00:00"
 * note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust."
@@ -38,4 +37,3 @@ Description: "List of patient's medications verified by D12345"
 //* entry[=].deleted = true
 * entry[=].date = "2023-12-12"
 * entry[=].item = Reference(MedicationStatement-ospen2) "Fenoksymetyylpenitsilliin"
-*/
