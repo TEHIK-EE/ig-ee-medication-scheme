@@ -7,7 +7,7 @@ Description: "Prescription of alprazolam with reimbursement rate 50%"
 //* implicitRules = "http://hl7.org/fhir/reference"
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
-* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#50 "50%"
+* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#050 "50%"
 * extension[=].extension[+].url = "reimbursementCondition"
 * extension[=].extension[=].valueCodeableConcept.coding.code = #50_1
 * extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"

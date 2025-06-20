@@ -20,7 +20,7 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * extension[=].extension[=].valueInteger = 12
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-reimbursement-rate"
 * extension[=].extension[0].url = "reimbursementRate"
-* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#75 "75%"
+* extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#075 "75%"
 * extension[=].extension[+].url = "reimbursementCondition"
 * extension[=].extension[=].valueCodeableConcept.coding.code = #75_1
 * extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
