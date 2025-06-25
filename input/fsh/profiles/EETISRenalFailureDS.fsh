@@ -26,11 +26,11 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[failureDegree] ^binding.description = "siia ilmselt mingi koodisüsteem?"
-* category[failureDegree] ^short = "This is categorization of the renal failure degree and the description "
-* category[failureDegree].coding.system ^binding.description = "siia miskit????KAS TULEB CS?"
-* category[failureDegree].text ^short = "0 | 1 | 2 | 3 | 4. Kas siia tuleb koodisüsteem? Kui ei siis tekstina"
-* category[additionalInformation].coding.system ^binding.description = "siia miskit????KAS TULEB CS?"
-* category[additionalInformation].text ^short = "Siia tuleb lisainfot juhul kui see failure degree texti alla ei mahu."
+* category[failureDegree] ^short = "Sellist CS ei eksisteeri! testimiseks. This is categorization of the renal failure degree and the description "
+* category[failureDegree].coding.system from $toimeained //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
+* category[failureDegree].text ^short = "0 | 1 | 2 | 3 | 4. Sellist CS ei eksisteeri! testimiseks. Kas siia tuleb koodisüsteem? Kui ei siis tekstina"
+* category[additionalInformation].coding.system from atc-ee //^binding.description = "siia miskit????KAS TULEB CS?"
+* category[additionalInformation].text ^short = "Sellist CS ei eksisteeri! testimiseks. Siia tuleb lisainfot juhul kui see failure degree texti alla ei mahu."
 //* category[additionalInformation] ^short = "Any additional information"
 * subject 1..
 * subject only Reference(Medication)
