@@ -1,4 +1,4 @@
-Instance: renal-function-failure
+/*Instance: renal-function-failure
 InstanceOf: ClinicalUseDefinition
 Usage: #example
 Description: "Example of a alert when medication affects renal function and dosage must be corrected" 
@@ -28,3 +28,4 @@ Description: "Example of a alert when medication affects renal function and dosa
 * undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"
 //* warning.description = "Additional information etc etc"
 //* warning.code.text = "Siia tuleb failureDegree. 1, jne. Kuniks pole loendit"
+*/
