@@ -83,11 +83,13 @@ Alias: $ravimi-andmete-tyyp-VS = https://fhir.ee/ValueSet/ravimi-andmete-tyyp
 Alias: $autoriseerimismooduli-kasutajarollid-VS = https://fhir.ee/ValueSet/autoriseerimismooduli-kasutajarollid
 Alias: $autoriseerimismooduli-kasutajarollid = https://fhir.ee/CodeSystem/autoriseerimismooduli-kasutajarollid
 Alias: $tis-fhir-identifikaatorid = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid
-Alias: $drug-form-group = https://www.drugformgroup.ee
-Alias: $drug-form-group-VS = https://www.drugformgroupvs.ee
+
 Alias: $retseptikeskus-retsept = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept
 Alias: $ravimiregister-pakend = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend
-Alias: $failure-degree = https://www.failuredegree.ee
-Alias: $failure-degree-VS = https://www.failuredegreevs.ee
-Alias: $additional-information = https://www.additionalinformation.ee
-Alias: $additional-information-VS = https://www.additionalinformationvs.ee
+
+Alias: $drug-form-group = https://fhir.ee/CodeSystem/drug-form-group
+Alias: $drug-form-group-VS = https://fhir.ee/ValueSet/drug-form-group // https://www.drugformgroupvs.ee
+Alias: $failure-degree = https://fhir.ee/CodeSystem/failure-degree
+Alias: $failure-degree-VS = https://fhir.ee/ValueSet/failure-degree // https://www.failuredegreevs.ee
+Alias: $additional-information = https://fhir.ee/CodeSystem/additional-information
+Alias: $additional-information-VS = https://fhir.ee/ValueSet/additional-information
