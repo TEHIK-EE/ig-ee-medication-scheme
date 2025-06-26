@@ -1,7 +1,7 @@
 CodeSystem: DRUG_FORM_GROUP
 Id: drug-form-group
-Title: "testimiseks kas saaab ilma päriselt eksisteeriva cs v vs-ta"
-Description: "testimiseks"
+Title: "drug form groub TEST-CS"
+Description: "placeholder. USE text."
 * ^url = $drug-form-group
 * ^status = #draft
 * ^content = #not-present
@@ -14,8 +14,8 @@ Description: "testimiseks"
 
 ValueSet: DRUG_FORM_GROUP_VS
 Id: drug-form-group-VS
-Title: "test drug form group"
-Description: "testimiseks"
+Title: "drug form groub TEST-VS"
+Description: "placeholder. USE text."
 
 * ^experimental = false
 * ^url = $drug-form-group-VS

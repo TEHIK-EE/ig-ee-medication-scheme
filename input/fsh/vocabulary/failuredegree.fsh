@@ -1,7 +1,7 @@
 CodeSystem: FAILURE_DEGREE
 Id: failure-degree
-Title: "testimiseks kas saaab ilma päriselt eksisteeriva cs v vs-ta"
-Description: "testimiseks"
+Title: "failure degree TEST-CS"
+Description: "placeholder. USE text."
 * ^url = $failure-degree
 * ^status = #draft
 * ^content = #not-present
@@ -14,8 +14,8 @@ Description: "testimiseks"
 
 ValueSet: FAILURE_DEGREE_VS
 Id: failure-degree-VS
-Title: "testin"
-Description: "testimiseks"
+Title: "failure degree TEST-VS"
+Description: "placeholder. USE text."
 
 * ^experimental = false
 * ^url = $failure-degree-VS
