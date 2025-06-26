@@ -10,6 +10,8 @@ Description: "Description of medication dexamethasone"
 //* extension[=].valueQuantity = 4 $retsept-mahu-ja-massiyhik#MG
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Nodexon"
+* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
+* identifier.value = "123456"
 * doseForm = $ravimvormid#738 "tablett"
 * totalVolume.value = 20
 * ingredient.item.concept = $toimeained#8510 "deksametasoon"
