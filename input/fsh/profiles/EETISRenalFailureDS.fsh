@@ -21,15 +21,15 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
     drugFormGroup 0..1 and
     failureDegree 0..1 and
     additionalInformation 0..1
-* category[drugFormGroup] ^short = "0 | 1 | 2 | 3 | 4 | 5| This is a list of different drug form groups."
-* category[drugFormGroup].coding.system from $drug-form-group-VS
+* category[drugFormGroup].coding.system ^short = "0 | 1 | 2 | 3 | 4 | 5| This is a list of different drug form groups."
+* category[drugFormGroup] from $drug-form-group-VS (preferred)
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[failureDegree] ^binding.description = "siia ilmselt mingi koodisüsteem?"
-* category[failureDegree] ^short = "Sellist CS ei eksisteeri! testimiseks. This is categorization of the renal failure degree and the description "
-* category[failureDegree].coding.system from $failure-degree //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
+* category[failureDegree].coding.system ^short = "Sellist CS ei eksisteeri! testimiseks. This is categorization of the renal failure degree and the description "
+* category[failureDegree] from $failure-degree (preferred) //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
 * category[failureDegree].text ^short = "0 | 1 | 2 | 3 | 4. Sellist CS ei eksisteeri! testimiseks. Kas siia tuleb koodisüsteem? Kui ei siis tekstina"
-* category[additionalInformation].coding.system from atc-ee //^binding.description = "siia miskit????KAS TULEB CS?"
+* category[additionalInformation] from atc-ee (preferred) //^binding.description = "siia miskit????KAS TULEB CS?"
 * category[additionalInformation].text ^short = "Sellist CS ei eksisteeri! testimiseks. Siia tuleb lisainfot juhul kui see failure degree texti alla ei mahu."
 //* category[additionalInformation] ^short = "Any additional information"
 * subject 1..
