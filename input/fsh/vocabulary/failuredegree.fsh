@@ -13,7 +13,7 @@ Description: "placeholder. USE text."
 //* #4 "Enteral"
 
 ValueSet: FAILURE_DEGREE_VS
-Id: failure-degree-VS
+Id: failure-degree
 Title: "failure degree TEST-VS"
 Description: "placeholder. USE text."
 

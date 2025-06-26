@@ -23,11 +23,11 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
     additionalInformation 0..1
 * category[drugFormGroup] ^short = "0 | 1 | 2 | 3 | 4 | 5| This is a fake CS for example. Do NOT use it!"
 * category[drugFormGroup] from $drug-form-group-VS (preferred)
-* category[drugFormGroup].text = "Filled with information from RenBase. E.g Systemic, parenteral etc"
+* category[drugFormGroup].text = "Filled with information from RenBase. Renbase drug form for which recommendations should be provided. E.g Systemic, parenteral etc"
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[failureDegree] ^binding.description = "siia ilmselt mingi koodisüsteem?"
-* category[failureDegree] ^short = "Failure degree 0-4. This is a fake CS for example. Do NOT use it! Sellist CS ei eksisteeri! testimiseks."
+* category[failureDegree] ^short = "Failure degree 0-4. Neerupuudulikkuse aste: number + selgitus. This is a fake CS for example. Do NOT use it! Sellist CS ei eksisteeri! testimiseks."
 * category[failureDegree] from $failure-degree-VS (preferred) //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
 * category[failureDegree].text ^short = "Filled with information from RenBase. This is categorization of the renal failure degree and the description"
 * category[additionalInformation] from $additional-information-VS (preferred) //^binding.description = "siia miskit????KAS TULEB CS?"

@@ -13,7 +13,7 @@ Description: "placeholder. USE text."
 //* #4 "Enteral"
 
 ValueSet: DRUG_FORM_GROUP_VS
-Id: drug-form-group-VS
+Id: drug-form-group
 Title: "drug form groub TEST-VS"
 Description: "placeholder. USE text."
 

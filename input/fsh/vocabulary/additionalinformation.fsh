@@ -7,7 +7,7 @@ Description: "placeholder. USE text."
 * ^content = #not-present
 
 ValueSet: ADDITIONAL_INFORMATION_VS
-Id: additional-information-VS
+Id: additional-information
 Title: "additional information TEST-VS"
 Description: "placeholder. USE text."
 
