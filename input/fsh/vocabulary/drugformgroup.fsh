@@ -2,7 +2,6 @@ CodeSystem: DRUG_FORM_GROUP
 Id: drug-form-group
 Title: "testimiseks kas saaab ilma päriselt eksisteeriva cs v vs-ta"
 Description: "testimiseks"
-
 * ^url = $drug-form-group
 * ^status = #draft
 * ^content = #fragment
