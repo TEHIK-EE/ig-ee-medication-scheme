@@ -14,6 +14,8 @@ The link 'https://www.drugformgroup.ee
 The link 'https://www.drugformgroupvs.ee
 The link 'https://www.failuredegree.ee
 The link 'https://www.failuredegreevs.ee
+The link 'https://www.additionalinformation.ee
+The link 'https://www.additionalinformationvs.ee
 
 # Other
 Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

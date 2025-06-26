@@ -21,16 +21,18 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
     drugFormGroup 0..1 and
     failureDegree 0..1 and
     additionalInformation 0..1
-* category[drugFormGroup].coding.system ^short = "0 | 1 | 2 | 3 | 4 | 5| This is a list of different drug form groups."
+* category[drugFormGroup] ^short = "0 | 1 | 2 | 3 | 4 | 5| This is a fake CS for example. Do NOT use it!"
 * category[drugFormGroup] from $drug-form-group-VS (preferred)
+* category[drugFormGroup].text = "Filled with information from RenBase. E.g Systemic, parenteral etc"
 //* category[ClinicalImportance] only text //meelega vale katsetamiseks//
 //* category[sliceScientificDocumentation] from $scientific-documentation-category-VS (required)
 //* category[failureDegree] ^binding.description = "siia ilmselt mingi koodisüsteem?"
-* category[failureDegree].coding.system ^short = "Sellist CS ei eksisteeri! testimiseks. This is categorization of the renal failure degree and the description "
-* category[failureDegree] from $failure-degree (preferred) //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
-* category[failureDegree].text ^short = "0 | 1 | 2 | 3 | 4. Sellist CS ei eksisteeri! testimiseks. Kas siia tuleb koodisüsteem? Kui ei siis tekstina"
-* category[additionalInformation] from atc-ee (preferred) //^binding.description = "siia miskit????KAS TULEB CS?"
-* category[additionalInformation].text ^short = "Sellist CS ei eksisteeri! testimiseks. Siia tuleb lisainfot juhul kui see failure degree texti alla ei mahu."
+* category[failureDegree] ^short = "This is a fake CS for example. Do NOT use it! Sellist CS ei eksisteeri! testimiseks."
+* category[failureDegree] from $failure-degree-VS (preferred) //see on siia kunstlikult pandud. ^binding.description = "siia miskit????KAS TULEB CS?"
+* category[failureDegree].text ^short = "Filled with information from RenBase. This is categorization of the renal failure degree and the description"
+* category[additionalInformation] from $additional-information-VS (preferred) //^binding.description = "siia miskit????KAS TULEB CS?"
+* category[additionalInformation] ^short = "This is a fake CS for example. Do NOT use it! Sellist CS ei eksisteeri! testimiseks."
+* category[additionalInformation].text ^short = "Filled with any additional information from RenBase"
 //* category[additionalInformation] ^short = "Any additional information"
 * subject 1..
 * subject only Reference(Medication)
