@@ -10,6 +10,10 @@ The link 'https://fhir.ee/StructureDefinition/%
 The link 'https://fhir.ee/ravimiregister-pakend
 The link 'https://fhir.ee/retseptikeskus-retsept
 The link 'https://fhir.ee/ValueSet/rhk-10
+The link 'https://www.drugformgroup.ee
+The link 'https://www.drugformgroupvs.ee
+The link 'https://www.failuredegree.ee
+The link 'https://www.failuredegreevs.ee
 
 # Other
 Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

@@ -87,3 +87,5 @@ Alias: $drug-form-group = https://www.drugformgroup.ee
 Alias: $drug-form-group-VS = https://www.drugformgroupvs.ee
 Alias: $retseptikeskus-retsept = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept
 Alias: $ravimiregister-pakend = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend
+Alias: $failure-degree = https://www.failuredegree.ee
+Alias: $failure-degree-VS = https://www.failuredegreevs.ee
