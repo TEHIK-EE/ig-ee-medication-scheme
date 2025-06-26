@@ -1,4 +1,4 @@
-Instance: medication-interaction1
+/*Instance: medication-interaction1
 InstanceOf: ClinicalUseDefinition
 Usage: #example
 Description: "Example of a medication interaction between medication A and B" 
@@ -29,3 +29,4 @@ Description: "Example of a medication interaction between medication A and B"
 * interaction.effect.concept.text = "Consequences. Ravim A vererõhku alandav ja diureetiline toime võib ravim B-ga kooskasutamisel nõrgeneda ning suurendada kehakaalu. Vererõhk kõrgeneb enamasti vähe või mõõdukalt, kuid hüpertensiooni tüsistuste tekke oht võib suureneda, eriti eakatel."
 * interaction.incidence.text = "D0"
 * interaction.management.text = "Recommendation. Kui kooskasutamine on vajalik, on soovitatav hoolikalt jälgida vererõhku ja kehakaalu. Ravimi A annust võib olla vaja kohandada. Kaaluda raviks xxx, kuna Ravim B ei vähenda toimet."
+*/
