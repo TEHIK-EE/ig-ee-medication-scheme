@@ -4,14 +4,13 @@ Title: "testimiseks kas saaab ilma päriselt eksisteeriva cs v vs-ta"
 Description: "testimiseks"
 * ^url = $drug-form-group
 * ^status = #draft
-* ^content = #fragment
-* ^experimental = false
+* ^content = #not-present
 
-* #0 "All"
-* #1 "Topical"
-* #2 "Systemic"
-* #3 "Parenteral"
-* #4 "Enteral"
+//* #0 "All"
+//* #1 "Topical"
+//* #2 "Systemic"
+//* #3 "Parenteral"
+//* #4 "Enteral"
 
 ValueSet: DRUG_FORM_GROUP_VS
 Id: drug-form-group-VS
