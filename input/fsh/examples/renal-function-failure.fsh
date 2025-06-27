@@ -24,14 +24,17 @@ Description: "Example of a alert when medication affects renal function and dosa
 //* category[drugFormGroup] = {}
 //* category[drugFormGroup].coding = FixedDrugFormGroupCoding
 * category[0].coding.display = "2, Systemic, süsteemne"
+* category[0].text = "Kas panna kirjeldus display või texti alla"
 //* category.coding[failureDegree] empty
 //* category[failureDegree] = {}
 //* category[failureDegree].coding = FixedFailureDegreeCoding
 * category[1].coding.display = "failureDegree 1 - GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[1].text = "Kas panna kirjeldus display või texti alla"
 //* category.coding[additionalInformation] empty
 //* category[additionalInformation] = {}
 //* category[additionalInformation].coding = FixedAdditionalInformationCoding
 * category[2].coding.display = "additional information. bla bla bla. siia võib ka igast asju lisada"
+* category[0].text = "Kas panna kirjeldus display või texti alla"
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
 * undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"

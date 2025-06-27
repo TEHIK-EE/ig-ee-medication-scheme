@@ -25,7 +25,7 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.path = "$this" //oli system
 * identifier ^slicing.rules = #open
 * identifier ^short = "Package code when medication is prescribed based on specific package"
 * identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
