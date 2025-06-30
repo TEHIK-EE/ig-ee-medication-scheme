@@ -55,6 +55,7 @@ Alias: $patsiendi-kontaktisikute-liigid = https://fhir.ee/CodeSystem/patsiendi-k
 
 Alias: $ravimi-asendamatuse-pohjus = https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus
 Alias: $sct = http://snomed.info/sct
+Alias: $loinc = http://loinc.org
 Alias: $ee-ads = https://fhir.ee/CodeSystem/ee-ads
 Alias: $ehak = https://fhir.ee/base/ehak
 Alias: $ee-medre-specialty = https://fhir.ee/CodeSystem/ee-medre-specialty
