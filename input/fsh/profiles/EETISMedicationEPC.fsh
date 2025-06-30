@@ -25,7 +25,7 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "$this" //oli system
+* identifier ^slicing.discriminator.path = "system" //oli system
 * identifier ^slicing.rules = #open
 * identifier ^short = "Package code when medication is prescribed based on specific package"
 * identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
@@ -33,9 +33,9 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
     packageNumber 0..1 and
     prescriptionNumber 0..1
 * identifier[packageNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend (preferred)
-//* identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
+* identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
 * identifier[prescriptionNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept (preferred)
-//* identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
+* identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
 * status ..0
 * marketingAuthorizationHolder ..0
