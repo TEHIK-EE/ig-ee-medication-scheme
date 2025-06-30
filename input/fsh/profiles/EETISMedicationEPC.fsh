@@ -32,9 +32,9 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * identifier contains
     packageNumber 0..1 and
     prescriptionNumber 0..1
-* identifier[packageNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend (preferred)
+* identifier[packageNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend
 * identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
-* identifier[prescriptionNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept (preferred)
+* identifier[prescriptionNumber].system from https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept
 * identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
 * status ..0
