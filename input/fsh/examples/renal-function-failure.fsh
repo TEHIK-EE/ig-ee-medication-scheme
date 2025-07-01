@@ -38,3 +38,4 @@ Description: "Example of a alert when medication affects renal function and dosa
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
 * undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"
+* undesirableEffect.symptomConditionEffect.reference = Reference(observation-definition1)
