@@ -1,4 +1,4 @@
-Profile: EETISMedicationOverview
+/*Profile: EETISMedicationOverview
 Parent: Bundle
 Id: ee-tis-medication-overview
 Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication Overview gathers together all resources related to patient's prescribed and dispensed medication."
@@ -40,3 +40,4 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * entry[observationEntry].resource only EETISObservationEGFR
 * entry[observationDefinitionEntry].resource only EETISObservationDefinitionEGFR
 * entry[clinicalUseDefinitionEntry].resource only EETISRenalFailureDS or EETISMedicationInteraction
+*/
