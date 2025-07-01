@@ -94,3 +94,6 @@ Alias: $failure-degree = https://fhir.ee/CodeSystem/failure-degree
 Alias: $failure-degree-VS = https://fhir.ee/ValueSet/failure-degree // https://www.failuredegreevs.ee
 Alias: $additional-information = https://fhir.ee/CodeSystem/additional-information
 Alias: $additional-information-VS = https://fhir.ee/ValueSet/additional-information
+
+Alias: $reimbursement-condition = https://fhir.ee/CodeSystem/reimbursement-condition
+Alias: $reimbursement-condition-VS = https://fhir.ee/ValueSet/reimbursement-condition

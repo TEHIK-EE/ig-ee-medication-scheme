@@ -12,7 +12,7 @@ Description: "Description of medication aspart-insulin"
 * extension[=].valueString = "Novorapid Flexpen"
 * identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
 * identifier.value = "123456"
-* doseForm = $ravimvormid#1256 "Õhukese polümeerikattega tablett"
+* doseForm = $ravimvormid#1256 "õhukese polümeerikattega tablett"
 * totalVolume.value = 12
 * ingredient.item.concept = $toimeained#11470 "fenoksümetüülpenitsilliin"
 * ingredient.isActive = true

@@ -22,6 +22,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * extension[reimbursementCondition] ^short = "Condition according to the list of reimbursed pharmaceuticals. Code from Retseptikeskus and description as display in text field."
 * extension[reimbursementCondition] ^definition = "\"Vajalikud tingimused\"loendist kood ning kirjeldus. Soodusravimite loetelule vastav tingimus."
 * extension[reimbursementCondition].value[x] only CodeableConcept
+* extension[reimbursementCondition].value[x] from $reimbursement-condition-VS (preferred)
 * extension[reimbursementCondition].value[x] ^binding.strength = #preferred
 * extension[reimbursementCondition].value[x] ^binding.description = "\"Vajalikud tingimused -loend\" retseptikeskusest"
 //* extension[reimbursementCondition].text ^short = "Textual description of conditions for reimbursement"

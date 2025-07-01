@@ -1,4 +1,4 @@
-/*Profile: EETISMedicationOverview
+Profile: EETISMedicationOverview
 Parent: Bundle
 Id: ee-tis-medication-overview
 Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication Overview gathers together all resources related to patient's prescribed and dispensed medication."
@@ -20,13 +20,23 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
     organizationEntry 0..* and
     patientEntry 0..1 and
     medicationEntry 0..* and
-    pharmacyLocationEntry 0..*
+    pharmacyLocationEntry 0..* and
+    medicationRequestEntry 0..* and
+    communicationEntry 0..* and
+    observationEntry 0..* and
+    observationDefinitionEntry 0..* and
+    clinicalUseDefinitionEntry 0..*
+* entry[compositionEntry].resource only EETISComposition
 * entry[medicationsStatementEntry].resource only EETISMedicationStatement
-* entry[compositionEntry].resource only Device
 * entry[practitionerEntry].resource only EETISPractitioner
 * entry[practitionerRoleEntry].resource only EETISPractitionerRole
 * entry[organizationEntry].resource only EETISOrganization
 * entry[patientEntry].resource only $ee-mpi-patient
 //* entry[deviceEntry].resource only Device
 * entry[medicationEntry].resource only EETISMedicationEPC or EETISMedicationExtemporal or EETISMedicationDispensedToPatient
-*/
+* entry[pharmacyLocationEntry].resource only EETISPharmacyLocation
+* entry[medicationRequestEntry].resource only EETISPrescription or EETISPrescriptionDispense
+* entry[communicationEntry].resource only EETISCommunication
+* entry[observationEntry].resource only EETISObservationEGFR
+* entry[observationDefinitionEntry].resource only EETISObservationDefinitionEGFR
+* entry[clinicalUseDefinitionEntry].resource only EETISRenalFailureDS or EETISMedicationInteraction
