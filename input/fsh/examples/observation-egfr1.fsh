@@ -4,8 +4,8 @@ Usage: #example
 Description: "Example of a observation definition about eGFR" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-observation-egfr"
 * language = #et
-* status = #active
+* status = #final 
 * code = #62238-1
 * subject = Reference(pat1MatiMeri)
 * performer = Reference(PractRoleD12345)
-* derivedFrom.display = "SIIA tuleb tervikdokumendi viide, kust analüüs pärit on?"
+* derivedFrom[0].display = "SIIA tuleb tervikdokumendi viide, kust analüüs pärit on?"
