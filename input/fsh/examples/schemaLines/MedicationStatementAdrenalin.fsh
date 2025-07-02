@@ -1,4 +1,4 @@
-Instance: MedicationStatementAdrenalin
+/*Instance: MedicationStatementAdrenalin
 InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida. Schema line for adrenalin"
@@ -72,3 +72,4 @@ Description: "Ravimiskeemi rida. Schema line for adrenalin"
 * dosage.timing.repeat.count = 1
 * dosage.asNeeded = true
 * dosage.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TK
+*/

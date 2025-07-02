@@ -1,4 +1,4 @@
-Instance: prescription-ospen
+/*Instance: prescription-ospen
 InstanceOf: MedicationRequest
 Usage: #example
 Description: "Prescription of phenoxymethylpenicillin"
@@ -35,3 +35,4 @@ Description: "Prescription of phenoxymethylpenicillin"
 * substitution.allowedBoolean = true
 * substitution.reason = $ravimi-asendamatuse-pohjus#KP02 "tegemist on kitsa terapeutilise vahemikuga ravimiga"
 //* substitution.reason.text = "Tegemist on kitsa terapeutilise vahemikuga ravimiga"
+*/

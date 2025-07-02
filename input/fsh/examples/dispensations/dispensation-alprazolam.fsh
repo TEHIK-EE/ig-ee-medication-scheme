@@ -1,4 +1,4 @@
-Instance: dispensation-alprazolam
+/*Instance: dispensation-alprazolam
 InstanceOf: MedicationDispense
 Usage: #example
 Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on retseptile pannud. Dispensation of alprazolam prescription with 0 reinbursement rate in pharmacy"
@@ -20,3 +20,4 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * daysSupply.value = 30
 * whenHandedOver = "2023-11-07"
 * note.text = "ei ole võimalik väljastada arsti kirjutatud soodustusega"
+*/

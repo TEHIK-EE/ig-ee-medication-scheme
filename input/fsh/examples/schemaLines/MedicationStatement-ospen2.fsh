@@ -1,4 +1,4 @@
-Instance: MedicationStatement-ospen2
+/*Instance: MedicationStatement-ospen2
 InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
@@ -57,3 +57,4 @@ Description: "Ravimiskeemi rida. Schema line for phenoxymethylpenicillin"
 * dosage.timing.repeat.periodUnit = #d
 * dosage.timing.repeat.boundsDuration = 7 'd' "d"
 * dosage.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA
+*/

@@ -22,8 +22,8 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * extension[=].extension[0].url = "reimbursementRate"
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#090 "90%"
 * extension[=].extension[+].url = "reimbursementCondition"
-* extension[=].extension[=].valueCodeableConcept.coding.code = #90_1
-* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
+* extension[=].extension[=].valueCodeableConcept = $reimbursement-condition#90_1 "vajalikud tingimused bla bla"
+//* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-dispensation-authorization"
 * extension[=].valueCodeableConcept = $retsepti-volituse-liik#public "Avalik"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-prescription-intent"

@@ -1,4 +1,4 @@
-Instance: prescription-dexamethason
+/*Instance: prescription-dexamethason
 InstanceOf: MedicationRequest
 Usage: #example
 Description: "Prescription of dexamethasone with complex dosaging"
@@ -55,3 +55,4 @@ Description: "Prescription of dexamethasone with complex dosaging"
 * substitution.allowedBoolean = true
 * substitution.reason = $substitution-not-allowed#KP01 "Tegemist on bioloogilise ravimiga"
 //* substitution.reason.text = "Tegemist on bioloogilise ravimiga"
+*/

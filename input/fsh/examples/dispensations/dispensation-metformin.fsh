@@ -1,4 +1,4 @@
-Instance: dispensation-metformin
+/*Instance: dispensation-metformin
 InstanceOf: MedicationDispense
 Usage: #example
 Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of metformin prescription for other buyer"
@@ -22,3 +22,4 @@ Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of met
 * daysSupply.value = 33.3
 * whenHandedOver = "2023-11-07"
 * note.text = "ravim väljastatud ainult osaliselt, sest puudus õige suurusega pakend"
+*/

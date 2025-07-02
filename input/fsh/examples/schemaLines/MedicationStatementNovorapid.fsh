@@ -1,4 +1,4 @@
-Instance: MedicationStatementNovorapid
+/*Instance: MedicationStatementNovorapid
 InstanceOf: MedicationStatement
 Usage: #example
 Description: "Ravimiskeemi rida. Schema line for aspart-insulin"
@@ -55,3 +55,4 @@ Description: "Ravimiskeemi rida. Schema line for aspart-insulin"
 * dosage.timing.repeat.period = 1
 * dosage.timing.repeat.periodUnit = #d
 * dosage.doseAndRate.doseQuantity = 12 $retsept-annustamise-yhik#TY "toimeaine ühik"
+*/

@@ -1,4 +1,4 @@
-Instance: prescription-adrenalin
+/*Instance: prescription-adrenalin
 InstanceOf: MedicationRequest
 Usage: #example
 Description: "Prescription of adrenaline marketing request has negative decision"
@@ -47,3 +47,4 @@ Description: "Prescription of adrenaline marketing request has negative decision
 * dispenseRequest.validityPeriod.end = "2024-02-07"
 //* dispenseRequest.dispenser.reference = "Location/tehiku-apteek"
 // Apteek eemaldatud, sest reference ootab Organization ressurssi, aga meil on Location.
+*/
