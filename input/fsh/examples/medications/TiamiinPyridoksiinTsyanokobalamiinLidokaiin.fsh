@@ -8,8 +8,8 @@ Description: "Description of medication Milgamma with four ingredient"
 * extension[=].valueCodeableConcept = $atc-ee#A11DB85 "tiamiin+püridoksiin+tsüanokobalamiin+lidokaiin"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-size-of-item"
 * extension[=].valueQuantity = 2 $retsept-mahu-ja-massiyhik#ML
-* identifier.system = "https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier.value = "123456"
+* identifier[0].system = $ravimiregister-pakend
+* identifier[0].value = "123456"
 * doseForm = $ravimvormid#1695 "süstesuspensiooni lahus"
 * totalVolume.value = 10
 

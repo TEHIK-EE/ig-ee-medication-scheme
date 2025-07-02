@@ -10,5 +10,5 @@ Description: "Description of medication metformin dispensed to patient"
 //* extension[=].valueQuantity = 500 $retsept-mahu-ja-massiyhik#MG
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "METFORAL 500MG"
-* identifier.system = "https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier.value = "1064719"
+* identifier[0].system = $ravimiregister-pakend
+* identifier[0].value = "1064719"

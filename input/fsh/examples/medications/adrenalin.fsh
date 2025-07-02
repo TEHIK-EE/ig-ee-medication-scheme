@@ -12,8 +12,8 @@ Description: "Description of medication adrenaline"
 * extension[=].valueQuantity = 1 $retsept-mahu-ja-massiyhik#ML
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Adrenaliin"
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier.value = "123456"
+* identifier[0].system = $ravimiregister-pakend
+* identifier[0].value = "123456"
 * doseForm = $ravimvormid#739 "süstelahus"
 * totalVolume.value = 5
 * ingredient.item.concept = $toimeained#8554 "epinefriin"

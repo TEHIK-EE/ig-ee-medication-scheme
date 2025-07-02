@@ -10,8 +10,8 @@ Description: "Description of medication phenoxymethylpenicillin"
 //* extension[=].valueQuantity = 1000000 $retsept-mahu-ja-massiyhik#RÜ
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Ospen"
-* identifier.system = "https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier.value = "123456"
+* identifier[0].system = $ravimiregister-pakend
+* identifier[0].value = "123456"
 * doseForm = $ravimvormid#1256 "õhukese polümeerikattega tablett"
 * totalVolume.value = 12
 * ingredient.item.concept = $toimeained#11470 "fenoksümetüülpenitsilliin"

@@ -12,5 +12,5 @@ Description: "Description of medication alprazoleme for dispensation to patient"
 //* extension[=].valueQuantity = 1 https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik#MG
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Xanax XR"
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier.value = "1021857"
+* identifier[0].system = $ravimiregister-pakend
+* identifier[0].value = "1021857"
