@@ -20,7 +20,7 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].extension[+].url = "recommendation"
 * extension[=].extension[=].valueString = "Siin on soovitused"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-related-observation-or-condition"
-* extension[=].valueReference = Reference(EETISObservationEGFR)
+* extension[=].valueReference = Reference(observation-egfr1)
 * type = #undesirable-effect
 //* category.coding[drugFormGroup] empty
 //* category[drugFormGroup] = {}
