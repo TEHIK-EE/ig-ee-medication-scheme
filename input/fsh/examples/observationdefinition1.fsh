@@ -1,4 +1,4 @@
-Instance: observation-definition1
+/*Instance: observation-definition1
 InstanceOf: ObservationDefinition
 Usage: #example
 Description: "Example of a observation definition about eGFR" 
@@ -7,3 +7,4 @@ Description: "Example of a observation definition about eGFR"
 * status = #active
 * code = #62238-1
 * contained = observation-egfr1
+*/

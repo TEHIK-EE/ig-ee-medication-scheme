@@ -1,4 +1,4 @@
-Profile: EETISObservationDefinitionEGFR
+/*Profile: EETISObservationDefinitionEGFR
 Parent: ObservationDefinition
 Id: ee-tis-observation-definition-egfr
 Description: "Neerufunktsiooni vastuses tagastatav analüüsi tulemus."
@@ -10,3 +10,4 @@ Description: "Neerufunktsiooni vastuses tagastatav analüüsi tulemus."
 * status ^short = "Siin on kohustusliku staatuse koodid NB!"
 * code from $loinc
 * code ^short = "siin on vist LOINC 62238-1?"
+*/

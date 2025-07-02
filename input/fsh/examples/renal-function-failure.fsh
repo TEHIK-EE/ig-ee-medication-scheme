@@ -19,6 +19,8 @@ Description: "Example of a alert when medication affects renal function and dosa
 * extension[=].extension[=].valueQuantity.value = 12
 * extension[=].extension[+].url = "recommendation"
 * extension[=].extension[=].valueString = "Siin on soovitused"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-related-observation-or-conditions"
+* extension[=].valueReference = Reference(EETISObservationEGFR)
 * type = #undesirable-effect
 //* category.coding[drugFormGroup] empty
 //* category[drugFormGroup] = {}
@@ -38,4 +40,4 @@ Description: "Example of a alert when medication affects renal function and dosa
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
 * undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"
-* undesirableEffect.symptomConditionEffect.reference = Reference(observation-definition1)
+//* undesirableEffect.symptomConditionEffect.reference = Reference(observation-definition1)

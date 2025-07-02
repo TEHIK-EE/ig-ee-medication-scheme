@@ -30,7 +30,8 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
     ExtensionEETISAffectedMedicationStatements named affected 0..* and
     ExtensionEETISAdditionalInformationLink named link 0..* and
     ExtensionEETISNephrotoxic named nephrotoxic 0..* and
-    ExtensionEETISDosageModification named dosageModification 0..*
+    ExtensionEETISDosageModification named dosageModification 0..* and
+    ExtensionEETISRelatedObservationOrCondition named relatedObservation 0..*
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding" //katsetus - enne oli $this ja value
 * category ^slicing.rules = #open
@@ -68,8 +69,8 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
 * undesirableEffect ^short = "Classification A/B/C/D and description how the dosage must be adjusted"
 * undesirableEffect ^definition = "Klassifikatsioon RenBase järgi ja kirjeldus kui palju annust tuleks muuta" 
 * undesirableEffect.classification ^short = "klassifikatsioon (A/B/C/D) + selle tekst nt C, text: Annust või annustamise vahemikku tuleb kohandada"
-* undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as an observation"
-* undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
-* undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
+//* undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as an observation"
+//* undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
+//* undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
 * population ..0
 * library ..0
