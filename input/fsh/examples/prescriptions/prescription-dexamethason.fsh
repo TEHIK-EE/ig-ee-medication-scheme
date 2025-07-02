@@ -53,6 +53,6 @@ Description: "Prescription of dexamethasone with complex dosaging"
 * dispenseRequest.validityPeriod.end = "2024-05-07"
 //* dispenseRequest.dispenser.reference = "https://fhir.ee/StructureDefinition/ee-tis-organization"
 * substitution.allowedBoolean = true
-* substitution.reason = $substitution-not-allowed#KP01 "Tegemist on bioloogilise ravimiga"
+* substitution.reason = $ravimi-asendamatuse-pohjus#KP01 "Tegemist on bioloogilise ravimiga"
 //* substitution.reason.text = "Tegemist on bioloogilise ravimiga"
 */

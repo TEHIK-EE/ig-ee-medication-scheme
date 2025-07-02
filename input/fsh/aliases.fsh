@@ -53,7 +53,6 @@ Alias: $patsiendi-kontaktisikute-liigid-VS = https://fhir.ee/ValueSet/patsiendi-
 Alias: $patsiendi-kontaktisikute-liigid = https://fhir.ee/CodeSystem/patsiendi-kontaktisikute-liigid
 
 
-Alias: $ravimi-asendamatuse-pohjus = https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
 Alias: $ee-ads = https://fhir.ee/CodeSystem/ee-ads
@@ -67,7 +66,8 @@ Alias: $statement-origin-category-VS = https://fhir.ee/ValueSet/statement-origin
 Alias: $patient-reported = https://fhir.ee/CodeSystem/patient-reported
 Alias: $ee-date-accuracy-indicator = https://fhir.ee/CodeSystem/ee-date-accuracy-indicator
 Alias: $ee-occupation = https://fhir.ee/CodeSystem/ee-occupation
-Alias: $substitution-not-allowed = https://fhir.ee/CodeSystem/substitution-not-allowed
+Alias: $ravimi-asendamatuse-pohjus = https://fhir.ee/CodeSystem/ravimi-asendamatuse-pohjus
+Alias: $ravimi-asendamatuse-pohjus-VS = https://fhir.ee/ValueSet/ravimi-asendamatuse-pohjus
 Alias: $task-input-parameter-type = https://fhir.ee/CodeSystem/task-input-parameter-type
 Alias: $task-output-parameter-type = https://fhir.ee/CodeSystem/task-output-parameter-type
 //Alias: $ee-identity-system = https://fhir.ee/ValueSet/ee-identity-system
