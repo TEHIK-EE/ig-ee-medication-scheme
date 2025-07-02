@@ -8,6 +8,6 @@ Description: "Seotud analüüs/test/uuring, mis on võib mõjutada neerufunktsio
 * ^context.expression = "ClinicalUseDefinition"
 * . ^short = "Observation/Condition which triggers renal function alert."
 * . ^definition = "Kasutusel viitamaks observationile/conditionile, mis mõjutavad neerufunktsiooni."
-* value[x] only Reference(EETISObservationEGFR or Condition)
+* value[x] only Reference(Observation or Condition)
 * value[x] ^short = "Observation/Condition which may trigger renal function alerts"
 * value[x] ^definition = "Observation/condition, mis kutsub esile neerufunktisooni muutuse languse ning määratud ravim võib vajada korrigeerimist"
