@@ -16,6 +16,8 @@ The link 'https://fhir.ee/CodeSystem/failure-degree
 The link 'https://fhir.ee/ValueSet/failure-degree
 The link 'https://fhir.ee/CodeSystem/additional-information
 The link 'https://fhir.ee/ValueSet/additional-information
+The link 'https://fhir.ee/CodeSystem/ravimi-soodustuse-vajalikud-tingimused
+The link 'https://fhir.ee/ValueSet/ravimi-soodustuse-vajalikud-tingimused
 
 # Other
 Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

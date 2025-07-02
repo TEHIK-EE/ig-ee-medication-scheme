@@ -12,7 +12,7 @@ Description: "Description of medication Aspirin"
 //* extension[=].valueQuantity = 1 https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik#MG
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "ASPIRIN CARDIO"
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
+* identifier.system = "https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend"
 * identifier.value = "1345687"
 * doseForm = $ravimvormid#965 "gastroresistentne tablett"
 * totalVolume.value = 98

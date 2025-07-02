@@ -95,5 +95,5 @@ Alias: $failure-degree-VS = https://fhir.ee/ValueSet/failure-degree // https://w
 Alias: $additional-information = https://fhir.ee/CodeSystem/additional-information
 Alias: $additional-information-VS = https://fhir.ee/ValueSet/additional-information
 
-Alias: $reimbursement-condition = https://fhir.ee/CodeSystem/reimbursement-condition
-Alias: $reimbursement-condition-VS = https://fhir.ee/ValueSet/reimbursement-condition
+Alias: $reimbursement-condition = https://fhir.ee/CodeSystem/ravimi-soodustuse-vajalikud-tingimused
+Alias: $reimbursement-condition-VS = https://fhir.ee/ValueSet/ravimi-soodustuse-vajalikud-tingimused

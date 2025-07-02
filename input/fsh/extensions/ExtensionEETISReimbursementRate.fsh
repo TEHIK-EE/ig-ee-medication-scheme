@@ -19,7 +19,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * extension[reimbursementRate].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 * extension[reimbursementRate].value[x] ^short = "Reimbursement rate of prescription medicine.\r\n0 | 50 | 75 | 90 | 100"
 * extension[reimbursementRate].value[x] ^binding.description = "Retsepti soodustuse määr. Loend"
-* extension[reimbursementCondition] ^short = "Condition according to the list of reimbursed pharmaceuticals. Code from Retseptikeskus and description as display in text field."
+* extension[reimbursementCondition] ^short = "NB! This is fake cs/VS! Just a name for system. Condition according to the list of reimbursed pharmaceuticals. Code from Retseptikeskus and description as display in text field."
 * extension[reimbursementCondition] ^definition = "\"Vajalikud tingimused\"loendist kood ning kirjeldus. Soodusravimite loetelule vastav tingimus."
 * extension[reimbursementCondition].value[x] only CodeableConcept
 * extension[reimbursementCondition].value[x] from $reimbursement-condition-VS (preferred)

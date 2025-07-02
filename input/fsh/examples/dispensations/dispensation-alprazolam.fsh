@@ -1,4 +1,4 @@
-/*Instance: dispensation-alprazolam
+Instance: dispensation-alprazolam
 InstanceOf: MedicationDispense
 Usage: #example
 Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on retseptile pannud. Dispensation of alprazolam prescription with 0 reinbursement rate in pharmacy"
@@ -9,8 +9,8 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * extension.extension[0].url = "reimbursementRate"
 * extension.extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#000 "0%"
 * extension.extension[+].url = "reimbursementCondition"
-* extension.extension[=].valueCodeableConcept.coding.code = #000
-* extension.extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
+* extension.extension[=].valueCodeableConcept = $reimbursement-condition#90_1 "vajalikud tingimused sellise soodustuse saamiseks"
+//* extension.extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * status = #completed
 * medication.reference = Reference(alprazolam-dispensed)
 * subject = Reference(pat1MatiMeri)
@@ -20,4 +20,3 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * daysSupply.value = 30
 * whenHandedOver = "2023-11-07"
 * note.text = "ei ole võimalik väljastada arsti kirjutatud soodustusega"
-*/
