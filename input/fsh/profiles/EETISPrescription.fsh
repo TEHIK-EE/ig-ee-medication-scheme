@@ -179,6 +179,6 @@ Description: "Retsept. This is a profile for medication prescription."
 * substitution.reason ^short = "Why should (not) substitution be made"
 * substitution.reason ^definition = "Asendamatuse põhjus (loend). \r\n\r\nIndicates the reason for the substitution, or why substitution must not be performed."
 * substitution.reason ^binding.description = "Asendamatuse põhjus. Loend"
-* substitution.reason.coding from $ravimi-asendamatuse-pohjus-VS (preferred)
-* substitution.reason.coding ^binding.description = "Asendamise keelamise loend"
+//* substitution.reason.coding from $ravimi-asendamatuse-pohjus-VS (preferred)
+//* substitution.reason.coding ^binding.description = "Asendamise keelamise loend"
 * eventHistory ..0
