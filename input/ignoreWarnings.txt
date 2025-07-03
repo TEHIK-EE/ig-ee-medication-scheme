@@ -2,6 +2,16 @@
 
 # Externally defined ValueSets cannot be resolved
 
+The valueSet reference%
+Hyperlink 'https://fhir.ee/%
+The link 'https://fhir.ee/ValueSet/%
+The link 'https://fhir.ee/CodeSystem/%
+The link 'https://fhir.ee/StructureDefinition/%
+The link 'https://fhir.ee/ravimiregister-pakend
+The link 'https://fhir.ee/retseptikeskus-retsept
+The link 'https://fhir.ee/ValueSet/rhk-10
+The link 'https://fhir.ee/CodeSystem/drug-form-group
+The link 'https://fhir.ee/ValueSet/drug-form-group
 The link 'https://fhir.ee/CodeSystem/failure-degree
 The link 'https://fhir.ee/ValueSet/failure-degree
 The link 'https://fhir.ee/CodeSystem/additional-information
