@@ -32,10 +32,10 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * identifier contains
     packageNumber 0..1 and
     prescriptionNumber 0..1
-* identifier[packageNumber].system from $ravimiregister-pakend
+* identifier[packageNumber].system from $ravimiregister-pakend (preferred)
 * identifier[packageNumber].value only string
 * identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
-* identifier[prescriptionNumber].system from $retseptikeskus-retsept
+* identifier[prescriptionNumber].system from $retseptikeskus-retsept (preferred)
 * identifier[prescriptionNumber].value only string
 * identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
