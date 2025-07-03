@@ -11,6 +11,8 @@ Description: "Neerufunktsiooni vastuses tagastatav analüüsi tulemus."
 * code ^short = "siin on vist LOINC 62238-1?"
 * subject only Reference($ee-mpi-patient)
 * performer only Reference(EETISPractitioner or EETISPractitionerRole)
+* value[x] only Quantity
+* referenceRange ^short = "Siia tuleb referentsväärtus low/high kui vajalik"
 * derivedFrom ^short = "Siia tuleks tervikdokumendi viide, millest see analüüs pärit on"
 
 
