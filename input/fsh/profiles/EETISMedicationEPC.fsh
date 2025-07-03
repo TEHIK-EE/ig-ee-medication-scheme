@@ -27,19 +27,19 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system" //oli system
 * identifier ^slicing.rules = #open
-* identifier ^short = "Package code when medication is prescribed based on specific package"
-* identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
+* identifier ^short = "Package code when medication is prescribed based on specific package. Slice prescriptionNumber is used for grouping medications in TJT. ATC is found in extension."
+* identifier ^definition = "Pakendi kood (pakendipõhisel retseptil), või grupeerimiseks kasutatav retseptinumber"
 * identifier contains
     packageNumber 0..1 and
     prescriptionNumber 0..1
 * identifier[packageNumber].system = $ravimiregister-pakend //(exactly) //võtsin systemi katseks ära
 * identifier[packageNumber].system 1..
 //* identifier[packageNumber].value only string
-* identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
+//* identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
 * identifier[prescriptionNumber].system = $retseptikeskus-retsept //(exactly) //võtsin systemi katseks ära
 * identifier[prescriptionNumber].system 1..
 //* identifier[prescriptionNumber].value only string
-* identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
+//* identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
 * status ..0
 * marketingAuthorizationHolder ..0
