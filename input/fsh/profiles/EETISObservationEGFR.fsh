@@ -12,6 +12,7 @@ Description: "Neerufunktsiooni vastuses tagastatav analüüsi tulemus."
 * subject only Reference($ee-mpi-patient)
 * performer only Reference(EETISPractitioner or EETISPractitionerRole)
 * value[x] only Quantity
+* value[x] ^short = "Mõõdetud eGFR väärtus (ja ühik) ning lisaks referentsväärtus"
 * referenceRange ^short = "Siia tuleb referentsväärtus low/high kui vajalik"
 * derivedFrom ^short = "Siia tuleks tervikdokumendi viide, millest see analüüs pärit on"
 
