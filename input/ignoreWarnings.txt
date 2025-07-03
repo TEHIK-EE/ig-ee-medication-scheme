@@ -3,25 +3,27 @@
 # Externally defined ValueSets cannot be resolved
 
 The valueSet reference%
-Hyperlink 'https://fhir.ee/%
-The link 'https://fhir.ee/ValueSet/%
-The link 'https://fhir.ee/CodeSystem/%
-The link 'https://fhir.ee/StructureDefinition/%
-The link 'https://fhir.ee/ravimiregister-pakend
-The link 'https://fhir.ee/retseptikeskus-retsept
-The link 'https://fhir.ee/ValueSet/rhk-10
-The link 'https://fhir.ee/CodeSystem/drug-form-group
-The link 'https://fhir.ee/ValueSet/drug-form-group
-The link 'https://fhir.ee/CodeSystem/failure-degree
-The link 'https://fhir.ee/ValueSet/failure-degree
-The link 'https://fhir.ee/CodeSystem/additional-information
-The link 'https://fhir.ee/ValueSet/additional-information
-The link 'https://fhir.ee/CodeSystem/ravimi-soodustuse-vajalikud-tingimused
-The link 'https://fhir.ee/ValueSet/ravimi-soodustuse-vajalikud-tingimused
-The link 'https://fhir.ee/CodeSystem/statement-origin-category
-The link 'https://fhir.ee/ValueSet/statement-origin-category
-The link 'https://fhir.ee/tis-fhir-identifikaatorid/retseptikeskus-retsept
-The link 'https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend
+Hyperlink 'https://fhir.ee/%'
+The link 'https://fhir.ee/ValueSet/%'
+The link 'https://fhir.ee/CodeSystem/%'
+The link 'https://fhir.ee/StructureDefinition/%'
+The link 'https://fhir.ee/ravimiregister-pakend'
+The link 'https://fhir.ee/retseptikeskus-retsept'
+The link 'https://fhir.ee/ValueSet/rhk-10'
+The link 'https://fhir.ee/CodeSystem/drug-form-group'
+The link 'https://fhir.ee/ValueSet/drug-form-group'
+The link 'https://fhir.ee/CodeSystem/failure-degree'
+The link 'https://fhir.ee/ValueSet/failure-degree'
+The link 'https://fhir.ee/CodeSystem/additional-information'
+The link 'https://fhir.ee/ValueSet/additional-information'
+The link 'https://fhir.ee/CodeSystem/ravimi-soodustuse-vajalikud-tingimused'
+The link 'https://fhir.ee/ValueSet/ravimi-soodustuse-vajalikud-tingimused'
+The link 'https://fhir.ee/CodeSystem/statement-origin-category'
+The link 'https://fhir.ee/ValueSet/statement-origin-category'
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/retseptikeskus-retsept'
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend'
+The link 'https://www.retseptikeskus-retsept.ee'
+The link 'https://www.ravimiregister-pakend.ee'
 
 
 
