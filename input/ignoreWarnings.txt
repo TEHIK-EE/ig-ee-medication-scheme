@@ -20,6 +20,9 @@ The link 'https://fhir.ee/CodeSystem/ravimi-soodustuse-vajalikud-tingimused
 The link 'https://fhir.ee/ValueSet/ravimi-soodustuse-vajalikud-tingimused
 The link 'https://fhir.ee/CodeSystem/statement-origin-category
 The link 'https://fhir.ee/ValueSet/statement-origin-category
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/retseptikeskus-retsept
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend
+
 
 
 # Other

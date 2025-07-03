@@ -23,7 +23,7 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
     ExtensionEETISMedicinalProductName named name 0..1
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
-* identifier 0..1
+* identifier 0..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system" //oli system
 * identifier ^slicing.rules = #open
@@ -33,8 +33,10 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
     packageNumber 0..1 and
     prescriptionNumber 0..1
 * identifier[packageNumber].system from $ravimiregister-pakend
+* identifier[packageNumber].value only string
 * identifier[packageNumber] ^binding.description = "kui on pakendipõhine retsept siis grupeerivaks tunnuseks on pakendi number"
 * identifier[prescriptionNumber].system from $retseptikeskus-retsept
+* identifier[prescriptionNumber].value only string
 * identifier[prescriptionNumber] ^binding.description = "kui on vaja grupeerida retsepti numbrite alusel"
 * code ..0
 * status ..0
