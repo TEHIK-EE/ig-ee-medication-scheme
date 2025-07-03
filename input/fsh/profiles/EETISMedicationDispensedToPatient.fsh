@@ -24,7 +24,7 @@ Description: "Väljamüüdud ravim. Medication resource as it is presented today
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier ..1
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
+* identifier.system = $ravimiregister-pakend //3.7.25 väljakomm."https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
 * identifier ^short = "Package code when medication is prescribed based on specific package"
 * identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
 * code ..0
