@@ -22,8 +22,8 @@ The link 'https://fhir.ee/CodeSystem/statement-origin-category
 The link 'https://fhir.ee/ValueSet/statement-origin-category
 The link 'https://fhir.ee/tis-fhir-identifikaatorid/retseptikeskus-retsept
 The link 'https://fhir.ee/tis-fhir-identifikaatorid/ravimiregister-pakend
-The link 'https://www.retseptikeskus-retsept.ee
-The link 'https://www.ravimiregister-pakend.ee
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/CodeSystem/retseptikeskus-retsept
+The link 'https://fhir.ee/tis-fhir-identifikaatorid/CodeSystem/ravimiregister-pakend
 
 
 
