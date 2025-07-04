@@ -24,13 +24,14 @@ Description: "List of patient's medications verified by D12345"
 //* entry[+].flag = $list-item-flag#04 "Prescribed"
 //* entry[=].deleted = false
 * entry[0].flag = $list-item-flag#04 "Prescribed"
-* entry[0].date = "2023-01-30"
-* entry[0].item = Reference(MedicationStatementAlprazolam) "Alprasolaam"
+* entry[=].date = "2023-01-30"
+* entry[=].item = Reference(MedicationStatementAlprazolam) 
+* entry[=].item.display = "Alprasolaam"
 //* entry[=].deleted = false
 * entry[1].flag = $list-item-flag#01 "Unchanged"
-* entry[1].date = "2023-11-30"
-* entry[1].item = Reference(MedicationStatement-metformin) "Metformiin"
-
+* entry[=].date = "2023-11-30"
+* entry[=].item = Reference(MedicationStatement-metformin) "Metformiin"
+* entry[=].item.display
 //* entry[=].deleted = false
 //* entry[=].date = "2023-01-03"
 //* entry[=].item = Reference(MedicationStatementNovorapid) "Aspart-insuliin"
