@@ -26,11 +26,11 @@ Description: "List of patient's medications verified by D12345"
 * entry[0].date = "2023-01-30"
 * entry[=].item = Reference(MedicationStatementAlprazolam) "Alprasolaam"
 * entry[=].flag = $list-item-flag#04 "Prescribed"
-* entry[=].deleted = false
+//* entry[=].deleted = false
 * entry[+].date = "2023-11-30"
 * entry[=].item = Reference(MedicationStatement-metformin) "Metformiin"
 * entry[=].flag = $list-item-flag#01 "Unchanged"
-* entry[=].deleted = false
+//* entry[=].deleted = false
 //* entry[=].date = "2023-01-03"
 //* entry[=].item = Reference(MedicationStatementNovorapid) "Aspart-insuliin"
 //* entry[+].flag = $list-item-flag#06 "Suspended"
