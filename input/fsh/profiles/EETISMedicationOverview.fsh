@@ -31,7 +31,6 @@ Description: "Ravimiskeem kui dokument. Hetkel ei kasuta! Not in use. Medication
 * entry[practitionerRoleEntry].resource only EETISPractitionerRole
 * entry[organizationEntry].resource only EETISOrganization
 * entry[patientEntry].resource only $ee-mpi-patient
-//* entry[deviceEntry].resource only Device
 * entry[medicationEntry].resource only EETISMedicationEPC or EETISMedicationExtemporal or EETISMedicationDispensedToPatient
 * entry[pharmacyLocationEntry].resource only EETISPharmacyLocation
 * entry[medicationRequestEntry].resource only EETISPrescription

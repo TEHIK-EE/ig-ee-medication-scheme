@@ -1,4 +1,4 @@
-/*Profile: EETISMedicationList
+Profile: EETISMedicationList
 Parent: List
 Id: ee-tis-medication-list
 Description: "Ravimiskeem. This profile gathers patient's medications in one list for better overview of the whole medication scheme"
@@ -35,10 +35,10 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * note.time ^definition = "Kommentaari lisamise aeg"
 * note.text ^short = "Comment about medication scheme"
 * note.text ^definition = "Kommentaari sisu"
+* entry 0..*
 * entry.item only Reference(EETISMedicationStatement)
 * entry.deleted ..0
 * entry.date ^short = "When entry flag is unchanged entry date does not change. When entry flag is something else than ´unchanged´ the entry date is also changed"
 * entry.date ^definition = "Entry.date kuupäev näitab seda kuupäeva, millal muudatus jõudis sinna seisu kus ta täna on. Entry.date displays the date when the entry changed."
 //* entry.item ^type.aggregation = #referenced
 * emptyReason ..0
-*/
