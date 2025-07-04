@@ -42,9 +42,9 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
     practitionerEntry 0..* and
     practitionerRoleEntry 0..* and
     organizationEntry 0..* and
-    relatedPersonEntry 0..* and
-    pharmacyLocationEntry 0..* and
-    deviceEntry 0..*
+    communicationEntry 0..* and
+    observationEntry 0..* and
+    clinicalUseDefinitionEntry 0..*
 * section.entry[medicationStatementEntry] only Reference(EETISMedicationStatement)
 * section.entry[medicationDispenseEntry] only Reference(EETISPrescriptionDispense)
 * section.entry[medicationRequestEntry] only Reference(EETISPrescription)
@@ -53,7 +53,7 @@ Description: "Kokkuvõte. Hetkel ei kasuta (vajalik Document Bundle jaoks). This
 * section.entry[practitionerEntry] only Reference(EETISPractitioner)
 * section.entry[practitionerRoleEntry] only Reference(EETISPractitionerRole)
 * section.entry[organizationEntry] only Reference(EETISOrganization)
-* section.entry[relatedPersonEntry] only Reference(EETISRelatedPerson)
-* section.entry[pharmacyLocationEntry] only Reference(EETISPharmacyLocation)
-* section.entry[deviceEntry] only Reference(Device)
+* section.entry[communicationEntry] only Reference(EETISCommunication)
+* section.entry[observationEntry] only Reference(EETISObservationEGFR)
+* section.entry[clinicalUseDefinitionEntry] only Reference(EETISRenalFailureDS or EETISMedicationInteraction)
 * section.section ..0

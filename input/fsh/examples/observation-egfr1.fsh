@@ -1,7 +1,7 @@
 Instance: observation-egfr1
 InstanceOf: Observation
 Usage: #example
-Description: "Example of a observation definition about eGFR" 
+Description: "Example of an eGFR observation" 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-observation-egfr"
 * language = #et
 * status = #final 

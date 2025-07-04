@@ -35,19 +35,19 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     repeatCategory 1..*
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
 * category[courseOfTherapyType] ^short = "What type of medication course is. RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
-//* category[courseOfTherapyType] ^binding.description = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
+* category[courseOfTherapyType] ^definition = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[statementOriginCategory] from $ravimi-andmete-tyyp-VS (required)
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
-//* category[statementOriginCategory] ^binding.description = "Category defining the origin of MedicationStatement. Use only code |ASK| from ValueSet ravimi-andmete-tyyp."
+//* category[statementOriginCategory] ^binding.d = "Category defining the origin of MedicationStatement. Use only code |ASK| from ValueSet ravimi-andmete-tyyp."
 //* category[statementOriginCategory] = $ravimi-andmete-tyyp-VS#ASK "ütluspõhine ravim" (exactly)
 //* category[statementOriginCategory] ^fixedCodeableConcept.text = "|ASK| ütluspõhine ravim"
 * category[prescriptionCategory] from $retsepti-liik-VS (required)
 * category[prescriptionCategory] ^short = "Whether the prescription is for regular medication, narcotics or medical device.RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
-//* category[prescriptionCategory] ^binding.description = "RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
+* category[prescriptionCategory] ^definition = "RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
 * category[repeatCategory] ^short = "Whether the prescription is one-time prescription or multiple.RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
-//* category[repeatCategory] ^binding.description = "RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
+* category[repeatCategory] ^definition = "RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
 //* medication ^type.aggregation = #referenced
 //* medication.concept ..0
