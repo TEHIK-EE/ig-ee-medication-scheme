@@ -14,9 +14,13 @@ Description: "List of patient's medications verified by D12345"
 * subject = Reference(pat1MatiMeri)
 * date = "2024-01-19T13:17:15.4473399+00:00"
 * source = Reference(PractRoleD12345)
-* note.authorString = "Janii"
-* note.time = "2024-01-19T13:17:15.4473399+00:00"
-* note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust."
+//* note = Reference(EETISAnnotation)
+* note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust"
+* note.authorString = "Kardioloog Doktor Doktor"
+* note.text = "2024-01-19T13:17:15.4473399+00:00"
+//* note.authorString = "Janii"
+//* note.time = "2024-01-19T13:17:15.4473399+00:00"
+//* note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust."
 //* entry[0].flag = $list-item-flag#01 "Unchanged"
 //* entry[=].deleted = false
 //* entry[=].date = "2023-06-30"
