@@ -1,4 +1,4 @@
-/*Instance: listMatiMeri3
+Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
 Description: "List of patient's medications verified by D12345"
@@ -14,7 +14,7 @@ Description: "List of patient's medications verified by D12345"
 * subject = Reference(pat1MatiMeri)
 * date = "2024-01-19T13:17:15.4473399+00:00"
 * source = Reference(PractRoleD12345)
-* note[0].authorString = "Kardioloog Doktor Doktor"
+//* note[0].authorString = "Kardioloog Doktor Doktor"
 * note[0].time = "2024-01-19T13:17:15.4473399+00:00"
 * note[0].text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust."
 //* entry[0].flag = $list-item-flag#01 "Unchanged"
@@ -30,8 +30,8 @@ Description: "List of patient's medications verified by D12345"
 //* entry[=].deleted = false
 * entry[1].flag = $list-item-flag#01 "Unchanged"
 * entry[=].date = "2023-11-30"
-* entry[=].item = Reference(MedicationStatement-metformin) "Metformiin"
-* entry[=].item.display
+* entry[=].item = Reference(MedicationStatement-metformin) 
+* entry[=].item.display = "Metformiin"
 //* entry[=].deleted = false
 //* entry[=].date = "2023-01-03"
 //* entry[=].item = Reference(MedicationStatementNovorapid) "Aspart-insuliin"
@@ -39,4 +39,3 @@ Description: "List of patient's medications verified by D12345"
 //* entry[=].deleted = true
 //* entry[=].date = "2023-12-12"
 //* entry[=].item = Reference(MedicationStatement-ospen2) "Fenoksymetyylpenitsilliin"
-*/
