@@ -1,4 +1,4 @@
-Instance: listMatiMeri3
+/*Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
 Description: "List of patient's medications verified by D12345"
@@ -43,3 +43,4 @@ Description: "List of patient's medications verified by D12345"
 //* entry[=].deleted = true
 //* entry[=].date = "2023-12-12"
 //* entry[=].item = Reference(MedicationStatement-ospen2) "Fenoksymetyylpenitsilliin"
+/*
