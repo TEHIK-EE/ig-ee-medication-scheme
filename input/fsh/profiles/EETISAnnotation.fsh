@@ -11,6 +11,7 @@ Description: "Kommentaar/märkus. Note or comment with time and author."
     //author ^definition = "Kommentaari lisaja. Kasutada stringi näitamaks THT nime ja rolli"
 //* note.time 0..1 
 * authorReference only Reference(EETISPractitioner or EETISPractitionerRole or EEBaseOrganization)
+* authorString 0..1
 * time ^short = "Time when the comment was added."
 * time ^definition = "Kommentaari lisamise aeg"
 * text ^short = "Comment about medication scheme"
