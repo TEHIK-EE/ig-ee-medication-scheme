@@ -23,10 +23,23 @@ Description: "Väljamüüdud ravim. Medication resource as it is presented today
     ExtensionEETISMedicinalProductName named name 0..1
 // * extension[atc].valueCodeableConcept from $atc-ee (required) 
 // * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
-* identifier ..1
-* identifier.system = $ravimiregister-pakend //3.7.25 väljakomm."https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
-* identifier ^short = "Package code when medication is prescribed based on specific package"
-* identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
+//* identifier ..1
+//* identifier.system = $ravimiregister-pakend //3.7.25 väljakomm."https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend"
+//* identifier ^short = "Package code when medication is prescribed based on specific package"
+//* identifier ^definition = "Pakendi kood (pakendipõhisel retseptil)"
+* identifier 0..1
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system" //oli system
+* identifier ^slicing.rules = #open
+* identifier ^short = "Package code when medication is prescribed based on specific package. Slice prescriptionNumber is used for grouping medications in TJT. ATC is found in extension."
+* identifier ^definition = "Pakendi kood (pakendipõhisel retseptil), või grupeerimiseks kasutatav retseptinumber"
+* identifier contains
+    packageNumber 0..1 and
+    prescriptionNumber 0..1
+* identifier[packageNumber].system = $ravimiregister-pakend //(exactly) //võtsin systemi katseks ära
+* identifier[packageNumber].system 1..
+* identifier[prescriptionNumber].system = $retseptikeskus-retsept //(exactly) //võtsin systemi katseks ära
+* identifier[prescriptionNumber].system 1..
 * code ..0
 * status ..0
 * marketingAuthorizationHolder ..0
