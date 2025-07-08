@@ -7,6 +7,8 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * ^date = "2024-01-19T13:17:15.4473399+00:00"
 * . ^short = "Medication scheme. List of patient's medication."
 * . ^definition = "RAVIMISKEEM"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>List with note – manual narrative provided.</div>"
 * extension contains
     ExtensionEETISConsentWithInteractions named consent 0..1
 * status = #current (exactly)
