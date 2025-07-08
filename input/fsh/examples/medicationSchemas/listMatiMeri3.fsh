@@ -16,7 +16,7 @@ Description: "List of patient's medications verified by D12345"
 * source = Reference(PractRoleD12345)
 * note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust"
 //* note.authorReference.display.value = "Kardioloog Doktor Doktor, vabatekstina autor, mitte referentsina"
-* note.time = "2024-01-19T13:17:15.4473399+00:00"
+//* note.time = "2024-01-19T13:17:15.4473399+00:00"
 //* note.text = "Selle inimese ravimiskeem on problemaatiline ning vajab mitme ospoole konsensust"
 //* note.authorString = "Kardioloog Doktor Doktor"
 //* note.text = "2024-01-19T13:17:15.4473399+00:00"
