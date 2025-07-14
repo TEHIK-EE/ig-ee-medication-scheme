@@ -8,8 +8,8 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * . ^short = "Medication scheme. List of patient's medication."
 * . ^definition = "RAVIMISKEEM"
 * extension contains
-    ExtensionEETISConsentWithInteractions named consent 0..1 
-   // ExtensionEETISConsentWithInteractions named renalFailureWarning 0..1
+    ExtensionEETISConsentWithInteractions named consent 0..1 and
+    ExtensionEETISConsentWithInteractions named renalFailureWarning 0..1
 * status = #current (exactly)
 * mode = #snapshot (exactly)
 * contained 0..*

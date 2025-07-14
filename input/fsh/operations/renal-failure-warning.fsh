@@ -1,14 +1,14 @@
-/*Instance: renal-failure-warning
+Instance: Medication-renal-failure-warnings
 InstanceOf: OperationDefinition
 Usage: #definition
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * extension[=].valueInteger = 1
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension[=].valueCode = #trial-use
-* url = "https://fhir.ee/OperationDefinition/renal-failure-warning"
+* url = "https://fhir.ee/OperationDefinition/renal-failure-warnings"
 * version = "1.0.0"
-* name = "Renal failure warning"
-* title = "Find renal failure warnings"
+* name = "Renal Failure Warnings"
+* title = "Find renal failure warnings for medication"
 * status = #active
 * kind = #operation
 * experimental = false
@@ -17,7 +17,7 @@ Usage: #definition
 * contact.name = "TEHIK"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://tehik.ee"
-* description = "The operation is used to get warnings about renal failure for given Medications."
+* description = "The renal failure warnings operation is used to get renal warnings for given Medications or Medication Scheme.The operation is used to get warnings about renal failure for given Medications."
 * jurisdiction = urn:iso:std:iso:3166#EE "Estonia"
 * affectsState = false
 * code = #interactions
@@ -30,7 +30,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "Patient MPI reference of who the medication scheme and eGFR result warning checked. "
+* parameter[=].documentation = "List of new medications. If not empty then only warnings between input medications will be returned. Old medication warnings won't be returned."
 * parameter[=].type = #Patient
 * parameter[+].name = #input
 * parameter[=].use = #in
@@ -42,6 +42,6 @@ Usage: #definition
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "Always Bundle, if no warnings then the bundle is empty. Every warning for different active ingredient is separate warning."
+* parameter[=].documentation = "Found warnings."
 * parameter[=].type = #Bundle
-*/
+

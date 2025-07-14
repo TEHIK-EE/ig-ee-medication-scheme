@@ -1,4 +1,4 @@
-/*Instance: listMatiMeri3
+Instance: listMatiMeri3
 InstanceOf: List
 Usage: #example
 Description: "List of patient's medications verified by D12345"
@@ -6,8 +6,8 @@ Description: "List of patient's medications verified by D12345"
 * language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
 * extension[=].valueBoolean = true
-//* extension[1].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
-//* extension[=].valueBoolean = false
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
+* extension[=].valueBoolean = false
 * status = #current
 * mode = #snapshot
 * title = "Ravimiskeem, kinnitatud D12345 poolt"
@@ -47,4 +47,3 @@ Description: "List of patient's medications verified by D12345"
 //* entry[=].deleted = true
 //* entry[=].date = "2023-12-12"
 //* entry[=].item = Reference(MedicationStatement-ospen2) "Fenoksymetyylpenitsilliin"
-*/
