@@ -1,4 +1,4 @@
-/*Instance: renal-failure-warning
+Instance: renal-failure-warning
 InstanceOf: OperationDefinition
 Usage: #definition
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
@@ -44,4 +44,3 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "Always Bundle, if no warnings then the bundle is empty. Every warning for different active ingredient is separate warning."
 * parameter[=].type = #Bundle
-*/
