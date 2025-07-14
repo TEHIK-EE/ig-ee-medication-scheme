@@ -27,7 +27,7 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * source only Reference(EETISPractitioner or EETISPractitionerRole)
 //* source ^type.aggregation = #contained
 * note 0..1
-//* note only EETISAnnotation
+* note only EETISAnnotation
 //* note.author[x] only string or Reference(EETISPractitioner or EETISPractitionerRole)
 //* note ^short = "Comment about medication scheme"
 //* note ^definition = "Kommentaar terve ravimiskeemi kohta. Erineb ravimiskeemi üksiku rea kommentaarist, vt. Communication-profiili."
