@@ -6,7 +6,7 @@ Description: "List of patient's medications verified by D12345"
 * language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
 * extension[=].valueBoolean = true
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-consent-with-interactions"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-renal-failure-warning"
 * extension[=].valueBoolean = false
 * status = #current
 * mode = #snapshot
