@@ -5,7 +5,7 @@ Usage: #definition
 * extension[=].valueInteger = 1
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension[=].valueCode = #trial-use
-* url = "https://fhir.ee/OperationDefinition/renal-failure-warnings"
+* url = "https://fhir.ee/OperationDefinition/Medication-renal-failure-warnings"
 * version = "1.0.0"
 * name = "Renal Failure Warnings"
 * title = "Find renal failure warnings for medications"
