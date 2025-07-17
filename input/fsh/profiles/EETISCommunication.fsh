@@ -36,7 +36,7 @@ Description: "Ravimiskeemi kommentaar. Comment about one treatment line in medic
 * payload.contentCodeableConcept.text 1..1
 * payload.contentCodeableConcept.text ^short = "Comment about the MedicationStatement in free form text"
 * payload.contentCodeableConcept.text ^definition = "Kommentaari sisu vabatekstina"
-//* note only EETISAnnotation
+* note only EETISAnnotation
 * note.time 1..1 
 * note.time ^short = "Time when the comment was changed."
 * note.time ^definition = "Kommentaari muutmise aeg"

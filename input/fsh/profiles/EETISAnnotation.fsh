@@ -1,4 +1,4 @@
-/*Profile: EETISAnnotation
+Profile: EETISAnnotation
 Parent: Annotation
 Id: ee-tis-annotation
 Description: "Kommentaar/märkus. Note or comment with time and author."
@@ -16,4 +16,3 @@ Description: "Kommentaar/märkus. Note or comment with time and author."
 * time ^definition = "Kommentaari lisamise aeg"
 * text ^short = "Comment about medication scheme"
 * text ^definition = "Kommentaari sisu"
-*/
