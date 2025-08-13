@@ -10,6 +10,8 @@ Description: "Alprasolaami väljamüük teise soodustusega kui mida arst on rets
 * extension[=].extension[=].valueCodeableConcept = $retsepti-soodustuse-maar#000 "0%"
 * extension[=].extension[+].url = "reimbursementCondition"
 * extension[=].extension[=].valueCodeableConcept = $reimbursement-condition#90_1 "vajalikud tingimused sellise soodustuse saamiseks"
+* extension[=].extension[+].url = "reimbursementSpeciality"
+* extension[=].extension[=].valueCodeableConcept = $erialad#E110 "dermatoveneroloogia"
 //* extension.extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * status = #completed
 * medication.reference = Reference(alprazolam-dispensed)

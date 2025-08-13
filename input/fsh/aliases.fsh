@@ -8,6 +8,8 @@ Alias: $ravimvormid-VS = https://fhir.ee/ValueSet/ravimvormid
 Alias: $toimeained-VS = https://fhir.ee/ValueSet/toimeained
 Alias: $toimeained = https://fhir.ee/CodeSystem/toimeained
 Alias: $retsept-mahu-ja-massiyhik = https://fhir.ee/CodeSystem/retsept-mahu-ja-massiyhik
+Alias: $erialad-VS = https://fhir.ee/ValueSet/erialad
+Alias: $erialad = https://fhir.ee/CodeSystem/erialad
 
 Alias: $retsept-annustamise-yhik-VS = https://fhir.ee/ValueSet/retsept-annustamise-yhik
 Alias: $retsept-annustamise-yhik = https://fhir.ee/CodeSystem/retsept-annustamise-yhik
