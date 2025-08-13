@@ -1,6 +1,6 @@
 Extension: ExtensionEETISReimbursementRate
 Id: ee-tis-reimbursement-rate
-Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi). For representation of the reimbursement rate and reason of prescription medicine."
+Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi). For representation of the reimbursement rate and reason of prescription medicine. Speciality of prescriber if available and necessary"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-31T14:08:33.4764521+00:00"
@@ -10,12 +10,12 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * ^context[=].expression = "MedicationRequest"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationDispense"
-* . ^short = "Reimbursement rate and reason of prescription medicine."
-* . ^definition = "Ravimi soodustuse määr protsentides Retseptikeskuse loendist \"Soodustuste määrad\" ning tingimused \"Vajalikud tingimused\" -loendist soodustuse saamiseks."
+* . ^short = "Reimbursement rate and reason of prescription medicine. Also speciality of prescriber if available."
+* . ^definition = "Ravimi soodustuse määr protsentides Retseptikeskuse loendist \"Soodustuste määrad\" ning tingimused \"Vajalikud tingimused\" -loendist soodustuse saamiseks. Juhul kui retseptid genereeritakse, siis ka soodustuse määraja erialakood."
 * extension contains
     reimbursementRate 0..* and
     reimbursementCondition 0..* and 
-    reimbursementSpeciality 1..
+    reimbursementSpeciality 0..1
 * extension[reimbursementRate].value[x] only CodeableConcept
 * extension[reimbursementRate].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 * extension[reimbursementRate].value[x] ^short = "Reimbursement rate of prescription medicine.\r\n0 | 50 | 75 | 90 | 100"
