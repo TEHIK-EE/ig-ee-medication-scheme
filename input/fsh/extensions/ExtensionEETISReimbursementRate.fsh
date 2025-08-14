@@ -15,7 +15,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * extension contains
     reimbursementRate 0..* and
     reimbursementCondition 0..* and 
-    reimbursementSpeciality 0..1
+    reimbursementSpeciality 1..1
 * extension[reimbursementRate].value[x] only CodeableConcept
 * extension[reimbursementRate].value[x] from $retsepti-soodustuse-maar-VS (preferred)
 * extension[reimbursementRate].value[x] ^short = "Reimbursement rate of prescription medicine.\r\n0 | 50 | 75 | 90 | 100"
@@ -26,6 +26,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * extension[reimbursementCondition].value[x] from $reimbursement-condition-VS (preferred)
 * extension[reimbursementCondition].value[x] ^binding.strength = #preferred
 * extension[reimbursementCondition].value[x] ^binding.description = "\"Vajalikud tingimused -loend\" retseptikeskusest"
+* extension[reimbursementSpeciality] ^short = "Speciality when prescribing medicine is required as some specialities may have right for a higher reimbursement rate than others."
 * extension[reimbursementSpeciality].value[x] only CodeableConcept
 * extension[reimbursementSpeciality].value[x] from $erialad-VS (preferred)
 * extension[reimbursementSpeciality].value[x] ^binding.strength = #required
