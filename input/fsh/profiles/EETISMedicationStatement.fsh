@@ -25,6 +25,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * partOf only Reference(EETISMedicationStatement)
 * status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud."
 * status ^short = "A code representing the status of recording the medication statement. recorded = KINNITATUD; draft = KINNITAMATA"
+* identifier ^short = "Identifier is prescription number (ee RETSEPTINUMBER), if the MedicationStatement is generated from RETSEPTIKESKUS prescriptions. In history view identifier system, must use ... as system in order to group medications in same form (eg. tablets and capsules are grouped together)"
+* identifier.system from $tis-fhir-identifikaatorid (preferred)
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -75,7 +77,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes."
 * note ^short = "Siia saab kirjutada märkusi ravimiskeemi rea kohta."
 * note.author[x] 1..
-//* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
+//y* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
 * dosage ^short = "Indicates how the medication is/was or should be taken by the patient."
