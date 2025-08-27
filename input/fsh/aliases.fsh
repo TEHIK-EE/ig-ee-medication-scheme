@@ -87,6 +87,7 @@ Alias: $ravimi-andmete-tyyp-VS = https://fhir.ee/ValueSet/ravimi-andmete-tyyp
 Alias: $autoriseerimismooduli-kasutajarollid-VS = https://fhir.ee/ValueSet/autoriseerimismooduli-kasutajarollid
 Alias: $autoriseerimismooduli-kasutajarollid = https://fhir.ee/CodeSystem/autoriseerimismooduli-kasutajarollid
 Alias: $tis-fhir-identifikaatorid = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid
+Alias: $grupp-ravimvorm = https://fhir.ee/grupp-ravimvorm
 
 Alias: $retseptikeskus-retsept = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept
 Alias: $ravimiregister-pakend = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/ravimiregister-pakend
