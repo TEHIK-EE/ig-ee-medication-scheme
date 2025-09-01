@@ -20,7 +20,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * extension[extensionEETISUnauthorizedProductRequest] ^short = "Used for requesting marketing permit for unauthorized medication."
 * extension[extensionEETISUnauthorizedProductRequest] ^definition = "Müügiloata ravimi taotluse tarvis."
 * identifier ..1
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/retseptikeskus-retsept"
+* identifier.system = $retseptikeskus-retsept
 * identifier.system ^short = "Identifier system uri for Estonian Prescription Centre prescriptions"
 //* identifier.system ^definition = "TIS FHIR identifikaatorite süsteem"
 * identifier.value ^short = "Prescription number"
