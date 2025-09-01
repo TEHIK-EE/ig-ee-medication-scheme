@@ -52,7 +52,7 @@ Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 //* category[=].text = "pidev"
 * category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
-* category[+] = $retsepti-liik#1 "tavaretsept"
+* category[+] = $retsepti-liik#1 "Tavaretsept"
 //* category[=].text = "tavaretsept"
 * category[+] = $retsepti-kordsus#3 "3-kordne"
 //* category[=].text = "3-kordne"

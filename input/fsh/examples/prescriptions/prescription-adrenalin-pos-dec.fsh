@@ -36,7 +36,7 @@ Description: "Unauthorized medication adrenaline with positive decision for mark
 * status = #active
 * statusChanged = "2023-11-07"
 * intent = #proposal
-* category[0] = $retsepti-liik#1 "tavaretsept"
+* category[0] = $retsepti-liik#1 "Tavaretsept"
 * category[+] = $retsepti-kordsus#1 "1-kordne"
 * medication.reference = Reference(adrenalin)
 * subject = Reference(pat1MatiMeri)

@@ -20,7 +20,7 @@ Description: "Prescription of metformin with substitution NOT allowed and reason
 * status = #active
 * statusChanged = "2014-06-10"
 * intent = #order
-* category[0] = $retsepti-liik#1 "tavaretsept"
+* category[0] = $retsepti-liik#1 "Tavaretsept"
 * category[+] = $retsepti-kordsus#3 "3-kordne"
 * medication.reference = Reference(metformin)
 * subject = Reference(pat1MatiMeri)

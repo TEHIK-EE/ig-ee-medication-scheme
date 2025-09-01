@@ -20,7 +20,7 @@ Description: "Prescription of alprazolam with reimbursement rate 50%"
 * status = #active
 * statusChanged = "2014-06-10"
 * intent = #order
-* category[0] = $retsepti-liik#1 "tavaretsept"
+* category[0] = $retsepti-liik#1 "Tavaretsept"
 * category[+] = $retsepti-kordsus#1 "1-kordne"
 //* medication.reference.reference = "Medication/alprazolam"
 * medication.reference = Reference(alprazolam)
