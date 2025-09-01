@@ -37,7 +37,7 @@ Description: "Ravimiskeemi rida ajaloo vaates grupeerituna ravimvormi järgi. Sc
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
 * identifier.value = "12345"
-* identifier.system = "https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp"
+* identifier.system = "https://fhir.ee/ravimiskeemi-rea-ajajoone-grupp"
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 //* category[=].text = "pidev"
 //* category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
