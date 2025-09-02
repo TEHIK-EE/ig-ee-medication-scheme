@@ -28,13 +28,14 @@ Description: "Example of a alert when medication affects renal function and dosa
 * category[0].coding.code = #2
 * category[=].coding.display = "süsteemne"
 * category[=].coding.system = "https://fhir.ee/drug-form-group"
-* category[=].text = "Kirjeldus siia text alla. kui on veel vaja midagi lisada"
+* category[=].text = "Kirjeldus siia text alla, kui on veel vaja midagi lisada"
 //* category.coding[failureDegree] empty
 //* category[failureDegree] = {}
 //* category[failureDegree].coding = FixedFailureDegreeCoding
 * category[+].coding.code = #1
 * category[=].coding.system = "https://fhir.ee/failure-degree"
-* category[=].text = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[=].coding.display = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[=].text = "Kirjeldus siia text alla, kui on veel vaja midagi lisada"
 //* category.coding[additionalInformation] empty
 //* category[additionalInformation] = {}
 //* category[additionalInformation].coding = FixedAdditionalInformationCoding
@@ -43,7 +44,8 @@ Description: "Example of a alert when medication affects renal function and dosa
 * category[+].text = "Kuna vosoritiidi ohutust ja efektiivsust neerukahjustuse korral ei ole hinnatud [(1)],[(2)], ei saa tõenduspõhiseid soovitusi anda. Siiski, tuginedes eliminatsioonimehhanismile, ei mõjuta neerupuudulikkus ilmselt vosoritiidi farmakokineetikat. Vosoritiid on modifitseeritud C-tüüpi natriureetiline peptiid. Vosoritiidi metabolism toimub eeldatavasti kataboolsete radade kaudu ja laguneb väikesteks peptiidideks ja aminohapeteks [(1)], [(2)]."
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
-* undesirableEffect.classification.text = "Annust või annustamise vahemikku tuleb kohandada"
 * undesirableEffect.classification.coding.code = #C
+* undesirableEffect.classification.coding.display = "Annust või annustamise vahemikku tuleb kohandada"
 * undesirableEffect.classification.coding.system = "https://fhir.ee/synbase-warning-classification"
+* undesirableEffect.classification.text = "Kui on veel vaja midagi lisada"
 //* undesirableEffect.symptomConditionEffect.reference = Reference(observation-definition1)
