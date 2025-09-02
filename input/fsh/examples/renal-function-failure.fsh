@@ -25,22 +25,25 @@ Description: "Example of a alert when medication affects renal function and dosa
 //* category.coding[drugFormGroup] empty
 //* category[drugFormGroup] = {}
 //* category[drugFormGroup].coding = FixedDrugFormGroupCoding
-* category[0].coding.display = "2, Systemic, süsteemne"
+* category[0].coding.code = #2
+* category[=].coding.display = "süsteemne"
 * category[=].coding.system = "https://fhir.ee/drug-form-group"
-* category[=].text = "Kirjeldus siia text alla."
+* category[=].text = "Kirjeldus siia text alla. kui on veel vaja midagi lisada"
 //* category.coding[failureDegree] empty
 //* category[failureDegree] = {}
 //* category[failureDegree].coding = FixedFailureDegreeCoding
-* category[+].coding.display = "failureDegree 1 - GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
+* category[+].coding.code = #1
 * category[=].coding.system = "https://fhir.ee/failure-degree"
-* category[=].text = "failureDegree 3 - GFR <15 ml/min (lõppstaadiumis neerupuudulikkus, dialüüspatsient)"
+* category[=].text = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
 //* category.coding[additionalInformation] empty
 //* category[additionalInformation] = {}
 //* category[additionalInformation].coding = FixedAdditionalInformationCoding
-* category[+].coding.display = "additional information. bla bla bla. siia võib ka igast asju lisada"
-* category[=].coding.system = "https://fhir.ee/additional-information"
+//* category[+].coding.display = "additional information. bla bla bla. siia võib ka igast asju lisada"
+* category[+].coding.system = "https://fhir.ee/additional-information"
 * category[=].text = "Kuna vosoritiidi ohutust ja efektiivsust neerukahjustuse korral ei ole hinnatud [(1)],[(2)], ei saa tõenduspõhiseid soovitusi anda. Siiski, tuginedes eliminatsioonimehhanismile, ei mõjuta neerupuudulikkus ilmselt vosoritiidi farmakokineetikat. Vosoritiid on modifitseeritud C-tüüpi natriureetiline peptiid. Vosoritiidi metabolism toimub eeldatavasti kataboolsete radade kaudu ja laguneb väikesteks peptiidideks ja aminohapeteks [(1)], [(2)]."
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
-* undesirableEffect.classification.text = "C, Annust või annustamise vahemikku tuleb kohandada"
+* undesirableEffect.classification.text = "Annust või annustamise vahemikku tuleb kohandada"
+* undesirableEffect.classification.coding.code = #C
+* undesirableEffect.classification.coding.system = "https://fhir.ee/synbase-warning-classification"
 //* undesirableEffect.symptomConditionEffect.reference = Reference(observation-definition1)

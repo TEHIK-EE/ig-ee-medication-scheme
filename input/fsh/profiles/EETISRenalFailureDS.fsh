@@ -69,6 +69,7 @@ Description: "Neerufuntsiooni puudulikkuse otsustustoe vastus. This profile is f
 * undesirableEffect ^short = "Classification A/B/C/D and description how the dosage must be adjusted"
 * undesirableEffect ^definition = "Klassifikatsioon RenBase järgi ja kirjeldus kui palju annust tuleks muuta" 
 * undesirableEffect.classification ^short = "klassifikatsioon (A/B/C/D) + selle tekst nt C, text: Annust või annustamise vahemikku tuleb kohandada"
+* undesirableEffect.classification ^binding.description = "Use this fictive system https://fhir.ee/synbase-warning-classification"
 //* undesirableEffect.symptomConditionEffect.reference ^short = "Reference to a eGFR as an observation"
 //* undesirableEffect.symptomConditionEffect.reference ^definition = "Siia tuleb referents eGFR näidule mis on hoiatuse aluseks"
 //* undesirableEffect.symptomConditionEffect only CodeableReference(ObservationDefinition)
