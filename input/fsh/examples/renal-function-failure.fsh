@@ -39,8 +39,8 @@ Description: "Example of a alert when medication affects renal function and dosa
 //* category[additionalInformation] = {}
 //* category[additionalInformation].coding = FixedAdditionalInformationCoding
 //* category[+].coding.display = "additional information. bla bla bla. siia võib ka igast asju lisada"
-* category[+].coding.system = "https://fhir.ee/additional-information"
-* category[=].text = "Kuna vosoritiidi ohutust ja efektiivsust neerukahjustuse korral ei ole hinnatud [(1)],[(2)], ei saa tõenduspõhiseid soovitusi anda. Siiski, tuginedes eliminatsioonimehhanismile, ei mõjuta neerupuudulikkus ilmselt vosoritiidi farmakokineetikat. Vosoritiid on modifitseeritud C-tüüpi natriureetiline peptiid. Vosoritiidi metabolism toimub eeldatavasti kataboolsete radade kaudu ja laguneb väikesteks peptiidideks ja aminohapeteks [(1)], [(2)]."
+//* category[+].coding.system = "https://fhir.ee/additional-information"
+* category[+].text = "Kuna vosoritiidi ohutust ja efektiivsust neerukahjustuse korral ei ole hinnatud [(1)],[(2)], ei saa tõenduspõhiseid soovitusi anda. Siiski, tuginedes eliminatsioonimehhanismile, ei mõjuta neerupuudulikkus ilmselt vosoritiidi farmakokineetikat. Vosoritiid on modifitseeritud C-tüüpi natriureetiline peptiid. Vosoritiidi metabolism toimub eeldatavasti kataboolsete radade kaudu ja laguneb väikesteks peptiidideks ja aminohapeteks [(1)], [(2)]."
 * subject.reference = "#metformin"
 //* subject.identifier.valueIdentifier = "11354"
 * undesirableEffect.classification.text = "Annust või annustamise vahemikku tuleb kohandada"
