@@ -10,7 +10,7 @@ Description: "This resource is used for asking the National Health Insurance Fun
 * subType 1..
 * subType from $retsepti-soodustuse-maar-VS (preferred)
 * subType ^short = "Soodustuse määr. Loend."
-* patient only Reference($ee-mpi-patient)
+* patient only Reference($ee-mpi-patient) 
 * enterer 1..
 * enterer only Reference(EETISPractitioner or EETISPractitionerRole)
 * insurer only Reference(EETISOrganization)
