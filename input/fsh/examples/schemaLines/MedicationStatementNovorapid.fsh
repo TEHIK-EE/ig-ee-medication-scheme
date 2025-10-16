@@ -37,7 +37,7 @@ Description: "Ravimiskeemi rida. Schema line for aspart-insulin"
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 * category[=].text = "pidev"
-* category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
+* category[+] = $ravimi-andmete-tyyp#123 "ei ole patsiendi ytluse põhjal"
 * category[+] = $retsepti-liik#1 "tavaretsept"
 * category[=].text = "tavaretsept"
 * category[+] = $retsepti-kordsus#3 "3-kordne"

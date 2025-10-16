@@ -64,8 +64,8 @@ Alias: $ee-medre-specialty = https://fhir.ee/CodeSystem/ee-medre-specialty
 Alias: $medre = https://fhir.ee/sid/pro/est/pho // TAM kood ee-base'ist
 Alias: $isikukood = https://fhir.ee/sid/pid/est/ni //ee-base'ist
 
-Alias: $statement-origin-category = https://fhir.ee/CodeSystem/statement-origin-category
-Alias: $statement-origin-category-VS = https://fhir.ee/ValueSet/statement-origin-category
+//Alias: $statement-origin-category = https://fhir.ee/CodeSystem/ravimi-andmete-tyyp
+//Alias: $statement-origin-category-VS = https://fhir.ee/ValueSet/ravimi-andmete-tyyp
 Alias: $patient-reported = https://fhir.ee/CodeSystem/patient-reported
 Alias: $ee-date-accuracy-indicator = https://fhir.ee/CodeSystem/ee-date-accuracy-indicator
 Alias: $ee-occupation = https://fhir.ee/CodeSystem/ee-occupation

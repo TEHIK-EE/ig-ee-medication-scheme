@@ -38,7 +38,7 @@ Description: "Ravimiskeemi rida. Schema line for alprazolam"
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#V "Vajadusel"
 * category[=].text = "ühekordne"
-* category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
+//* category[+] = $ravimi-andmete-tyyp#123 "ei ole patsiendi ytluse põhjal"
 * category[+] = $retsepti-liik#1 "Tavaretsept"
 * category[=].text = "tavaretsept"
 * category[+] = $retsepti-kordsus#1 "1-kordne"

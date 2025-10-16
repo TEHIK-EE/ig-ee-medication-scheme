@@ -12,7 +12,7 @@ Description: "Ravimiskeemi rida käsimüügiravimile. Schema line for over-the-c
 * status = #recorded
 * category[0] = $ravikuuri-tyyp#P "Pidev"
 //* category[=].text = "pidev"
-* category[+] = $statement-origin-category#123 "ei ole patsiendi ytluse põhjal"
+* category[+] = $ravimi-andmete-tyyp#ASK "ütluspõhine ravim"
 * medication.reference = Reference(aspirin)
 * subject = Reference(pat1MatiMeri)
 * effectivePeriod.start = "2015-02-07T13:28:17-05:00"
