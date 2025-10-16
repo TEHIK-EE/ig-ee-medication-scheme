@@ -36,12 +36,12 @@ Description: "Ravimiskeemi rida. Schema line for metformin"
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#P "Pidev"
+* category[courseOfTherapyType] = $ravikuuri-tyyp#P "Pidev"
 //* category[=].text = "pidev"
-//* category[+] = $ravimi-andmete-tyyp#123 "ei ole patsiendi ytluse põhjal"
-* category[+] = $retsepti-liik#1 "Tavaretsept"
+//* category[statementOriginCategory] = $ravimi-andmete-tyyp#123 "ei ole patsiendi ytluse põhjal"
+* category[prescriptionCategory] = $retsepti-liik#1 "Tavaretsept"
 //* category[=].text = "tavaretsept"
-* category[+] = $retsepti-kordsus#3 "3-kordne"
+* category[repeatCategory] = $retsepti-kordsus#3 "3-kordne"
 //* category[=].text = "3-kordne"
 * medication.reference = Reference(metformin)
 * subject = Reference(pat1MatiMeri)
