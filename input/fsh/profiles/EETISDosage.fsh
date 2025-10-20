@@ -64,6 +64,7 @@ Description: "Annustamisjuhis. Dosage is for exact representation of what quanti
 //* doseAndRate.dose[x] from $retsept-annustamise-yhik-VS (example)
 * doseAndRate.dose[x] ^short = "Amount of medication per dose"
 * doseAndRate.dose[x] ^definition = "RAVIMI KOGUS ANNUSE KOHTA. Loendis on koodid nagu näiteks TA -tablett, TK - tükk, CP- kapsel, MA - mõõtannus jne. Amount of medication per dose."
+//* doseAndRate.dose only SimpleQuantity
 //* doseAndRate.dose[x] ^binding.description = "Annustamise ühikud loend"
 * doseAndRate.rate[x] ^short = "Amount of medication per unit of time"
 * doseAndRate.rate[x] ^definition = "MANUSTAMISE KIIRUS. Amount of medication per unit of time."
