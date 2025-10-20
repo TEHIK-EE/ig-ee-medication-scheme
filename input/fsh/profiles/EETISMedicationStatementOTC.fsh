@@ -21,6 +21,7 @@ Description: "Ravimiskeemi rida käsimüügiravimi puhul. Medication Statement f
 * status ^short = "A code representing the status of recording the medication statement. recorded = KINNITATUD; draft = KINNITAMATA"
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
+//* category ^slicing.ordered = false
 * category ^slicing.rules = #open
 * category contains
     courseOfTherapyType 1..* and
