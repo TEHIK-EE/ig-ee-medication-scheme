@@ -44,7 +44,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 //* category[statementOriginCategory] ^binding.d = "Category defining the origin of MedicationStatement. Use only code |ASK| from ValueSet ravimi-andmete-tyyp."
 //* category[statementOriginCategory] = $ravimi-andmete-tyyp-VS#ASK "ütluspõhine ravim" (exactly)
 //* category[statementOriginCategory] ^fixedCodeableConcept.text = "|ASK| ütluspõhine ravim"
-* category[prescriptionCategory] from $retsepti-liik-VS (required)
+* category[prescriptionCategory] from $retsepti-liik (required)
 * category[prescriptionCategory] ^short = "Whether the prescription is for regular medication, narcotics or medical device.RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[prescriptionCategory] ^definition = "RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
