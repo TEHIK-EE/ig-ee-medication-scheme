@@ -30,7 +30,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category ^slicing.discriminator.type = #value //pattern muudetud 20.10.25 valueks
 * category ^slicing.discriminator.path = "$this"
 //* category ^slicing.ordered = false
-* category ^slicing.rules = #open
+* category ^slicing.rules = #closed
+* category 3..*
 * category contains
     courseOfTherapyType 1..* and
     prescriptionCategory 1..* and
