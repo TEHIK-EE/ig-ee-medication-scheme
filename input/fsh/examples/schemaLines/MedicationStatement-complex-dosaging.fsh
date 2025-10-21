@@ -36,12 +36,18 @@ Description: "Ravimiskeemi rida muutuva annustamisega. Schema line for metformin
 * extension[=].extension[+].url = "verificationAuthor"
 * extension[=].extension[=].valueReference = Reference(PractRoleD12345)
 * status = #recorded
-* category[0] = $ravikuuri-tyyp#P "Pidev"
+* category[0].coding.code = #P 
+* category[=].coding.system = $ravikuuri-tyyp
+* category[=].coding.display = "Pidev"
 //* category[=].text = "pidev"
 //* category[+] = $ravimi-andmete-tyyp#123 "ei ole patsiendi ytluse põhjal"
-* category[+] = $retsepti-liik#1 "Tavaretsept"
+* category[+].coding.code = #1 
+* category[=].coding.system = $retsepti-liik
+* category[=].coding.display = "Tavaretsept"
 //* category[=].text = "tavaretsept"
-* category[+] = $retsepti-kordsus#3 "3-kordne"
+* category[+].coding.code = #3 
+* category[=].coding.system = $retsepti-kordsus
+* category[=].coding.display = "3-kordne"
 //* category[=].text = "3-kordne"
 * medication.reference = Reference(metformin)
 * subject = Reference(pat1MatiMeri)
