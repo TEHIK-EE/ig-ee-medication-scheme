@@ -28,7 +28,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * identifier ^short = "Identifier is prescription number (ee RETSEPTINUMBER), if the MedicationStatement is generated from RETSEPTIKESKUS prescriptions. In history view identifier system must be used in order to group medications eg. in same dose form etc."
 * identifier.system ^binding.description = "Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/#retseptikeskus-retsept when prescriptions are generated from Retseptikeskus. Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp as system when grouping medication statements in history view." //from $tis-fhir-identifikaatorid (preferred)
 * category ^slicing.discriminator.type = #value //pattern muudetud 20.10.25 valueks
-* category ^slicing.discriminator.path = "$system" //this->system 21.10 testimiseks
+* category ^slicing.discriminator.path = "$coding.system" //this->system 21.10 testimiseks
 * category ^slicing.ordered = false
 * category ^slicing.rules = #open
 * category contains
