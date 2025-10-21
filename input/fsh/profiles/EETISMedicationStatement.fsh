@@ -28,8 +28,8 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * identifier ^short = "Identifier is prescription number (ee RETSEPTINUMBER), if the MedicationStatement is generated from RETSEPTIKESKUS prescriptions. In history view identifier system must be used in order to group medications eg. in same dose form etc."
 * identifier.system ^binding.description = "Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/#retseptikeskus-retsept when prescriptions are generated from Retseptikeskus. Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp as system when grouping medication statements in history view." //from $tis-fhir-identifikaatorid (preferred)
 * category ^slicing.discriminator.type = #value //pattern muudetud 20.10.25 valueks
-* category ^slicing.discriminator.path = "$coding.system" //this->system 21.10 testimiseks
-* category ^slicing.ordered = false
+* category ^slicing.discriminator.path = "$this" 
+//* category ^slicing.ordered = false
 * category ^slicing.rules = #open
 * category contains
     courseOfTherapyType 1..* and
@@ -37,22 +37,22 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     repeatCategory 1..* and
     statementOriginCategory 0..*
 * category[courseOfTherapyType] from $ravikuuri-tyyp-VS (required)
-* category[courseOfTherapyType].coding.system = $ravikuuri-tyyp
+//* category[courseOfTherapyType].coding.system = $ravikuuri-tyyp
 * category[courseOfTherapyType] ^short = "What type of medication course is. RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 * category[courseOfTherapyType] ^definition = "RAVIKUURI TÜÜP. LOEND. pidev | fikseeritud | vajadusel | muutuv | ühekordne |"
 //* category[statementOriginCategory] ^binding.d = "Category defining the origin of MedicationStatement. Use only code |ASK| from ValueSet ravimi-andmete-tyyp."
 //* category[statementOriginCategory] = $ravimi-andmete-tyyp-VS#ASK "ütluspõhine ravim" (exactly)
 //* category[statementOriginCategory] ^fixedCodeableConcept.text = "|ASK| ütluspõhine ravim"
 * category[prescriptionCategory] from $retsepti-liik-VS (required)
-* category[prescriptionCategory].coding.system = $retsepti-liik
+//* category[prescriptionCategory].coding.system = $retsepti-liik
 * category[prescriptionCategory] ^short = "Whether the prescription is for regular medication, narcotics or medical device.RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[prescriptionCategory] ^definition = "RETSEPTI LIIK. LOEND. tavaretsept | narkootilise ravimi retsept | meditsiiniseadme retsept"
 * category[repeatCategory] from $retsepti-kordsus-VS (required)
-* category[repeatCategory].coding.system = $retsepti-liik
+//* category[repeatCategory].coding.system = $retsepti-liik
 * category[repeatCategory] ^short = "Whether the prescription is one-time prescription or multiple.RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * category[repeatCategory] ^definition = "RETSEPTI KORDSUS. LOEND. 1-kordne | 2-kordne | 3-kordne | 6-kordne"
 * category[statementOriginCategory] from $ravimi-andmete-tyyp-VS (required)
-* category[statementOriginCategory].coding.system = $ravimi-andmete-tyyp
+//* category[statementOriginCategory].coding.system = $ravimi-andmete-tyyp
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
