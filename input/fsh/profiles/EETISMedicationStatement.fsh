@@ -29,7 +29,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * identifier.system ^binding.description = "Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/#retseptikeskus-retsept when prescriptions are generated from Retseptikeskus. Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp as system when grouping medication statements in history view." //from $tis-fhir-identifikaatorid (preferred)
 * category ^slicing.discriminator.type = #value //pattern muudetud 20.10.25 valueks
 * category ^slicing.discriminator.path = "$this"
-* category ^slicing.ordered = true // katsetus 21.10
+* category ^slicing.ordered = false
 * category ^slicing.rules = #open
 * category contains
     courseOfTherapyType 1..* and
