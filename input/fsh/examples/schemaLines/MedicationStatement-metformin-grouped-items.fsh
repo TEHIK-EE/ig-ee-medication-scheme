@@ -1,7 +1,7 @@
 Instance: MedicationStatement-metformin-grouped-items
 InstanceOf: MedicationStatement
 Usage: #example
-Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line for metformin where several identifiers are grouped." 
+Description: "Ravimiskeemi rida kus identifikaatorid on grupeeritud. Schema line for metformin where several identifiers are grouped together." 
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-statement"
 * language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-substitution"
