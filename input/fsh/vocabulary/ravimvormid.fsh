@@ -1,4 +1,4 @@
-ValueSet: Ravimvormid_VS
+/*ValueSet: Ravimvormid_VS
 Id: ravimvormid
 Title: "Ravimvormid"
 Description: "Üldised ja detailsed ravimvormid, mida on lubatud kasutada digiretseptil ja ravimiskeemis."
@@ -6,3 +6,4 @@ Description: "Üldised ja detailsed ravimvormid, mida on lubatud kasutada digire
 * ^url = $ravimvormid-VS
 * ^experimental = true
 * include codes from system $ravimvormid
+*/
