@@ -67,7 +67,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * effective[x] only Period
 * effective[x] ^short = "Time period when the treatment line begins and ends"
 * effective[x] ^definition = "Ravimiskeemi rea kehtivuse algus"
-* informationSource only Reference(EETISPractitioner or EETISPractitionerRole)
+* informationSource only Reference($ee-practitioner or EETISPractitionerRole)
 * informationSource ^short = "Initial author of the MedicationStatement. The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest."
 * informationSource ^definition = "AUTOR KES KOOSTAB RAVIMISKEEMI REA (arst). Ravimiskeemi rea (algne) koostaja."
 * derivedFrom only Reference(EETISPrescription)
@@ -82,7 +82,6 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes."
 * note ^short = "Siia saab kirjutada märkusi ravimiskeemi rea kohta."
 * note.author[x] 1..
-//y* note.author[x] only string or Reference(EETISPractitionerRole or EETISPractitioner)
 * relatedClinicalInformation ..0
 * dosage only EETISDosage
 * dosage ^short = "Indicates how the medication is/was or should be taken by the patient."

@@ -1,4 +1,4 @@
-Profile: EETISPractitioner
+/*Profile: EETISPractitioner
 Parent: $ee-practitioner
 Id: ee-tis-practitioner
 Description: "Tervishoiutöötaja. Practitioner has qualification in healthcare. E.g. nurse, pharmacist, doctor of medicine."
@@ -7,3 +7,4 @@ Description: "Tervishoiutöötaja. Practitioner has qualification in healthcare.
 //* qualification[degree] ^sliceName = "degree"
 * qualification.identifier ..0
 * qualification.period ..0
+*/

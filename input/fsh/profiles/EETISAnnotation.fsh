@@ -10,7 +10,7 @@ Description: "Kommentaar/märkus. Note or comment with time and author."
 * author[x] ^short = "Healthcare professional who added comment. Use string to express the name and role of HCP"
     //author ^definition = "Kommentaari lisaja. Kasutada stringi näitamaks THT nime ja rolli"
 //* note.time 0..1 
-* authorReference only Reference(EETISPractitioner or EETISPractitionerRole or EEBaseOrganization)
+* authorReference only Reference($ee-practitioner or EETISPractitionerRole or EEBaseOrganization)
 * authorString 0..1
 * time ^short = "Time when the comment was added."
 * time ^definition = "Kommentaari lisamise aeg"

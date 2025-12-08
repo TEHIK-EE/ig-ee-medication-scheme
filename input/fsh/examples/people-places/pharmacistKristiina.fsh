@@ -2,7 +2,7 @@ Instance: pharmacistKristiina
 InstanceOf: PractitionerRole
 Usage: #example
 Description: "Practitioner with Medre code P00197 in practitioner role pharmacist"
-* meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-practitioner-role"
+* meta.profile = "https://fhir.ee/StructureDefinition/ee-practitioner-role"
 * language = #et
 * active = true
 * practitioner.identifier.system = $medre

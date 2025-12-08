@@ -26,7 +26,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * identifier.value ^short = "Prescription number"
 * identifier ^short = "Identifier for the prescription."
 * identifier ^definition = "Retsepti unikaalne identifikaator. Identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server."
-* identifier.assigner only Reference(EETISOrganization)
+* identifier.assigner only Reference($ee-organization)
 * basedOn ..1
 * priorPrescription ..0
 * status ^definition = "Kui tegemist on müügiloata ravimi taotlusega, on status siiski \"active\" , sest retsept on aktiivne ning kui müügiloa otsus on positiivne ja \"intent\" muutunud \"proposal\"-st \"order\"-ks extension lockStatus alt täpsustus, milline apteek retesepti broneeris ja retsept staatusesse \"on-hold. \r\n\r\nA code specifying the current state of the order. Generally, this will be active or completed state."
@@ -68,12 +68,12 @@ Description: "Retsept. This is a profile for medication prescription."
 * informationSource 0..*
 * informationSource ^short = "If prescription is cancelled by someone else than original prescriber it must be filled here. Original prescriber remains in requester field."
 * informationSource ^definition = "Juhul kui retsept on annulleeritud kellegi teise poolt kui algne väljakirjutaja, tuleb annulleerija info siia tuua."
-* informationSource only Reference(EETISPractitionerRole or EETISPractitioner)
+* informationSource only Reference(EETISPractitionerRole or $ee-practitioner)
 * encounter ..0
 * authoredOn 1..
 * authoredOn ^short = "When the prescription was made."
 * authoredOn ^definition = "Koostamise aeg"
-* requester only Reference(EETISPractitionerRole or EETISPractitioner)
+* requester only Reference(EETISPractitionerRole or $ee-practitioner)
 * requester ^short = "Who/What requested the Request. Initial author of the request. NB! See also the differenece between informationSource"
 * requester ^definition = "Kes tegi retsepti. Retsepti algne koostaja."
 * requester ^type.aggregation = #contained
@@ -159,7 +159,7 @@ Description: "Retsept. This is a profile for medication prescription."
 * dispenseRequest.numberOfRepeatsAllowed ..0
 * dispenseRequest.quantity ..0
 * dispenseRequest.expectedSupplyDuration ..0
-* dispenseRequest.dispenser only Reference(EETISOrganization)
+* dispenseRequest.dispenser only Reference($ee-organization)
 * dispenseRequest.dispenser ^definition = "KASUTATAKSE AINULT MÜÜGILOATA RAVIMI APTEEGI BRONEERIMISE PUHUL. Indicates the intended performing Organization that will dispense the medication as specified by the prescriber."
 * dispenseRequest.dispenser ^type.aggregation = #referenced
 * dispenseRequest.dispenserInstruction ..0

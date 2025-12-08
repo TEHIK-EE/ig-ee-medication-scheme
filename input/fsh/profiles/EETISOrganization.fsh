@@ -1,4 +1,4 @@
-Profile: EETISOrganization
+/*Profile: EETISOrganization
 Parent: $ee-organization
 Id: ee-tis-organization
 Description: "Asutus. Organization resource is used to refer to a certain identifiable place which is related to persons prescribing or dispensing medication."
@@ -8,3 +8,4 @@ Description: "Asutus. Organization resource is used to refer to a certain identi
 * alias ..1
 * description ..0
 * qualification ..0
+*/

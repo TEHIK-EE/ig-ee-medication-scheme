@@ -25,7 +25,7 @@ Description: "Ravimiskeemi kommentaar. Comment about one treatment line in medic
 * sent 1..1
 * sent ^short = "When the comment was added to the MedicationStatement"
 * sent ^definition = "Kommentaari lisamise aeg"
-* sender only Reference(EETISPractitioner or EETISPractitionerRole)
+* sender only Reference($ee-practitioner or EETISPractitionerRole)
 * sender 1..1
 * sender ^short = "Practitioner who added the comment"
 * sender ^definition = "Tervishoiutöötaja, kes lisas ravimiskeemi reale kommentaari" 

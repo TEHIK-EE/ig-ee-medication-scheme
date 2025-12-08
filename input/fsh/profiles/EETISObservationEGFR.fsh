@@ -10,7 +10,7 @@ Description: "eGFR analüüsi tulemus. Observation about eGFR"
 * status ^short = "|final| kui eGFR näit on ajaliselt kontrollperioodi sees ja OK. |unknown| kui näit on kontrollperioodist väljas (vananenud)."
 * code ^short = "eGFR puhul LOINC 62238-1?"
 * subject only Reference($ee-mpi-patient)
-* performer only Reference(EETISPractitioner or EETISPractitionerRole)
+* performer only Reference($ee-practitioner or EETISPractitionerRole)
 * value[x] only Quantity
 * value[x] ^short = "Mõõdetud eGFR väärtus (ja ühik) ning lisaks referentsväärtus. Measured eGFR value."
 * dataAbsentReason ^short = "If the eGFR has never been measured use this element and code |not-performed|"

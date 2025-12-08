@@ -1,4 +1,4 @@
-Instance: PractRoleD98765
+/*Instance: PractRoleD98765
 InstanceOf: PractitionerRole
 Usage: #example
 Description: "Practitioner D98765 in practitioner role doctor and with occupation kardioloog"
@@ -14,3 +14,4 @@ Description: "Practitioner D98765 in practitioner role doctor and with occupatio
 //* specialty[0] = $sct#394579002 "Cardiology (qualifier value)"
 //* specialty[+] = $sct#1251549008 "Interventional cardiology (qualifier value)"
 * specialty[0] = $ee-medre-specialty#E170 "Kardioloogia"
+*/
