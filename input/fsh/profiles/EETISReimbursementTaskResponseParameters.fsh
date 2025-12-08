@@ -1,4 +1,4 @@
-Profile: EETISReimbursementTaskResponseParameters
+/*Profile: EETISReimbursementTaskResponseParameters
 Parent: Parameters
 Id: ee-tis-reimbursement-task-response-parameters
 Description: "This resource passes information back to EETISReimbursementTask output about the e-Prescription Centre's answer of allowed reimbursement rates. Also, information about insurance, EU insurance, pension and pension for incapacity for work are passed back."
@@ -70,3 +70,4 @@ Description: "This resource passes information back to EETISReimbursementTask ou
 //* parameter[reimbursementRateParameter].value[x] ^binding.description = "Soodustuse määr"
 //* parameter[reimbursementConditionParameter].value[x] only CodeableConcept
 //* parameter[reimbursementConditionParameter].value[x] ^binding.description = "Vajalikud tingimused"
+*/
