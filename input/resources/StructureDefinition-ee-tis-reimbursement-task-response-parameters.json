@@ -3063,10 +3063,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "binding": {
-          "description": "Vajalikud tingimused- LOEND"
-        }
+        ]
       },
       {
         "id": "Parameters.parameter:reimbursementParameter.part:rate",
