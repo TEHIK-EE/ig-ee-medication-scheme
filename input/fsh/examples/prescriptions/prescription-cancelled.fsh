@@ -35,7 +35,6 @@ Description: "Cancelled prescription of phenoxymethylpenicillin"
 * dosageInstruction.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA "tablett"
 * dispenseRequest.validityPeriod.start = "2023-11-07"
 * dispenseRequest.validityPeriod.end = "2024-05-07"
-//* dispenseRequest.dispenser.reference = "https://fhir.ee/StructureDefinition/ee-tis-organization"
 * substitution.allowedBoolean = false
 * substitution.reason = $ravimi-asendamatuse-pohjus#KP01 "tegemist on bioloogilise ravimiga"
 //* substitution.reason.text = "Tegemist on bioloogilise ravimiga"

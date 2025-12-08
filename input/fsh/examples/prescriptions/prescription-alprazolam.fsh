@@ -33,7 +33,6 @@ Description: "Prescription of alprazolam with reimbursement rate 50%"
 * dosageInstruction.doseAndRate.doseQuantity = 1 $retsept-annustamise-yhik#TA "tablett"
 * dispenseRequest.validityPeriod.start = "2023-11-07"
 * dispenseRequest.validityPeriod.end = "2023-12-07"
-//* dispenseRequest.dispenser.reference = "https://fhir.ee/StructureDefinition/ee-tis-organization"
 * substitution.allowedBoolean = true
 * substitution.reason = $ravimi-asendamatuse-pohjus#KP08 "patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"
 //* substitution.reason.text = "Patsiendil on diagnoositud kaasuv psüühika- või käitumishäire"

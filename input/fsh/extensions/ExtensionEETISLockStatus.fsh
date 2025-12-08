@@ -19,6 +19,3 @@ Description: "Broneering retseptil. When pharmacy locks the prescription for ord
 * extension[lockOwner] ^short = "Pharmacy who locked the prescription for ordering unauthorized medication."
 * extension[lockOwner] ^definition = "Broneeringu teinud apteek"
 * extension[lockOwner].value[x] only string
-//* value[x] ^slicing.discriminator.type = #type
-//* value[x] ^slicing.discriminator.path = "$this"
-//* value[x] ^slicing.rules = #open

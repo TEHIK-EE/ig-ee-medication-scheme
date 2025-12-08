@@ -159,8 +159,6 @@ Description: "Retsept. This is a profile for medication prescription."
 * dispenseRequest.numberOfRepeatsAllowed ..0
 * dispenseRequest.quantity ..0
 * dispenseRequest.expectedSupplyDuration ..0
-//* dispenseRequest.dispenser only Reference(EETISOrganization or EETISPharmacyLocation)
-// Kommentaar: eemaldasin Locationi, sest see ei ole lubatud andmetüüp siin
 * dispenseRequest.dispenser only Reference(EETISOrganization)
 * dispenseRequest.dispenser ^definition = "KASUTATAKSE AINULT MÜÜGILOATA RAVIMI APTEEGI BRONEERIMISE PUHUL. Indicates the intended performing Organization that will dispense the medication as specified by the prescriber."
 * dispenseRequest.dispenser ^type.aggregation = #referenced
