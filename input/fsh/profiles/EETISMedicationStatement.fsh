@@ -23,10 +23,11 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
     ExtensionEETISGroupedItems named ExtensionEETISGroupedItems 0..*
 * extension[extensionEETISVerification] ^definition = "Optional Extension Element - found in all resources."
 * partOf only Reference(EETISMedicationStatement)
+* partOf ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy"
+* partOf ^type.extension.valueBoolean = true
 * status ^definition = "recorded = Kinnitatud; draft = Kinnitamata. Retseptikeskuse retsepti põhjal genereeritud kinnitamata rida on staatuses recorded/kinnitatud."
 * status ^short = "A code representing the status of recording the medication statement. recorded = KINNITATUD; draft = KINNITAMATA"
 * identifier ^short = "Identifier is prescription number (ee RETSEPTINUMBER), if the MedicationStatement is generated from RETSEPTIKESKUS prescriptions. In history view identifier system must be used in order to group medications eg. in same dose form etc."
-// identifier.system ^binding.description = "Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid/#retseptikeskus-retsept when prescriptions are generated from Retseptikeskus. Use https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp as system when grouping medication statements in history view." //from $tis-fhir-identifikaatorid (preferred)
 * category ^slicing.discriminator.type = #value //pattern muudetud 20.10.25 valueks
 * category ^slicing.discriminator.path = "$this" 
 //* category ^slicing.ordered = false
@@ -56,12 +57,7 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * category[statementOriginCategory] ^short = "Category defining the origin of MedicationStatement. USED ONLY when medication scheme line is based on patient's statement."
 * category[statementOriginCategory] ^definition = "Seda kategooriat kasutada AINULT juhul, kui ravimiskeemi rida genereeritakse patsiendi sõnul. Kasutada koodi |ASK| loendist ravimi-andmete-tyyp. Retseptikeskuse retseptidest loodud ravimiskeemi rea puhul jääb see kategooria TÜHJAKS."
 * medication only CodeableReference(EETISMedicationEPC or EETISMedicationExtemporal)
-//* medication ^type.aggregation = #referenced
-//* medication.concept ..0
-//* medication.reference only Reference(EETISMedicationEPC or EETISMedicationExtemporal)
-//* medication.reference ^type.aggregation = #referenced
 * subject only Reference($ee-mpi-patient)
-//* subject ^type.aggregation = #referenced
 * encounter ..0
 * effective[x] 1..1
 * effective[x] only Period
@@ -77,8 +73,6 @@ Description: "Ravimiskeemi rida. One or more Medication Statements form patient'
 * reason ^definition = "Diagnoosikoodid (RHK-10)\r\nDIAGNOOSIKOOD retseptikeskusest"
 * reason from $rhk-10-VS (preferred)
 * reason ^short = "Diagnose for medication. ICD-10 codes from Estonian Prescription Centre. Reimbursement of medication depends on which ICD-10 code is used."
-//* reason ^binding.description = "Diagnoosikood RHK-10"
-//* reason.reference ..0
 * note ^definition = "Provides extra information about the Medication Statement that is not conveyed by the other attributes."
 * note ^short = "Siia saab kirjutada märkusi ravimiskeemi rea kohta."
 * note.author[x] 1..

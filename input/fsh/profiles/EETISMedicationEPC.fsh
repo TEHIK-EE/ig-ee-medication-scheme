@@ -21,8 +21,6 @@ Description: "Ravim. Medication resource as it is presented today in Estonian e-
 //    ExtensionEETISMedicinalProductClassification named narcotic 0..1 and - hetkel seda ei kasuta, sest pole CS ega VS aga vajadusel saame sisse lylitada. Siia alla saab lisda ka käsimyygi ja retseptiravimite eristamise.
     ExtensionEETISSizeOfItem named sizeOfItem 0..1 and
     ExtensionEETISMedicinalProductName named name 0..1
-// * extension[atc].valueCodeableConcept from $atc-ee (required) 
-// * extension[narcotic] ^short = "This classification is for expressing whether the medication is narcotic/psychotropic"     
 * identifier 0..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system" //oli system
