@@ -27,13 +27,13 @@ Description: "Example of a alert when medication affects renal function and dosa
 //* category[drugFormGroup].coding = FixedDrugFormGroupCoding
 * category[0].coding.code = #2
 * category[=].coding.display = "süsteemne"
-* category[=].coding.system = "https://fhir.ee/drug-form-group"
+* category[=].coding.system = $drug-form-group
 * category[=].text = "Kirjeldus siia text alla, kui on veel vaja midagi lisada"
 //* category.coding[failureDegree] empty
 //* category[failureDegree] = {}
 //* category[failureDegree].coding = FixedFailureDegreeCoding
 * category[+].coding.code = #1
-* category[=].coding.system = "https://fhir.ee/failure-degree"
+* category[=].coding.system = $failure-degree
 * category[=].coding.display = "GFR 30-59 ml/min (mõõdukas neerupuudulikkus)"
 * category[=].text = "Kirjeldus siia text alla, kui on veel vaja midagi lisada"
 //* category.coding[additionalInformation] empty

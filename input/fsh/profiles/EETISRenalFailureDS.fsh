@@ -2,19 +2,19 @@ Instance: FixedDrugFormGroupSystem
 InstanceOf: Coding
 Usage: #inline
 Title: "Fixed Coding for Drug Form Group"
-* system = "https://fhir.ee/drug-form-group" //CS ära võetud
+* system = "https://fhir.ee/CodeSystem/drug-form-group" //CS ära võetud
 
 Instance: FixedFailureDegreeSystem
 InstanceOf: Coding
 Usage: #inline
 Title: "Fixed Coding for Failure Degree"
-* system = "https://fhir.ee/failure-degree" //CS ära võetud
+* system = "https://fhir.ee/CodeSystem/failure-degree" //CS ära võetud
 
 Instance: FixedAdditionalInformationSystem
 InstanceOf: Coding
 Usage: #inline
 Title: "Fixed Coding for Additional Information"
-* system = "https://fhir.ee/additional-information" //CS ära võetud
+* system = "https://fhir.ee//CodeSystem/additional-information" //CS ära võetud
 
 Profile: EETISRenalFailureDS
 Parent: ClinicalUseDefinition
