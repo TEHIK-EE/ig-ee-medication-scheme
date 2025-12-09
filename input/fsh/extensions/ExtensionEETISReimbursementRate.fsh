@@ -12,6 +12,7 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * ^context[=].expression = "MedicationDispense"
 * . ^short = "Reimbursement rate and reason of prescription medicine. Also speciality of prescriber if available."
 * . ^definition = "Ravimi soodustuse määr protsentides Retseptikeskuse loendist \"Soodustuste määrad\" ning tingimused \"Vajalikud tingimused\" -loendist soodustuse saamiseks. Juhul kui retseptid genereeritakse, siis ka soodustuse määraja erialakood."
+* extension 1..
 * extension contains
     reimbursementRate 0..* and
     reimbursementCondition 0..* and 
@@ -24,12 +25,10 @@ Description: "Soodustuse määr ja tingimused (soodusravimite nimekirja järgi).
 * extension[reimbursementCondition] ^definition = "\"Vajalikud tingimused\"loendist kood ning kirjeldus. Soodusravimite loetelule vastav tingimus."
 * extension[reimbursementCondition].value[x] only CodeableConcept
 * extension[reimbursementCondition].value[x] from $reimbursement-condition-VS (preferred)
-* extension[reimbursementCondition].value[x] ^binding.strength = #preferred
 * extension[reimbursementCondition].value[x] ^binding.description = "\"Vajalikud tingimused -loend\" retseptikeskusest"
 * extension[reimbursementSpeciality] ^short = "Speciality when prescribing medicine is required as some specialities may have right for a higher reimbursement rate than others."
 * extension[reimbursementSpeciality].value[x] only CodeableConcept
-* extension[reimbursementSpeciality].value[x] from $erialad-VS (preferred)
-* extension[reimbursementSpeciality].value[x] ^binding.strength = #required
+* extension[reimbursementSpeciality].value[x] from $erialad-VS (required)
 * extension[reimbursementSpeciality].value[x] ^binding.description = "\"Erialade -loend\""
 //* extension[reimbursementCondition].text ^short = "Textual description of conditions for reimbursement"
 //* extension[reimbursementCondition].text ^definition = "Tekstiline kirjeldus vajalikest tingimustest soodustuse saamiseks"
