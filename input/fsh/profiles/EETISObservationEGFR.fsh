@@ -15,6 +15,6 @@ Description: "eGFR analüüsi tulemus. Observation about eGFR"
 * value[x] ^short = "Mõõdetud eGFR väärtus (ja ühik) ning lisaks referentsväärtus. Measured eGFR value."
 * dataAbsentReason ^short = "If the eGFR has never been measured use this element and code |not-performed|"
 * referenceRange ^short = "Siia tuleb referentsväärtus low(/high) kui vajalik"
-* derivedFrom ^short = "Siia tuleks tervikdokumendi viide, millest see analüüs pärit on. Reference to a document/source where observation came from"
+* derivedFrom ^short = "Reference to a document/source where observation came from. (ee Siia tuleks tervikdokumendi viide, millest see analüüs pärit on.)"
 
 
