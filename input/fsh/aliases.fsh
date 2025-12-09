@@ -93,9 +93,9 @@ Alias: $ravimiregister-pakend = http://ravimiregister.ee/pakendid
 Alias: $ravimiskeemi-rea-ajajoone-grupp = https://fhir.ee/CodeSystem/tis-fhir-identifikaatorid#ravimiskeemi-rea-ajajoone-grupp
 
 Alias: $drug-form-group = https://fhir.ee/CodeSystem/drug-form-group
-Alias: $drug-form-group-VS = https://fhir.ee/ValueSet/drug-form-group // https://www.drugformgroupvs.ee
+Alias: $drug-form-group-VS = https://fhir.ee/ValueSet/drug-form-group
 Alias: $failure-degree = https://fhir.ee/CodeSystem/failure-degree
-Alias: $failure-degree-VS = https://fhir.ee/ValueSet/failure-degree // https://www.failuredegreevs.ee
+Alias: $failure-degree-VS = https://fhir.ee/ValueSet/failure-degree 
 Alias: $additional-information = https://fhir.ee/CodeSystem/additional-information
 Alias: $additional-information-VS = https://fhir.ee/ValueSet/additional-information
 
