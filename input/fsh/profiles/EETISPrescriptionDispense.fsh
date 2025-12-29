@@ -10,7 +10,8 @@ Description: "Ravimi väljastamine. When the medication prescribed is dispensed 
 * contained ..0
 * extension contains
     ExtensionEETISBuyerEPC named extensionEETISBuyerEPC 0..* and
-    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..*
+    ExtensionEETISReimbursementRate named extensionEETISReimbursementRate 0..* and
+    ExtensionEETISMedicationRemainder named extensionEETISMedicationRemainder 0..1
 * extension[extensionEETISBuyerEPC].value[x] ^short = "Personal identification code of the buyer"
 * extension[extensionEETISBuyerEPC].value[x] ^definition = "OSTJA ISIKUKOOD"
 * identifier ..0

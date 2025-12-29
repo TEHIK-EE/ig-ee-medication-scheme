@@ -4,8 +4,10 @@ Description: "Jääk. Extension describing how many days worth medication is lef
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2023-10-03T10:47:00.9373224+00:00"
-* ^context.type = #element
-* ^context.expression = "MedicationStatement"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense"
 * . ^short = "Medication left on prescription calculated in days."
 * . ^definition = "Arvutuslik ravimi jääk päevades."
 * extension contains
