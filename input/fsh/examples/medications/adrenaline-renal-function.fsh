@@ -5,7 +5,7 @@ Description: "Description of medication adrenaline used as an input when validat
 * meta.profile = "https://fhir.ee/StructureDefinition/ee-tis-medication-renal-function"
 * language = #et
 * extension[0].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-classification"
-* extension[=].valueCodeableConcept = $atc-ee#C01CA24 "Epinefriin"
+* extension[=].valueCodeableConcept = $atc-ee#C01CA24 "epinefriin"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medicinal-product-name"
 * extension[=].valueString = "Adrenaline auxilia"
 * identifier.system = $ravimiregister-pakend

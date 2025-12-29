@@ -15,6 +15,11 @@ Description: "Metformiini väljamüük patsiendi esindajale. Dispensation of met
 //* extension[=].extension[=].valueCodeableConcept.coding.display = "siia tuleb kirjeldus vajalikud-tingimused-loendist"
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-buyer-epc"
 * extension[=].valueString = "42002230000"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-remainder"
+* extension[=].extension[0].url = "daysAvailable"
+* extension[=].extension[=].valueInteger = 200
+* extension[=].extension[+].url = "daysDispensed"
+* extension[=].extension[=].valueInteger = 100
 * status = #completed
 * medication.reference = Reference(metformin-dispensed)
 * subject = Reference(pat1MatiMeri)
