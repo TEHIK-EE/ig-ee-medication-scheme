@@ -37,7 +37,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].documentation = "Keel milles soovitakse ravimiskeemi kuvada."
+* parameter[=].documentation = "Keel milles soovitakse ravimiskeemi kuvada. Nt 'et' või 'en' vaikimisi väärtus on 'et'."
 * parameter[=].type = #string
 * parameter[+].name = #return
 * parameter[=].use = #out
