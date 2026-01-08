@@ -44,4 +44,4 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "Found interactions"
-* parameter[=].type = #ClinicalUseDefinition
+* parameter[=].type = #Bundle

@@ -29,7 +29,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].targetProfile = "https://fhir.ee/base/StructureDefinition/ee-patient"
+//* parameter[=].targetProfile = "https://fhir.ee/base/StructureDefinition/ee-patient"
 * parameter[=].scope = #type
 * parameter[=].documentation = "Patsiendi MPI viide - kelle ravimiskeemi printvaadet päritakse"
 * parameter[=].type = #Patient
