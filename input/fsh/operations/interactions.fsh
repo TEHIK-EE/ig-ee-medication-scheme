@@ -8,6 +8,7 @@ Usage: #definition
 * url = "https://fhir.ee/OperationDefinition/Interactions"
 * version = "1.0.0"
 * name = "Interactions"
+* id = "Medication-interactions"
 * title = "Find interactions for medications"
 * status = #active
 * kind = #operation

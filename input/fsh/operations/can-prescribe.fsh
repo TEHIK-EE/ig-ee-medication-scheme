@@ -1,4 +1,4 @@
-Instance: Medication-can-prescribe
+Instance: can-prescribe
 InstanceOf: OperationDefinition
 Usage: #definition
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
