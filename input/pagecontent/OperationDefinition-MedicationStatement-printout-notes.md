@@ -1,12 +1,13 @@
 # Ravimiskeemi printvaate pärimine
 Ravimiskeemi printvaate operatsioon tagastab kasutajale html renderduse kinnitatud ravimiskeemist.
-
+```
 URL: GET [base]/MedicationStatement/$printout?subject=Patient/12345&language=et
+```
 
 Päring töötab valiidse Charon v2 tokeniga. Päringu parameetris olev "subject" ja charon tokeni päringusse pandud "patient" peavad olema samad.
 Kohustuslik header "x-context-id" - kasutatakse audit logikirje tekitamisel. Sobib näiteks sesssiooni ID.
 
-DEV näidispäring
+**DEV näidispäring**
 ```
 curl -k -L 'https://10.0.13.90/r1/ee-dev/GOV/70009770/uptis/fis-service/fhir/MedicationStatement/$printout?subject=Patient/7231&language=et' \
 -H 'X-Road-Client: ee-dev/GOV/70009770/tjt' \
@@ -23,9 +24,9 @@ Siin küsitakse täpselt sama ravimiskeem, mida tagastatakse ka kinnitatud ravim
 ### Ravimiskeemi printvaate loomine
 Kinnitatud ravimiskeemi andmed muundatakse printvaate jaoks sobilikule kujule ja jaotatakse kolmeks:
 
-Vajadusel ravimid (ravikuuri tüüp 'v')
-Regulaarsed ravimid (ravikuuri tüüp 'p')
-Ajutised ravimid (ravikuuri tüüp ''f' ja ravim väljastatud viimase 180 päeva jooksul, konfigureeritav läbi configmapi `TEMPORARY_MEDICATION_PERIOD_DAYS` env väärtuse)
+1. Vajadusel ravimid (ravikuuri tüüp 'v')
+2. Regulaarsed ravimid (ravikuuri tüüp 'p')
+3. Ajutised ravimid (ravikuuri tüüp ''f' ja ravim väljastatud viimase **180** päeva jooksul, konfigureeritav läbi configmapi `TEMPORARY_MEDICATION_PERIOD_DAYS` env väärtuse)
 Kasutades thymeleafi template'i, pannakse kokku ravimiskeemi dokument, mis on ehitatud Terviseportaali nõuete kohaselt patsiendile andmiseks.
 
 ### Ravimiskeemi tagastamine
@@ -51,5 +52,5 @@ Ravimiskeemi printvaate näidisvastus:
 	"data": "Base64EncodedString"
 }
 ```
-<img src="printout.png" alt="Pildi pealkiri" width="800"/>
+<img src="printout.png" alt="Printvaate näidis" width="800"/>
 <br clear="all"/>
