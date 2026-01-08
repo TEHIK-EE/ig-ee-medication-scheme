@@ -51,3 +51,9 @@ Ravimiskeemi printvaate näidisvastus:
 	"data": "Base64EncodedString"
 }
 ```
+
+<div>
+<img src="printout.svg"  alt="printout" width="50%">
+<p>Printvaate näidis</p>
+<p></p>
+</div>
