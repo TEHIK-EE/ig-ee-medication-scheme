@@ -29,17 +29,19 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "Patient"
+* parameter[=].targetProfile = "EEBasePatient"
+* parameter[=].scope = #type
+* parameter[=].documentation = "Patsiendi MPI viide - kelle ravimiskeemi printvaadet päritakse"
 * parameter[=].type = #Patient
 * parameter[+].name = #language
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].documentation = "Language locale"
+* parameter[=].documentation = "Keel milles soovitakse ravimiskeemi kuvada."
 * parameter[=].type = #string
 * parameter[+].name = #return
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "In force localized medication plan as a Binary html document"
+* parameter[=].documentation = "Operatsiooni väljundiks on alati Binary, mille sisuks on UTF-8 formaadis base64 kodeeritud html dokument."
 * parameter[=].type = #Binary
