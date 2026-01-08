@@ -9,5 +9,7 @@ From the links below you can access the operations used in Medication Scheme:
 - [MedicationStatement-history]
 - [Interactions]
 - [Task-reimbursements]
+- [Medication-renal-failure-warnings]
 - [MedicationStatement-validate-custom]
 - [MedicationStatement-printout]
+- [Medication-can-prescribe]
