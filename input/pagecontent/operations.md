@@ -10,3 +10,4 @@ From the links below you can access the operations used in Medication Scheme:
 - [Interactions]
 - [Task-reimbursements]
 - [MedicationStatement-validate-custom]
+- [MedicationStatement-printout]
