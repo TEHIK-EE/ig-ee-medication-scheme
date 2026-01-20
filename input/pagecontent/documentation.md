@@ -1,7 +1,16 @@
 # MedIN Andmemudel
 {% include fsh-link-references.md %}
+
+## Andmeobjektide kirjeldused
+Ravimiskeemi infomudelid ja nende FHIR vasted: Infomudelid vs FHIR
+Ravimiskeemi FHIR ressurside ülevaade (IG link): https://build.fhir.org/ig/TEHIK-EE/ig-ee-medication-scheme/artifacts.html 
+
 ## Ressursside äriline kasutus
-Alltoodud skeem illustreerib tehniliste ressursside ärilist kasutust:
+Järgnevalt on kirjeldatud FHIR ressursside kasutust MedIN teenuse väljundis. Loetavuse huvides on andmestik kirjeldatud kahes erinevas jaos. 
+
+### Kinnitatud ravimiskeemi andmestik
+Alltoodud skeem illustreerib tehniliste ressursside ärilist kasutust Kinnitatud ravimiskeemi pärimisel:
+
 <div>
 <img src="ravimiskeemifhirressursid.svg"  alt="Ravimiskeemi FHIR ressursid" width="95%">
 <p>Skeem 1. Ravimiskeemi FHIR ressursid</p>
@@ -10,15 +19,16 @@ Alltoodud skeem illustreerib tehniliste ressursside ärilist kasutust:
 
 Andmete lisamine, muutmine ja eemaldamine on kõik läbi [Ravimiskeemi andmete kinnitamine](OperationDefinition-MedicationStatement-confirm.html) operatsiooni. All on lühidalt kirjeldatud andemete tekkimise järjekorda:
 
-* Patsiendi ravimiskeemi lisatakse ravimiskeemi rida, tekivad ressursid MedicationStatement ja sellega seotud Medication A 
-    * ühtlasi lisatakse taustal Retseptikeskusesse retseptid ning salvestatakse nende numbrid MedicationStatement juurde
-* Patsiendi ravimiskeemi pärimisel leitakse FHIR andmetest MedicationStatement ja sellega seotud Medication A
-    * täiendavalt päritakse retseptikeskusest numbrite alusel retseptid ning konverteeritakse need MedicationRequest ressurssideks, mis on samuti seotud eelnevalt MedicationStatement'ga seotud Medication A-ga. 
-    * juhul kui retsepte on väljastatud, tekib iga retsepti väljastamisel MedicationDispense - siin on aga eripäraks iga väljastusega eraldi kaasa tulev Medication ressurss (joonisel nt MedicationDispense 1 ja Medication B). Põhjus seisneb selles, et Patsiendile väljastatava ravimi osas langetab lõpliku otsuse kohapeal olev apteeker.
-* Andmete muutmisel tekivad FHIR ressurssidest uued versioonid
-* Ravimiskeemis andmete kustutamist kui sellist ei eksisteeri, on vaid ravimiskeemi ridade aktiivsest vaatest eemaldamine ehk nendele effective.end kuupäeva määramine kinnitamisel, mis välistab need [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) operatsiooni väljundist.
+1. Patsiendi ravimiskeemi lisatakse ravimiskeemi rida, tekivad ressursid MedicationStatement ja sellega seotud Medication A
+    - ühtlasi lisatakse taustal Retseptikeskusesse retseptid ning salvestatakse nende numbrid MedicationStatement juurde
+2. Patsiendi ravimiskeemi pärimisel leitakse FHIR andmetest MedicationStatement ja sellega seotud Medication A
+    - täiendavalt päritakse retseptikeskusest numbrite alusel retseptid ning konverteeritakse need MedicationRequest ressurssideks, mis on samuti seotud eelnevalt MedicationStatement'ga seotud Medication A-ga. 
+    - juhul kui retsepte on väljastatud, tekib iga retsepti väljastamisel MedicationDispense - siin on aga eripäraks iga väljastusega eraldi kaasa tulev Medication ressurss (joonisel nt MedicationDispenseA1 ja Medication A1). Põhjus seisneb selles, et Patsiendile väljastatava ravimi osas langetab lõpliku otsuse kohapeal olev apteeker.
+    - Täiendavalt päritakse retseptikeskusest andmed retseptide kohta, mis on loodud Ravimiskeemi väliselt, need läbivad Grupeerimise loogika ravimiskeemis ning kattuvuste puhul seotakse ravimiskeemi reaga läbi eraldi extension-i ( ExtensionEETISGroupedItems )
+3. Andmete muutmisel tekivad FHIR ressurssidest uued versioonid
+4. Ravimiskeemis andmete kustutamist kui sellist ei eksisteeri, on vaid ravimiskeemi ridade aktiivsest vaatest eemaldamine ehk nendele MedicationStatement.effective.end kuupäeva määramine kinnitamisel, mis välistab need Kinnitatud ravimiskeemi pärimine operatsiooni väljundist.   
 
-## Ravimiskeemi kinnitamise andmestik
+### Ravimiskeemi kinnitamise andmestik
 
 <div>
 <img src="ravimiskeemikinnitamine.svg"  alt="Ravimiskeemi kinnitamise andmestik" width="95%">
@@ -37,9 +47,13 @@ Andmete lisamine, muutmine ja eemaldamine on kõik läbi [Ravimiskeemi andmete k
        * unchanged - muutmata ravimiskeemi read, ehk ravimiskeemi read, mis eelmisest kinnitamisest muutmata kujul alles jäid
        * ceased - Eemaldatud või peatatud ravimiskeemi read ehk ravimiskeemi read, mis selle kinnitamisega peatati
        * changed - Muudetud ravimiskeemi read, ehk ravimiskeemi read, mis selle kinnitamisega muudeti või pikendati
+       * consolidated - Kinnitamisel leitud ravimiskeemi read, mis on kokku grupeeritud käesolevaga ning kinnitamisel automaatselt konsolideeriti.
+       * generated - kinnitatud ravimiskeemi pärimisel leiti FHIR andmetest hilisemad Retseptikeskuse andmed ning nendega kirjutati väljundis FHIR andmed üle ehk saadud seis on nn "genereeritud"
+        - NB! seda väärtust saab ainult Kinnitatud ravimiskeemi pärimine väljundis näha
+        - kinnitatud ravimiskeemi pärimisel rakendatakse Grupeerimise loogika ravimiskeemis ning teatud olukordades on vajalik FHIR ressurssidesse peegeldada Retseptikeskuse andmeid 
     * Entry.item sisaldab viidet konkreetsele ravimiskeemi reale
     * Selgitus: kuna Entry ise ei ole eraldiseisev ressurss vaid kollektsioon List ressursi all, on ta joonisel eristatud
 3. Ühe Ravimiskeemi rea kinnitamiste ja kinnitaja andmestik
     * Igal andmeid tekitaval või muutval kinnitamisel tekib MedicationStatment.extension kollektsiooni juurde üks [EETISVerification] kirje, kus on kirjas kinnitamise aeg ja MEDRE koodi näol viide kinnitajale (Identifier)
-    * Ravimiskeemi (esialgse?) rea kinnitaja andmed lähevad PractitionerRole ressurssi [EETISPractitionerRole], mille sisu asub MedicationStatement.contained atribuudis ja sellele viitab atribuut MedicationStatement.informationSource
+    * Ravimiskeemi rea viimase kinnitaja andmed lähevad PractitionerRole ressurssi [EETISPractitionerRole], mille sisu asub MedicationStatement.contained atribuudis ja sellele viitab atribuut MedicationStatement.informationSource
     * Selgitus: kuna PractitionerRole siin asub contained atribuudi sees, ei ole tegemist eraldiseisva, salvestatud ja päritava ressursiga ning see on joonisel eristatud
