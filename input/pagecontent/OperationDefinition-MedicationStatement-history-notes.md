@@ -22,14 +22,14 @@ Patsiendi ravimiskeemi ajaloo pärimiseks mõeldud operation koosneb mitmest jä
         - staatused ehk staatused.staatus väärtused puuduvad (huvitavad kõikides staatustes retseptid)
     - Päritakse kogu info - ehk üldinfo, määratud ravi, isikud, väljastatud (vt ka API kirjeldus), mh ei välistata annulleeritud retsepte
 - Päringuga saab kätte kõik patsiendiga seotud retseptid läbi aegade - sealt tuleb järgmistes sammudes välja filtreerida:
-    - Ravimiskeemiga seotud retseptid - [sammu Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine](#retseptikeskuse-andmete-pohjal-fhir-ravimiskeemi-andmete-taiendamine) jaoks
-    - Ravimiskeemi väliselt tekkinud retseptid - [sammu Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-valiselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-parimine-ning-fhir-ressursside-loomine) jaoks.
+    - Ravimiskeemiga seotud retseptid - [sammu Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine](#retseptikeskuse-andmete-põhjal-fhir-ravimiskeemi-andmete-täiendamine) jaoks
+    - Ravimiskeemi väliselt tekkinud retseptid - [sammu Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-valiselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-pärimine-ning-fhir-ressursside-loomine) jaoks.
 
 ### Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine
 
-* Eeltingimus: punktis [Retseptikeskusest patsiendiga seotud retseptide pärimine](#retseptikeskusest-patsiendiga-seotud-retseptide-parimine) on tehtud Retseptikeskuse päring
+* Eeltingimus: punktis [Retseptikeskusest patsiendiga seotud retseptide pärimine](#retseptikeskusest-patsiendiga-seotud-retseptide-pärimine) on tehtud Retseptikeskuse päring
 * Leiab Ravimiskeemi ridadega seotud retseptid
-    - Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mille numbrid leiti punktis [FHIR andmete leidmine](#fhir-andmete-leidmine) (MedicationStatement.derivedFrom.identifier.value). Ülejäänud retseptide osas tuleb toimida nii, nagu kirjeldatud punktis [Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-valiselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-parimine-ning-fhir-ressursside-loomine)
+    - Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mille numbrid leiti punktis [FHIR andmete leidmine](#fhir-andmete-leidmine) (MedicationStatement.derivedFrom.identifier.value). Ülejäänud retseptide osas tuleb toimida nii, nagu kirjeldatud punktis [Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-väliselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-pärimine-ning-fhir-ressursside-loomine)
 * Genereerib RK andmetest MedicationRequest ning MedicationDispense ja sellega seotud Medication (ehk välja ostetud ravimi) FHIR ressurssid (vt Ravimiskeemiga seotud retseptide vastus)
     - Ka siin on viidatud vastuse kirjeldus ravimiskeemi kohta, aga täpselt samad RK vastus → FHIR mäppimise reeglid kehtivad ka ajaloo puhul
 * Ümber mäpitud ressursid lisatakse $history vastuse Bundle-sse
@@ -37,7 +37,7 @@ Selle sammu vastus oleks MedIN serveris olev täielik ravimiskeemi ajalugu ehk t
 
 ### Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine
 
-* Eeltingimus: punktis [Retseptikeskusest patsiendiga seotud retseptide pärimine](#retseptikeskusest-patsiendiga-seotud-retseptide-parimine) on tehtud Retseptikeskuse päring
+* Eeltingimus: punktis [Retseptikeskusest patsiendiga seotud retseptide pärimine](#retseptikeskusest-patsiendiga-seotud-retseptide-pärimine) on tehtud Retseptikeskuse päring
 * Leiab Ravimiskeemi väliselt loodud retseptid:
     - Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mis **ei ole** ravimiskeemiga seotud, st mille kohta puuduvad viited punktis [FHIR andmete leidmine](#fhir-andmete-leidmine) leitud ravimiskeemi ridades
 * Genereerib RK andmetest MedicationRequest ja sellega seotud Medication ning MedicationDispense ja omakorda sellega seotud Medication FHIR ressurssid, lisaks genereerib nende alusel seotud FHIR MedicationStatement ressursid (vt Ravimiskeemi väliselt loodud retseptide vastus). 
