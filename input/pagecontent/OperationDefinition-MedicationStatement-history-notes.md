@@ -1,13 +1,11 @@
 ## Ärireeglid
 
 Patsiendi ravimiskeemi ajaloo pärimiseks mõeldud operation koosneb mitmest järjestikku tehtavast tegevusest:
-
-
-
-joonis!
-
-
-
+<div>
+<img src="ajalooparing.svg"  alt="Ajaloopäring" width="60%">
+<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<p></p>
+</div>
 ###  FHIR andmete leidmine
 
 * Leiab patsiendi MPI viite alusel kõik ravimiskeemi kinnitamise faktid (EETISMedicationList) ning sellega seotud kehtivad ravimiskeemi read 
@@ -15,76 +13,59 @@ joonis!
 * Tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd (st ravimiskeemi reaga seotud ehk välja kirjutatud ravimi andmed)
 
 
-### 1.2.2. Retseptikeskusest patsiendiga seotud retseptide pärimine
+### Retseptikeskusest patsiendiga seotud retseptide pärimine
 
-* Teeb päringud Retseptikeskusesse (vt Ravimiskeemi väliselt loodud retseptide päring) patsiendi isikukoodi alusel
+- Teeb päringud Retseptikeskusesse (vt Ravimiskeemi väliselt loodud retseptide päring) patsiendi isikukoodi alusel
+    - Viidatud päringu kirjeldus käib ravimiskeemi kohta - **NB! ravimiskeemi ajaloo puhul tuleb sisendis teha järgnevad muudatused:**
+		- koostatud alates kuupäev on rakenduses konfigureeritav, hetkel 2018-01-01
+        - staatused ehk staatused.staatus väärtused puuduvad (huvitavad kõikides staatustes retseptid)
+    - Päritakse kogu info - ehk üldinfo, määratud ravi, isikud, väljastatud (vt ka API kirjeldus), mh ei välistata annulleeritud retsepte
+- Päringuga saab kätte kõik patsiendiga seotud retseptid läbi aegade - sealt tuleb järgmistes sammudes välja filtreerida:
+    - Ravimiskeemiga seotud retseptid - [sammu](#retseptikeskuse-andmete-põhjal-fhir-ravimiskeemi-andmete-täiendamine) jaoks
+    - Ravimiskeemi väliselt tekkinud retseptid - [sammu](#retseptikeskusest-ravimiskeemi-valiselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-parimine-ning-fhir-ressursside-loomine) jaoks.
 
-&nbsp;	- Viidatud päringu kirjeldus käib ravimiskeemi kohta - **NB! ravimiskeemi ajaloo puhul tuleb sisendis teha järgnevad muudatused:**
-
-&nbsp;		- koostatud alates kuupäev on rakenduses konfigureeritav, hetkel 2018-01-01
-
-&nbsp;		- staatused ehk staatused.staatus väärtused puuduvad (huvitavad kõikides staatustes retseptid)
-
-&nbsp;	- Päritakse kogu info - ehk üldinfo, määratud ravi, isikud, väljastatud (vt ka API kirjeldus), mh ei välistata annulleeritud retsepte
-
-* Päringuga saab kätte kõik patsiendiga seotud retseptid läbi aegade - sealt tuleb järgmistes sammudes välja filtreerida:
-
-&nbsp;	- Ravimiskeemiga seotud retseptid - sammu 1.2.3 jaoks (järgmine peatükk)
-
-&nbsp;	- Ravimiskeemi väliselt tekkinud retseptid - sammu 1.2.4 jaoks (ülejärgmine peatükk)
-
-
-
-### 1.2.3 Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine
+### Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine
 
 * Eeltingimus: punktis 1.2.2 on tehtud Retseptikeskuse päring
 * Leiab Ravimiskeemi ridadega seotud retseptid
 
-&nbsp;	- Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mille numbrid leiti punktis 1.2.1 (MedicationStatement.derivedFrom.identifier.value). Ülejäänud retseptide osas tuleb toimida nii, nagu kirjeldatud punktis 1.2.4
+- Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mille numbrid leiti punktis 1.2.1 (MedicationStatement.derivedFrom.identifier.value). Ülejäänud retseptide osas tuleb toimida nii, nagu kirjeldatud punktis 1.2.4
 
 * Genereerib RK andmetest MedicationRequest ning MedicationDispense ja sellega seotud Medication (ehk välja ostetud ravimi) FHIR ressurssid (vt Ravimiskeemiga seotud retseptide vastus)
 
-&nbsp;	- Ka siin on viidatud vastuse kirjeldus ravimiskeemi kohta, aga täpselt samad RK vastus → FHIR mäppimise reeglid kehtivad ka ajaloo puhul
+- Ka siin on viidatud vastuse kirjeldus ravimiskeemi kohta, aga täpselt samad RK vastus → FHIR mäppimise reeglid kehtivad ka ajaloo puhul
 
 * Ümber mäpitud ressursid lisatakse $history vastuse Bundle-sse
-
 
 
 Selle sammu vastus oleks MedIN serveris olev täielik ravimiskeemi ajalugu ehk täiendatud Bundle List elementidest, kus on MedicationStatement ja sellega seotud Medication, MedicationRequest, MedicationDispense ja sellega seotud Medication.
 
 
-
-### 1.2.4 Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine
+### Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine
 
 * Eeltingimus: punktis 1.2.2 on tehtud Retseptikeskuse päring
 * Leiab Ravimiskeemi väliselt loodud retseptid:
 
-&nbsp;	- Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mis \*\*ei ole\*\* ravimiskeemiga seotud, st mille kohta puuduvad viited punktis 1.2.1 leitud ravimiskeemi ridades
+- Retseptikeskuse päringu väljundis huvitavad ainult sellised retseptid, mis **ei ole** ravimiskeemiga seotud, st mille kohta puuduvad viited punktis 1.2.1 leitud ravimiskeemi ridades
 
 * Genereerib RK andmetest MedicationRequest ja sellega seotud Medication ning MedicationDispense ja omakorda sellega seotud Medication FHIR ressurssid, lisaks genereerib nende alusel seotud FHIR MedicationStatement ressursid (vt Ravimiskeemi väliselt loodud retseptide vastus). 
 
-&nbsp;	- Viidatud vastuse kirjeldus käib ravimiskeemiga seotud retseptide pärimise kohta, aga täpselt samad RK vastus → FHIR mäppimise reeglid kehtivad ka ajaloo puhul. \*\*NB! Ainuke erinevus ravimiskeemi ajaloo puhul on järgmine:\*\*
+- Viidatud vastuse kirjeldus käib ravimiskeemiga seotud retseptide pärimise kohta, aga täpselt samad RK vastus → FHIR mäppimise reeglid kehtivad ka ajaloo puhul. **NB! Ainuke erinevus ravimiskeemi ajaloo puhul on järgmine:**
 
-&nbsp;		- Kui RK tagastab annulleeritud staatuses retsepti, siis tuleb sellest teha kaks MedicationStatement'i - üks, millel MedicationStatement.effectivePeriod.end on täitmata ja teine, millel MedicationStatement.effectivePeriod.end = annulleerimise kuupäev 
+- Kui RK tagastab annulleeritud staatuses retsepti, siis tuleb sellest teha kaks MedicationStatement'i - üks, millel MedicationStatement.effectivePeriod.end on täitmata ja teine, millel MedicationStatement.effectivePeriod.end = annulleerimise kuupäev 
 
 Muus osas on mäppimine täpselt sama ning mõlemad MedicationStatement ressursid viitavad samale MedicationRequest'ile
 
 Mõlema MedicationStatement kohta tuleb ka luua eraldi List ressurss (vt järgmist punkti)
 
-* Lisaks eelkirjeldatule tuleb iga loodud MedicationStatement'i kohta genereerida ka List ressurss kinnitaja andmetega (RK-st päritud retseptide puhul on alati ühe kinnitamise kohta üks retsept). Vt mäppimise kirjeldust siit - Kinnitamise fakti loomine retseptide põhjal. Kirjeldus käib ravimiskeemi kinnitamise kohta - \*\*NB! ravimiskeemi ajaloo osas on mäppimisel järgnevad täiendused:\*\*
+* Lisaks eelkirjeldatule tuleb iga loodud MedicationStatement'i kohta genereerida ka List ressurss kinnitaja andmetega (RK-st päritud retseptide puhul on alati ühe kinnitamise kohta üks retsept). Vt mäppimise kirjeldust siit - Kinnitamise fakti loomine retseptide põhjal. Kirjeldus käib ravimiskeemi kinnitamise kohta - **NB! ravimiskeemi ajaloo osas on mäppimisel järgnevad täiendused:**
 
-&nbsp;	- Kinnitamisega seotud ravimiskeemi read - List.Entry\[] kollektsioon täita \*\*ainult Ravimiskeemi väliselt loodud retsepti genereeritud MedicationStatement'iga\*\*
-
-&nbsp;	- rea flag - \*\*Märkida vastavalt retsepti staatusele, mille pealt List genereeritakse:\*\*
-
-&nbsp;		- annulleeritud - ceased
-
-&nbsp;		- teised staatused - prescribed
-
-&nbsp;	- rea viide - \*\*Märkida retsepti andmete põhjal loodud MedicationStatement viide\*\*
-
-&nbsp;	- rea kuupäev - \*\*Võtta see retsepti andmete põhjal loodud MedicationStatement.effective.start väljast\*\*
-
+- Kinnitamisega seotud ravimiskeemi read - List.Entry\[] kollektsioon täita \*\*ainult Ravimiskeemi väliselt loodud retsepti genereeritud MedicationStatement'iga\*\*
+- rea flag - \*\*Märkida vastavalt retsepti staatusele, mille pealt List genereeritakse:\*\*
+- annulleeritud - ceased
+- teised staatused - prescribed
+- rea viide - \*\*Märkida retsepti andmete põhjal loodud MedicationStatement viide\*\*
+- rea kuupäev - \*\*Võtta see retsepti andmete põhjal loodud MedicationStatement.effective.start väljast\*\*
 * Ümber mäpitud ressursid lisatakse $history vastuse Bundle-sse
 
 
