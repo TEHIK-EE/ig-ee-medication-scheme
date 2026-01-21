@@ -23,7 +23,7 @@ Patsiendi ravimiskeemi ajaloo pärimiseks mõeldud operation koosneb mitmest jä
     - Päritakse kogu info - ehk üldinfo, määratud ravi, isikud, väljastatud (vt ka API kirjeldus), mh ei välistata annulleeritud retsepte
 - Päringuga saab kätte kõik patsiendiga seotud retseptid läbi aegade - sealt tuleb järgmistes sammudes välja filtreerida:
     - Ravimiskeemiga seotud retseptid - [sammu Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine](#retseptikeskuse-andmete-põhjal-fhir-ravimiskeemi-andmete-täiendamine) jaoks
-    - Ravimiskeemi väliselt tekkinud retseptid - [sammu Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-valiselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-pärimine-ning-fhir-ressursside-loomine) jaoks.
+    - Ravimiskeemi väliselt tekkinud retseptid - [sammu Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate ja annulleeritud retseptide pärimine ning FHIR ressursside loomine](#retseptikeskusest-ravimiskeemi-väliselt-tekkinud-kehtivate-ja-annulleeritud-retseptide-pärimine-ning-fhir-ressursside-loomine) jaoks.
 
 ### Retseptikeskuse andmete põhjal FHIR ravimiskeemi andmete täiendamine
 
