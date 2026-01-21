@@ -1,6 +1,6 @@
-# Kasutuslood
+# MedIN Kasutuslood
 {% include fsh-link-references.md %}
-
+## Sissejuhatus
 Tehniliselt ei ole Ravimiskeemi teenus oma ülesehituselt märkimisväärselt keerukas, kuid teenuste kasutus on erinevates ärilistes stsenaariumites mõnevõrra erinev. 
 Teenuste tehniline kirjeldus on toodud MedIN API kirjeldus alamlehtedel, järgnevalt on aga ära toodud teenuste kasutamine erinevates ärilistes stsenaariumites.
 
@@ -24,12 +24,15 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 
 1. Klientsüsteem teeb MPI viite alusel päringu Kinnitatud ravimiskeemi pärimine 
 2. MedIN tagastab FHIR Bundle, kus on sees ravimiskeemi andmestik ([vt MedIN Andmemudel](documentation.html)) 
-    * Retseptikeskusest leitakse ka kõik patsiendi kehtivad müümata ja välja müüdud retspetid alates viimasest ravimiskeemi kinnitamisest või viimased 180 päeva
+    * Retseptikeskusest leitakse ka kõik patsiendi kehtivad müümata ja välja müüdud retspetid alates viimasest ravimiskeemi kinnitamisest või viimased 540 päeva
     * FHIR Bundle tagastab muuhulgas List ressursi, mis sisaldab ravimiskeemi viimase muudatuse aega - olgu siis MedIN või Retseptikeskuse poolelt - see andmestik on vajalik nn "tõendusena"  ravimiskeemi andmete muutmisel
 3. Klientsüsteem teeb MPI viite alusel päringu [Koostoimete pärimine](OperationDefinition-Interactions.html)
     * **NB!** Oluline on siin anda ette ainult patsiendi viide, et saada kehtivas ravimiskeemis esinevaid koostoimeid.
     * seda päringut saab ka kinnitatud ravimiskeemi pärimisega paralleelselt teha
-4. Klientsüsteem viib kahe päringu tulemused omavahel kokku ja kuvab ravimiskeemi ja koostoimed lõppkasutajale
+4. Klientsüsteem teeb MPI viite alusel päringu [Neerufunktsiooni languse hoiatuste pärimine](OperationDefinition-Medication-renal-failure-warnings.html)
+    * NB! Oluline on siin anda ette ainult patsiendi viide, et saada kehtivas ravimiskeemis esinevaid hoiatused ja patsiendi viimane eGFR analüüsi näit.
+    * seda päringut saab ka kinnitatud ravimiskeemi pärimisega paralleelselt teha
+5. Klientsüsteem viib kahe päringu tulemused omavahel kokku ja kuvab ravimiskeemi ja seal esinevad koostoimed ja neerufunktsiooni hoiatused lõppkasutajale
 
 ### Ravimiskeemi ravimi lisamine
 <div>
@@ -38,25 +41,36 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 <p></p>
 </div>
 
-1. Klientsüsteemis on lõppkasutaja sisestanud lisatava ravimi andmestiku ja klientsüsteem teeb päringu [Koostoimete pärimine](OperationDefinition-Interactions.html)
-    * **NB!** siin on oluline lisaks patsiendi viitele anda sisendisse ka lisatava ravimi andmed
-    * Koostoimete pärimiseks on vajalikud minimaalselt preparaadi andmed või toimeainete-tugevuste ning ravimvormi andmed
-2. MedIN tagastab FHIR Bundle ressursi, kus on sees koostoimete andmestik 
-3. Klientsüsteem kuvab lõppkasutajale välja tekkivate koostoimete info
+1. Klientsüsteemis on lõppkasutaja sisestanud lisatava ravimi andmestiku
+2. Järgnevad päringud saab teha paralleelselt või klientsüsteemi soovitud järjekorras
+    - klientsüsteem teeb päringu [Koostoimete pärimine](OperationDefinition-Interactions.html)
+        - NB! siin on oluline lisaks patsiendi viitele anda sisendisse ka lisatava ravimi andmed
+        - Koostoimete pärimiseks on vajalikud minimaalselt preparaadi andmed või toimeainete-tugevuste ning ravimvormi andmed
+    - MedIN tagastab FHIR Bundle ressursi, kus on sees koostoimete andmestik 
+    - klientsüsteem teeb päringu [Neerufunktsiooni languse hoiatuste pärimine](OperationDefinition-Medication-renal-failure-warnings.html)
+        - NB! siin on oluline lisaks patsiendi viitele anda sisendisse ka lisatava ravimi andmed
+        - Koostoimete pärimiseks on vajalikud minimaalselt preparaadi andmed või toimeainete-tugevuste ning ravimvormi andmed
+    - MedIN tagastab FHIR Bundle ressursi, kus on sees neerufunktsiooni hoiatuste andmestik ning TIS-st leitud kõige hilisem patsiendi eGFR analüüsi tulemus 
+    - klientsüsteem teeb päringu [Uue ravimi lisamise valideerimine](OperationDefinition-can-prescribe.html)
+        - sisendiks on patsiendi viide ning lisatava ravimi andmed
+            - võimalus on ka sisendisse anda teised lisatava ravimi mustandid parameetris draft, juhul kui klientsüsteem kogub kõik ravimiskeemis tehtavad muudatused kokku 
+        - topeltravimite kontrolli pärimiseks on vajalikud minimaalselt preparaadi andmed või toimeainete-tugevuste ning ravimvormi andmed
+    - MedIN tagastab FHIR OperationOutcome ressursi, kus on sees veateated, juhul kui lisatavate ravimitega tekib ravimiskeemis konflikte
+3. Klientsüsteem kuvab lõppkasutajale välja tekkivate koostoimete, neerufunktsiooni hoiatuste ja topeltravimite kontrolli tulemuse info
 4. Lõppkasutaja on sisestanud lisatava ravimi andmed ja klientsüsteem teeb päringu [Retsepti soodustuste pärimine](OperationDefinition-Task-reimbursements.html)
 5. MedIN tagastab FHIR Task ressursi, mille Task.output atribuudis on soodusmäärade andmestik
 6. Klientsüsteem kuvab soodusmäärade valiku lõppkasutajale või otsustab ise, millist soodusmäära kasutada
 7. Lõppkasutaja on ravimi andmetega lõpetanud ja ravimi andmed on valmis valideerimiseks, klientsüsteem teeb päringu [Ravimiskeemi ridade valideerimine](OperationDefinition-MedicationStatement-validate-custom.html)
-    * Juhul kui klientsüsteemis on kasutusel ka lokaalne andmestik, on soovituslik valideerimise päring teha vahetult enne salvestamist, et lõppkasutaja saaks andmeid korrigeerida
+    - Juhul kui klientsüsteemis on kasutusel ka lokaalne andmestik, on soovituslik valideerimise päring teha vahetult enne salvestamist, et lõppkasutaja saaks andmeid korrigeerida
 8. MedIN tagastab FHIR OperationOutcome ressursi, mille sees on valideerimisteated koos nende tasemetega
-    * **NB!** Oluline on teada, et Ravimiskeemi hilisem kinnitamine ei õnnestu, juhul kui lahendamata on jäänud mõni valideerimisteade tasemega Fatal või Error 
+    - NB! Oluline on teada, et Ravimiskeemi hilisem kinnitamine ei õnnestu, juhul kui lahendamata on jäänud mõni valideerimisteade tasemega **Fatal** või **Error** 
 9. Klientsüsteem kuvab teated lõppkasutajale, kes vajadusel korrigeerib andmeid
 10. Lõppkasutaja on muudatustega lõpule jõudnud ja soovib Patsiendi ravimiskeemi uuel kujul kinnitada ning retseptid luua, Klientsüsteem teeb päringu [Ravimiskeemi andmete kinnitamine](OperationDefinition-MedicationStatement-confirm.html)
-    * **NB!** siin tuleb viitena anda sisse viimase muudatuse viide, milleks on Kinnitatud ravimiskeemi pärimisel saadud FHIR List ressurss - seda kasutatakse, et kontrollida, kas muudatused on tehtud kõige viimast seisu omades.
-    * Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul lisatud rida ning kõik Kinnitatud ravimiskeemi pärimisel saadud read
-11. MedIN valideerib andmed, kontrollib koostoimeid,  loob uued retseptid ning salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
-    * Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
-    * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid FHIR-i ei salvestata, küll aga tehakse Retseptikeskuses retseptide lisamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski loodi. Sellisel juhul need loodud retseptid peegelduvad ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes. 
+    - NB! siin tuleb viitena anda sisse viimase muudatuse viide, milleks on Kinnitatud ravimiskeemi pärimisel saadud FHIR List ressurss - seda kasutatakse, et kontrollida, kas muudatused on tehtud kõige viimast seisu omades.
+    - Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul lisatud rida ning kõik Kinnitatud ravimiskeemi pärimisel saadud read
+11. MedIN valideerib andmed, kontrollib koostoimeid ja neerufunktsiooni hoiatusi, loob uued retseptid ning salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu      aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
+    - Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
+    - NB! Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid FHIR-i ei salvestata, küll aga tehakse Retseptikeskuses retseptide lisamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski loodi. Sellisel juhul need loodud retseptid peegelduvad ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes 
 
 ### Ravimiskeemi ravimi eemaldamine
 *NB! Lihtsuse huvides on skeemilt ja tegevuste nimekirjast jäetud ära koostoimete pärimine*
@@ -73,7 +87,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
     * Rea eemaldamiseks tuleb FHIR andmetesse lisada MedicationStatement.effective.end kuupäev, väärtustades selle tänase kuupäeva+kellaajaga, ning täita extension [ExtensionEETISCancelledStatusReason] 
     * **NB!** siin tuleb viitena anda sisse viimase muudatuse viide, milleks on Kinnitatud ravimiskeemi pärimisel saadud FHIR List ressurss - seda kasutatakse, et kontrollida, kas muudatused on tehtud kõige viimast seisu omades.
     * Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul eemaldatav rida muudetud kujul ning kõik ülejäänud Kinnitatud ravimiskeemi pärimisel saadud read
-5. MedIN valideerib andmed, kontrollib koostoimeid,  võimalusel tühistab eemaldatava reaga seotud retseptid ning salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
+5. MedIN valideerib andmed, kontrollib koostoimeid ja neerufunktsiooni hoiatusi, võimalusel tühistab eemaldatava reaga seotud retseptid ning salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
     * Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
     * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid FHIR-i ei salvestata, küll aga tehakse Retseptikeskuses retseptide tühistamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski annulleeritakse. Sellisel juhul peegeldub see muudatus ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes.
 
@@ -111,7 +125,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
         * retsepti kehtivus
     * **NB!** siin tuleb viitena anda sisse viimase muudatuse viide, milleks on Kinnitatud ravimiskeemi pärimisel saadud FHIR List ressurss - seda kasutatakse, et kontrollida, kas muudatused on tehtud kõige viimast seisu omades.
     * Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul muudetav rida muudetud kujul ning kõik ülejäänud Kinnitatud ravimiskeemi pärimisel saadud read
-11. MedIN valideerib andmed, kontrollib koostoimeid, võimalusel tühistab muudetava reaga seotud retseptid ning loob uuendatud andmete pealt uued retseptid; salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
+11. MedIN valideerib andmed, koostoimeid ja neerufunktsiooni hoiatusi, võimalusel tühistab muudetava reaga seotud retseptid ning loob uuendatud andmete pealt uued retseptid; salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
     * Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
     * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid ei salvestata, küll aga tehakse Retseptikeskuses retseptide tühistamist ja kinnitamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski annulleeritakse ja uued luuakse. Sellisel juhul peegeldub see muudatus ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes.
 
@@ -134,7 +148,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
     * Rea pikendamiseks tuleb muuta vähemalt üht atribuuti, mis tingiks muutmise ahelas vanade retseptide tühistamise ja uute loomise (vt Ravimiskeemi ravimi muutmine) **JA täiendavalt tuleb pikendataval real täita atribuut MedicationStatement.PartOf**, lisades sinna pikendatava retsepti (ükskõik millise eelmise MedicationStatement.derivedFrom väärtuse - välja sisu valideeritakse vastu profiili aga sealt edasi kontrollitaks ainult välja täidetust). Selle atribuudi täitmine käivitab loogika, mis säilitab eelmised sama ravimiskeemi reaga seotud retseptid ning ei tühista neid
     * **NB!** siin tuleb viitena anda sisse viimase muudatuse viide, milleks on Kinnitatud ravimiskeemi pärimisel saadud FHIR List ressurss - seda kasutatakse, et kontrollida, kas muudatused on tehtud kõige viimast seisu omades.
     * Päringu sisendisse tuleb anda kogu kinnitatud ravimiskeemi pärimisel saadud väljund koos muudatuste ja täiendustega - antud juhul pikendatav rida muudetud kujul ning kõik ülejäänud Kinnitatud ravimiskeemi pärimisel saadud read
-8. MedIN valideerib andmed, kontrollib koostoimeid, loob uuendatud andmete pealt uued retseptid; salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
+8. MedIN valideerib andmed, koostoimeid ja neerufunktsiooni hoiatusi, loob uuendatud andmete pealt uued retseptid; salvestab FHIR andmed, tagastades FHIR Bundle, mis sisaldab kogu aktuaalset patsiendi ravimiskeemi, sh viiteid loodud retseptidele
     * Valideerimisreeglid - [MedIN Andmekvaliteedi kontrollid](controls.html)
     * **NB!** Juhul kui kinnitamise käigus tekib vigu ja tagastatakse OperationOutcome, siis saadetud andmeid ei salvestata, küll aga tehakse Retseptikeskuses retseptide lisamist ükshaaval, mis võib tingida olukorra kus kinnitamine ebaõnnestub, kuid mingid retseptid siiski loodi. Sellisel juhul need loodud retseptid peegelduvad ka [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) päringu tulemustes
 
