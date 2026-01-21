@@ -1,0 +1,50 @@
+# MedIN Rollid-Õigused
+| [Ravimiskeemi andmete kinnitamine](https://wiki.sm.ee/spaces/UPTISDEV/pages/276499625/Ravimiskeemi+andmete+kinnitamine) | /fhir/MedicationStatement/$confirm | medin.medicationstatement.confirm | doctor, midwife, nurse |
+| [Ravimiskeemi ajaloo pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/288555740/Ravimiskeemi+ajaloo+p%C3%A4rimine) | /fhir/MedicationStatement/$history | medin.medicationstatement.history | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist
+
+patient, patient-limited, legal-representative, consent-representative, consent-representative-limited
+
+**student** |
+| [Kinnitatud ravimiskeemi pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/276499643/Kinnitatud+ravimiskeemi+p%C3%A4rimine) | /fhir/MedicationStatement/$confirmed-medication-scheme | medin.medicationstatement.confirmed-medication-scheme | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist
+
+patient, patient-limited, legal-representative, consent-representative, consent-representative-limited
+
+**specialist, student** |
+| [Koostoimete pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/276499601/Koostoimete+p%C3%A4rimine) | /fhir/Medication/$interactions | medin.medication.interactions | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist
+
+**specialist, student** |
+| [Neerufunktsiooni languse hoiatuste pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/366590127/Neerufunktsiooni+languse+hoiatuste+p%C3%A4rimine) | /fhir/Medication/$renal-failure-warnings | medin.medication.renal-failure-warnings | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist
+
+**specialist, student** |
+| [Retsepti soodustuste pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/276499617/Retsepti+soodustuste+p%C3%A4rimine) | /fhir/Task/$reimbursements | medin.task.reimbursements | doctor, midwife, nurse |
+| [Ravimiskeemi ridade valideerimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/288556729/Ravimiskeemi+ridade+valideerimine) | /fhir/MedicationStatement/$validate-custom | medin.medicationstatement.validate-custom | doctor, midwife, nurse |
+| Ressursside pärimine terviklikkuse tagamiseks ( vt ka [MedIN Tervikluse tagamine](https://wiki.sm.ee/spaces/UPTISDEV/pages/217123240/MedIN+Tervikluse+tagamine)) | /fhir/MedicationStatement/ID/_history/version ja <br>/fhir/Medication/ID/_history/version
+
+näiteks: /fhir/MedicationStatement/123/_history/1 | medin.medicationstatement.history-integrity | server |
+| [Ravimiskeemi printvaate pärimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/326322518/Ravimiskeemi+printvaate+p%C3%A4rimine) | /fhir/MedicationStatement/$printout | medin.medicationstatement.printout | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist
+
+patient, patient-limited, legal-representative, consent-representative, consent-representative-limited
+
+**specialist, student** |
+| [Uue ravimi lisamise valideerimine](https://wiki.sm.ee/spaces/UPTISDEV/pages/390546453/Uue+ravimi+lisamise+valideerimine) | /fhir/Medication/$can-prescribe | medin.medication.can-prescribe | doctor, midwife, nurse, clinical-psychologist, speech-therapist, physiotherapist |
+| [ATC nimetuste pärimine ATC koodi põhjal - INTERNAL-API](https://wiki.sm.ee/spaces/UPTISDEV/pages/366576620/Sisemised+api-d#Sisemisedapid-GET%2Finternal-api%2Fatc%2F%7BatcCode%7D) | /internal-api/atc/{atcCode} | medin.internal-api.atc | server |
+| [Active Ingredient nimetuste pärimine active ingredient id põhjal - INTERNAL-API](https://wiki.sm.ee/spaces/UPTISDEV/pages/366576620/Sisemised+api-d#Sisemisedapid-GET%2Finternal-api%2Factive-ingredient%2F%7Bactive-ingredient-id%7D) | /internal-api/active-ingredient/{active-ingredient-id} | medin.internal-api.active-ingredient | server |
+
+Tabeli loomisel oli lähtekohaks TJT Ravimiskeemi õiguste maatriks.
+
+## Õiguste valideerimine MedIN-is
+Rolli õiguse kontroll toetub Charon/Themis lahendusele. Tokenit küsides teostatakse seal vastavad kontrollid (kas patsient tahab vaadata enda andmeid, kas esindataval on vastava patsiendi vaatamiseks õigused jne).
+MedIN õiguste kontrollimise flow on järgnev:
+
+1. Klient küsib õigete parameetrite ja õige rolliga Charon V2 tokeni
+2. Klient teeb saadud tokeniga päringu MedIN-i
+3. MedIN küsib saadud tokeni järgi Charon-st session-info parameetriga "application=medin" (ehk tagastatakse MedIN spetsiifilised permissionid)
+4. MedIN kontrollib, kas session-info vastuses olevad permissionid sisaldavad tehtava päringu jaoks vajalikku õigust (nt "medin.medicationstatement.confirm").
+    - Kui permission on olemas, siis lubatakse päring läbi
+    - Kui permissionit ei ole olemas, tagastatakse 403 Forbidden.
+
+## Patsiendi andmete suletuse kontroll
+Täiendavalt tehakse õiguste kontrollis veel patsiendi suletuse kontroll (vt MedIN Nõusolekuteenuse integratsioon)
+Juhul kui patsiendi andmed on suletud, on ligipääs piiratud AINULT rollidele: patient, patient-limited, legal-representative, consent-representative, consent-representative-limited. 
+Teiste rollidega tagastatakse kõikidele päringutele vastus: siia veateate link
+Süsteemset server rolli see ei piira.

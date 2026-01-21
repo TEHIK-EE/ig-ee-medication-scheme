@@ -148,6 +148,8 @@ pages:
     title: Changes
   documentation.md:
     title: Documentation
+  permissions.md:
+    title: Permissions  
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -177,6 +179,7 @@ menu:
     Documentation: documentation.html
     Controls: controls.html
     Use cases: usecases.html
+    Permissions: permissions.html
     Checklist for developers: checklist.html
   Artifacts: artifacts.html
   About : 
