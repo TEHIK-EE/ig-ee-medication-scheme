@@ -1,4 +1,4 @@
-CodeSystem: ATC_EE
+/*CodeSystem: ATC_EE
 Id: atc-ee
 Title: "Siseriiklik ATC"
 Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
@@ -24,3 +24,4 @@ Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
 * ^experimental = false
 * ^url = $atc-ee-VS
 * include codes from system $atc-ee
+*/
