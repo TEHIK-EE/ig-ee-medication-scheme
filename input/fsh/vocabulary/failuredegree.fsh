@@ -1,7 +1,7 @@
 CodeSystem: FAILURE_DEGREE
 Id: failure-degree
 Title: "failure degree TEST-CS"
-Description: "placeholder. USE text."
+Description: "Placeholder. NO actual CS in terminologyserver. USE text."
 * ^url = $failure-degree
 * ^status = #draft
 * ^content = #not-present
@@ -15,7 +15,7 @@ Description: "placeholder. USE text."
 ValueSet: FAILURE_DEGREE_VS
 Id: failure-degree
 Title: "failure degree TEST-VS"
-Description: "placeholder. USE text."
+Description: "Placeholder. NO actual VS in terminologyserver. USE text."
 
 * ^experimental = false
 * ^url = $failure-degree-VS

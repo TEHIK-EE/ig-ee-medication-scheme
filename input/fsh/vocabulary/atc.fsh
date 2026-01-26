@@ -1,7 +1,7 @@
-/*CodeSystem: ATC_EE
+CodeSystem: ATC_EE
 Id: atc-ee
 Title: "Siseriiklik ATC"
-Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
+Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega. Tegemist on fragmendiga, näidisega selle IG jaoks. Tegelik loend tuleb ravimiametilt.  No actual CS in terminology server."
 
 * ^url = $atc-ee
 * ^status = #draft
@@ -19,9 +19,8 @@ Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
 ValueSet: ATC_EE_VS
 Id: atc-ee
 Title: "Siseriiklik ATC"
-Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega"
+Description: "WHO ATC klassifikatsioon koos Eesti laiendkoodidega. Tegemist on fragmendiga, näidisega selle IG jaoks. Tegelik loend tuleb ravimiametilt. No actual VS in terminology server."
 
 * ^experimental = false
 * ^url = $atc-ee-VS
 * include codes from system $atc-ee
-*/

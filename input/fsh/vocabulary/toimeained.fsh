@@ -1,7 +1,7 @@
 CodeSystem: Toimeained
 Id: toimeained
 Title: "Toimeained"
-Description: "Ravimiameti nimekiri ravimite toimeainetest"
+Description: "No actual CS in terminology server. Ravimiameti nimekiri ravimite toimeainetest."
 
 * ^url = $toimeained
 * ^status = #draft
@@ -22,7 +22,7 @@ Description: "Ravimiameti nimekiri ravimite toimeainetest"
 ValueSet: Toimeained_VS
 Id: toimeained
 Title: "Toimeainete loend"
-Description: "Ravimiameti nimekiri ravimite toimeainetest"
+Description: "No actual VS in terminology server. Ravimiameti nimekiri ravimite toimeainetest."
 
 * ^url = $toimeained-VS
 * ^experimental = false
