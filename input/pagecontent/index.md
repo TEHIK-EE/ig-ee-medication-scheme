@@ -10,6 +10,12 @@ This implementation guide describes the medication scheme maintained by Health a
 
 Käesolev juhis kirjeldab ravimiskeemi, mida haldab Tervise ja Heaolu Infosüsteemide Keskus. Juhis on kirjutatud eesti ja inglise keeles, kusjuures eestikeelne tekst on kohati põhjalikum ja detailsem, olles suunatud kohalikule arendajale.
 
+>
+>NB! 1. Standardsed FHIR RESTful otspunktid
+>Ravimiskeemi andmed jagunevad FHIR ressurssideks, teenuse eripäraks on aga see, et kogu andmestiku pärimine ja haldamine käib läbi nn custom operatsioonide, mitte läbi standardsete >otspunktide.
+>
+>Kasutatavate operatsioonide äriloogika ning reeglid on kirjeldatud vastavatel [alamlehtedel](operations.html).
+
 ## About | Juhendist
 
 

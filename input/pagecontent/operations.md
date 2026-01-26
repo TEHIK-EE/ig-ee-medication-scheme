@@ -12,4 +12,4 @@ From the links below you can access the operations used in Medication Scheme:
 - [Medication-renal-failure-warnings]
 - [MedicationStatement-validate-custom]
 - [MedicationStatement-printout]
-- [Medication-can-prescribe]
+- [can-prescribe]
