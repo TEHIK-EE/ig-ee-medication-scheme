@@ -6,7 +6,7 @@ Eesmärk on pakkuda klientsüsteemidele võimalust taaskasutada MedIN sisemist l
 Operatsiooni üldine käik:
 
 - Sisendisse antud patsiendi kohta leitakse MedIN serveri andmestikust kehtiv ravimiskeem
-    - sisemiselt tehakse Kinnitatud ravimiskeemi pärimine, rakendades seal olevat loogikat, et saada kätte hetkel kehtiv ravimiskeemi seis
+    - sisemiselt tehakse [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html), rakendades seal olevat loogikat, et saada kätte hetkel kehtiv ravimiskeemi seis
     - kinnitatud skeemi pärimist tehakse teatud määral optimeeritult:
         - ei pärita RK tühistamisi
         - ei pärita FHIR andmetele juurde RK andmeid (väljastused)
