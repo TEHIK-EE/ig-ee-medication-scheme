@@ -150,6 +150,8 @@ pages:
     title: Documentation
   permissions.md:
     title: Permissions  
+  grouping.md:
+    title: Grouping logic
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -177,6 +179,7 @@ menu:
   Guidance: 
     Operations: operations.html
     Documentation: documentation.html
+    Grouping logic: grouping.html
     Controls: controls.html
     Use cases: usecases.html
     Permissions: permissions.html
