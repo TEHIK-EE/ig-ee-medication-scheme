@@ -7,8 +7,8 @@ Skeemil on toodud tegevuste järjekord, iga ploki kohta on eraldi kirjeldus allp
 **NB!** Tugevaks äriliseks eelduseks kinnitamise edukusele on, et Ravimiskeemi pärimisel on saadud viimane seis nii FHIR andmetes kui ka Retspetikeskuse retseptidest - vt Kinnitatud ravimiskeemi pärimine 
 
 <div>
-<img src="andmetekinnitamine.svg"  alt="Ajaloopäring" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<img src="andmetekinnitamine.svg"  alt="Ravimiskeemi kinnitamine - üldine protsess" width="60%">
+<p>Ravimiskeemi kinnitamine - üldine protsess</p>
 <p></p>
 </div>
 
@@ -19,8 +19,8 @@ Edasiseks andmete töötluseks tehakse **esmalt** sisemiselt Kinnitatud ravimisk
 Edasi jaotuvad andmed vastavalt järgmisele skeemile:
 
 <div>
-<img src="sisendiandmetetootlus.svg"  alt="Sisendiandmete töötlus" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<img src="sisendiandmetetootlus.svg"  alt="Sisendiandmete töötlus" width="80%">
+<p>Ravimiskeemi andmete kinnitamine - Sisendiandmete töötlus</p>
 <p></p>
 </div>
 
@@ -53,8 +53,8 @@ Kogu sisendile teostatakse äriloogilised kontrollid vastavalt MedIN Andmekvalit
     - vt Ravimiskeemi väliselt loodud retseptide vastus
 - Retseptikeskuse andmetest genereeritud ridadele kehtivad salvestamisel-valideerimisel erireeglid (nt autor võib erineda, alguse aeg võib olla minevikus jne) - need on vaja siia välja tuua, lisaks ka kirjeldada RK päringud, mida siin teostatakse
 <div>
-<img src="retseptikeskusekontrollid.svg"  alt="Retseptikeskuse kontrollid" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<img src="retseptikeskusekontrollid.svg"  alt="Retseptikeskuse kontrollid" width="80%">
+<p>Ravimiskeemi kinnitamisel Retseptikeskuse kontrollid</p>
 <p></p>
 </div>
 
@@ -94,7 +94,7 @@ Kogu sisendile teostatakse äriloogilised kontrollid vastavalt MedIN Andmekvalit
 ## Retseptikeskuse validatsioon
 <div>
 <img src="rkvalidatsioon.svg"  alt="Retseptikeskuse validatsioon" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<p>Ravimiskeemi kinnitamisel Retseptikeskuse validatsioon</p>
 <p></p>
 </div>
 
@@ -119,7 +119,7 @@ Kogu sisendile teostatakse äriloogilised kontrollid vastavalt MedIN Andmekvalit
 ## Retseptikeskuses retseptide tühistamine
 <div>
 <img src="rkrtyhistamine.svg"  alt="Retseptikeskuse retseptide tühistamine" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<p>Ravimiskeemi kinnitamisel Retseptikeskuse retseptide tühistamine</p>
 <p></p>
 </div>
 
@@ -143,7 +143,7 @@ Kirjeldus: Retseptikeskuse poolel on loodud eraldi teenus retsepti annustamise m
 ## Retseptikeskuses retseptide loomine
 <div>
 <img src="rkrloomine.svg"  alt="Retseptikeskuse retseptide loomine" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<p>Ravimiskeemi kinnitamisel Retseptikeskuses retseptide loomine</p>
 <p></p>
 </div>
 
@@ -159,7 +159,7 @@ Kirjeldus: Retseptikeskuse poolel on loodud eraldi teenus retsepti annustamise m
 ## FHIR andmete salvestamine
 <div>
 <img src="fhirandmetetootlemine.svg"  alt="FHIR andmete töötlemine ja salvestamine" width="60%">
-<p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
+<p>Ravimiskeemi kinnitamine - FHIR andmete töötlemine ja salvestamine</p>
 <p></p>
 </div>
 
