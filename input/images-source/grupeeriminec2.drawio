@@ -33,7 +33,7 @@
                 <mxCell id="10" value="" style="swimlane;startSize=0;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
                     <mxGeometry x="1590" y="-70" width="900" height="960" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi KAUDU loodud retspetid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="10">
+                <mxCell id="11" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi KAUDU loodud retseptid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="10">
                     <mxGeometry x="380" y="10" width="510" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="MedicationDispense C1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
@@ -241,7 +241,7 @@
                 <mxCell id="76" value="" style="swimlane;startSize=0;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
                     <mxGeometry x="1590" y="930" width="900" height="1500" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi VÄLISELT loodud retspetid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="76">
+                <mxCell id="77" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi VÄLISELT loodud retseptid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="76">
                     <mxGeometry x="370" y="10" width="520" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="78" value="Medication B" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="76">

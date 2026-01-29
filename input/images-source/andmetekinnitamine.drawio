@@ -93,7 +93,7 @@
                         <mxPoint x="165" y="1060" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="Retseptikeskuses&amp;nbsp;&lt;div&gt;retspetide loomine&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
+                <mxCell id="19" value="Retseptikeskuses&amp;nbsp;&lt;div&gt;retseptide loomine&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
                     <mxGeometry x="60" y="850" width="210" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="Sisendi äriloogilised kontrollid" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
@@ -111,7 +111,7 @@
                 <mxCell id="24" value="FHIR andmete salvestamine" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
                     <mxGeometry x="60" y="960" width="210" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="Retseptikeskuses retspetide tühistamine" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
+                <mxCell id="25" value="Retseptikeskuses retseptide tühistamine" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="3">
                     <mxGeometry x="60" y="740" width="210" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startArrow=none;startFill=0;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="3" source="19" target="24">

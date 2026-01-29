@@ -11,7 +11,7 @@ OperationOutcome sisaldab **veakoodi ja kirjeldust**, mis annab tehnilise vea te
 
 Skeemil on toodud tegevuste järjekord, iga ploki kohta on eraldi kirjeldus allpool. Peale kõikide plokkide läbimist tagastakse leitud veateated OperationOutcome väljundisse
 <div>
-<img src="ridadevalideerimine.svg"  alt="Ravimiskeemi ridade valideerimine" width="60%">
+<img src="ridadevalideerimine.svg"  alt="Ravimiskeemi ridade valideerimine" width="40%">
 <p>Pilt 1 - siia ilus tekst diagrammi kohta</p>
 <p></p>
 </div>
@@ -21,13 +21,13 @@ Operatsiooni sisendiga läbitakse MedIN Andmekvaliteedi kontrollid ning kogutaks
 
 ## Retseptikeskuse validatsioon
 Operatsiooni sisendiga läbitakse Retseptikeskuse validatsioon ning kogutakse tekkinud veateated. Validatsioon teostatakse ainult nende ravimiskeemi ridade puhul, mille juures tuleb luua uus retsept. Kui tegemist on tühistamise või muutmisega, mis retsepti loomist ei nõua, siis jäetakse antud validatsioon vahele.
-*NB!* Erinevus Ravimiskeemi andmete kinnitamine päringuga on see, et andmete valideerimisel küsitakse KÕIKIDE tasemete vigu, mitte ainult A ja E klassifikatsiooniga
+**NB!** Erinevus Ravimiskeemi andmete kinnitamine päringuga on see, et andmete valideerimisel küsitakse KÕIKIDE tasemete vigu, mitte ainult A ja E klassifikatsiooniga
 Retseptikeskusest saadud vead peegeldatakse väljundisse koodiprefiksiga "MedIN-RK-".
 
 ## Näited
 Ühe ravimiskeemi rea (MedicationStatment + Medication) valideerimiseks saatmine
+**Näidispäring salvestamata ravimiskeemi reaga**:
 ```
-Näidispäring salvestamata ravimiskeemi reaga
 {
   "resourceType": "Parameters",
   "parameter": [
@@ -342,10 +342,10 @@ Näidispäring salvestamata ravimiskeemi reaga
 }
 ```
 Näidis-väljund olukorras, kus on osad väljad täitmata ja tekib ka ravimiregistri vastu valideerimisel viga
-
 NB! näidist täiendada, kui on tehtud ka Retseptikeskuse liidestus!
+
+**Näidisvastus salvestamata ravimiskeemi reaga**
 ```
-Näidisvastus salvestamata ravimiskeemi reaga
 {
   "resourceType": "OperationOutcome",
   "issue": [

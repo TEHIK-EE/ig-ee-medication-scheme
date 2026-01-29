@@ -1,6 +1,6 @@
 URL: POST [base]/Task/$reimbursements
 
-This is NOT an idempotent operation
+This is NOT an idempotent operation.
 
 ## Ärireeglid
 - Task.input's kaasasolevat MedicationStatement ressurssi valideeritakse vastu profiili

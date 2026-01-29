@@ -40,7 +40,7 @@
                 <mxCell id="13" value="" style="swimlane;startSize=0;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
                     <mxGeometry x="700" y="210" width="900" height="1310" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi väliselt loodud retspetid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="13">
+                <mxCell id="14" value="&lt;span style=&quot;font-size: 15px; font-weight: 700;&quot;&gt;Ravimiskeemi väliselt loodud retseptid (Grupeeritud)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF3333;" vertex="1" parent="13">
                     <mxGeometry x="480" y="10" width="410" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Medication B" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="13">

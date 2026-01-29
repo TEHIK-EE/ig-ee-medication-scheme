@@ -24,7 +24,7 @@ Kasutuslugudes on eeldatud, et teenuse kasutamiseks autentimine on juba sooritat
 
 1. Klientsüsteem teeb MPI viite alusel päringu Kinnitatud ravimiskeemi pärimine 
 2. MedIN tagastab FHIR Bundle, kus on sees ravimiskeemi andmestik ([vt MedIN Andmemudel](documentation.html)) 
-    * Retseptikeskusest leitakse ka kõik patsiendi kehtivad müümata ja välja müüdud retspetid alates viimasest ravimiskeemi kinnitamisest või viimased 540 päeva
+    * Retseptikeskusest leitakse ka kõik patsiendi kehtivad müümata ja välja müüdud retseptid alates viimasest ravimiskeemi kinnitamisest või viimased 540 päeva
     * FHIR Bundle tagastab muuhulgas List ressursi, mis sisaldab ravimiskeemi viimase muudatuse aega - olgu siis MedIN või Retseptikeskuse poolelt - see andmestik on vajalik nn "tõendusena"  ravimiskeemi andmete muutmisel
 3. Klientsüsteem teeb MPI viite alusel päringu [Koostoimete pärimine](OperationDefinition-Interactions.html)
     * **NB!** Oluline on siin anda ette ainult patsiendi viide, et saada kehtivas ravimiskeemis esinevaid koostoimeid.

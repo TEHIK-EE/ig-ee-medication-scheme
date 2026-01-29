@@ -12,4 +12,4 @@ curl -k -L 'https://10.0.13.90/r1/ee-dev/GOV/70009770/uptis/fis-service/fhir/Med
 -H 'x-context-id: my-context' \
 -H 'Authorization: Bearer xxx'
 ```
-This is NOT an idempotent operation
+This is NOT an idempotent operation.

@@ -21,7 +21,7 @@ tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd
 </div>
 
 - teeb päringud Retseptikeskusesse (vt Ravimiskeemiga seotud retseptide päring)
-- leiab Ravimiskeemi ridadega seotud retspetid:
+- leiab Ravimiskeemi ridadega seotud retseptid:
     - päritakse kogu info - ehk üldinfo, määratud ravi, isikud, väljastatud (vt ka RETS - API kirjeldus), mh ei välistata annulleeritud retsepte
     - päritakse ainult ID alusel
 - genereerib RK andmetest MedicationRequest ning MedicationDispense ja sellega seotud Medication FHIR ressurssid (vt Ravimiskeemiga seotud retseptide retseptide vastus ning arvutatakse ravimi jääk vastavalt Jäägi arvutamise loogika.
@@ -78,7 +78,7 @@ tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd
 
 ### Viimase kinnitamise leidmine ja andmete sinna alla viimine
 - Võrdleb ravimiskeemi väliselt loodud retsepte, viimati tühistatud retsepte ja FHIR andmetest leitud viimast kinnitamist ning leiab nendest kõige hilisema
-    - Juhul kui RK andmed on hilisemad kui FHIR andmetest leitud kinnitamine (Ravimiskeemi väliselt loodud retspetide koostamise aeg VÕI viimati tühistatud retspetide annulleerimise aeg) siis:
+    - Juhul kui RK andmed on hilisemad kui FHIR andmetest leitud kinnitamine (Ravimiskeemi väliselt loodud retseptide koostamise aeg VÕI viimati tühistatud retseptide annulleerimise aeg) siis:
         - genereerib retseptikeskuse andmete põhjal List resssursi (vt Kinnitamise fakti loomine retseptide põhjal)  ja asendab FHIR andmetest leitud kinnitamise sellega, välja arvatud ravimiskeemi üldkommentaar (List.note), mis kopeeritakse FHIR andmetest, juhul kui FHIR andmetes on see täidetud
         - kõik leitud andmed - nii FHIR andmed kui ka RK andmete pealt loodud MedicationStatement'd - seotakse loodud List-ga
         - kõikide entry'te flag'd märgitakse "unchanged" väärtusega v.a. see MedicationStatement, mille põhjal List tehti 

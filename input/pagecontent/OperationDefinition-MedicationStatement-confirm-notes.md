@@ -4,7 +4,7 @@ Ravimiskeemi kinnitamine koosneb mitmest järjestikku tehtavast tegevusest. Üld
 
 Skeemil on toodud tegevuste järjekord, iga ploki kohta on eraldi kirjeldus allpool.  
 
-**NB!** Tugevaks äriliseks eelduseks kinnitamise edukusele on, et Ravimiskeemi pärimisel on saadud viimane seis nii FHIR andmetes kui ka Retspetikeskuse retseptidest - vt Kinnitatud ravimiskeemi pärimine 
+**NB!** Tugevaks äriliseks eelduseks kinnitamise edukusele on, et Ravimiskeemi pärimisel on saadud viimane seis nii FHIR andmetes kui ka retseptikeskuse retseptidest - vt [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html) 
 
 <div>
 <img src="andmetekinnitamine.svg"  alt="Ravimiskeemi kinnitamine - üldine protsess" width="60%">
@@ -15,7 +15,7 @@ Skeemil on toodud tegevuste järjekord, iga ploki kohta on eraldi kirjeldus allp
 ## Sisendiandmete esmane validatsioon ja töötlus
 *NB!* eeltöötlus ei peegelda tingimata koodis loodud lahendust vaid pigem äriloogilist andmetega tegelemise viisi - reaalset rakenduse koodi vaadates ei pruugi loogika asuda tegevuste järjekorras selles kohas*
 Esmase validatsioonina rakendab FHIR server automaatset sisendandmete valideerimist vastu FHIR profiile ning kasutatud terminoloogiat. (vt ka MedIN Andmekvaliteedi kontrollid)
-Edasiseks andmete töötluseks tehakse **esmalt** sisemiselt Kinnitatud ravimiskeemi pärimine, rakendades kogu seal olevat loogikat, et saada kätte hetkel kehtiv ravimiskeemi seis ning võrrelda sisendisse tulnud andmeid sellega, mis on hetkel kehtiv skeem.
+Edasiseks andmete töötluseks tehakse **esmalt** sisemiselt [Kinnitatud ravimiskeemi pärimine](OperationDefinition-MedicationStatement-confirmed-medication-scheme.html), rakendades kogu seal olevat loogikat, et saada kätte hetkel kehtiv ravimiskeemi seis ning võrrelda sisendisse tulnud andmeid sellega, mis on hetkel kehtiv skeem.
 Edasi jaotuvad andmed vastavalt järgmisele skeemile:
 
 <div>
@@ -24,24 +24,24 @@ Edasi jaotuvad andmed vastavalt järgmisele skeemile:
 <p></p>
 </div>
 
-Selleks, et hõlbustada edasiste kontrollide ja sooritatavate tegevuste läbi viimist, eristatakse sisendisse tulnud andmetes järgmiseid seisusid, mis väljenduvad ka kinnitamise lõpuks tekkiva EETISMedicationList atribuudis List.entry.flag: 
+Selleks, et hõlbustada edasiste kontrollide ja sooritatavate tegevuste läbi viimist, eristatakse sisendisse tulnud andmetes järgmiseid seisusid, mis väljenduvad ka kinnitamise lõpuks tekkiva [EETISMedicationList] atribuudis List.entry.flag: 
 **NB!** töötlemisel on ka oluline järjekord, kuna iga järgnev samm eeldab, et eelmine on läbitud:
 - Juhul kui MedicationStatement.id ei ole määratud 
-    - JA puudub MedicationStatment.identifier mille system oleks (https://fhir.ee/retseptikeskus-retsept), siis List.Entry.item.flag=prescribed ehk tegemist on uue lisatava reaga
+    - JA puudub MedicationStatment.identifier mille system oleks (https://fhir.ee/retseptikeskus-retsept), siis List.Entry.item.flag=**prescribed** ehk tegemist on uue lisatava reaga
     - JA on olemas MedicationStatment.identifier mille system oleks (https://fhir.ee/retseptikeskus-retsept) 
-        - AGA andmeid EI OLE muudetud → siis on List.Entry.item.flag=unchanged ehk tegemist on Retseptikeskuse andmetest genereeritud reaga, mis vajab salvestamist
+        - AGA andmeid EI OLE muudetud → siis on List.Entry.item.flag=**unchanged** ehk tegemist on Retseptikeskuse andmetest genereeritud reaga, mis vajab salvestamist
         - KUI andmed ON muudetud, käitub rida samamoodi, nagu oleks real olemas MedicationStatement.id ja andmeid on muudetud (vt edasi)
 - Juhul kui MedicationStatement.id on määratud
-    - JA andmeid EI OLE muudetud võrreldes serveri versiooniga, siis List.Entry.item.flag=unchanged ehk tegemist on muutmata reaga
-        - siin kehtib ka erijuht - juhul kui Kinnitatud ravimiskeemi pärimisel on saadud rida, mille flag on List.Entry.item.flag=generated ehk rida on baasis olemas, kuid sama reaga seotult on olemas Retseptikeskuses uuemad andmed - ka sellisel juhul määratakse List.Entry.item.flag=unchanged (vt ka B1 - olemas uus FHIR kinnitamine (A2) ja peale seda loodud RK retseptid - Kinnitatud ravimiskeemi pärimine)
+    - JA andmeid EI OLE muudetud võrreldes serveri versiooniga, siis List.Entry.item.flag=**unchanged** ehk tegemist on muutmata reaga
+        - siin kehtib ka erijuht - juhul kui Kinnitatud ravimiskeemi pärimisel on saadud rida, mille flag on List.Entry.item.flag=**generated** ehk rida on baasis olemas, kuid sama reaga seotult on olemas Retseptikeskuses uuemad andmed - ka sellisel juhul määratakse List.Entry.item.flag=**unchanged** (vt ka B1 - olemas uus FHIR kinnitamine (A2) ja peale seda loodud RK retseptid - Kinnitatud ravimiskeemi pärimine)
     - KUI andmeid ON muudetud võrreldes serveri versiooniga
         - JA kui MedicationStatement.effective.end ON sisendis väärtustatud ja serveri versioonis ei ole, siis flag=ceased ehk tegemist on eemaldatava reaga
             - kõrvalmärkus: olukord, kus serveri versioonis on MedicationStatement.effective.end väärtustatud ja sisendis ei ole, on tehniline viga
         - KUI MedicationStatement.effective.end EI OLE sisendis väärtustatud 
-            - JA retsepti mõjutavaid atribuute EI OLE muudetud (Ravimvorm/tugevus, Mitte asendada, ravimeid pakendis, pakkide arv, Müügiloata ravimi taotluse põhjendus + kirjeldus, retsepti kommentaar, Ravikuuri kestus, kordsus, volitus, retsepti kehtivus)  → siis List.Entry.item.flag=changed ehk tegemist on muudetud reaga, kus retsepte EI OLE vaja muuta
+            - JA retsepti mõjutavaid atribuute EI OLE muudetud (Ravimvorm/tugevus, Mitte asendada, ravimeid pakendis, pakkide arv, Müügiloata ravimi taotluse põhjendus + kirjeldus, retsepti kommentaar, Ravikuuri kestus, kordsus, volitus, retsepti kehtivus)  → siis List.Entry.item.flag=**changed** ehk tegemist on muudetud reaga, kus retsepte EI OLE vaja muuta
             - KUI retsepti mõjutavaid atribuute ON muudetud (Ravimvorm/tugevus, Mitte asendada, ravimeid pakendis, pakkide arv, Müügiloata ravimi taotluse põhjendus + kirjeldus, retsepti kommentaar, Ravikuuri kestus, kordsus, volitus, retsepti kehtivus)
-                - JA MedicationStatement.partOf EI OLE  täidetud → siis List.Entry.item.flag=changed ehk tegemist on nn "muutmisega" ning sama reaga seotud olemasolevad retseptid tuleb tühistada ning seejärel luua uued retspetid
-                - KUI ON täidetud → siis List.Entry.item.flag=changed ehk tegemist on nn "pikendamisega" ning sama reaga seotud olemasolevad retseptid tuleb jätta muutmata ning seejärel luua uued täiendavad retspetid
+                - JA MedicationStatement.partOf EI OLE  täidetud → siis List.Entry.item.flag=**changed** ehk tegemist on nn **"muutmisega"** ning sama reaga seotud **olemasolevad retseptid** tuleb **tühistada** ning seejärel **luua uued retseptid**
+                - KUI ON täidetud → siis List.Entry.item.flag=changed ehk tegemist on nn "pikendamisega" ning sama reaga seotud olemasolevad retseptid tuleb jätta muutmata ning seejärel **luua uued täiendavad retseptid**.
 
 Sisendi töötlemisel tehakse ühtlasi ka vajadusel andmete rikastamist :
 - Kontrollitakse kas confirmer parameetris (või ka MedicationStatement.contained plokis) märgitud PractitionerRole ressursil on määratud kontaktandmed (telefon, email)
@@ -83,7 +83,7 @@ Kogu sisendile teostatakse äriloogilised kontrollid vastavalt MedIN Andmekvalit
 ### Ärireeglid
 
 - Kõikidest sisendisse tulnud andmetest leitakse ravimiskeemi read, mis on lisatud või mida on muudetud (kuid ei ole kustutamisele määratud) 
-- Vastavalt Neerufunktsiooni languse hoiatuste pärimine#Patsiendineerun%C3%A4idup%C3%A4riminejaaegumiseloogika päritakse patsiendi eGFR ja selle tulemustega tehakse leitud ridade alusel SynBase neerufunktsiooni hoiatuste päring ( vt MedIN Otsustustoe integratsioon ) sama loogika alusel mis Neerufunktsiooni languse hoiatuste pärimine päringu sees.
+- Vastavalt Neerufunktsiooni languse hoiatuste pärimine#Patsiendineerun%C3%A4idup%C3%A4riminejaaegumiseloogika päritakse patsiendi eGFR ja selle tulemustega tehakse leitud ridade alusel SynBase neerufunktsiooni hoiatuste päring ( vt MedIN Otsustustoe integratsioon ) sama loogika alusel mis [Neerufunktsiooni languse hoiatuste pärimine](OperationDefinition-Medication-renal-failure-warnings.html) päringu sees.
     - mh kehtivad erandid:
         - alla 18a patsiendil kontrolli ei tehta
         - kui patsiendil ei leita eGFR tulemust
@@ -129,12 +129,12 @@ Kogu sisendile teostatakse äriloogilised kontrollid vastavalt MedIN Andmekvalit
     - Kustutamisele määratud read (ceased)
 - Ravimiskeemi rea küljes olevate retseptide puhul teostame esmalt RK päringu, et saada seotud retseptide staatused (vt Tühistamisele minevate retseptide staatused  - päring )
 - Staatuste alusel filtreeritakse välja need, mida ei ole võimalik annuleerida (staatus <> Koostatud), välja filtreeritavaid IGNOREERITAKSE
-    - Selgitus: Ravimiskeemi kinnitamist ja retspetide tühistamist ei katkestata, kui retseptid on mööda äriprotsessi edasi liikunud (nt välja ostetud, aegunud, broneeritud)
-- Alles jäänud retseptid annuleeritakse teenusega ( annulleerimine  - päring ), kordsete retspetide puhul tehakse päring ainult ühele kordsete hulgast, Retseptikeskuse vastusest   saab välja lugeda kõik automaatselt tühistatud retspetid
+    - Selgitus: Ravimiskeemi kinnitamist ja retseptide tühistamist ei katkestata, kui retseptid on mööda äriprotsessi edasi liikunud (nt välja ostetud, aegunud, broneeritud)
+- Alles jäänud retseptid annuleeritakse teenusega ( annulleerimine  - päring ), kordsete retseptide puhul tehakse päring ainult ühele kordsete hulgast, Retseptikeskuse vastusest   saab välja lugeda kõik automaatselt tühistatud retseptid
     - NB! Muudetavate ridade puhul, kus on vaja retsepte tühistada, määratakse annulleerimise põhjuseks "AN02 - Raviskeemi muudatus: puudub oodatud ravitulemus"
 - Juhul kui mõne retsepti tühistamisel tekib vigu - viga ja katkestame (veakood)
     - NB! retseptikeskuse vead peegeldatakse vastuse OperationOutcome-i!
-- Juhul kui peale filtreerimist ei jää alles ühtegi tühistatavat retspeti, liigutakse edasi järgmise tegevuse juurde, st viga ei teki
+- Juhul kui peale filtreerimist ei jää alles ühtegi tühistatavat retsepti, liigutakse edasi järgmise tegevuse juurde, st viga ei teki
 
 ## Retseptikeskuses retseptide annustamise muutmine - tulevikus loodav
 Kirjeldus: Retseptikeskuse poolel on loodud eraldi teenus retsepti annustamise muutmiseks, mida peaks MedIN kasutama juhul kui ravimiskeemi real muudetakse ainult annustamise sektsiooni. 
@@ -164,8 +164,8 @@ Kirjeldus: Retseptikeskuse poolel on loodud eraldi teenus retsepti annustamise m
 </div>
 
 ### Ärireeglid:
-- FHIR andmed salvestatakse kõige viimasena tegevuste järjekorras ning seda tehakse ühe transaktsioonina (üks muudatus, mitte mitu erinevat). Kui kogu tegevuse jooksul tekib vähemalt üks viga, katkestatakse töö ja andmete muudatusi ei salvestata
-- Kinnitamise fakti salvestamiseks tekitatakse nn "Kinnitamise objekt" ehk EETISMedicationList, mis:
+- FHIR andmed salvestatakse kõige viimasena tegevuste järjekorras ning seda tehakse ühe transaktsioonina (üks muudatus, mitte mitu erinevat). Kui kogu tegevuse jooksul tekib vähemalt üks viga, katkestatakse töö ja **andmete muudatusi ei salvestata**
+- Kinnitamise fakti salvestamiseks tekitatakse nn "Kinnitamise objekt" ehk [EETISMedicationList], mis:
     - Sisaldab kinnitamise aega
     - Sisaldab kinnitaja (PractitionerRole) andmestikku FHIR contained atribuudis, mis on võetud vastavast sisendparameetrist (confirmer)
     - Sisaldab versioonispetsiifilisi viiteid (List.Entry) ravimiskeemi ridadele ehk MedicationStatment'tele, mis sisendi töötlemisel eri List.Entry.flag väärtustega eristati
@@ -173,22 +173,23 @@ sisaldab iga (List.Entry) viite kohta viimast ravimiskeemi rea muudatuse kuupäe
         - st kui rida selle kinnitamisega ei muutunud, siis Entry.date jääb sama, mis eelmine kord (sama mis selle rea viimane EETISVerification)
         - kui reaga toimub mingi muudatus, siis List.Entry.date = kinnitamise kuupäev
     - Juhul kui kinnitamisel lisati kommentaar, siis sisaldab kommentaar teksti ning kommenteerija nime, rolli ja kommenteerimise aega. Kommenteerija andmed on samad, mis ravimiskeemi kinnitajal ja kommentaari aeg on sama, mis kinnitamise aeg
-- Igale List.Entry.flag väärtusega prescribed, ceased, changed olnud MedicationStatment'le lisatakse Kinnitamise andmestik ehk EETISVerification mis sisaldab:
+- Igale List.Entry.flag väärtusega prescribed, ceased, changed olnud MedicationStatment'le lisatakse Kinnitamise andmestik ehk [EETISVerification] mis sisaldab:
     - kinnitamise aeg
     - kinnitaja viited ehk PractitionerRole nn FHIR logical reference'd (MEDRE kood identifier'na) 
     - kinnitaja viidete juures ka display väärtus mis sisaldab kinnitaja nime ja eriala
-- Lisategevusena võetakse sellised read, mille küljes oleva ExtensionEETISGroupedItems sees on "groupingReference" extensionid ning:
-    - võetakse extensioni seest MedicationStatement ID-d ning lisatakse need List-i alla List.Entry.item.flag=consolidated väärtusega entry-d.
+- Lisategevusena võetakse sellised read, mille küljes oleva [ExtensionEETISGroupedItems] sees on "groupingReference" extensionid ning:
+    - võetakse extensioni seest MedicationStatement ID-d ning lisatakse need List-i alla List.Entry.item.flag=**consolidated** väärtusega entry-d.
     - Seejärel eemaldatakse "base" statement-i küljest "groupingReference" extensionid ära
         - siia tuleb perspektiivis ka nende ridade effective.end märkimine! TJT-2799 - MedIN: grupeeritud ridade konsolideerimisel väärtustada konsolideeritud ridadel effective.end Closed
 - Igale flag väärtusega prescribed, changed olnud MedicationStatment'le lisatakse contained atribuuti täis andmestik selle rea loonud või muutnud tervishoiutöötaja/spetsialistile PractitionerRole ressursi näol ning lisatakse sellele viide MedicationStatement.informationSource atribuuti
 - Iga serverisse lisatav või muudetav MedicationStatement esmalt täiendatakse kinnitamise infoga (ja sellest tekib uus versioon) ja seejärel lisatakse selle versiooni viide List-i
 - Medication ressursi muutumisel luuakse ALATI uus Medication ressurss, sest eeldus on, et ravim kui selline muutuda ei saa, pigem asendub
     - see tähendab, et MedicationStatement'st tekib uus versioon, mis viitab ainult uuele Medication Ressursile
-- Kõige lõpuks ressurssid salvestatakse baasi
+- Kõige lõpuks ressurssid **salvestatakse baasi**
 
 ## Näited
 Näide, kus patsiendile lisatakse üks uus ravimiskeemi rida ja lõpetatakse teine, taustal on serveris alles jäänud üks ravimiskeemi rida, mida ei muudeta.
+**Ravimiskeemi kinnitamise sisend**:
 ```
 {
   "resourceType": "Parameters",
@@ -909,7 +910,8 @@ Näide, kus patsiendile lisatakse üks uus ravimiskeemi rida ja lõpetatakse tei
   ]
 }
 ```
-Näidisväljund:
+Näidisväljund
+**Ravimiskeemi kinnitamise väljund**:
 ```
 {
   "resourceType": "Bundle",
