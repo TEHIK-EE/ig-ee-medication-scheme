@@ -176,7 +176,7 @@ Ravimiskeemi ajaloo näidisvastus
                                 "system": "https://fhir.ee/sid/pro/est/pho",
                                 "value": "D09908"
                             },
-                            "display": "EGE KÄOSAAR"
+                            "display": "MARI MAASIKAS"
                         },
                         "organization": {
                             "identifier": {
@@ -278,7 +278,7 @@ Ravimiskeemi ajaloo näidisvastus
                                         "system": "https://fhir.ee/sid/pro/est/pho",
                                         "value": "D09908"
                                     },
-                                    "display": "EGE KÄOSAAR, infektsioonhaigused"
+                                    "display": "MARI MAASIKAS, infektsioonhaigused"
                                 }
                             }
                         ],
@@ -335,7 +335,7 @@ Ravimiskeemi ajaloo näidisvastus
                 "informationSource": [
                     {
                         "reference": "#PractitionerRole-D09908",
-                        "display": "EGE KÄOSAAR"
+                        "display": "MARI MAASIKAS"
                     }
                 ],
                 "derivedFrom": [
@@ -416,7 +416,7 @@ Ravimiskeemi ajaloo näidisvastus
                                 "system": "https://fhir.ee/sid/pro/est/pho",
                                 "value": "D09908"
                             },
-                            "display": "EGE KÄOSAAR"
+                            "display": "MARI MAASIKAS"
                         },
                         "organization": {
                             "identifier": {
@@ -518,7 +518,7 @@ Ravimiskeemi ajaloo näidisvastus
                                         "system": "https://fhir.ee/sid/pro/est/pho",
                                         "value": "D09908"
                                     },
-                                    "display": "EGE KÄOSAAR, infektsioonhaigused"
+                                    "display": "MARI MAASIKAS, infektsioonhaigused"
                                 }
                             }
                         ],
@@ -548,7 +548,7 @@ Ravimiskeemi ajaloo näidisvastus
                                         "system": "https://fhir.ee/sid/pro/est/pho",
                                         "value": "D09908"
                                     },
-                                    "display": "EGE KÄOSAAR, infektsioonhaigused"
+                                    "display": "MARI MAASIKAS, infektsioonhaigused"
                                 }
                             }
                         ],
@@ -606,7 +606,7 @@ Ravimiskeemi ajaloo näidisvastus
                 "informationSource": [
                     {
                         "reference": "#PractitionerRole-D09908",
-                        "display": "EGE KÄOSAAR"
+                        "display": "MARI MAASIKAS"
                     }
                 ],
                 "derivedFrom": [
@@ -687,7 +687,7 @@ Ravimiskeemi ajaloo näidisvastus
                                 "system": "https://fhir.ee/sid/pro/est/pho",
                                 "value": "D09908"
                             },
-                            "display": "EGE KÄOSAAR"
+                            "display": "MARI MAASIKAS"
                         },
                         "organization": {
                             "identifier": {
@@ -734,7 +734,7 @@ Ravimiskeemi ajaloo näidisvastus
                 "date": "2024-09-06T12:14:05+03:00",
                 "source": {
                     "reference": "#PractitionerRole-D09908",
-                    "display": "EGE KÄOSAAR"
+                    "display": "MARI MAASIKAS"
                 },
                 "entry": [
                     {
@@ -783,7 +783,7 @@ Ravimiskeemi ajaloo näidisvastus
                                 "system": "https://fhir.ee/sid/pro/est/pho",
                                 "value": "D09908"
                             },
-                            "display": "EGE KÄOSAAR"
+                            "display": "MARI MAASIKAS"
                         },
                         "organization": {
                             "identifier": {
@@ -830,7 +830,7 @@ Ravimiskeemi ajaloo näidisvastus
                 "date": "2024-09-09T15:16:20+03:00",
                 "source": {
                     "reference": "#PractitionerRole-D09908",
-                    "display": "EGE KÄOSAAR"
+                    "display": "MARI MAASIKAS"
                 },
                 "entry": [
                     {
