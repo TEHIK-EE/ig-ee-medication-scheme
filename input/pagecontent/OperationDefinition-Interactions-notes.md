@@ -1,36 +1,18 @@
-# Koostoimete pärimine
-URL: POST [base]/Medication/$interactions
+### Ärireeglid
 
-DEV: https://tis.dev.tehik.ee/medin/fhir/Medication/$interactions
-
-This is NOT an idempotent operation
-
-## Kirjeldus
-Klient-süsteemide töövoo paremaks toetamiseks on võimalik kasutada operation't analoogselt tänasele retseptikeskuse x-tee teenusele rets.koostoime_list:
-
-Andes ette ainult patsiendi viite - otsitakse koostoimeid patsiendi hetkel kehtivast ravimiskeemist
-siin leitakse MedIN serveri andmestikust kehtiv ravimiskeem (aktuaalses kinnitatud ravimiskeemis sisalduvad MedicationStatement'ega seotud Medication ressursid)
-Iga leitud Medication puhul luuakse SynBase API drug, kus märgitakse "old_drug": false
-leitud koostoimetele leitakse ka MedicationStatement vasted - kus toimeained/preparaadid esinevad, need lisatakase ClinicalUseDefinition.affected väljas reference'dena
-Andes ette toimeained/preparaat - otsitakse koostoimeid ette antud toimeainete/preparaatide ja kehtiva ravimiskeemi vahel
-siin leitakse MedIN serveri andmestikust kehtiv ravimiskeem (aktuaalses kinnitatud ravimiskeemis sisalduvad MedicationStatement'ega seotud Medication ressursid)
-Igast leitud Medication puhul luuakse SynBase API drug, kus märgitakse "old_drug": true
-Täiendavalt võetakse sisendist tulnud Medication kirjed ja nendest luuakse SynBase API drug kirjed, kus märgitakse "old_drug": false
-Leitud koostoimetele leitakse ka MedicationStatement vasted - kus toimeained/preparaadid esinevad, need lisatakase ClinicalUseDefinition.affected väljas reference'dena
-
-**Ärireeglid**:
-In each drug, either drug code or combination of substances and drug form id should be provided
-Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmestikku
-NB! Koostoimete kontrolli tehakse vähemalt kahe ravimi olemasolul:
-Kui kinnitatud ravimiskeemis (sh RK andmed) on vähemalt üks rida ja lisatakse ravimit
-kui päritakse koostoimeid kinnitatud ravimiskeemi kohta ja leitakse vähemalt kaks rida (sh RK andmed) 
-juhul kui tingimus ei ole täidetud, katkeb töö ja päringut ei tehta
-vt ka Otsustutoe integratsiooni puhul andmete mappingut: MedIN Otsustustoe integratsioon
+- In each drug, either drug code or combination of substances and drug form id should be provided
+- Server ei loe siin kohustuslikuks muud kui toimeainete ja ravimvormi andmestikku
+- **NB!** Koostoimete kontrolli tehakse vähemalt kahe ravimi olemasolul:
+    - Kui kinnitatud ravimiskeemis (sh RK andmed) on vähemalt üks rida ja lisatakse ravimit
+    - kui päritakse koostoimeid kinnitatud ravimiskeemi kohta ja leitakse vähemalt kaks rida (sh RK andmed) 
+    - juhul kui tingimus ei ole täidetud, katkeb töö ja päringut ei tehta
+- vt ka Otsustutoe integratsiooni puhul andmete mappingut: MedIN Otsustustoe integratsioon
 
 ## Näited
 Näide on tehtud olukorrale, kus lisatavat ravimit kaasa ei anta, on ainult patsiendi viide:
-```
+
 **Näidispäring patsiendi viitega**
+```
 {
     "resourceType": "Parameters",
     "parameter": [
@@ -44,8 +26,9 @@ Näide on tehtud olukorrale, kus lisatavat ravimit kaasa ei anta, on ainult pats
 }
 ```
 Näidis-väljund olukorras, kus on leitud üks koostoime, mis mõjutab kahte ravimiskeemi rida:
-```
+
 **Näidisvastus ühe koostoimega**
+```
 {
     "resourceType": "Bundle",
     "type": "collection",

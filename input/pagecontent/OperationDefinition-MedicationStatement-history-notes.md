@@ -9,7 +9,7 @@ Patsiendi ravimiskeemi ajaloo pärimiseks mõeldud operation koosneb mitmest jä
 
 ### FHIR andmete leidmine
 
-* Leiab patsiendi MPI viite alusel kõik ravimiskeemi kinnitamise faktid (EETISMedicationList) ning sellega seotud kehtivad ravimiskeemi read 
+* Leiab patsiendi MPI viite alusel kõik ravimiskeemi kinnitamise faktid [EETISMedicationList] ning sellega seotud kehtivad ravimiskeemi read 
 * **EI** filtreeri välja neid MedicationStatement'e, millel on määratud effective.end (need on ka märgitud List.entry.flag = ceased) ega neid, mis on konsolideeritud (nendel on märgitud List.entry.flag = consolidated)
 * Tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd (st ravimiskeemi reaga seotud ehk välja kirjutatud ravimi andmed)
 
@@ -56,7 +56,7 @@ Selle sammu vastus oleks MedIN serveris olev täielik ravimiskeemi ajalugu ehk t
 
 Selle sammu vastus oleks punktis 1.2.3 saadud Bundle täiendamine ainult Retseptikeskuses olevate retseptide põhjal loodud List elementidega, kus on MedicationStatement ja sellega seotud Medication, MedicationRequest, MedicationDispense ja sellega seotud Medication.
 
-### 1.2.5 Grupeerimise loogika rakendamine
+### Grupeerimise loogika rakendamine
 
 * Eeltingimus: kas siin on neid?
 * Rakendab kogu saadud tulemile Ravimiskeemi ajaloos kasutatav grupeerimise loogika
@@ -67,14 +67,14 @@ Selle sammu vastus oleks kõikidele leitud andmetele eraldi arvutusliku grupeeri
 
 Näidispäring patsiendi viitega
 
-Ravimiskeemi ajaloo pärimine
+**Ravimiskeemi ajaloo pärimine**
 ```
 GET /MedicationStatement/$history?subject=Patient/140959
 ```
 
 Näidisvastus 
 
-Ravimiskeemi ajaloo näidisvastus
+**Ravimiskeemi ajaloo näidisvastus**:
 ```
 {
     "resourceType": "Bundle",
