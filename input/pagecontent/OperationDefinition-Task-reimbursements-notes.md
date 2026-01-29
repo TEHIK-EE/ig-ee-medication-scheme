@@ -9,11 +9,12 @@ This is NOT an idempotent operation
 ## Näited
 Näidis-sisend olukorras, kus andmeid ei ole veel salvestatud ja soovitakse pärida võimalikke soodustusi.
 
-Kasutatud on ravimit https://ravimiregister.ee/publichomepage.aspx?pv=PublicMedDetail&vid=b1834c31-1479-4c89-b5d3-8f824c3190cb ja eeldatud, et patsiendile pannakse diagnoos E11-E11 või E14-E14
+Kasutatud on [ravimit](https://ravimiregister.ee/publichomepage.aspx?pv=PublicMedDetail&vid=b1834c31-1479-4c89-b5d3-8f824c3190cb) ja eeldatud, et patsiendile pannakse diagnoos E11-E11 või E14-E14.
 
-Patsiendi viide on veel vigane. 
+*Patsiendi viide on veel vigane.* 
+
+**Näidispäring salvestamata ravimiskeemi reaga**
 ```
-Näidispäring salvestamata ravimiskeemi reaga
 {
   "resourceType": "Parameters",
   "parameter": [
@@ -365,9 +366,10 @@ Näidispäring salvestamata ravimiskeemi reaga
   ]
 }
 ```
-Näidis-väljund olukorras, kus on saadetud Ravimiskeemi rida, mida ei ole veel maha salvestatud
-´´´
-Näidisvastus salvestamata ravimiskeemi reaga
+Näidis-väljund olukorras, kus on saadetud Ravimiskeemi rida, mida ei ole veel maha salvestatud:
+
+**Näidisvastus salvestamata ravimiskeemi reaga**
+```
 {
   "resourceType": "Task",
   "meta": {
