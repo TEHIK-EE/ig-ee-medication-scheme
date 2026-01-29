@@ -2,20 +2,20 @@
 Patsiendi hetkel kehtiva, kinnitatud ravimiskeemi pärimiseks mõeldud operation, koosneb mitmest järjestikku tehtavast tegevusest:
 
 <div>
-<img src="rsparimine.svg"  alt="Kinnitatud ravimiskeemi pärimine - üldine protsess" width="80%">
+<img src="rsparimine.svg"  alt="Kinnitatud ravimiskeemi pärimine - üldine protsess" width="40%">
 <p>Kinnitatud ravimiskeemi pärimine - üldine protsess</p>
 <p></p>
 </div>
 
 ### FHIR andmete leidmine
-Leiab patsiendi MPI viite alusel viimase kinnitamise fakti ([EETISMedicationList]) ning sellega seotud ravimiskeemi read
-filtreerib välja need MedicationStatement'd, millel on määratud effective.end (need on ka märgitud List.entry.flag = ceased) JA need MedicationStatement-d, millel on märgitud List.entry.flag = consolidated ehk read, mis on kokku grupeeritud
-tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd.
+- Leiab patsiendi MPI viite alusel viimase kinnitamise fakti (EETISMedicationList) ning sellega seotud ravimiskeemi read
+- filtreerib välja need MedicationStatement'd, millel on määratud effective.end (need on ka märgitud List.entry.flag = ceased) JA need MedicationStatement-d, millel on märgitud List.entry.flag = consolidated ehk read, mis on kokku grupeeritud
+- tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd.
 
 ### Retseptikeskusest FHIR seoste alusel retseptide pärimine
 
 <div>
-<img src="rsparimine2.svg"  alt="Retseptikeskusest FHIR seoste alusel retseptide pärimine" width="80%">
+<img src="rsparimine2.svg"  alt="Retseptikeskusest FHIR seoste alusel retseptide pärimine" width="50%">
 <p>Retseptikeskusest FHIR seoste alusel retseptide pärimine</p>
 <p></p>
 </div>
@@ -29,7 +29,7 @@ tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd
 ### Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate retseptide pärimine
 
 <div>
-<img src="rsparimine3.svg"  alt="Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate retseptide pärimine" width="80%">
+<img src="rsparimine3.svg"  alt="Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate retseptide pärimine" width="50%">
 <p>Retseptikeskusest ravimiskeemi väliselt tekkinud kehtivate retseptide pärimine</p>
 <p></p>
 </div>
@@ -63,7 +63,7 @@ tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd
 ### Retseptikeskusest viimati tühistatud retseptide pärimine
 
 <div>
-<img src="rsparimine3.svg"  alt="Retseptikeskusest viimati tühistatud retseptide pärimine" width="80%">
+<img src="rsparimine3.svg"  alt="Retseptikeskusest viimati tühistatud retseptide pärimine" width="50%">
 <p>Retseptikeskusest viimati tühistatud retseptide pärimine</p>
 <p></p>
 </div>
@@ -92,9 +92,10 @@ tagastab nii kinnitamise fakti (List), MedicationStatement'd kui ka Medication'd
 ```
 GET /MedicationStatement/$confirmed-medication-scheme?subject=Patient/94465
 ```
-**Näidisvastus**
+Näidisvastus
+
+**Kinnitatud ravimiskeemi pärimine näidisvastus**
 ```
- Kinnitatud ravimiskeemi pärimine näidisvastus
  {
 	"resourceType": "Bundle",
 	"type": "collection",
@@ -2294,4 +2295,4 @@ GET /MedicationStatement/$confirmed-medication-scheme?subject=Patient/94465
 		}
 	]
 }
-``` 
+```
