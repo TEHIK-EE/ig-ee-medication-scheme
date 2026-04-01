@@ -44,7 +44,7 @@ Description: "Eritoit. Medication resource for medical nutrition packages. Used 
 //* doseForm.coding ^binding.description = "Ravimvormide loend"
 * doseForm ^short = "Dose form of the medication. E.g powder, tablet, ointment etc."
 * doseForm ^definition = "Väljakirjutatud ravimi ravimvorm (loendist). Nt. pulber, tablett, salv jne"
-* totalVolume 1..
+* totalVolume 0..
 * totalVolume ^short = "If the certain medication (brand name) is chosen then total volume is the amount of medication in package. If based on just active ingredient then total volume is same as in MedicationStatement TotalPrescribedAmount."
 * totalVolume ^definition = "Kui preparaat ON määratud, siis on ravimite hulk pakendis. Kui preparaat EI ole määratud, siis on see kogu välja kirjutatud hulk (ehk võrdne MedicationStatement extension andmetega)."
 * totalVolume only SimpleQuantity
@@ -61,8 +61,8 @@ Description: "Eritoit. Medication resource for medical nutrition packages. Used 
 * ingredient.item.concept.text ^short = "Main ingredient as free text. (Eritoitesegu ja imikute toitesegu puhul, kus konkreetset toimeainet pole välja tuua.)"
 //* ingredient.item.concept ^binding.description = "Toimeainete loend. Ravimiregistri loend"
 //* ingredient.item.reference ..0
-* ingredient.isActive 1..
-* ingredient.isActive.value = true
+//* ingredient.isActive 1..
+//* ingredient.isActive.value = true
 * ingredient.strength[x] only Ratio
 * ingredient.strengthRatio 0..
 //* ingredient.strengthRatio only Ratio

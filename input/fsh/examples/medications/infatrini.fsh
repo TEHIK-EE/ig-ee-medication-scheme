@@ -17,6 +17,6 @@ Description: "Description of medical nutrition INFATRINI"
 * doseForm = $ravimvormid#795 "suukaudne suspensioon"
 * totalVolume.value = 24
 * ingredient.item.concept.text = "imikute toitesegu"
-* ingredient.isActive = true
+//* ingredient.isActive = true
 //* ingredient.strengthRatio.numerator = 1 $retsept-mahu-ja-massiyhik#MG
 //* ingredient.strengthRatio.denominator = 1 $retsept-mahu-ja-massiyhik#ML
