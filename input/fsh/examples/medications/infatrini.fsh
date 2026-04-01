@@ -14,7 +14,7 @@ Description: "Description of medical nutrition INFATRINI"
 * extension[=].valueString = "INFATRINI"
 * identifier[0].system = $ravimiregister-pakend
 * identifier[0].value = "7017432"
-* doseForm = $ravimvormid#10008 "suspensioon"
+* doseForm = $ravimvormid#795 "suukaudne suspensioon"
 * totalVolume.value = 24
 * ingredient.item.concept.text = "imikute toitesegu"
 * ingredient.isActive = true
