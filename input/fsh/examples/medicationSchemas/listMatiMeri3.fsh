@@ -8,7 +8,7 @@ Description: "List of patient's medications verified by D12345"
 * extension[=].valueBoolean = true
 * extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-renal-failure-warning"
 * extension[=].valueBoolean = false
-* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-scheme-verification-date"
+* extension[+].url = "https://fhir.ee/StructureDefinition/ee-tis-medication-scheme-verification-time"
 * extension[=].valueDateTime = "2023-11-30"
 * status = #current
 * mode = #snapshot
