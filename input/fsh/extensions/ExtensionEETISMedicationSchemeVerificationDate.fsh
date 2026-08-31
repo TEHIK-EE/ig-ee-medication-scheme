@@ -4,7 +4,7 @@ Description: "See extension on vajalik väljendamaks seda, kui patsiendil on kun
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "List"
-* . ^short = "Date when medication scheme was confirmed."
+* . ^short = "Date when medication scheme was confirmed. If absent then scheme is based on prescription centre data only."
 * . ^definition = "Ravimiskeemi kinnitamise aeg."
 * value[x] only dateTime
 * value[x] ^short = "Date of confirmed medication scheme."
