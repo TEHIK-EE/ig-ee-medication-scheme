@@ -9,7 +9,8 @@ Description: "Ravimiskeem. This profile gathers patient's medications in one lis
 * . ^definition = "RAVIMISKEEM"
 * extension contains
     ExtensionEETISConsentWithInteractions named consent 0..1 and
-    ExtensionEETISRenalFailureWarning named renalFailureWarning 0..1
+    ExtensionEETISRenalFailureWarning named renalFailureWarning 0..1 and
+    ExtensionEETISMedicationSchemeVerificationDate named schemeEverConfirmed 0..1
 * status = #current (exactly)
 * mode = #snapshot (exactly)
 * contained 0..*
